@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.github.io/"/>
-  <updated>2017-04-08T11:46:06.904Z</updated>
+  <updated>2017-04-08T14:39:21.431Z</updated>
   <id>http://ray-eldath.github.io/</id>
   
   <author>
@@ -16,20 +16,219 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://ray-eldath.github.io/2017/04/08/hello-world/"/>
-    <id>http://ray-eldath.github.io/2017/04/08/hello-world/</id>
-    <published>2017-04-08T09:08:53.936Z</published>
-    <updated>2017-04-08T11:46:06.904Z</updated>
+    <title>博客系统更新成功</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/blog-system-update-successful/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/blog-system-update-successful/</id>
+    <published>2017-04-08T14:34:57.000Z</published>
+    <updated>2017-04-08T14:39:21.431Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/v1491652002/17th-angel.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;博客系统更新成功&quot;&gt;&lt;a hre
     
     </summary>
     
     
-      <category term="Testing" scheme="http://ray-eldath.github.io/tags/Testing/"/>
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Other" scheme="http://ray-eldath.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好，密码学(3)：离散概率（速成课）（续）</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/</id>
+    <published>2017-04-08T13:58:25.000Z</published>
+    <updated>2017-04-08T14:27:31.271Z</updated>
+    
+    <summary type="html">
+    
+      &lt;!--&lt;img src=&quot;http://res.cloudinary.com/ray-eldath/image/upload/&quot; class=&quot;full-image&quot; /&gt;--&gt;
+&lt;h2 id=&quot;导览&quot;&gt;&lt;a href=&quot;#导览&quot; class=&quot;headerlink&quot; titl
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+    
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.github.io/tags/Hello-Cryptography/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好，密码学(2)：离散概率（速成课）</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-2/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/hello-cryptography-2/</id>
+    <published>2017-04-08T13:56:16.000Z</published>
+    <updated>2017-04-08T14:26:47.769Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/v1491657926/header-img/cryptography-I-1.png.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+    
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.github.io/tags/Hello-Cryptography/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好，密码学(1)：什么是密码学</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-1/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/hello-cryptography-1/</id>
+    <published>2017-04-08T13:53:13.000Z</published>
+    <updated>2017-04-08T14:26:40.961Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/v1491657928/header-img/cryptography-I-2.png.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+    
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.github.io/tags/Hello-Cryptography/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>博客落成有感</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/something-about-my-blog/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/something-about-my-blog/</id>
+    <published>2017-04-08T13:48:22.000Z</published>
+    <updated>2017-04-08T13:51:30.569Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;（此篇博客为旧版&lt;code&gt;Jekyll&lt;/code&gt;系统的部署事项，对本博客新的&lt;code&gt;Hexo&lt;/code&gt;系统不适用，已不再更新）&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;博客落成有感&quot;&gt;&lt;a href=&quot;#博客落成有感&quot; class=&quot;head
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="http://ray-eldath.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>游戏古登堡计划视频组后期工作规范（草案）</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/note-about-subtitle/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/note-about-subtitle/</id>
+    <published>2017-04-08T13:47:05.000Z</published>
+    <updated>2017-04-08T14:59:08.619Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/v1491663529/Neon.Genesis.Evangelion.full.1610251.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p
+    
+    </summary>
+    
+    
+      <category term="Other" scheme="http://ray-eldath.github.io/tags/Other/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>密码学(1)：古典密码学（下）</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/cryptography-2/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/cryptography-2/</id>
+    <published>2017-04-08T13:39:52.000Z</published>
+    <updated>2017-04-08T14:20:41.257Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/v1491657940/header-img/talk-about-cryptography-2.png.png&quot; class=&quot;full-image&quot;
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Cryptography" scheme="http://ray-eldath.github.io/tags/Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>密码学(1)：古典密码学（上）</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/cryptography-1/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/cryptography-1/</id>
+    <published>2017-04-08T13:35:09.000Z</published>
+    <updated>2017-04-08T14:20:41.870Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/header-img/talk-about-cryptography-2.png.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Cryptography" scheme="http://ray-eldath.github.io/tags/Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>密码学(0)：概述</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/cryptography-0/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/cryptography-0/</id>
+    <published>2017-04-08T13:29:59.000Z</published>
+    <updated>2017-04-08T13:34:22.965Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/header-img/talk-about-cryptography-1.png.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+    
+      <category term="Cryptography" scheme="http://ray-eldath.github.io/tags/Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World!</title>
+    <link href="http://ray-eldath.github.io/2017/04/08/hello-world/"/>
+    <id>http://ray-eldath.github.io/2017/04/08/hello-world/</id>
+    <published>2017-04-08T13:22:18.000Z</published>
+    <updated>2017-04-08T14:03:17.926Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;“Yeah It’s on.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thing goes well, now my blog is running now.&lt;/p&gt;
+&lt;h2 id=&quot;Hello-World-Hello-Blog&quot;&gt;&lt;a hre
+    
+    </summary>
+    
+    
+      <category term="Life" scheme="http://ray-eldath.github.io/tags/Life/"/>
     
   </entry>
   

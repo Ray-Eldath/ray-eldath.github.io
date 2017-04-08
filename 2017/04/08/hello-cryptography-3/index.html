@@ -75,7 +75,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Life," />
+  <meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!," />
 
 
 
@@ -93,17 +93,17 @@
 
 
 
-<meta name="description" content="“Yeah It’s on.”  Thing goes well, now my blog is running now. Hello World, Hello Blog!!————Eldath at 2016-10-06">
-<meta name="keywords" content="Life">
+<meta name="description" content="导览课程地址请见Coursera。 对于离散概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …   若未阅读上篇文章密码学I：离散概率的，建议前去阅读。 独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$事件的任何信息，则称$A$、$B$两事件是互相独立的。即：">
+<meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World!">
-<meta property="og:url" content="http://ray-eldath.github.io/2017/04/08/hello-world/index.html">
+<meta property="og:title" content="你好，密码学(3)：离散概率（速成课）（续）">
+<meta property="og:url" content="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/index.html">
 <meta property="og:site_name" content="Eldath's Blog">
-<meta property="og:description" content="“Yeah It’s on.”  Thing goes well, now my blog is running now. Hello World, Hello Blog!!————Eldath at 2016-10-06">
-<meta property="og:updated_time" content="2017-04-08T14:03:17.926Z">
+<meta property="og:description" content="导览课程地址请见Coursera。 对于离散概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …   若未阅读上篇文章密码学I：离散概率的，建议前去阅读。 独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$事件的任何信息，则称$A$、$B$两事件是互相独立的。即：">
+<meta property="og:updated_time" content="2017-04-08T14:27:31.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World!">
-<meta name="twitter:description" content="“Yeah It’s on.”  Thing goes well, now my blog is running now. Hello World, Hello Blog!!————Eldath at 2016-10-06">
+<meta name="twitter:title" content="你好，密码学(3)：离散概率（速成课）（续）">
+<meta name="twitter:description" content="导览课程地址请见Coursera。 对于离散概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …   若未阅读上篇文章密码学I：离散概率的，建议前去阅读。 独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$事件的任何信息，则称$A$、$B$两事件是互相独立的。即：">
 
 
 
@@ -131,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://ray-eldath.github.io/2017/04/08/hello-world/"/>
+  <link rel="canonical" href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/"/>
 
 
 
 
 
-  <title> Hello World! | Eldath's Blog </title>
+  <title> 你好，密码学(3)：离散概率（速成课）（续） | Eldath's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -313,7 +313,7 @@
   
 
   <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ray-eldath.github.io/2017/04/08/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
@@ -334,7 +334,7 @@
             
             
               
-                Hello World!
+                你好，密码学(3)：离散概率（速成课）（续）
               
             
           </h1>
@@ -349,7 +349,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T21:22:18+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-08T21:58:25+08:00">
                 2017-04-08
               </time>
             
@@ -380,7 +380,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  22
+                  431
                 </span>
               
 
@@ -396,7 +396,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
+                  2
                 </span>
               
             </div>
@@ -415,11 +415,36 @@
       
 
       
-        <blockquote>
-<p>“Yeah It’s on.”</p>
+        <!--<img src="http://res.cloudinary.com/ray-eldath/image/upload/" class="full-image" />-->
+<h2 id="导览"><a href="#导览" class="headerlink" title="导览"></a>导览</h2><p>课程地址请见<a href="https://www.coursera.org/learn/crypto/lecture/JkDRg/discrete-probability-crash-course-cont" target="_blank" rel="external">Coursera</a>。</p>
+<p>对于离散概率的更详细解释，请见：<a href="https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Discrete_Probability" target="_blank" rel="external">WikiBooks (English)</a></p>
+<blockquote>
+<p>注意：文章中对专业名词进行解释的链接均来自<a href="https://zh.wikipedia.org/" target="_blank" rel="external">维基百科</a>，中国大陆读者若想访问请自备… …</p>
 </blockquote>
-<p>Thing goes well, now my blog is running now.</p>
-<h2 id="Hello-World-Hello-Blog"><a href="#Hello-World-Hello-Blog" class="headerlink" title="Hello World, Hello Blog!!"></a>Hello World, Hello Blog!!</h2><p>————Eldath at 2016-10-06</p>
+<hr>
+<p><strong>若未阅读上篇文章<a href="https://ray-eldath.github.io/2017/04/08/hello-cryptography-2/">密码学I：离散概率</a>的，建议前去阅读。</strong></p>
+<h2 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p><strong>独立性</strong>：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$事件的<strong>任何</strong>信息，则称$A$、$B$两事件是互相独立的。即：</p>
+<p>$$<br>Pr[A\;\:\mathbf{and}\;\:B]=Pr[A]\cdot Pr[B]<br>$$</p>
+<blockquote>
+<p>通常来讲，独立性描述的是两事件间互不相关的程度。</p>
+</blockquote>
+<h3 id="随机变量中的独立性"><a href="#随机变量中的独立性" class="headerlink" title="随机变量中的独立性"></a>随机变量中的独立性</h3><p>若有两个在集合$V$中取值的随机变量$X,Y$，那么如果这两个随机变量满足：</p>
+<p>$$<br>\forall a,b\in V\<br>Pr[X=a\;\:\mathbf{and}\;\:X=b]\;\;=\;\;Pr[X]\cdot Pr[Y=b]<br>$$</p>
+<blockquote>
+<p>这意味着即使你知道$X=a$你也不知道关于$y$的取值的任何信息。</p>
+</blockquote>
+<h2 id="异或运算（XOR）"><a href="#异或运算（XOR）" class="headerlink" title="异或运算（XOR）"></a>异或运算（XOR）</h2><p>这是一种在密码学中<em>相当重要</em>的运算。</p>
+<blockquote>
+<p>关于其重要的原因我们将稍后讲到。</p>
+</blockquote>
+<h3 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h3><p>一种对数值$A$和$B$进行的运算，记为：</p>
+<p>$$<br>A\oplus B<br>$$</p>
+<p>其运算基本规则为：<strong>两两数值<em>相同</em>时为假，而数值<em>不同</em>时为真。</strong></p>
+<blockquote>
+<p>这也就是说，$15\oplus 17=true$，$15\oplus 15=false$。<br>通常来讲，我们所写的形如$100101\oplus 110110$不是对整个数值进行运算，而是对数值的<strong>每一位</strong>进行运算。即（一般我们用$1$表示“真”，用$0$表示“假”）：$$100101\oplus 110110=010011$$</p>
+<p>请见：<a href="https://zh.wikipedia.org/zh-cn/逻辑异或" target="_blank" rel="external">维基百科（中文 - 大陆简体）</a></p>
+</blockquote>
+<h3 id="异或运算（XOR）的重要性质"><a href="#异或运算（XOR）的重要性质" class="headerlink" title="异或运算（XOR）的重要性质"></a>异或运算（XOR）的<em>重要</em>性质</h3><p> // 未完待续。</p>
 
       
     </div>
@@ -448,7 +473,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://ray-eldath.github.io/2017/04/08/hello-world/" title="Hello World!">http://ray-eldath.github.io/2017/04/08/hello-world/</a>
+      <a href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/" title="你好，密码学(3)：离散概率（速成课）（续）">http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -464,7 +489,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Life/" rel="tag"># Life</a>
+            <a href="/tags/Tech/" rel="tag"># Tech</a>
+          
+            <a href="/tags/Series-Articles/" rel="tag"># Series Articles</a>
+          
+            <a href="/tags/Hello-Cryptography/" rel="tag"># Hello, Cryptography!</a>
           
         </div>
       
@@ -477,8 +506,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/08/cryptography-0/" rel="next" title="密码学(0)：概述">
-                <i class="fa fa-chevron-left"></i> 密码学(0)：概述
+              <a href="/2017/04/08/blog-system-update-successful/" rel="next" title="博客系统更新成功">
+                <i class="fa fa-chevron-left"></i> 博客系统更新成功
               </a>
             
           </div>
@@ -486,6 +515,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/08/hello-cryptography-2/" rel="prev" title="你好，密码学(2)：离散概率（速成课）">
+                你好，密码学(2)：离散概率（速成课） <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -663,7 +696,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-World-Hello-Blog"><span class="nav-number">1.</span> <span class="nav-text">Hello World, Hello Blog!!</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#导览"><span class="nav-number">1.</span> <span class="nav-text">导览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#独立性"><span class="nav-number">2.</span> <span class="nav-text">独立性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机变量中的独立性"><span class="nav-number">2.2.</span> <span class="nav-text">随机变量中的独立性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异或运算（XOR）"><span class="nav-number">3.</span> <span class="nav-text">异或运算（XOR）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义-1"><span class="nav-number">3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异或运算（XOR）的重要性质"><span class="nav-number">3.2.</span> <span class="nav-text">异或运算（XOR）的重要性质</span></a></li></ol></li></ol></div>
             
 
           </div>
