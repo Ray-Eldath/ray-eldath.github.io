@@ -1,0 +1,1016 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//cdn.jsdelivr.net/fontawesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Tech,Cryptography,Series Articles," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Eldath's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="你好，密码学(1)：古典密码学（上）古典密码学 与 现代密码学 的区别（以下文字摘自维基百科 ，想单击文内链接的同学读者请自备 LADDER）  按照发展方向：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（消息验证码）、信息发布的不可抵赖性（数字签名）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。  按照">
+<meta name="keywords" content="Tech,Cryptography,Series Articles">
+<meta property="og:type" content="article">
+<meta property="og:title" content="密码学(1)：古典密码学（上）">
+<meta property="og:url" content="http://ray-eldath.github.io/2016/10/11/cryptography-1/index.html">
+<meta property="og:site_name" content="Eldath's Blog">
+<meta property="og:description" content="你好，密码学(1)：古典密码学（上）古典密码学 与 现代密码学 的区别（以下文字摘自维基百科 ，想单击文内链接的同学读者请自备 LADDER）  按照发展方向：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（消息验证码）、信息发布的不可抵赖性（数字签名）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。  按照">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161023_122041.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_195713.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_210714.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_213956.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_224840.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231328.png.png">
+<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231843.png.png">
+<meta property="og:updated_time" content="2017-04-09T03:32:05.836Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="密码学(1)：古典密码学（上）">
+<meta name="twitter:description" content="你好，密码学(1)：古典密码学（上）古典密码学 与 现代密码学 的区别（以下文字摘自维基百科 ，想单击文内链接的同学读者请自备 LADDER）  按照发展方向：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（消息验证码）、信息发布的不可抵赖性（数字签名）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。  按照">
+<meta name="twitter:image" content="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'VVCXALZ8CM',
+      apiKey: '2ac0dd0a1534d30465ee6f51034fd0e9',
+      indexName: 'eldath',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索...","hits_empty":"没有找到与 ${query} 相关的结果","hits_stats":"找到相关结果 ${hits} 个， 用时 ${time}ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ray-eldath.github.io/2016/10/11/cryptography-1/"/>
+
+
+
+
+
+  <title> 密码学(1)：古典密码学（上） | Eldath's Blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//tajs.qq.com/stats?sId=61612602";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Eldath's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Tech, Life and Startalk.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ray-eldath.github.io/2016/10/11/cryptography-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Eldath">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://res.cloudinary.com/ray-eldath/image/upload/v1491647716/avatar-img.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eldath's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                密码学(1)：古典密码学（上）
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-11T15:25:35+08:00">
+                2016-10-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,381
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  9
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png" class="full-image"></p>
+<h1 id="你好，密码学-1-：古典密码学（上）"><a href="#你好，密码学-1-：古典密码学（上）" class="headerlink" title="你好，密码学(1)：古典密码学（上）"></a>你好，密码学(1)：古典密码学（上）</h1><h2 id="古典密码学-与-现代密码学-的区别"><a href="#古典密码学-与-现代密码学-的区别" class="headerlink" title="古典密码学 与 现代密码学 的区别"></a>古典密码学 与 现代密码学 的区别</h2><p>（以下文字摘自<a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6" target="_blank" rel="external">维基百科</a> ，想单击文内链接的<del>同学</del>读者请自备 LADDER）</p>
+<ul>
+<li><p><strong>按照发展方向</strong>：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（<a href="https://zh.wikipedia.org/w/index.php?title=%E6%B6%88%E6%81%AF%E9%AA%8C%E8%AF%81%E7%A0%81&amp;action=edit&amp;redlink=1" target="_blank" rel="external">消息验证码</a>）、信息发布的不可抵赖性（<a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D" target="_blank" rel="external">数字签名</a>）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。</p>
+</li>
+<li><p><strong>按照本质</strong>：古典密码学的编码和破译通常依赖于设计者和敌手的创造力与技巧，作为一种实用性艺术存在，并没有对于密码学的清晰定义；而现代密码学则起源于20世纪末出现的大量相关理论，这些理论使得现代密码学成为了一种可以系统而严格地学习的科学。</p>
+<p><del>没办法，作者垃圾，只能复制维基百科。</del></p>
+</li>
+</ul>
+<h2 id="最早的密码"><a href="#最早的密码" class="headerlink" title="最早的密码"></a>最早的密码</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>最早的密码，应该就是凯撒移位密码了。它 <strong>早期</strong> 的使用方法非常简单，请看下面的例子：</p>
+<blockquote>
+<p>明文：e l d a t h  i s  t h e  m o s t  l o v e l y  p e r s o n.</p>
+<p>密文：H O G O W K  L V  W K H  P R V W  O R Y H O B  S H U V R Q.</p>
+<p>依照密码学的惯例，明文一律使用小写，密文一律使用大写。</p>
+</blockquote>
+<h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><p>作为最早的密码，凯撒移位密码的工作方式显然相当简单：</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161023_122041.png.png" alt="凯撒移位密码工作方式分析"></p>
+<p>从下图中可以看出，子密钥（不知道这个说法是否合适，欢迎读者指出）的生成，就是将明文字母表按顺序位移，并将 多/少 出来的部分补到密文字母表的前/后面去：</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_195713.png.png" alt="凯撒移位密码工作方式说明"></p>
+<p>这样，一个凯撒移位密码的字母表就生成了。只要保证通信双方都知道这个密钥，使用它来传递信息，足以保证最最基本的安全性。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>作为历史上第一个实用密码，凯撒移位密码的安全性实在不高。但由于当时密码破译术还未出现，凯撒移位密码也能在一定程度上保护信息安全。</p>
+<h2 id="单字母表替换密码-又称简单替换密码"><a href="#单字母表替换密码-又称简单替换密码" class="headerlink" title="单字母表替换密码(又称简单替换密码)"></a>单字母表替换密码(又称简单替换密码)</h2><p><strong>注释：根据<a href="https://www.zhihu.com/people/liu-wei-ran-8-34" target="_blank" rel="external">刘巍然-学酥</a> 在 <a href="https://zhuanlan.zhihu.com/p/20331980" target="_blank" rel="external">利用机器学习实施攻击：Probabilistic Spying on Encrypted Tunnels</a> 中提及的内容，该密码称作“单表代换密码”，而下一种密码称作“多表代换密码”。但作者认为“单字母表替换密码”和“多字母表替换密码”的名称更易理解，故未修正。</strong></p>
+<h3 id="引言-1"><a href="#引言-1" class="headerlink" title="引言"></a>引言</h3><p>说明凯撒移位密码以让读者明白那是密码的工作方式之后，接下来让我们看看更高级的密码：</p>
+<h3 id="工作方式-1"><a href="#工作方式-1" class="headerlink" title="工作方式"></a>工作方式</h3><p>与凯撒移位密码不同的是，单字母表替换密码不是对字母表进行位移，而是直接 <strong>随机地</strong> 将明文字母与密文字母进行对应：</p>
+<blockquote>
+<p>明文：a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<p>密文：C D G H K N M Z W A V F E J I L O U R S T V Y P X Q</p>
+</blockquote>
+<p>这就是简单的单字母表替换密码，它的明文字母与密文字母的对应完全是随机的，因而比凯撒移位密码提供了更高的安全性，因为凯撒移位密码只要<strong>将密文字母放到字母表中，通过观察其与明文字母表之间的位移</strong>就能破解。</p>
+<p>但这种密码有个缺点，由于明文字母 - 密文字母的对应是随机的，导致传递密钥必须传递整个字母表，使得密钥的分发相对不方便。因此，在此基础上， <strong>基于关键词的单字母表替换密码密码</strong> 诞生了：</p>
+<blockquote>
+<p>明文：a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
+<p>密文：R A Y E L D A T H I J K L M N O P Q R S T U V W X Y</p>
+</blockquote>
+<p>对，在这次示例中，我们采用 <code>Ray Eldath</code> 作为关键词，然后将字母表的剩余未填充部分 以关键词末尾最后一个字母为首字符，按 <strong>去除在关键词中出现字母后的字母表</strong> 进行顺序填充，(听不懂看例子)这就很好地解决了密钥分发较困难的问题。</p>
+<h2 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h2><p>单字母表替换密码基本代表了当时密码学的最高水平，通过单字母表替换密码再结合混淆（按一定规律随机插入无意义字符）和代码（比如指定 <code>α</code> 表示 <code>ice1000</code>）的加密方法，使得单字母表替换密码具有了在当时极高的安全性，从而能够在公元前一个千年里保持优势。</p>
+<h2 id="多字母表替换密码-又称复式替换密码"><a href="#多字母表替换密码-又称复式替换密码" class="headerlink" title="多字母表替换密码(又称复式替换密码)"></a>多字母表替换密码(又称复式替换密码)</h2><h3 id="引言-2"><a href="#引言-2" class="headerlink" title="引言"></a>引言</h3><p>几个世纪以来，单字母表替换密码已经足以保证信息的安全。然而，从阿拉伯开始继而到欧洲的频度分析，使得密码破译者又一次占了上风。</p>
+<h3 id="工作方式-2"><a href="#工作方式-2" class="headerlink" title="工作方式"></a>工作方式</h3><p>还是一样，请看下面的例子：</p>
+<blockquote>
+<p>明文：ice1000 is eldath’s good friend.</p>
+<p>密文：EDA1000 KO ANZEPD’S CQKA BTETJA.</p>
+</blockquote>
+<p>这一次，位移不再明显了，甚至连同一个明文字母（注意看 <code>good</code> ）都对应了两个密文字母，如何做到的？请看下面的解析：</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_210714.png.png" alt="多字母表替换密码解析"></p>
+<p>在这种加密方法中，我们将使用 <strong>多个字母表</strong>，（此处是2个）交替使用，（此处约定 <code>先使用第一个 - 然后第二个 - 再又第一个 - ...</code> 的次序，从而达到提高安全性的目的.</p>
+<blockquote>
+<p>那么每个字母表就可以使用生成单字母表替换密码的任一一种方法来生成了。</p>
+</blockquote>
+<p>但这种加密方式的安全性仍不够高，因为当字母表选择规则为 <code>A - B - A - ...</code> 时，对于每个明文字符，每 <code>n</code> （ <code>n</code> 为字母表个数，在这个例子中 <code>n=2</code> ）次，就会重复（即<em>同一明文字符</em> 被加密为<em>同一密文子符</em>）一次，就如下图中的示范：（还是上面那个字母表）</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_213956.png.png" alt="多字母表替换密码缺陷分析"></p>
+<p><del>相信读者已经</del> 大家肯定看出来了，明文和密码有着非常非常明显的重复，这就给这种密码留下了漏洞，因为通过观察重复间隔，字母表的个数就能够知道了。</p>
+<p>而解决这个问题的唯一方法，就是增加字母表的个数。</p>
+<p>下面这张表格是由曾任罗马外交官，并深受阿尔伯提、特里瑟米斯和波特影响的<strong>维热纳尔</strong>（又译维吉尼亚）确立的，因而以维热纳尔方阵而著称：</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_224840.png.png" alt="维热纳尔方阵"></p>
+<blockquote>
+<p>踏马的这个表难弄的要死，我还写了个程序去整… …(゜д゜)</p>
+<p>（感觉我好水啊）</p>
+</blockquote>
+<p>再看看下面这个使用维热纳尔密码加密的例子：</p>
+<blockquote>
+<p>明  文：Happy birthday!</p>
+<p>关键词：<code>October</code></p>
+<p>密  文：VCIDZ FZFVARBC!</p>
+</blockquote>
+<p>首先，在维热纳尔方阵中找出关键词对应的那几行组成密码表，比如对于关键词<code>October</code>，密码表就是：</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231328.png.png" alt="维热纳尔密码&quot;October&quot;对应的密码表"></p>
+<p>有了密码表，我们就可以逐个密码表对明文进行逐字母加密了：（注意上图和下图的红框）</p>
+<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231843.png.png" alt="维热纳尔密码加密示例"></p>
+<p>这就是维热纳尔密码的优点。在上图中我特意将末尾的<code>z</code>写了很多次，但却没有一次重复。所以维热纳尔密码的一大优点就在于安全性由关键字长度决定，关键词越长，相同字母明文被加密为相同字母密文（即重复）的次数就越少，安全性也就越高。</p>
+<hr>
+<p>维热纳尔密码富有创造性地使用了多个密码表作为密钥，同时首次使密码的安全性完全可控，极大地影响今后密码学的发展。</p>
+<h2 id="总结-2"><a href="#总结-2" class="headerlink" title="总结"></a>总结</h2><p>多字母表替换密码大幅提升了安全性，以至于后来的几代密码都受了它的影响，在密码术还没诞生多久的1586年，创造这么一个领先密码破译者两个多世纪的密码，实在是惊人之举。</p>
+<h1 id="总结-3"><a href="#总结-3" class="headerlink" title="总结"></a>总结</h1><h3 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h3><p>本篇通过大量明文-密文对照示例和工作方式示意图，详细介绍了凯撒移位密码、单字母表替换密码和多字母表替换密码的工作方式及安全性，意在简述密码学诞生最初一个世纪内的发展。毫无疑问地，密码编码者又占尽了优势。</p>
+<h3 id="推荐阅读-amp-参考书目"><a href="#推荐阅读-amp-参考书目" class="headerlink" title="推荐阅读&amp;参考书目"></a>推荐阅读&amp;参考书目</h3><ul>
+<li><strong><em>《密码故事》</em></strong> <strong>, [英] 西蒙·辛格, 湖南出版社. </strong>(<strong><em>The Code Story</em></strong> <strong>, Simon Singh, Coville &amp; Walsh Limited) </strong></li>
+</ul>
+<h3 id="课后作业"><a href="#课后作业" class="headerlink" title="课后作业"></a>课后作业</h3><p>尝试解密下列密码：</p>
+<p><strong>密码一：</strong></p>
+<blockquote>
+<p>密文：JUXSTISMCQSTUCJWTCTCPJTIPNM<br>     NTTSTUVSOTAITXSTCSJHIUTSHTS<br>     SOAJOTYRTMMTOUTQJSJUTSNPPAX<br>     IRIJTRSTTSMUTSOSUTAXJUICJUT<br>     PCUITCMSRLTTUATQSTTTJPO<br>密钥：scratch</p>
+</blockquote>
+<p><strong>密码二：</strong></p>
+<blockquote>
+<p>密文：GZIYVMGPTUUDCHBCWIFRRMKMFEIE<br>     SCLHKGMKZRPUGQTIRKEWMZMTECUI<br>     UCCIDJIYWDMSMEXTULNLVMNJIFFD<br>     MKMHMGJXLLHIVYGVAQIKIFIKVVMU<br>     UMFWDKVRZOMYMIYWXGXGXKJHXXRR<br>     ZLMFMBGIANLVGRRV<br>密钥：prejudice</p>
+</blockquote>
+<h1 id="本篇完"><a href="#本篇完" class="headerlink" title="本篇完"></a>本篇完</h1><p>首发在<a href="https://ray-eldath.github.io/">作者博客</a>于2016-10-11，第一次修订于2016-11-27，第二次修订于2017-01-27。</p>
+<blockquote>
+<p><del>蛤</del> 哈，一二次修订都是27号诶。</p>
+<p><del>欢迎关注作者 知乎 Eldath 及 GitHub Ray-Eldath</del>。</p>
+</blockquote>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Ray Eldath
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://ray-eldath.github.io/2016/10/11/cryptography-1/" title="密码学(1)：古典密码学（上）">http://ray-eldath.github.io/2016/10/11/cryptography-1/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tech/" rel="tag"># Tech</a>
+          
+            <a href="/tags/Cryptography/" rel="tag"># Cryptography</a>
+          
+            <a href="/tags/Series-Articles/" rel="tag"># Series Articles</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/13/cryptography-2/" rel="next" title="密码学(1)：古典密码学（下）">
+                <i class="fa fa-chevron-left"></i> 密码学(1)：古典密码学（下）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/10/10/cryptography-0/" rel="prev" title="密码学(0)：概述">
+                密码学(0)：概述 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58e8daf2f830725a" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODEwMC80Njcz"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://res.cloudinary.com/ray-eldath/image/upload/v1491647716/avatar-img.png"
+               alt="Ray Eldath" />
+          <p class="site-author-name" itemprop="name">Ray Eldath</p>
+           
+              <p class="site-description motion-element" itemprop="description">面向运气编程</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="mailto:eldath.ray@protonmail.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-envelope-o"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Ray-Eldath" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-question-circle-o"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/eldath" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你好，密码学-1-：古典密码学（上）"><span class="nav-number">1.</span> <span class="nav-text">你好，密码学(1)：古典密码学（上）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#古典密码学-与-现代密码学-的区别"><span class="nav-number">1.1.</span> <span class="nav-text">古典密码学 与 现代密码学 的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最早的密码"><span class="nav-number">1.2.</span> <span class="nav-text">最早的密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.2.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作方式"><span class="nav-number">1.2.2.</span> <span class="nav-text">工作方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.3.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#单字母表替换密码-又称简单替换密码"><span class="nav-number">1.4.</span> <span class="nav-text">单字母表替换密码(又称简单替换密码)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作方式-1"><span class="nav-number">1.4.2.</span> <span class="nav-text">工作方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结-1"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多字母表替换密码-又称复式替换密码"><span class="nav-number">1.6.</span> <span class="nav-text">多字母表替换密码(又称复式替换密码)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言-2"><span class="nav-number">1.6.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工作方式-2"><span class="nav-number">1.6.2.</span> <span class="nav-text">工作方式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结-2"><span class="nav-number">1.7.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#总结-3"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#概要"><span class="nav-number">2.0.1.</span> <span class="nav-text">概要</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐阅读-amp-参考书目"><span class="nav-number">2.0.2.</span> <span class="nav-text">推荐阅读&参考书目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#课后作业"><span class="nav-number">2.0.3.</span> <span class="nav-text">课后作业</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本篇完"><span class="nav-number">3.</span> <span class="nav-text">本篇完</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ray Eldath</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>
