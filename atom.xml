@@ -4,9 +4,9 @@
   <subtitle>Tech, Life and Startalk.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://ray-eldath.github.io/"/>
+  <link href="http://ray-eldath.tech/"/>
   <updated>2017-04-16T13:48:17.013Z</updated>
-  <id>http://ray-eldath.github.io/</id>
+  <id>http://ray-eldath.tech/</id>
   
   <author>
     <name>Ray Eldath</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>博客系统更新成功</title>
-    <link href="http://ray-eldath.github.io/2017/04/08/blog-system-update-successful/"/>
-    <id>http://ray-eldath.github.io/2017/04/08/blog-system-update-successful/</id>
+    <link href="http://ray-eldath.tech/2017/04/08/blog-system-update-successful/"/>
+    <id>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</id>
     <published>2017-04-08T14:34:57.000Z</published>
     <updated>2017-04-16T13:48:17.013Z</updated>
     
@@ -30,16 +30,16 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Other" scheme="http://ray-eldath.github.io/tags/Other/"/>
+      <category term="Other" scheme="http://ray-eldath.tech/tags/Other/"/>
     
   </entry>
   
   <entry>
     <title>你好，密码学(3)：离散概率（速成课）（续）</title>
-    <link href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/"/>
-    <id>http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/</id>
+    <link href="http://ray-eldath.tech/2017/04/08/hello-cryptography-3/"/>
+    <id>http://ray-eldath.tech/2017/04/08/hello-cryptography-3/</id>
     <published>2017-04-08T13:58:25.000Z</published>
     <updated>2017-04-16T13:51:28.763Z</updated>
     
@@ -52,18 +52,18 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
-      <category term="Hello, Cryptography!" scheme="http://ray-eldath.github.io/tags/Hello-Cryptography/"/>
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
     
   </entry>
   
   <entry>
     <title>你好，密码学(2)：离散概率（速成课）</title>
-    <link href="http://ray-eldath.github.io/2017/03/24/hello-cryptography-2/"/>
-    <id>http://ray-eldath.github.io/2017/03/24/hello-cryptography-2/</id>
+    <link href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/"/>
+    <id>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</id>
     <published>2017-03-24T05:56:16.000Z</published>
     <updated>2017-04-16T13:50:45.835Z</updated>
     
@@ -75,18 +75,18 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
-      <category term="Hello, Cryptography!" scheme="http://ray-eldath.github.io/tags/Hello-Cryptography/"/>
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
     
   </entry>
   
   <entry>
     <title>你好，密码学(1)：什么是密码学</title>
-    <link href="http://ray-eldath.github.io/2017/03/18/hello-cryptography-1/"/>
-    <id>http://ray-eldath.github.io/2017/03/18/hello-cryptography-1/</id>
+    <link href="http://ray-eldath.tech/2017/03/18/hello-cryptography-1/"/>
+    <id>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</id>
     <published>2017-03-18T05:53:13.000Z</published>
     <updated>2017-04-16T13:52:19.033Z</updated>
     
@@ -98,18 +98,18 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
-      <category term="Hello, Cryptography!" scheme="http://ray-eldath.github.io/tags/Hello-Cryptography/"/>
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
     
   </entry>
   
   <entry>
     <title>游戏古登堡计划视频组后期工作规范（草案）</title>
-    <link href="http://ray-eldath.github.io/2016/12/03/note-about-subtitle/"/>
-    <id>http://ray-eldath.github.io/2016/12/03/note-about-subtitle/</id>
+    <link href="http://ray-eldath.tech/2016/12/03/note-about-subtitle/"/>
+    <id>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</id>
     <published>2016-12-03T13:47:05.000Z</published>
     <updated>2017-04-16T14:03:30.433Z</updated>
     
@@ -122,14 +122,14 @@
     </summary>
     
     
-      <category term="Other" scheme="http://ray-eldath.github.io/tags/Other/"/>
+      <category term="Other" scheme="http://ray-eldath.tech/tags/Other/"/>
     
   </entry>
   
   <entry>
     <title>密码学(1)：古典密码学（下）</title>
-    <link href="http://ray-eldath.github.io/2016/10/13/cryptography-2/"/>
-    <id>http://ray-eldath.github.io/2016/10/13/cryptography-2/</id>
+    <link href="http://ray-eldath.tech/2016/10/13/cryptography-2/"/>
+    <id>http://ray-eldath.tech/2016/10/13/cryptography-2/</id>
     <published>2016-10-13T13:39:52.000Z</published>
     <updated>2017-04-16T14:00:22.425Z</updated>
     
@@ -141,18 +141,18 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Cryptography" scheme="http://ray-eldath.github.io/tags/Cryptography/"/>
+      <category term="Cryptography" scheme="http://ray-eldath.tech/tags/Cryptography/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
   <entry>
     <title>密码学(1)：古典密码学（上）</title>
-    <link href="http://ray-eldath.github.io/2016/10/11/cryptography-1/"/>
-    <id>http://ray-eldath.github.io/2016/10/11/cryptography-1/</id>
+    <link href="http://ray-eldath.tech/2016/10/11/cryptography-1/"/>
+    <id>http://ray-eldath.tech/2016/10/11/cryptography-1/</id>
     <published>2016-10-11T07:25:35.000Z</published>
     <updated>2017-04-16T13:58:05.368Z</updated>
     
@@ -164,18 +164,18 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Cryptography" scheme="http://ray-eldath.github.io/tags/Cryptography/"/>
+      <category term="Cryptography" scheme="http://ray-eldath.tech/tags/Cryptography/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
   <entry>
     <title>密码学(0)：概述</title>
-    <link href="http://ray-eldath.github.io/2016/10/10/cryptography-0/"/>
-    <id>http://ray-eldath.github.io/2016/10/10/cryptography-0/</id>
+    <link href="http://ray-eldath.tech/2016/10/10/cryptography-0/"/>
+    <id>http://ray-eldath.tech/2016/10/10/cryptography-0/</id>
     <published>2016-10-10T11:59:29.000Z</published>
     <updated>2017-04-16T13:55:55.344Z</updated>
     
@@ -187,18 +187,18 @@
     </summary>
     
     
-      <category term="Tech" scheme="http://ray-eldath.github.io/tags/Tech/"/>
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Cryptography" scheme="http://ray-eldath.github.io/tags/Cryptography/"/>
+      <category term="Cryptography" scheme="http://ray-eldath.tech/tags/Cryptography/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.github.io/tags/Series-Articles/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
   <entry>
     <title>博客落成有感</title>
-    <link href="http://ray-eldath.github.io/2016/10/07/something-about-my-blog/"/>
-    <id>http://ray-eldath.github.io/2016/10/07/something-about-my-blog/</id>
+    <link href="http://ray-eldath.tech/2016/10/07/something-about-my-blog/"/>
+    <id>http://ray-eldath.tech/2016/10/07/something-about-my-blog/</id>
     <published>2016-10-07T03:23:49.000Z</published>
     <updated>2017-04-16T13:55:05.082Z</updated>
     
@@ -210,14 +210,14 @@
     </summary>
     
     
-      <category term="Other" scheme="http://ray-eldath.github.io/tags/Other/"/>
+      <category term="Other" scheme="http://ray-eldath.tech/tags/Other/"/>
     
   </entry>
   
   <entry>
     <title>Hello World!</title>
-    <link href="http://ray-eldath.github.io/2016/10/06/hello-world/"/>
-    <id>http://ray-eldath.github.io/2016/10/06/hello-world/</id>
+    <link href="http://ray-eldath.tech/2016/10/06/hello-world/"/>
+    <id>http://ray-eldath.tech/2016/10/06/hello-world/</id>
     <published>2016-10-06T14:12:32.000Z</published>
     <updated>2017-04-16T13:53:32.947Z</updated>
     
@@ -230,7 +230,7 @@
     </summary>
     
     
-      <category term="Life" scheme="http://ray-eldath.github.io/tags/Life/"/>
+      <category term="Life" scheme="http://ray-eldath.tech/tags/Life/"/>
     
   </entry>
   
