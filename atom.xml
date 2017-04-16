@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.github.io/"/>
-  <updated>2017-04-09T04:22:13.959Z</updated>
+  <updated>2017-04-16T13:48:17.013Z</updated>
   <id>http://ray-eldath.github.io/</id>
   
   <author>
@@ -20,11 +20,12 @@
     <link href="http://ray-eldath.github.io/2017/04/08/blog-system-update-successful/"/>
     <id>http://ray-eldath.github.io/2017/04/08/blog-system-update-successful/</id>
     <published>2017-04-08T14:34:57.000Z</published>
-    <updated>2017-04-09T04:22:13.959Z</updated>
+    <updated>2017-04-16T13:48:17.013Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.4/v1491652002/17th-angel.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/blog-system-update-successful.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;博客系统更新成功&quot;
     
     </summary>
     
@@ -40,12 +41,13 @@
     <link href="http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/"/>
     <id>http://ray-eldath.github.io/2017/04/08/hello-cryptography-3/</id>
     <published>2017-04-08T13:58:25.000Z</published>
-    <updated>2017-04-09T04:22:55.545Z</updated>
+    <updated>2017-04-16T13:51:28.763Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/q_auto:eco/v1491706851/Okumura.Rin.full.676854.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;我图还没整好，先配这图吧&lt;/del&gt;&lt;/p&gt;
+&lt;h2
     
     </summary>
     
@@ -63,11 +65,12 @@
     <link href="http://ray-eldath.github.io/2017/03/24/hello-cryptography-2/"/>
     <id>http://ray-eldath.github.io/2017/03/24/hello-cryptography-2/</id>
     <published>2017-03-24T05:56:16.000Z</published>
-    <updated>2017-04-09T04:22:56.674Z</updated>
+    <updated>2017-04-16T13:50:45.835Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/v1491657926/header-img/cryptography-I-1.png.png&quot; cl
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你好，密码学-1-：离散概率（速成课）&quot;&gt;&lt;a hr
     
     </summary>
     
@@ -85,11 +88,12 @@
     <link href="http://ray-eldath.github.io/2017/03/18/hello-cryptography-1/"/>
     <id>http://ray-eldath.github.io/2017/03/18/hello-cryptography-1/</id>
     <published>2017-03-18T05:53:13.000Z</published>
-    <updated>2017-04-09T04:22:58.550Z</updated>
+    <updated>2017-04-16T13:52:19.033Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/v1491657928/header-img/cryptography-I-2.png.png&quot; cl
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你好，密码学-1-：什么是密码学&quot;&gt;&lt;a href=
     
     </summary>
     
@@ -107,11 +111,13 @@
     <link href="http://ray-eldath.github.io/2016/12/03/note-about-subtitle/"/>
     <id>http://ray-eldath.github.io/2016/12/03/note-about-subtitle/</id>
     <published>2016-12-03T13:47:05.000Z</published>
-    <updated>2017-04-09T04:22:53.684Z</updated>
+    <updated>2017-04-16T14:03:30.433Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/q_auto:eco/v1491663529/Neon.Genesis.Evangelion.full.1610251.jpg&quot; class=&quot;full
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;别问我为啥配这图&lt;/del&gt;&lt;/p&gt;
+&lt;h1 id=&quot;
     
     </summary>
     
@@ -125,11 +131,12 @@
     <link href="http://ray-eldath.github.io/2016/10/13/cryptography-2/"/>
     <id>http://ray-eldath.github.io/2016/10/13/cryptography-2/</id>
     <published>2016-10-13T13:39:52.000Z</published>
-    <updated>2017-04-09T04:22:31.710Z</updated>
+    <updated>2017-04-16T14:00:22.425Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-3.png.png&quot; class
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/cryptography-2.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你好，密码学-1-：古典密码学（下）&quot;&gt;&lt;a href=&quot;#你好
     
     </summary>
     
@@ -147,11 +154,12 @@
     <link href="http://ray-eldath.github.io/2016/10/11/cryptography-1/"/>
     <id>http://ray-eldath.github.io/2016/10/11/cryptography-1/</id>
     <published>2016-10-11T07:25:35.000Z</published>
-    <updated>2017-04-09T04:22:28.208Z</updated>
+    <updated>2017-04-16T13:58:05.368Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png&quot; class
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/cryptography-1.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你好，密码学-1-：古典密码学（上）&quot;&gt;&lt;a href=&quot;#你好
     
     </summary>
     
@@ -169,11 +177,12 @@
     <link href="http://ray-eldath.github.io/2016/10/10/cryptography-0/"/>
     <id>http://ray-eldath.github.io/2016/10/10/cryptography-0/</id>
     <published>2016-10-10T11:59:29.000Z</published>
-    <updated>2017-04-09T04:22:24.510Z</updated>
+    <updated>2017-04-16T13:55:55.344Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-1.png.png&quot; class
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/cryptography-0.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerl
     
     </summary>
     
@@ -191,11 +200,12 @@
     <link href="http://ray-eldath.github.io/2016/10/07/something-about-my-blog/"/>
     <id>http://ray-eldath.github.io/2016/10/07/something-about-my-blog/</id>
     <published>2016-10-07T03:23:49.000Z</published>
-    <updated>2017-04-09T04:23:00.512Z</updated>
+    <updated>2017-04-16T13:55:05.082Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.7/v1491706728/Okumura.Rin.full.1284476.jpg&quot; class=&quot;fu
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/something-about-my-blog.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;div class=&quot;note danger
     
     </summary>
     
@@ -209,12 +219,13 @@
     <link href="http://ray-eldath.github.io/2016/10/06/hello-world/"/>
     <id>http://ray-eldath.github.io/2016/10/06/hello-world/</id>
     <published>2016-10-06T14:12:32.000Z</published>
-    <updated>2017-04-09T03:52:29.373Z</updated>
+    <updated>2017-04-16T13:53:32.947Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.5/v1491707818/601837.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;bl
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-world.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;“Yeah It’s on.”&lt;/p&gt;
     
     </summary>
     

@@ -104,13 +104,13 @@
 <meta property="og:url" content="http://ray-eldath.github.io/2016/10/07/something-about-my-blog/index.html">
 <meta property="og:site_name" content="Eldath's Blog">
 <meta property="og:description" content="（此篇博客为旧版Jekyll系统的部署事项，对本博客新的Hexo系统不适用，已不再更新）  博客落成有感在和Jekyll和huxblog-boilerplate苦苦纠缠了两天半之后… …我的博客 终！于！落！成！ 了！喜大普奔啊！咳咳… …所以我稍稍谈谈用 该死的 Jekyll在gthub pages建博客时的注意事项… …都是经过痛苦调试换来的经验呀。 一些小提醒 强烈先在本地配置个Jekyl">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.7/v1491706728/Okumura.Rin.full.1284476.jpg">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/v1491658151/in-post/something-about-my-new-blog/2016-10-07_11-17-15.png.png">
-<meta property="og:updated_time" content="2017-04-09T04:23:00.512Z">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/something-about-my-blog.jpg@800w_1l">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/something-about-my-blog/2016-10-07_11-17-15.png">
+<meta property="og:updated_time" content="2017-04-16T13:55:05.082Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="博客落成有感">
 <meta name="twitter:description" content="（此篇博客为旧版Jekyll系统的部署事项，对本博客新的Hexo系统不适用，已不再更新）  博客落成有感在和Jekyll和huxblog-boilerplate苦苦纠缠了两天半之后… …我的博客 终！于！落！成！ 了！喜大普奔啊！咳咳… …所以我稍稍谈谈用 该死的 Jekyll在gthub pages建博客时的注意事项… …都是经过痛苦调试换来的经验呀。 一些小提醒 强烈先在本地配置个Jekyl">
-<meta name="twitter:image" content="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.7/v1491706728/Okumura.Rin.full.1284476.jpg">
+<meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/something-about-my-blog.jpg@800w_1l">
 
 
 
@@ -415,7 +415,7 @@
       
 
       
-        <p><img src="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.7/v1491706728/Okumura.Rin.full.1284476.jpg" class="full-image"></p>
+        <p><img src="http://ray-eldath.image.alimmdn.com/header/something-about-my-blog.jpg@800w_1l" class="full-image"></p>
 <div class="note danger"><p><strong>（此篇博客为旧版<code>Jekyll</code>系统的部署事项，对本博客新的<code>Hexo</code>系统不适用，已不再更新）</strong></p>
 </div>
 <h1 id="博客落成有感"><a href="#博客落成有感" class="headerlink" title="博客落成有感"></a>博客落成有感</h1><p>在和<a href="http://jekyllcn.com/" target="_blank" rel="external">Jekyll</a>和<a href="https://github.com/Huxpro/huxblog-boilerplate" target="_blank" rel="external">huxblog-boilerplate</a>苦苦纠缠了两天半之后… …我的博客 <strong>终！于！落！成！</strong> 了！喜大普奔啊！<br>咳咳… …所以我稍稍谈谈用 <del>该死的</del> Jekyll在gthub pages建博客时的注意事项… …都是经过痛苦调试换来的经验呀。</p>
@@ -448,7 +448,7 @@
 <p>就是有一点要注意的：由于浏览器处于安全考虑，不接受从 <code>http</code> 协议返回的图片渲染到 <code>https</code> 网页中，因此需使用 <strong><code>https</code> 协议的加速链接 </strong> ！！！</p>
 <p>所以，我简单介绍一下如何在类似<a href="https://github.com/Huxpro/huxblog-boilerplate" target="_blank" rel="external">huxblog-boilerplate</a>这种 <strong>高大上</strong> 的主题中使用七牛CDN进行加速：</p>
 <p>首先，通过官方文档我们可以知道，在这个<code>_layouts</code>文件夹中存放的就是博客主题的模版文件，我们可以再博客中使用<code>layout: page/post/...</code>来指定使用哪个模版。而我这个主题还有一个<code>header-img:</code>的参数用来指定封面图，因此，我们可以猜出来这玩意就是在<code>_layouts</code>里面处理的！<br>知道了目标以后，就要着手分析文件了。首先打开<code>_layouts</code>文件夹，我这个主题不算复杂，它提供了四种模版：</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/v1491658151/in-post/something-about-my-new-blog/2016-10-07_11-17-15.png.png" alt="目录结构"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/something-about-my-blog/2016-10-07_11-17-15.png" alt="目录结构"></p>
 <p>我们逐个打开看看，可以发现在<code>page.html</code>和<code>post.html</code>里，它提供了两段 <em>基本</em> 相同的处理语句：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">background-image: url(&apos;&#123;&#123; site.baseurl &#125;&#125;/&#123;% if page.header-img %&#125;&#123;&#123; page.header-img &#125;&#125;&#123;% else %&#125;&#123;&#123; site.header-img &#125;&#125;&#123;% endif %&#125;&apos;)</div></pre></td></tr></table></figure>
 <p>再次通过翻阅<a href="http://jekyllcn.com/docs/index/" target="_blank" rel="external">官方文档</a>，我们可以知道在所有<code>site.{CONFIG}</code>表示的设置项都是在<code>_config.yml</code>中给出的设置项。</p>

@@ -104,19 +104,19 @@
 <meta property="og:url" content="http://ray-eldath.github.io/2016/10/11/cryptography-1/index.html">
 <meta property="og:site_name" content="Eldath's Blog">
 <meta property="og:description" content="你好，密码学(1)：古典密码学（上）古典密码学 与 现代密码学 的区别（以下文字摘自维基百科 ，想单击文内链接的同学读者请自备 LADDER）  按照发展方向：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（消息验证码）、信息发布的不可抵赖性（数字签名）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。  按照">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161023_122041.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_195713.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_210714.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_213956.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_224840.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231328.png.png">
-<meta property="og:image" content="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231843.png.png">
-<meta property="og:updated_time" content="2017-04-09T04:22:28.208Z">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/cryptography-1.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161023_122041.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_195713.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_210714.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_213956.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_224840.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_231328.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_231843.png">
+<meta property="og:updated_time" content="2017-04-16T13:58:05.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="密码学(1)：古典密码学（上）">
 <meta name="twitter:description" content="你好，密码学(1)：古典密码学（上）古典密码学 与 现代密码学 的区别（以下文字摘自维基百科 ，想单击文内链接的同学读者请自备 LADDER）  按照发展方向：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（消息验证码）、信息发布的不可抵赖性（数字签名）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。  按照">
-<meta name="twitter:image" content="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png">
+<meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/cryptography-1.png">
 
 
 
@@ -421,7 +421,7 @@
       
 
       
-        <p><img src="https://res.cloudinary.com/ray-eldath/image/upload/c_scale,q_auto:eco,w_0.8/header-img/talk-about-cryptography-2.png.png" class="full-image"></p>
+        <p><img src="http://ray-eldath.image.alimmdn.com/header/cryptography-1.png" class="full-image"></p>
 <h1 id="你好，密码学-1-：古典密码学（上）"><a href="#你好，密码学-1-：古典密码学（上）" class="headerlink" title="你好，密码学(1)：古典密码学（上）"></a>你好，密码学(1)：古典密码学（上）</h1><h2 id="古典密码学-与-现代密码学-的区别"><a href="#古典密码学-与-现代密码学-的区别" class="headerlink" title="古典密码学 与 现代密码学 的区别"></a>古典密码学 与 现代密码学 的区别</h2><p>（以下文字摘自<a href="https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A0%81%E5%AD%A6" target="_blank" rel="external">维基百科</a> ，想单击文内链接的<del>同学</del>读者请自备 LADDER）</p>
 <ul>
 <li><p><strong>按照发展方向</strong>：古典密码学主要关注信息的保密书写和传递，以及与其相对应的破译方法。而现代密码学不只关注信息保密问题，还同时涉及信息完整性验证（<a href="https://zh.wikipedia.org/w/index.php?title=%E6%B6%88%E6%81%AF%E9%AA%8C%E8%AF%81%E7%A0%81&amp;action=edit&amp;redlink=1" target="_blank" rel="external">消息验证码</a>）、信息发布的不可抵赖性（<a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D" target="_blank" rel="external">数字签名</a>）、以及在计算中产生的来源于内部和外部的攻击的信息安全问题。</p>
@@ -437,9 +437,9 @@
 <p>依照密码学的惯例，明文一律使用小写，密文一律使用大写。</p>
 </blockquote>
 <h3 id="工作方式"><a href="#工作方式" class="headerlink" title="工作方式"></a>工作方式</h3><p>作为最早的密码，凯撒移位密码的工作方式显然相当简单：</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161023_122041.png.png" alt="凯撒移位密码工作方式分析"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161023_122041.png" alt="凯撒移位密码工作方式分析"></p>
 <p>从下图中可以看出，子密钥（不知道这个说法是否合适，欢迎读者指出）的生成，就是将明文字母表按顺序位移，并将 多/少 出来的部分补到密文字母表的前/后面去：</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_195713.png.png" alt="凯撒移位密码工作方式说明"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_195713.png" alt="凯撒移位密码工作方式说明"></p>
 <p>这样，一个凯撒移位密码的字母表就生成了。只要保证通信双方都知道这个密钥，使用它来传递信息，足以保证最最基本的安全性。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>作为历史上第一个实用密码，凯撒移位密码的安全性实在不高。但由于当时密码破译术还未出现，凯撒移位密码也能在一定程度上保护信息安全。</p>
 <h2 id="单字母表替换密码-又称简单替换密码"><a href="#单字母表替换密码-又称简单替换密码" class="headerlink" title="单字母表替换密码(又称简单替换密码)"></a>单字母表替换密码(又称简单替换密码)</h2><p><strong>注释：根据<a href="https://www.zhihu.com/people/liu-wei-ran-8-34" target="_blank" rel="external">刘巍然-学酥</a> 在 <a href="https://zhuanlan.zhihu.com/p/20331980" target="_blank" rel="external">利用机器学习实施攻击：Probabilistic Spying on Encrypted Tunnels</a> 中提及的内容，该密码称作“单表代换密码”，而下一种密码称作“多表代换密码”。但作者认为“单字母表替换密码”和“多字母表替换密码”的名称更易理解，故未修正。</strong></p>
@@ -464,17 +464,17 @@
 <p>密文：EDA1000 KO ANZEPD’S CQKA BTETJA.</p>
 </blockquote>
 <p>这一次，位移不再明显了，甚至连同一个明文字母（注意看 <code>good</code> ）都对应了两个密文字母，如何做到的？请看下面的解析：</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_210714.png.png" alt="多字母表替换密码解析"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_210714.png" alt="多字母表替换密码解析"></p>
 <p>在这种加密方法中，我们将使用 <strong>多个字母表</strong>，（此处是2个）交替使用，（此处约定 <code>先使用第一个 - 然后第二个 - 再又第一个 - ...</code> 的次序，从而达到提高安全性的目的.</p>
 <blockquote>
 <p>那么每个字母表就可以使用生成单字母表替换密码的任一一种方法来生成了。</p>
 </blockquote>
 <p>但这种加密方式的安全性仍不够高，因为当字母表选择规则为 <code>A - B - A - ...</code> 时，对于每个明文字符，每 <code>n</code> （ <code>n</code> 为字母表个数，在这个例子中 <code>n=2</code> ）次，就会重复（即<em>同一明文字符</em> 被加密为<em>同一密文子符</em>）一次，就如下图中的示范：（还是上面那个字母表）</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_213956.png.png" alt="多字母表替换密码缺陷分析"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_213956.png" alt="多字母表替换密码缺陷分析"></p>
 <p><del>相信读者已经</del> 大家肯定看出来了，明文和密码有着非常非常明显的重复，这就给这种密码留下了漏洞，因为通过观察重复间隔，字母表的个数就能够知道了。</p>
 <p>而解决这个问题的唯一方法，就是增加字母表的个数。</p>
 <p>下面这张表格是由曾任罗马外交官，并深受阿尔伯提、特里瑟米斯和波特影响的<strong>维热纳尔</strong>（又译维吉尼亚）确立的，因而以维热纳尔方阵而著称：</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_224840.png.png" alt="维热纳尔方阵"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_224840.png" alt="维热纳尔方阵"></p>
 <blockquote>
 <p>踏马的这个表难弄的要死，我还写了个程序去整… …(゜д゜)</p>
 <p>（感觉我好水啊）</p>
@@ -486,9 +486,9 @@
 <p>密  文：VCIDZ FZFVARBC!</p>
 </blockquote>
 <p>首先，在维热纳尔方阵中找出关键词对应的那几行组成密码表，比如对于关键词<code>October</code>，密码表就是：</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231328.png.png" alt="维热纳尔密码&quot;October&quot;对应的密码表"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_231328.png" alt="维热纳尔密码&quot;October&quot;对应的密码表"></p>
 <p>有了密码表，我们就可以逐个密码表对明文进行逐字母加密了：（注意上图和下图的红框）</p>
-<p><img src="https://res.cloudinary.com/ray-eldath/image/upload/in-post/talk-about-cryptography/sp161021_231843.png.png" alt="维热纳尔密码加密示例"></p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/cryptography/sp161021_231843.png" alt="维热纳尔密码加密示例"></p>
 <p>这就是维热纳尔密码的优点。在上图中我特意将末尾的<code>z</code>写了很多次，但却没有一次重复。所以维热纳尔密码的一大优点就在于安全性由关键字长度决定，关键词越长，相同字母明文被加密为相同字母密文（即重复）的次数就越少，安全性也就越高。</p>
 <hr>
 <p>维热纳尔密码富有创造性地使用了多个密码表作为密钥，同时首次使密码的安全性完全可控，极大地影响今后密码学的发展。</p>
@@ -506,7 +506,7 @@
 <blockquote>
 <p>密文：GZIYVMGPTUUDCHBCWIFRRMKMFEIE<br>     SCLHKGMKZRPUGQTIRKEWMZMTECUI<br>     UCCIDJIYWDMSMEXTULNLVMNJIFFD<br>     MKMHMGJXLLHIVYGVAQIKIFIKVVMU<br>     UMFWDKVRZOMYMIYWXGXGXKJHXXRR<br>     ZLMFMBGIANLVGRRV<br>密钥：prejudice</p>
 </blockquote>
-<h1 id="本篇完"><a href="#本篇完" class="headerlink" title="本篇完"></a>本篇完</h1><p>首发在<a href="https://ray-eldath.github.io/">作者博客</a>于2016-10-11，第一次修订于2016-11-27，第二次修订于2017-01-27。</p>
+<h1 id="本篇完"><a href="#本篇完" class="headerlink" title="本篇完"></a>本篇完</h1><p>首发在<a href="https://ray-eldath.tech/" target="_blank" rel="external">作者博客</a>于2016-10-11，第一次修订于2016-11-27，第二次修订于2017-01-27。</p>
 <blockquote>
 <p><del>蛤</del> 哈，一二次修订都是27号诶。</p>
 <p><del>欢迎关注作者 知乎 Eldath 及 GitHub Ray-Eldath</del>。</p>
