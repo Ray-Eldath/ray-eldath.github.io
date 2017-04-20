@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ray-eldath.tech/2017/04/08/hello-cryptography-3/</loc>
+    
+    <lastmod>2017-04-20T07:45:58.446Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</loc>
+    
+    <lastmod>2017-04-20T07:43:26.027Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ray-eldath.tech/2017/04/17/spanish-note-1/</loc>
     
     <lastmod>2017-04-17T12:51:08.313Z</lastmod>
@@ -54,20 +68,6 @@
     <loc>http://ray-eldath.tech/2016/10/06/hello-world/</loc>
     
     <lastmod>2017-04-16T13:53:32.947Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</loc>
-    
-    <lastmod>2017-04-16T13:52:19.033Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/04/08/hello-cryptography-3/</loc>
-    
-    <lastmod>2017-04-16T13:51:28.763Z</lastmod>
     
   </url>
   
