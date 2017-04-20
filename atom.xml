@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-04-17T12:51:08.313Z</updated>
+  <updated>2017-04-20T08:00:09.635Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -14,6 +14,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>你好，密码学(3)：离散概率（速成课）（续）</title>
+    <link href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/"/>
+    <id>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</id>
+    <published>2017-04-20T08:00:25.000Z</published>
+    <updated>2017-04-20T08:00:09.635Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;密码学I：离散概率（速成课）（续）&quot;&gt;&lt;a href
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
+    
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+  </entry>
   
   <entry>
     <title>西班牙语笔记(1)：基础1</title>
@@ -56,30 +79,6 @@
       <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
       <category term="Other" scheme="http://ray-eldath.tech/tags/Other/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>你好，密码学(3)：离散概率（速成课）（续）</title>
-    <link href="http://ray-eldath.tech/2017/04/08/hello-cryptography-3/"/>
-    <id>http://ray-eldath.tech/2017/04/08/hello-cryptography-3/</id>
-    <published>2017-04-08T13:58:25.000Z</published>
-    <updated>2017-04-20T07:45:58.446Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;我图还没整好，先配这图吧&lt;/del&gt;&lt;/p&gt;
-&lt;h1
-    
-    </summary>
-    
-    
-      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
-    
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
-      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
     
   </entry>
   
