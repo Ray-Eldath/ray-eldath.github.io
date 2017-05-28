@@ -1,0 +1,1032 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="QdtC5jYsMSZ0zyzafCg1N43nr6tEuKqVriq6fx_vFXg" />
+
+
+
+
+  <meta name="yandex-verification" content="03cbd86af2d76a91" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//cdn.jsdelivr.net/fontawesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Tech,Avalon,Project," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Eldath's Blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="�������Ľ����ܶ��ֿ���ʳ��Avalon�ķ��������������ڲ������С� [TOC] ���ȣ����Ľ��ṩ����ʳ��Avalon����Ҫ�����������Լ���Ӧ��ѡ����  ֱ��ʳ��Avalon   ��Avalon��Ϊ�����������Լ�����Ŀ ��������Ŀ��ΪAvalon�Ĳ�����������v0.0.1b�">
+<meta name="keywords" content="Tech,Avalon,Project">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Avalon ����ʳ��ָ��">
+<meta property="og:url" content="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/index.html">
+<meta property="og:site_name" content="Eldath's Blog">
+<meta property="og:description" content="�������Ľ����ܶ��ֿ���ʳ��Avalon�ķ��������������ڲ������С� [TOC] ���ȣ����Ľ��ṩ����ʳ��Avalon����Ҫ�����������Լ���Ӧ��ѡ����  ֱ��ʳ��Avalon   ��Avalon��Ϊ�����������Լ�����Ŀ ��������Ŀ��ΪAvalon�Ĳ�����������v0.0.1b�">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg">
+<meta property="og:updated_time" content="2017-05-28T07:24:55.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Avalon ����ʳ��ָ��">
+<meta name="twitter:description" content="�������Ľ����ܶ��ֿ���ʳ��Avalon�ķ��������������ڲ������С� [TOC] ���ȣ����Ľ��ṩ����ʳ��Avalon����Ҫ�����������Լ���Ӧ��ѡ����  ֱ��ʳ��Avalon   ��Avalon��Ϊ�����������Լ�����Ŀ ��������Ŀ��ΪAvalon�Ĳ�����������v0.0.1b�">
+<meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'VVCXALZ8CM',
+      apiKey: '2ac0dd0a1534d30465ee6f51034fd0e9',
+      indexName: 'eldath',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"搜索...","hits_empty":"没有找到与 ${query} 相关的结果","hits_stats":"找到相关结果 ${hits} 个， 用时 ${time}ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/"/>
+
+
+<!--<script src="//cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
+<link href="/pace.css" rel="stylesheet" />-->
+
+
+  <title> Avalon ����ʳ��ָ�� | Eldath's Blog </title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-97484560-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Eldath's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Tech, Life and Startalk.</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+  <div class="algolia-popup popup search-popup">
+    <div class="algolia-search">
+      <div class="algolia-search-input-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="algolia-search-input" id="algolia-search-input"></div>
+    </div>
+
+    <div class="algolia-results">
+      <div id="algolia-stats"></div>
+      <div id="algolia-hits"></div>
+      <div id="algolia-pagination" class="algolia-pagination"></div>
+    </div>
+
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+  </div>
+
+
+
+
+    </div>
+  
+</nav>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Eldath">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eldath's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                Avalon ����ʳ��ָ��
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-28T15:17:47+08:00">
+                2017-05-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  439
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><img src="http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg" class="full-image"></p>
+<h1 id="����"><a href="#����" class="headerlink" title="����"></a>����</h1><p>���Ľ����ܶ��ֿ���ʳ��Avalon�ķ��������������ڲ������С�</p>
+<p>[TOC]</p>
+<p>���ȣ����Ľ��ṩ����ʳ��Avalon����Ҫ�����������Լ���Ӧ��ѡ����</p>
+<ul>
+<li>ֱ��ʳ��Avalon</li>
+</ul>
+<ul>
+<li>��Avalon��Ϊ�����������Լ�����Ŀ</li>
+<li>��������Ŀ��ΪAvalon�Ĳ�����<strong>������<code>v0.0.1b</code>�Ժ���RELEASE�汾��<code>46b2068afe</code>���Ժ��Ŀ��հ汾</strong>��</li>
+</ul>
+<p>��ֱ�ӵ����Ϸ�Ŀ¼�еĶ�Ӧ��������ת����Ӧ���֡�</p>
+<h1 id="һ�еĳ�ʼ"><a href="#һ�еĳ�ʼ" class="headerlink" title="һ�еĳ�ʼ"></a>һ�еĳ�ʼ</h1><p><strong>! ������Ϊ�������ֵĹ�ͬ�ȵ����裬�����ɱ��²������ٽ��ж�Ӧ�ĺ������� !</strong></p>
+<h2 id="��װPerl"><a href="#��װPerl" class="headerlink" title="��װPerl"></a>��װPerl</h2><p>���ȣ�����Avalon����<a href="https://github.com/sjdy521/Mojo-Webqq" target="_blank" rel="external">Mojo-Webqq</a>����Perl�㣬������Ҫ��װPerl��</p>
+<p>�����ҵĸ���<del>�о�</del>�ȿӣ�����ActivePerl������ʹ��Perl����֮һ�������е�<a href="https://www.activestate.com/activeperl/downloads" target="_blank" rel="external">ActivePerl�ٷ���վ</a>���ء�</p>
+<p>��Ȼ��Ҳ����ѡ������Perl���������±���</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ƽ̨</th>
+<th style="text-align:left">�Ƽ�ѡ��</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Windows</td>
+<td style="text-align:left"><a href="http://www.activestate.com/activeperl/downloads" target="_blank" rel="external"><strong>ActivePerl</strong></a>, <a href="http://strawberryperl.com/" target="_blank" rel="external">StrawberryPerl</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Linux</td>
+<td style="text-align:left"><a href="http://www.activestate.com/activeperl/downloads" target="_blank" rel="external"><strong>ActivePerl</strong></a>, ϵͳ�Դ�, yum/apt�Ȱ�������, �ٷ�Դ������</td>
+</tr>
+<tr>
+<td style="text-align:left">Mac</td>
+<td style="text-align:left"><a href="http://www.activestate.com/activeperl/downloads" target="_blank" rel="external"><strong>ActivePerl</strong></a>, ϵͳ�Դ�</td>
+</tr>
+</tbody>
+</table>
+<h2 id="��װcpanm"><a href="#��װcpanm" class="headerlink" title="��װcpanm"></a>��װcpanm</h2><p>����Mojo-Webqq�ն�cpanmΪ���������ߣ��������ǻ���Ҫ��װcpanm��</p>
+<p>��װһ�������ַ�����ѡ�����е�<strong>����һ��</strong>���ɣ�</p>
+<h3 id="����һ��ͨ��cpan��װ���Ƽ���"><a href="#����һ��ͨ��cpan��װ���Ƽ���" class="headerlink" title="����һ��ͨ��cpan��װ���Ƽ���"></a>����һ��ͨ��cpan��װ���Ƽ���</h3><p>���ն��У�ִ���������</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ cpan -i App::cpanminus</div></pre></td></tr></table></figure>
+<h3 id="��������ֱ�Ӱ�װ"><a href="#��������ֱ�Ӱ�װ" class="headerlink" title="��������ֱ�Ӱ�װ"></a>��������ֱ�Ӱ�װ</h3><p>���ն��У�ִ���������</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ curl http://share-10066126.cos.myqcloud.com/cpanm.pl|perl - App::cpanminus</div></pre></td></tr></table></figure>
+<h2 id="��װMojo-Webqq����������"><a href="#��װMojo-Webqq����������" class="headerlink" title="��װMojo-Webqq����������"></a>��װMojo-Webqq����������</h2><p>����cpanm�İ�װ�������ǾͿ���ֱ��ʹ��cpanm����Mojo-Webqq�İ�װ/�����ˡ�</p>
+<p>���ն��У�ִ���������</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cpanm --mirror http://mirrors.163.com/cpan/ Mojo::Webqq</div><div class="line">$ cpanm --mirror http://mirrors.163.com/cpan/ Mojo::Weixin</div></pre></td></tr></table></figure>
+<p>���ڸ��·����󾡿�ִ�������������£���Ϊ<em>ĳѶ������ɾAPI���²��ֹ���ʧЧ����ʱ��ֻ�ܾ������߸����ˡ�</em></p>
+<h3 id="��װ��������"><a href="#��װ��������" class="headerlink" title="��װ��������"></a>��װ��������</h3><p>����δʹ����<a href="http://www.activestate.com/activeperl/downloads" target="_blank" rel="external"><strong>ActivePerl��ȫƽ̨��</strong></a>��<a href="http://strawberryperl.com/" target="_blank" rel="external">StrawberryPerl��Windows��</a>�Ѿ�����Mojo-Webqq��������ģ����Perl���������п��ܳ�������ȱʧ�����⡣�������ն���ִ�У�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">For RedHat/Centos:</div><div class="line"> $ yum install -y openssl-devel</div><div class="line">For Ubuntu:</div><div class="line"> $ sudo apt-get install libssl-dev</div></pre></td></tr></table></figure>
+<p>���ٳ������°�װMojo-Webqq��</p>
+<h2 id="��װJava"><a href="#��װJava" class="headerlink" title="��װJava"></a>��װJava</h2><p>��<a href="https://www.java.com/zh_CN/download/help/download_options.xml" target="_blank" rel="external"><strong>���ΰ�װ Java��</strong></a>��</p>
+<h1 id="ֱ��ʹ��Avalon"><a href="#ֱ��ʹ��Avalon" class="headerlink" title="ֱ��ʹ��Avalon"></a>ֱ��ʹ��Avalon</h1><p><strong>! ��ȷ�����Ѿ����ɡ�һ�еĳ�ʼ��һ���е����в��� !</strong></p>
+<h3 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h3><p>����������Ҫ��Դ�������в�����������ֱ�ӵ�<a href="https://github.com/Ray-Eldath/Avalon/releases" target="_blank" rel="external">RELEASEҳ��</a>��������RELEASE���ɡ�</p>
+<h3 id="����-2"><a href="#����-2" class="headerlink" title="����"></a>����</h3><p>����ʹ��<code>cd</code>�����һ���������ص��ļ���Ŀ¼��Ϊ����Ŀ¼��Ȼ����ѹ����������<code>.zip</code>�ļ�������ִ�У�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ cd bin</div><div class="line">$ ./Avalon</div></pre></td></tr></table></figure>
+<p>v0.0.1b���Ժ��汾��Avalon�ܹ��Զ�����Mojo-Webqq��Mojo-Weixin���̣�����ʹ�õİ汾��v0.0.1b֮ǰ�������°汾��<del>��ʵ��������д�ֶ�ִ��.pl�ļ��Ĳ���</del>��</p>
+<h3 id="�ر�����"><a href="#�ر�����" class="headerlink" title="�ر�����"></a>�ر�����</h3><p>����ʹ�õĲ���ϵͳ<strong>û��ͼ�ν���</strong>����ζ��������ֱ��ɨ��ά����¼�����밴���²���������</p>
+<ol>
+<li>�༭<code>Avalon����Ŀ¼\bin</code>Ŀ¼�µ�<code>Mojo-Webqq.pl</code>�ļ���ȡ��<code># $client-&gt;load(&quot;UploadQRcode&quot;);</code>���е�ע�͡�</li>
+</ol>
+<hr>
+<p>���ϼ���ֱ��ʹ��Avalon���������в�����Have a good time !</p>
+<h1 id="��Avalon��Ϊ�����������Լ�����L��"><a href="#��Avalon��Ϊ�����������Լ�����L��" class="headerlink" title="��Avalon��Ϊ�����������Լ�����Ŀ��"></a>��Avalon��Ϊ�����������Լ�����Ŀ��</h1><p><strong>! ��ȷ�����Ѿ����ɡ�һ�еĳ�ʼ��һ���е����в��� !</strong></p>
+<h3 id="��������"><a href="#��������" class="headerlink" title="��������"></a>��������</h3><p>Avalon��ʹ��<a href="https://jitpack.io" target="_blank" rel="external">JitPack</a>��Ϊ�����������밴<a href="https://jitpack.io/#Ray-Eldath/Avalon" target="_blank" rel="external">Ray-Eldath / Avalon</a>�еĲ��轫Avalon������������Ŀ�������С�</p>
+<p><strong>2017.5.28����ֹ��<code>v0.0.1b</code>�汾�������ز��Թ��ܵ���ʽRELEASE�汾��δ������������ʹ�ô����ز��Թ��ܵ�Avalon���뽫�����汾�Ÿ�Ϊ<code>c1f7e18e25</code>������<code>config.json</code>�е�<code>debug</code>��Ϊ<code>true</code>�������Ѿ�������<code>v0.0.1b</code>�Ժ��汾��Avalon�������Ա���ʾ��</strong></p>
+<h3 id="���������l�"><a href="#���������l�" class="headerlink" title="���������ļ�"></a>���������ļ�</h3><p>���ȣ�����Ҫ����<a href="https://github.com/Ray-Eldath/Avalon/releases" target="_blank" rel="external">Avalon������RELEASE</a>�е�<code>.zip</code>�ļ���</p>
+<p>Ȼ����<code>.bin</code>Ŀ¼�³�<code>Avalon</code>��<code>Avalon.bat</code>֮���������ļ�����������<strong>��Ŀ��Ŀ¼</strong>��</p>
+<h3 id="��ʼʳ��"><a href="#��ʼʳ��" class="headerlink" title="��ʼʳ��"></a>��ʼʳ��</h3><p>Avalon��<code>v0.0.1b</code>����ʼ�ṩ���Ƶ�MessageHook���ܡ�������ֱ����������Ŀ���������д��룺</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MessageHooker.register(<span class="keyword">new</span> GroupMessageHook(HookType.ALL, (e) -&gt; &#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>����</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">MessageHooker.register(<span class="keyword">new</span> FriendMessageHook((e) -&gt; &#123;</div><div class="line">  <span class="comment">// do something</span></div><div class="line">&#125;));</div></pre></td></tr></table></figure>
+<p>�����Ӷ�Ⱥ��Ϣ��Hook���Ժ�����Ϣ��Hook��</p>
+<blockquote>
+<p>����<code>HookType</code>�Ľ��ͣ�</p>
+<p><code>HookType.ALL</code>��������Ϣ���ύ�ɸ�Hook����</p>
+<p><code>HookType.ADMIN_ONLY</code>��ֻ�й���Ա��������Ϣ�Żύ�ɸ�Hook�����������������ù���Ա�˻����μ�<a href="">����Avalon</a></p>
+<p><code>HookType.GENERAL_USER_ONLY</code>��ֻ����ͨ�û����ǹ���Ա����������Ϣ�Żύ�ɸ�Hook����</p>
+</blockquote>
+<hr>
+<p>���Ͼ��ǽ�Avalon��Ϊ�����������Լ�����Ŀ�����������в��衣Have a good <del>day</del> time !</p>
+<h1 id="��������L��ΪAvalon�Ĳ���"><a href="#��������L��ΪAvalon�Ĳ���" class="headerlink" title="��������Ŀ��ΪAvalon�Ĳ���"></a>��������Ŀ��ΪAvalon�Ĳ���</h1><p><strong>������<code>v0.0.1b</code>�Ժ���RELEASE�汾��<code>46b2068afe</code>���Ժ��Ŀ��հ汾</strong></p>
+<p><strong>! ��ȷ�����Ѿ����ɡ�һ�еĳ�ʼ��һ���е����в��� !</strong></p>
+<h2 id="clone����"><a href="#clone����" class="headerlink" title="clone����"></a>clone����</h2><p>��������Ҫclone Avalon�Ĵ��롣���ն���ִ�У�</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">git clone https://github.com/Ray-Eldath/Avalon.git</div></pre></td></tr></table></figure>
+<h2 id="����������L"><a href="#����������L" class="headerlink" title="����������Ŀ"></a>����������Ŀ</h2><p>Avalon���Զ���ȡ<code>plugin</code>Ŀ¼�µĺϷ��ļ������أ�Ŀ¼�����������½ڣ�����������Ҫ��֧�ֲ������ܵ�Avalon���뵽������Ŀ�����У�Ȼ�󴴽�һ��ʵ�ֽӿ�<code>AvalonPlugin</code>���࣬�ýӿ��н����ڷ���<code>void main()</code>����������Ϊ�������������ڵ㡣�������ٸ÷�����ʹ��MessageHook��������Ҫ�Ĺ��ܡ�</p>
+<p>���������Ĳ���֮�����뵼��һ��<strong>����Avalon����</strong>��<code>.jar</code>�ļ�������������������<code>plugins</code>Ŀ¼�С�</p>
+<h2 id="����L¼"><a href="#����L¼" class="headerlink" title="����Ŀ¼"></a>����Ŀ¼</h2><p><strong>��������ʹ��<code>v0.0.1b</code>�Ժ���RELEASE�汾��������ֱ���������ڵ����ݡ�</strong></p>
+<p>��Avalon��Ŀ��Ŀ¼�£��½�����Ŀ¼���ļ���</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Avalon</div><div class="line">������data</div><div class="line">	������plugin</div><div class="line">		������plugins.json</div></pre></td></tr></table></figure>
+<p>��������<code>plugins.json</code>���������Ĳ�����������Ϣ����ʽ���£�</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"plugins"</span>: &#123;</div><div class="line">    <span class="attr">"������������"</span>: &#123;</div><div class="line">      <span class="attr">"version"</span>: <span class="string">"�������İ汾"</span>,</div><div class="line">      <span class="attr">"copyright"</span>: <span class="string">"�������İ�Ȩ˵��"</span>,</div><div class="line">      <span class="attr">"website"</span>: <span class="string">"��������֧����վ"</span>,</div><div class="line">      <span class="attr">"class"</span>: <span class="string">"�������������ڵ�"</span>,</div><div class="line">      <span class="attr">"file"</span>: <span class="string">"������.jar�ļ�������"</span>,</div><div class="line">      <span class="attr">"enable"</span>: �Ƿ���������</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>���磺</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  <span class="attr">"plugins"</span>: &#123;</div><div class="line">    <span class="attr">"Avalon-Game"</span>: &#123;</div><div class="line">      <span class="attr">"version"</span>: <span class="string">"v0.0.1-alpha"</span>,</div><div class="line">      <span class="attr">"copyright"</span>: <span class="string">"����������GPL v2.0��Դ��"</span>,</div><div class="line">      <span class="attr">"website"</span>: <span class="string">"https://github.com/Ray-Eldath/Avalon-Game"</span>,</div><div class="line">      <span class="attr">"class"</span>: <span class="string">"avalon.game.main.AvalonPlugin"</span>,</div><div class="line">      <span class="attr">"file"</span>: <span class="string">"Avalon-Game_main.jar"</span>,</div><div class="line">      <span class="attr">"enable"</span>: <span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<p>���Ͼ��ǽ�������Ŀ��ΪAvalon�Ĳ������������в��衣Congratulation !</p>
+<h1 id="����…-…"><a href="#����…-…" class="headerlink" title="����… …"></a>����… …</h1><p>�������и������⣬����<code>echo ZWxkYXRoLnJheUBwcm90b25tYWlsLmNvbQ== | base64 -d</code>���ʼ���ֱ������Ŀ���½�<a href="https://github.com/Ray-Eldath/Avalon/issues" target="_blank" rel="external">issues</a>��</p>
+<p>���󣬱��Ĳ��ֲ���<a href="https://github.com/Ray-Eldath/Avalon-Game" target="_blank" rel="external">Mojo-Webqq/README.md</a>��</p>
+<p>����ϵӦ<a href="https://github.com/ice1000" target="_blank" rel="external">ice1000</a> dalao��Ҫ����д��</p>
+<p>ǿ�һ�ӭ����Avalon����������Ŀ���״������ṩ�κ���ʽ�İ�����</p>
+<hr>
+<p>���Ͼ��Ǳ��ĵ�ȫ�����ݡ�</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      Ray Eldath
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/" title="Avalon ����ʳ��ָ��">http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Tech/" rel="tag"># Tech</a>
+          
+            <a href="/tags/Avalon/" rel="tag"># Avalon</a>
+          
+            <a href="/tags/Project/" rel="tag"># Project</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/05/28/avalon-profile-description/" rel="prev" title="Avalon 配置文件说明">
+                Avalon 配置文件说明 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+    <div class="post-spread">
+      
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_inline_share_toolbox">
+  <script type = "text/javascript" src = "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58e8daf2f830725a" async = "async" ></script>
+</div>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODEwMC80Njcz"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ray-eldath.image.alimmdn.com/special/avatar-big.png"
+               alt="Ray Eldath" />
+          <p class="site-author-name" itemprop="name">Ray Eldath</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="mailto:eldath.ray@protonmail.com" target="_blank" title="Email">
+                  
+                    <i class="fa fa-fw fa-envelope-o"></i>
+                  
+                  Email
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Ray-Eldath" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-question-circle-o"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/eldath" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#����"><span class="nav-number">1.</span> <span class="nav-text">����</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#һ�еĳ�ʼ"><span class="nav-number">2.</span> <span class="nav-text">һ�еĳ�ʼ</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#��װPerl"><span class="nav-number">2.1.</span> <span class="nav-text">��װPerl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#��װcpanm"><span class="nav-number">2.2.</span> <span class="nav-text">��װcpanm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#����һ��ͨ��cpan��װ���Ƽ���"><span class="nav-number">2.2.1.</span> <span class="nav-text">����һ��ͨ��cpan��װ���Ƽ���</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#��������ֱ�Ӱ�װ"><span class="nav-number">2.2.2.</span> <span class="nav-text">��������ֱ�Ӱ�װ</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#��װMojo-Webqq����������"><span class="nav-number">2.3.</span> <span class="nav-text">��װMojo-Webqq����������</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#��װ��������"><span class="nav-number">2.3.1.</span> <span class="nav-text">��װ��������</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#��װJava"><span class="nav-number">2.4.</span> <span class="nav-text">��װJava</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ֱ��ʹ��Avalon"><span class="nav-number">3.</span> <span class="nav-text">ֱ��ʹ��Avalon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#����-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">����</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#����-2"><span class="nav-number">3.0.2.</span> <span class="nav-text">����</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#�ر�����"><span class="nav-number">3.0.3.</span> <span class="nav-text">�ر�����</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#��Avalon��Ϊ�����������Լ�����L��"><span class="nav-number">4.</span> <span class="nav-text">��Avalon��Ϊ�����������Լ�����Ŀ��</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#��������"><span class="nav-number">4.0.1.</span> <span class="nav-text">��������</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#���������l�"><span class="nav-number">4.0.2.</span> <span class="nav-text">���������ļ�</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#��ʼʳ��"><span class="nav-number">4.0.3.</span> <span class="nav-text">��ʼʳ��</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#��������L��ΪAvalon�Ĳ���"><span class="nav-number">5.</span> <span class="nav-text">��������Ŀ��ΪAvalon�Ĳ���</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#clone����"><span class="nav-number">5.1.</span> <span class="nav-text">clone����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����������L"><span class="nav-number">5.2.</span> <span class="nav-text">����������Ŀ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����L¼"><span class="nav-number">5.3.</span> <span class="nav-text">����Ŀ¼</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#����…-…"><span class="nav-number">6.</span> <span class="nav-text">����… …</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ray Eldath</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+  
+  
+
+
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three.min.js"></script>
+
+  
+  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/algolia-instant-search/instantsearch.min.css">
+
+  
+  
+  <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
+  
+
+  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+</body>
+</html>

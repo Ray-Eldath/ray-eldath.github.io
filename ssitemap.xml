@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</loc>
+    
+    <lastmod>2017-05-28T07:24:55.358Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/05/28/avalon-profile-description/</loc>
+    
+    <lastmod>2017-05-28T07:24:34.542Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</loc>
+    
+    <lastmod>2017-05-28T07:06:21.871Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</loc>
     
     <lastmod>2017-04-20T08:00:09.635Z</lastmod>
@@ -75,13 +96,6 @@
     <loc>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</loc>
     
     <lastmod>2017-04-16T13:50:45.835Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</loc>
-    
-    <lastmod>2017-04-16T13:48:17.013Z</lastmod>
     
   </url>
   

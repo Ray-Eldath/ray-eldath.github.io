@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-04-20T08:00:09.635Z</updated>
+  <updated>2017-05-28T07:24:55.358Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -14,6 +14,52 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Avalon ����ʳ��ָ��</title>
+    <link href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/"/>
+    <id>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</id>
+    <published>2017-05-28T07:17:47.000Z</published>
+    <updated>2017-05-28T07:24:55.358Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;����&quot;&gt;&lt;a href=&quot;#����&quot; 
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
+    
+      <category term="Avalon" scheme="http://ray-eldath.tech/tags/Avalon/"/>
+    
+      <category term="Project" scheme="http://ray-eldath.tech/tags/Project/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Avalon 配置文件说明</title>
+    <link href="http://ray-eldath.tech/2017/05/28/avalon-profile-description/"/>
+    <id>http://ray-eldath.tech/2017/05/28/avalon-profile-description/</id>
+    <published>2017-05-28T07:07:05.000Z</published>
+    <updated>2017-05-28T07:24:34.542Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-profile-description.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; cl
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
+    
+      <category term="Avalon" scheme="http://ray-eldath.tech/tags/Avalon/"/>
+    
+      <category term="Project" scheme="http://ray-eldath.tech/tags/Project/"/>
+    
+  </entry>
   
   <entry>
     <title>你好，密码学(3)：离散概率（速成课）（续）</title>
@@ -66,7 +112,7 @@
     <link href="http://ray-eldath.tech/2017/04/08/blog-system-update-successful/"/>
     <id>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</id>
     <published>2017-04-08T14:34:57.000Z</published>
-    <updated>2017-04-16T13:48:17.013Z</updated>
+    <updated>2017-05-28T07:06:21.871Z</updated>
     
     <summary type="html">
     
