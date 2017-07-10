@@ -79,7 +79,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!," />
+  <meta name="keywords" content="Tech," />
 
 
 
@@ -97,19 +97,21 @@
 
 
 
-<meta name="description" content="你好，密码学(1)：离散概率（速成课）导览课程地址请见Coursera。 对于分布概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …  基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。 $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$">
-<meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!">
+<meta name="description" content="基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了ProgramLeague / Avalon-Executive这个还很不完善的雏形。 今天刚把核心">
+<meta name="keywords" content="Tech">
 <meta property="og:type" content="article">
-<meta property="og:title" content="你好，密码学(2)：离散概率（速成课）">
-<meta property="og:url" content="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/index.html">
+<meta property="og:title" content="基于Docker的Codepad / OJ构想与实现（伪）">
+<meta property="og:url" content="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/index.html">
 <meta property="og:site_name" content="Eldath's Blog">
-<meta property="og:description" content="你好，密码学(1)：离散概率（速成课）导览课程地址请见Coursera。 对于分布概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …  基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。 $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$">
-<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png">
-<meta property="og:updated_time" content="2017-04-16T13:50:45.835Z">
+<meta property="og:description" content="基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了ProgramLeague / Avalon-Executive这个还很不完善的雏形。 今天刚把核心">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image.png">
+<meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image1.png?t=1499691252522">
+<meta property="og:updated_time" content="2017-07-10T15:03:33.767Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="你好，密码学(2)：离散概率（速成课）">
-<meta name="twitter:description" content="你好，密码学(1)：离散概率（速成课）导览课程地址请见Coursera。 对于分布概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …  基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。 $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$">
-<meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png">
+<meta name="twitter:title" content="基于Docker的Codepad / OJ构想与实现（伪）">
+<meta name="twitter:description" content="基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了ProgramLeague / Avalon-Executive这个还很不完善的雏形。 今天刚把核心">
+<meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l">
 
 
 
@@ -137,14 +139,14 @@
 
 
 
-  <link rel="canonical" href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/"/>
+  <link rel="canonical" href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/"/>
 
 
 <!--<script src="//cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
 <link href="/pace.css" rel="stylesheet" />-->
 
 
-  <title> 你好，密码学(2)：离散概率（速成课） | Eldath's Blog </title>
+  <title> 基于Docker的Codepad / OJ构想与实现（伪） | Eldath's Blog </title>
   
 
 
@@ -321,7 +323,7 @@
   
 
   <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/">
+    <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
@@ -342,7 +344,7 @@
             
             
               
-                你好，密码学(2)：离散概率（速成课）
+                基于Docker的Codepad / OJ构想与实现（伪）
               
             
           </h2>
@@ -357,8 +359,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-24T13:56:16+08:00">
-                2017-03-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-10T23:03:57+08:00">
+                2017-07-10
               </time>
             
 
@@ -388,7 +390,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,387
+                  1,165
                 </span>
               
 
@@ -423,49 +425,45 @@
       
 
       
-        <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png" class="full-image"></p>
-<h1 id="你好，密码学-1-：离散概率（速成课）"><a href="#你好，密码学-1-：离散概率（速成课）" class="headerlink" title="你好，密码学(1)：离散概率（速成课）"></a>你好，密码学(1)：离散概率（速成课）</h1><h2 id="导览"><a href="#导览" class="headerlink" title="导览"></a>导览</h2><p>课程地址请见<a href="https://www.coursera.org/learn/crypto/lecture/qaEcL/discrete-probability-crash-course" target="_blank" rel="external">Coursera</a>。</p>
-<p>对于分布概率的更详细解释，请见：<a href="https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Discrete_Probability" target="_blank" rel="external">WikiBooks (English)</a></p>
+        <p><img src="http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l" class="full-image"></p>
+<h1 id="基于Docker的Codepad-OJ构想与实现（伪）"><a href="#基于Docker的Codepad-OJ构想与实现（伪）" class="headerlink" title="基于Docker的Codepad / OJ构想与实现（伪）"></a>基于Docker的Codepad / OJ构想与实现（伪）</h1><h2 id="渊源"><a href="#渊源" class="headerlink" title="渊源"></a>渊源</h2><p>本人一直在忙一个项目<a href="https://github.com/Ray-Eldath/Avalon" target="_blank" rel="external">Avalon</a>，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的<a href="https://oi.men.ci/docker-sandbox-judger/" target="_blank" rel="external">基于 Docker 容器的沙盒化评测系统</a>及其相关项目<a href="https://github.com/Menci/docker-sandbox" target="_blank" rel="external">Menci / docker-sandbox</a>，终于做出了<a href="https://github.com/ProgramLeague/Avalon-Executive" target="_blank" rel="external">ProgramLeague / Avalon-Executive</a>这个还很不完善的雏形。</p>
+<p>今天刚把核心功能测试跑过，<del>为了庆祝一下</del>，就写了这篇文章。</p>
+<h2 id="构想"><a href="#构想" class="headerlink" title="构想"></a>构想</h2><p>起先我的想法和<a href="https://oi.men.ci/docker-sandbox-judger/" target="_blank" rel="external">基于 Docker 容器的沙盒化评测系统</a>中的想法很类似：接收客户机的程序，在真机编译，再送进Docker，利用已经放在Docker image中的程序完成资源限制，最后收集输出。</p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image.png" alt="构想1 - 来自oi.men.ci"></p>
+<p><em>上图来自<a href="https://oi.men.ci/docker-sandbox-judger/" target="_blank" rel="external">基于 Docker 容器的沙盒化评测系统</a></em></p>
+<p>但是在实现的过程中，我发现一个<strong>巨大</strong>的问题：</p>
+<p><strong>Windows端编译的程序怎么可能整到Docker的Linux container中运行呢？</strong></p>
 <blockquote>
-<p>注意：文章中对专业名词进行解释的链接均来自<a href="https://zh.wikipedia.org/" target="_blank" rel="external">维基百科</a>，中国大陆读者若想访问请自备… …</p>
+<p>虽然Docker有Windows container，但看看Hub上少得可怜的镜像，还是算了吧。</p>
 </blockquote>
-<h2 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h2><p><strong>$U$</strong>：一个总是有限集的全集。通常是<strong>n位二进制字符串的集合</strong>，记为${0,1}^n$。</p>
-<p><strong>$P$</strong>：全集上的$U$<a href="https://zh.wikipedia.org/zh-cn/%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83" target="_blank" rel="external">概率分布</a>，为一个函数，即$P$。该函数为$U$上的元素分配一个值。</p>
-<blockquote>
-<p>例如：对于${0,1}^n$，即U表示所有两位的二进制串集合。此时$U={00, 01, 10, 11}$。而因为$U$是二进制字符串，因此$P$为$U$中的每一个元素分配一个<strong>0到1之间</strong>的数，称作该元素<strong>在全集$U$中</strong>的<strong>概率</strong>（或权重）。</p>
-</blockquote>
-<p>我们要求：将$U$中所有元素的概率加起来，我们能得到1。即：<br>$$<br>\sum_{x\in U} P(x)=1<br>$$</p>
-<p>个人理解 - 概率分布：对于全集$U$中的每一个元素，$P$返回该元素的概率组成的集合。</p>
-<hr>
-<h2 id="常用概率分布"><a href="#常用概率分布" class="headerlink" title="常用概率分布"></a>常用概率分布</h2><h3 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h3><blockquote>
-<p>先导定义：<br>$|U|$：全集$U$的大小，即全集$U$中元素的个数。</p>
-</blockquote>
-<p><strong>均匀分布</strong>：即为全集$U$中的每一个元素分配<strong>相同</strong>的权重。<br>因为我们要求权重之和为1并且所有这些权重都相等，因此对全集中的每一个元素$X$，它的概率为<code>1/|U|</code>。<br>这意味着若从这个分布中随机抽样，将得到所有<code>n</code>位字符串上的均匀样本。即根据这个分布 所有字符串被抽中的可能性是相同的。</p>
-<h3 id="在点-x-0-的点分布"><a href="#在点-x-0-的点分布" class="headerlink" title="在点$x_0$的点分布"></a>在点$x_0$的点分布</h3><p><strong>点分布</strong>：将所有权重放在单一的点$x_0$上，并对其他$U$中的元素的可能性赋<code>0</code>值。即：</p>
-<p>$$<br>P(x_0)=1,\quad \forall x \neq x_0: \;P(x)=0<br>$$</p>
-<p>因此，此时若从这个分布中多次抽样，将总是能够确保抽到$x_0$代表的数值而绝不会抽到任何其他的数值。</p>
-<h3 id="本节最后"><a href="#本节最后" class="headerlink" title="本节最后"></a>本节最后</h3><p>由于全集$U$总是有限集，事实上我们可以把分布于$U$中每一个元素的权重写出来 从而将整个分布表示为一个向量。该向量的每个实数都在0到1之间。</p>
-<h2 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h2><h3 id="基本定义-1"><a href="#基本定义-1" class="headerlink" title="基本定义"></a>基本定义</h3><p><strong>事件</strong>：考虑全集$U$的一个子集$A$ ，因为全集$U$的所有元素概率之和为<code>1</code>，因此它的子集$A$的概率之和必然介于0和1之间。即：</p>
-<p>$$<br>\mathbf {For\;\:a\;\:set\;}A\subseteq U:\quad Pr[A]=\sum x \in [0,1]<br>$$</p>
-<p>此时，称全集$U$的子集$A$为一个<strong>事件</strong>，集合$A$的概率称为<strong>事件的概率</strong>。</p>
-<h3 id="联合界-union-bound"><a href="#联合界-union-bound" class="headerlink" title="联合界(union bound)"></a>联合界(union bound)</h3><p><strong>联合界</strong>：假定有2个事件 $A_1$ 和 $A_2$ ，它们都是全集$U$的子集。因为$U$代表两个集合的并 ，所以 $A_1$ 或 $A_2$ 发生的概率小于这两个概率之和。即：</p>
-<p>$$<br>Pr[A_1 \cup A_2] \; \le\; Pr[A_1]+Pr[A_2]<br>$$</p>
-<p>原因在于，当我们计算这两个概率之和时，$A_1$ 和 $A_2$ 交集交集中元素的概率被计算了2次，所以这两个概率之和将大于或等于 $A_1$ 和 $A_2$ 并集的实际概率。<br>特别地，若 $A_1 \cap A_2= \varnothing$ ，那么 $Pr[A_1 \cap A_2]$ 将等于 $Pr[A_1]+Pr[A_2]$ ，即：</p>
-<p>$$<br>\mathbf {if} A_1 \cap A_2= \varnothing, \quad \mathbf{than} \;\;\; Pr[A_1 \cap A_2]=Pr[A_1]+Pr[A_2]<br>$$</p>
-<h2 id="随机变量"><a href="#随机变量" class="headerlink" title="随机变量"></a>随机变量</h2><p><strong>随机变量</strong>：一个从全集映射到某个集合$v$的函数，记为$X$。此时我们说集合V是随机变量的值域。<br>更一般地，如果有一个从某个集合$v$中取值的随机变量，那么它实际上生成了集合$v$上的一个概率分布，即：</p>
-<p>$$<br>\mathbf { rand \;\; var.} \;\: x \;\; \mathbf {  includes\;\;a\;\;distribution\;\;on} \;\;V \mathbf:\quad Pr[X=v]:=Pr[x^{-1}(v)]<br>$$</p>
-<p>意思是说：随机变量输出$v$的概率等于我们从全集中随机抽取一个元素，对其施加函数$X$ ，然后输出$v$的可能性是多少。<br>正式地，我们说$X$输出$v$的概率就等于我们从全集中随机抽取一个元素，正好落在 $v$在函数$X$之下的<a href="https://zh.wikipedia.org/wiki/像_(數學" target="_blank" rel="external">原像</a>)中的概率。</p>
-<p><strong>关键</strong>：随机变量在特定集合$v$中取值，就生成了$v$上的一个概率分布。</p>
-<h3 id="均匀随机变量"><a href="#均匀随机变量" class="headerlink" title="均匀随机变量"></a>均匀随机变量</h3><p><strong>均匀随机变量</strong>：假定$U$是某个有限集合，对于全集$U$中的所有元素$a$，随机抽取一个元素$r$等于$a$的概率是 $1\over|U|$ ，即：</p>
-<p>$$<br>r \overset{R} \longleftarrow  \mathbf{\;\;means\;\;devote\;\;uniform\;random\;variable\;\;on}\;\;U\<br>\forall\;a\in U:\quad Pr[i=a]\;=\;\;\frac{1}{|U|}<br>$$</p>
-<p>正式来讲，均匀随机变量是一个<a href="https://zh.wikipedia.org/wiki/恆等函數" target="_blank" rel="external">恒等函数</a>，也就是说对全集中的所有$x$，$R(x)$等于$x$。</p>
-<p>##随机化算法</p>
-<p><strong>确定性算法</strong>：给定输入数据，总是产生相同输出的算法。即一个输入数据$m$ ，总产生相同输出$A(m)$的函数：</p>
-<p>$$<br>y \longleftarrow A(m)<br>$$</p>
-<p><strong>随机化算法</strong>：取输入数据$m$作为输入，但它每次执行算法时都重新取一个<strong>隐性参数</strong>$r$，因为我们每次执行算法所取的$r$都不同，因此即使输入的数据$m$一致，输出也不会相同：</p>
-<p>$$<br>y \longleftarrow A(m\;;\;r)\quad \mathbf{where}\quad r \overset{R} \longleftarrow  {0,1}^R\<br>\mathbf{output\;\;is\;\;a\;\;random\;\;variable}\<br>y \overset{R} \longleftarrow A(m)<br>$$</p>
-<p><strong>关键</strong>：即使随机化算法每次执行时的输入都一样，你还是会得到不同的输出。</p>
-<h1 id="本节完"><a href="#本节完" class="headerlink" title="本节完"></a>本节完</h1>
+<p>因此，上述过程中的编译也必须在Docker中完成。</p>
+<p><img src="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image1.png?t=1499691252522" alt="新构想"></p>
+<p>首先前端服务向后端服务（Executive）发出请求，随后后端服务调用执行器，执行器与Docker交互，执行预处理、编译、运行等的操作，均完成后将结果发送至上层，上层再回复给前端服务。</p>
+<p>对预处理、编译和运行的解释如下：</p>
+<ul>
+<li><strong>Pre-Process</strong>：初始化Docker；拉取image；创建container；将代码写入文件；将代码文件拷入对应的Container等准备工作</li>
+<li><strong>Compile</strong>：将代码编译为可执行程序</li>
+<li><strong>Run</strong>：执行可执行程序并收集输出</li>
+</ul>
+<p>显而易见，Pre-Process和Compile要共用一个container，而Run则需独立创建一个container运行。</p>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><p>为了<del>偷懒</del>降低实现复杂度，我使用了<a href="https://docs.docker.com/engine/admin/resource_constraints/" target="_blank" rel="external">Docker提供的资源限制</a>而非自己编译一个基于<code>setrlimit()</code>的资源限制组件来完成资源限制功能。因此，pre-processor将代码文件放入一个<strong>不加资源限制</strong>的container后，compiler将该代码文件编译，接着(将该可执行文件放入真机)-&gt;(将该可执行文件放入一个<strong>新的 有资源限制</strong>的container)，随后runner(在这个有资源限制的container中运行可执行文件)，最后收集输出并回复上一层。</p>
+<p>当然在实际实现时也不能不加资源限制，只是相对runner的资源限制，compiler的资源限制应该能宽松不少。</p>
+<h3 id="几点注意"><a href="#几点注意" class="headerlink" title="几点注意"></a>几点注意</h3><ol>
+<li><p>为了提高性能及节省资源，compiler、pre-processor使用的container是可以复用的；我们只需<strong>为每个语言</strong>创建独立的container，并不需要<strong>为每份提交</strong>创建；在具体的代码实现中，使用一个<code>CompilerContainerPool</code>就好。</p>
+</li>
+<li><p>由于(拉取镜像、创建pre-processor和compiler使用的container)在整个程序的生命周期中只需操作一次，因此可以将pre-processor拆出initiator专门完成这种<strong>在整个程序的生命周期中只需操作一次</strong>的任务然后在程序入口点调用，从而避免每次收到提交都要检测初始化工作是否已经完成。</p>
+</li>
+<li><p>建议使用类似<a href="https://github.com/spotify/docker-client" target="_blank" rel="external">docker-client</a>这种直接基于HTTP协议而非基于命令行的Docker API以防一些奇怪的问题（虽然我还没遇到过）。</p>
+</li>
+<li><p>对于<del>Jawa</del>Java，基于docker-client“将文件从container复制至真机”的实现是个坑… …下面给出本垃圾钻研出的实现代码：</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyFileOut</span><span class="params">(String containerId, File output, String pathInContainer)</span></span></div><div class="line">            <span class="keyword">throws</span> DockerException, InterruptedException, IOException &#123;</div><div class="line">    File temp = <span class="keyword">new</span> File(output.getParent() + File.separator + <span class="string">"_temp.tar"</span>);</div><div class="line">    Files.createParentDirs(temp);</div><div class="line">    <span class="keyword">if</span> (!temp.createNewFile())</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"can not new temp file: "</span> + temp.toString());</div><div class="line">    TarArchiveOutputStream aos = <span class="keyword">new</span> TarArchiveOutputStream(<span class="keyword">new</span> FileOutputStream(temp));</div><div class="line">    <span class="keyword">try</span> (<span class="keyword">final</span> TarArchiveInputStream tarStream = <span class="keyword">new</span> TarArchiveInputStream(</div><div class="line">            client.archiveContainer(containerId, pathInContainer))) &#123;</div><div class="line">        TarArchiveEntry entry;</div><div class="line">        <span class="keyword">while</span> ((entry = tarStream.getNextTarEntry()) != <span class="keyword">null</span>) &#123;</div><div class="line">            aos.putArchiveEntry(entry);</div><div class="line">            IOUtils.copy(tarStream, aos);</div><div class="line">            aos.closeArchiveEntry();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    aos.finish();</div><div class="line">    aos.close();</div><div class="line">    <span class="keyword">boolean</span> unTarStatus = unTar(<span class="keyword">new</span> TarArchiveInputStream(<span class="keyword">new</span> FileInputStream(temp)), output.getParent());</div><div class="line">    StringBuilder builder = <span class="keyword">new</span> StringBuilder();</div><div class="line">    <span class="keyword">if</span> (!unTarStatus)</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"un tar file error"</span>);</div><div class="line">    <span class="keyword">if</span> (!temp.delete())</div><div class="line">        builder.append(<span class="string">"temp file delete failed, but "</span>);</div><div class="line">    LOGGER.info(builder.append(<span class="string">"copy files "</span>).append(pathInContainer).append(<span class="string">" out of container "</span>).append(containerId).append(<span class="string">" successful"</span>).toString());</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">unTar</span><span class="params">(TarArchiveInputStream tarIn, String outputDir)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">    ArchiveEntry entry;</div><div class="line">    <span class="keyword">boolean</span> newFile = <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">while</span> ((entry = tarIn.getNextEntry()) != <span class="keyword">null</span>) &#123;</div><div class="line">        File tmpFile = <span class="keyword">new</span> File(outputDir + <span class="string">"/"</span> + entry.getName());</div><div class="line">        newFile = tmpFile.createNewFile();</div><div class="line">        OutputStream out = <span class="keyword">new</span> FileOutputStream(tmpFile);</div><div class="line">        <span class="keyword">int</span> length;</div><div class="line">        <span class="keyword">byte</span>[] b = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2048</span>];</div><div class="line">        <span class="keyword">while</span> ((length = tarIn.read(b)) != -<span class="number">1</span>)</div><div class="line">            out.write(b, <span class="number">0</span>, length);</div><div class="line">        out.close();</div><div class="line">    &#125;</div><div class="line">    tarIn.close();</div><div class="line">    <span class="keyword">return</span> newFile;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><strong>注意及时释放资源！！</strong> <strong>注意及时释放资源！！</strong> <strong>注意及时释放资源！！</strong> 包括文件资源不仅要close还要及时删除；container及时close/kill并remove；client最后要close等。</p>
+</li>
+</ol>
+<h2 id="就这些了"><a href="#就这些了" class="headerlink" title="就这些了"></a>就这些了</h2><p>项目地址：<a href="https://github.com/ProgramLeague/Avalon-Executive" target="_blank" rel="external">ProgramLeague / Avalon-Executive</a></p>
+<p>以后可能还有更详细的说明。</p>
+
       
     </div>
 
@@ -493,7 +491,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/" title="你好，密码学(2)：离散概率（速成课）">http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</a>
+      <a href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/" title="基于Docker的Codepad / OJ构想与实现（伪）">http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -511,10 +509,6 @@
           
             <a href="/tags/Tech/" rel="tag"># Tech</a>
           
-            <a href="/tags/Series-Articles/" rel="tag"># Series Articles</a>
-          
-            <a href="/tags/Hello-Cryptography/" rel="tag"># Hello, Cryptography!</a>
-          
         </div>
       
 
@@ -526,18 +520,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/04/08/blog-system-update-successful/" rel="next" title="博客系统更新成功">
-                <i class="fa fa-chevron-left"></i> 博客系统更新成功
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/18/hello-cryptography-1/" rel="prev" title="你好，密码学(1)：什么是密码学">
-                你好，密码学(1)：什么是密码学 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/28/avalon-quick-start-guide/" rel="prev" title="Avalon 快速食用指南">
+                Avalon 快速食用指南 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -716,7 +706,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你好，密码学-1-：离散概率（速成课）"><span class="nav-number">1.</span> <span class="nav-text">你好，密码学(1)：离散概率（速成课）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#导览"><span class="nav-number">1.1.</span> <span class="nav-text">导览</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本定义"><span class="nav-number">1.2.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用概率分布"><span class="nav-number">1.3.</span> <span class="nav-text">常用概率分布</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#均匀分布"><span class="nav-number">1.3.1.</span> <span class="nav-text">均匀分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在点-x-0-的点分布"><span class="nav-number">1.3.2.</span> <span class="nav-text">在点$x_0$的点分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#本节最后"><span class="nav-number">1.3.3.</span> <span class="nav-text">本节最后</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件"><span class="nav-number">1.4.</span> <span class="nav-text">事件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本定义-1"><span class="nav-number">1.4.1.</span> <span class="nav-text">基本定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#联合界-union-bound"><span class="nav-number">1.4.2.</span> <span class="nav-text">联合界(union bound)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机变量"><span class="nav-number">1.5.</span> <span class="nav-text">随机变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#均匀随机变量"><span class="nav-number">1.5.1.</span> <span class="nav-text">均匀随机变量</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本节完"><span class="nav-number">2.</span> <span class="nav-text">本节完</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#基于Docker的Codepad-OJ构想与实现（伪）"><span class="nav-number">1.</span> <span class="nav-text">基于Docker的Codepad / OJ构想与实现（伪）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#渊源"><span class="nav-number">1.1.</span> <span class="nav-text">渊源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构想"><span class="nav-number">1.2.</span> <span class="nav-text">构想</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-number">1.3.</span> <span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#几点注意"><span class="nav-number">1.3.1.</span> <span class="nav-text">几点注意</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就这些了"><span class="nav-number">1.4.</span> <span class="nav-text">就这些了</span></a></li></ol></li></ol></div>
             
 
           </div>

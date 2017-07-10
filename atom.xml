@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-06-06T05:58:59.798Z</updated>
+  <updated>2017-07-10T15:03:33.767Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -16,11 +16,30 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>基于Docker的Codepad / OJ构想与实现（伪）</title>
+    <link href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/"/>
+    <id>http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</id>
+    <published>2017-07-10T15:03:57.000Z</published>
+    <updated>2017-07-10T15:03:33.767Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;基于Docker的Code
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Avalon 快速食用指南</title>
     <link href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/"/>
     <id>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</id>
     <published>2017-05-28T07:17:47.000Z</published>
-    <updated>2017-06-06T05:58:59.798Z</updated>
+    <updated>2017-06-06T06:03:36.383Z</updated>
     
     <summary type="html">
     
@@ -112,7 +131,7 @@
     <link href="http://ray-eldath.tech/2017/04/08/blog-system-update-successful/"/>
     <id>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</id>
     <published>2017-04-08T14:34:57.000Z</published>
-    <updated>2017-05-28T07:06:21.871Z</updated>
+    <updated>2017-07-10T15:03:39.213Z</updated>
     
     <summary type="html">
     
@@ -121,8 +140,6 @@
     
     </summary>
     
-    
-      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
       <category term="Other" scheme="http://ray-eldath.tech/tags/Other/"/>
     
