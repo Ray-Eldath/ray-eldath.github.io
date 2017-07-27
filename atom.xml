@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-07-27T15:11:06.016Z</updated>
+  <updated>2017-07-27T15:15:18.798Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>你好，密码学(4)：密码系统和流密码</title>
+    <title>你好，密码学(4)：密码系统、OTP密码和密码的安全性</title>
     <link href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
     <id>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</id>
     <published>2017-07-27T09:57:44.000Z</published>
-    <updated>2017-07-27T15:11:06.016Z</updated>
+    <updated>2017-07-27T15:15:18.798Z</updated>
     
     <summary type="html">
     
