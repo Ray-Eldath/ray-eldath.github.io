@@ -106,7 +106,7 @@
 <meta property="og:description" content="密码学I：离散概率（速成课）（续）导览课程地址请见Coursera。 对于离散概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …    欢迎访问作者博客  若未阅读上篇文章密码学I：离散概率的，强烈建议前去阅读。 独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-3/slide-1.png">
-<meta property="og:updated_time" content="2017-04-20T08:00:09.635Z">
+<meta property="og:updated_time" content="2017-07-27T12:18:38.401Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好，密码学(3)：离散概率（速成课）（续）">
 <meta name="twitter:description" content="密码学I：离散概率（速成课）（续）导览课程地址请见Coursera。 对于离散概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …    欢迎访问作者博客  若未阅读上篇文章密码学I：离散概率的，强烈建议前去阅读。 独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$">
@@ -439,7 +439,7 @@
 <blockquote>
 <p>通常来讲，独立性衡量的是两事件间互不相关的程度。</p>
 </blockquote>
-<h3 id="随机变量中的独立性"><a href="#随机变量中的独立性" class="headerlink" title="随机变量中的独立性"></a>随机变量中的独立性</h3><p>若有两个在集合$V$中取值的随机变量$X,Y$，那么如果这两个随机变量满足：<br>$$<br>\forall a,b\in V\<br>Pr[X=a\;\:\mathtt{and}\;\:X=b]\;\;=\;\;Pr[X]\cdot Pr[Y=b]<br>$$</p>
+<h3 id="随机变量中的独立性"><a href="#随机变量中的独立性" class="headerlink" title="随机变量中的独立性"></a>随机变量中的独立性</h3><p>若有两个在集合$V$中取值的随机变量$X,Y$，那么如果这两个随机变量满足：<br>$$<br>\forall a,b\in V\\<br>Pr[X=a\;\:\mathtt{and}\;\:X=b]\;\;=\;\;Pr[X]\cdot Pr[Y=b]<br>$$</p>
 <blockquote>
 <p>这意味着即使你知道$X=a$你也不知道关于$y$的取值的任何信息。</p>
 </blockquote>
@@ -454,8 +454,8 @@
 <p>请见：<a href="https://zh.wikipedia.org/zh-cn/逻辑异或" target="_blank" rel="external">维基百科 - 逻辑异或（中文 - 大陆简体）</a></p>
 </blockquote>
 <h3 id="异或运算（XOR）的重要性质"><a href="#异或运算（XOR）的重要性质" class="headerlink" title="异或运算（XOR）的重要性质"></a>异或运算（XOR）的<em>重要</em>性质</h3><p>阐述：若存在一个随机变量$y$，和一个独立<strong>均匀</strong>随机变量$x$，此时$x$和$y$的异或（无论$y$以什么方式分布）$z$<em>总是</em>一个<strong>均匀的随机变量</strong>。</p>
-<p>换句话说如果我取一个随机的分布，然后用独立<strong>均匀</strong>随机变量和它进行异或运算，最终得到的<em>一定</em>是一个<strong>均匀随机变量</strong>，即：<br>$$<br>Y\mathtt{\quad is\;\:a\;\:\mathbf{rand.}\;\:var.\;\:over\quad}{0,1}^2,\<br>X\mathtt{\quad is\;\:an\;\:\mathbf{indep.\;\:uniform}\;\:var.\;\:on\quad}{0,1}^2\<br>\mathtt{Than\;\;}Z:Y\oplus X\mathtt{\quad is\;\:\mathbf{uniform}\;\:var.\;\:over\quad}{0,1}^2<br>$$<br>证明现不列出。可能会在作者博客上给出。</p>
-<h2 id="生日悖论（The-birthday-paradox）"><a href="#生日悖论（The-birthday-paradox）" class="headerlink" title="生日悖论（The birthday paradox）"></a>生日悖论（The birthday paradox）</h2><p>###定义<br><strong>定义</strong>：假设在全集$U$中选择几个独立、以相同方式分布的随机变量$n$ ，则如若选择$\sqrt{|U|}$次，则基本上有很大的几率（超过$\frac{1}{2}$）会有两个相同的元素。换句话说，若抽样$\sqrt{|U|}$次，那么很有可能（超过$\frac{1}{2}$）你的两个抽样会是 一样的，即：<br>$$<br>r_1,…,r_n\in U\mathtt{\quad are\;\:indep.\;\:and\;\:has\;\:same\;\:way\;\:of\;\:distribution}\<br>\mathtt{when}\quad n=1.2 \times \sqrt{|U|} \quad \mathtt{than}\quad Pr[\exists i\neq j: \;r_i=r_j ]\ge \frac{1}{2}\<br>\text(\exists \quad \text{means “exist”)}\<br>$$</p>
+<p>换句话说如果我取一个随机的分布，然后用独立<strong>均匀</strong>随机变量和它进行异或运算，最终得到的<em>一定</em>是一个<strong>均匀随机变量</strong>，即：<br>$$<br>Y\mathtt{\quad is\;\:a\;\:\mathbf{rand.}\;\:var.\;\:over\quad}{0,1}^2,\\<br>X\mathtt{\quad is\;\:an\;\:\mathbf{indep.\;\:uniform}\;\:var.\;\:on\quad}{0,1}^2\\<br>\mathtt{Than\;\;}Z:Y\oplus X\mathtt{\quad is\;\:\mathbf{uniform}\;\:var.\;\:over\quad}{0,1}^2<br>$$<br>证明现不列出。可能会在作者博客上给出。</p>
+<h2 id="生日悖论（The-birthday-paradox）"><a href="#生日悖论（The-birthday-paradox）" class="headerlink" title="生日悖论（The birthday paradox）"></a>生日悖论（The birthday paradox）</h2><p>###定义<br><strong>定义</strong>：假设在全集$U$中选择几个独立、以相同方式分布的随机变量$n$ ，则如若选择$\sqrt{|U|}$次，则基本上有很大的几率（超过$\frac{1}{2}$）会有两个相同的元素。换句话说，若抽样$\sqrt{|U|}$次，那么很有可能（超过$\frac{1}{2}$）你的两个抽样会是 一样的，即：<br>$$<br>r_1,…,r_n\in U\mathtt{\quad are\;\:indep.\;\:and\;\:has\;\:same\;\:way\;\:of\;\:distribution}\\<br>\mathtt{when}\quad n=1.2 \times \sqrt{|U|} \quad \mathtt{than}\quad Pr[\exists i\neq j: \;r_i=r_j ]\ge \frac{1}{2}\\<br>\text(\exists \quad \text{means “exist”)}<br>$$</p>
 <blockquote>
 <p>该定理被叫做“悖论”是因为经常使用该定理来描述人们的生日。因为根据该定理，最少仅仅需要$1.2\times\sqrt{365}$个人聚集在一起就能够使得有两个人有同样的生日的概率大于$\frac{1}{2}$，即24个人。这就是为什么叫做悖论，因为24应该是一个比大多数人的预计都要小的数。</p>
 </blockquote>
@@ -615,7 +615,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-07-10T15:03:33.767Z</updated>
+  <updated>2017-07-27T15:11:06.016Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>你好，密码学(4)：密码系统和流密码</title>
+    <link href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
+    <id>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</id>
+    <published>2017-07-27T09:57:44.000Z</published>
+    <updated>2017-07-27T15:11:06.016Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;你好，密码学-4-：密码系统、OTP密码和密码的安全性&quot;&gt;&lt;a href=&quot;#你好，密码学-4-：密码系统、OTP密码和密码的安全性&quot; class=&quot;headerlink&quot; title=&quot;你好，密码学(4)：密码系统、OTP密码和密码的安全性&quot;&gt;&lt;/a&gt;你好，密码
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
+    
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+  </entry>
+  
+  <entry>
     <title>基于Docker的Codepad / OJ构想与实现（伪）</title>
     <link href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/"/>
     <id>http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</id>
     <published>2017-07-10T15:03:57.000Z</published>
-    <updated>2017-07-10T15:03:33.767Z</updated>
+    <updated>2017-07-10T15:23:21.729Z</updated>
     
     <summary type="html">
     
@@ -85,7 +107,7 @@
     <link href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/"/>
     <id>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</id>
     <published>2017-04-20T08:00:25.000Z</published>
-    <updated>2017-04-20T08:00:09.635Z</updated>
+    <updated>2017-07-27T12:18:38.401Z</updated>
     
     <summary type="html">
     
@@ -150,7 +172,7 @@
     <link href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/"/>
     <id>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</id>
     <published>2017-03-24T05:56:16.000Z</published>
-    <updated>2017-04-16T13:50:45.835Z</updated>
+    <updated>2017-07-27T12:18:09.050Z</updated>
     
     <summary type="html">
     

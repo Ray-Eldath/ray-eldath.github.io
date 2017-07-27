@@ -105,7 +105,7 @@
 <meta property="og:site_name" content="Eldath's Blog">
 <meta property="og:description" content="你好，密码学(1)：离散概率（速成课）导览课程地址请见Coursera。 对于分布概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …  基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。 $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png">
-<meta property="og:updated_time" content="2017-04-16T13:50:45.835Z">
+<meta property="og:updated_time" content="2017-07-27T12:18:09.050Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好，密码学(2)：离散概率（速成课）">
 <meta name="twitter:description" content="你好，密码学(1)：离散概率（速成课）导览课程地址请见Coursera。 对于分布概率的更详细解释，请见：WikiBooks (English)  注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …  基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。 $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$">
@@ -388,7 +388,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,387
+                  1,380
                 </span>
               
 
@@ -435,7 +435,7 @@
 <p>例如：对于${0,1}^n$，即U表示所有两位的二进制串集合。此时$U={00, 01, 10, 11}$。而因为$U$是二进制字符串，因此$P$为$U$中的每一个元素分配一个<strong>0到1之间</strong>的数，称作该元素<strong>在全集$U$中</strong>的<strong>概率</strong>（或权重）。</p>
 </blockquote>
 <p>我们要求：将$U$中所有元素的概率加起来，我们能得到1。即：<br>$$<br>\sum_{x\in U} P(x)=1<br>$$</p>
-<p>个人理解 - 概率分布：对于全集$U$中的每一个元素，$P$返回该元素的概率组成的集合。</p>
+<p>即对于全集$U$中的每一个元素，$P$返回该元素的概率组成的集合。</p>
 <hr>
 <h2 id="常用概率分布"><a href="#常用概率分布" class="headerlink" title="常用概率分布"></a>常用概率分布</h2><h3 id="均匀分布"><a href="#均匀分布" class="headerlink" title="均匀分布"></a>均匀分布</h3><blockquote>
 <p>先导定义：<br>$|U|$：全集$U$的大小，即全集$U$中元素的个数。</p>
@@ -463,7 +463,7 @@
 <p><strong>确定性算法</strong>：给定输入数据，总是产生相同输出的算法。即一个输入数据$m$ ，总产生相同输出$A(m)$的函数：</p>
 <p>$$<br>y \longleftarrow A(m)<br>$$</p>
 <p><strong>随机化算法</strong>：取输入数据$m$作为输入，但它每次执行算法时都重新取一个<strong>隐性参数</strong>$r$，因为我们每次执行算法所取的$r$都不同，因此即使输入的数据$m$一致，输出也不会相同：</p>
-<p>$$<br>y \longleftarrow A(m\;;\;r)\quad \mathbf{where}\quad r \overset{R} \longleftarrow  {0,1}^R\<br>\mathbf{output\;\;is\;\;a\;\;random\;\;variable}\<br>y \overset{R} \longleftarrow A(m)<br>$$</p>
+<p>$$<br>y \longleftarrow A(m\;;\;r)\quad \mathbf{where}\quad r \overset{R} \longleftarrow  {0,1}^R\\<br>\mathbf{output\;\;is\;\;a\;\;random\;\;variable}\\<br>y \overset{R} \longleftarrow A(m)<br>$$</p>
 <p><strong>关键</strong>：即使随机化算法每次执行时的输入都一样，你还是会得到不同的输出。</p>
 <h1 id="本节完"><a href="#本节完" class="headerlink" title="本节完"></a>本节完</h1>
       
@@ -617,7 +617,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

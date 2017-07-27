@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image.png">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image1.png?t=1499691252522">
-<meta property="og:updated_time" content="2017-07-10T15:03:33.767Z">
+<meta property="og:updated_time" content="2017-07-10T15:23:21.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于Docker的Codepad / OJ构想与实现（伪）">
 <meta name="twitter:description" content="基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了ProgramLeague / Avalon-Executive这个还很不完善的雏形。 今天刚把核心">
@@ -390,7 +390,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,165
+                  1,163
                 </span>
               
 
@@ -432,7 +432,7 @@
 <p><img src="http://ray-eldath.image.alimmdn.com/post/my-codepad-with-docker/image.png" alt="构想1 - 来自oi.men.ci"></p>
 <p><em>上图来自<a href="https://oi.men.ci/docker-sandbox-judger/" target="_blank" rel="external">基于 Docker 容器的沙盒化评测系统</a></em></p>
 <p>但是在实现的过程中，我发现一个<strong>巨大</strong>的问题：</p>
-<p><strong>Windows端编译的程序怎么可能整到Docker的Linux container中运行呢？</strong></p>
+<p><strong>Windows端编译的程序怎么能整到Docker的Linux container中运行</strong></p>
 <blockquote>
 <p>虽然Docker有Windows container，但看看Hub上少得可怜的镜像，还是算了吧。</p>
 </blockquote>
@@ -458,7 +458,7 @@
 <li><p>对于<del>Jawa</del>Java，基于docker-client“将文件从container复制至真机”的实现是个坑… …下面给出本垃圾钻研出的实现代码：</p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">copyFileOut</span><span class="params">(String containerId, File output, String pathInContainer)</span></span></div><div class="line">            <span class="keyword">throws</span> DockerException, InterruptedException, IOException &#123;</div><div class="line">    File temp = <span class="keyword">new</span> File(output.getParent() + File.separator + <span class="string">"_temp.tar"</span>);</div><div class="line">    Files.createParentDirs(temp);</div><div class="line">    <span class="keyword">if</span> (!temp.createNewFile())</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> IOException(<span class="string">"can not new temp file: "</span> + temp.toString());</div><div class="line">    TarArchiveOutputStream aos = <span class="keyword">new</span> TarArchiveOutputStream(<span class="keyword">new</span> FileOutputStream(temp));</div><div class="line">    <span class="keyword">try</span> (<span class="keyword">final</span> TarArchiveInputStream tarStream = <span class="keyword">new</span> TarArchiveInputStream(</div><div class="line">            client.archiveContainer(containerId, pathInContainer))) &#123;</div><div class="line">        TarArchiveEntry entry;</div><div class="line">        <span class="keyword">while</span> ((entry = tarStream.getNextTarEntry()) != <span class="keyword">null</span>) &#123;</div><div class="line">            aos.putArchiveEntry(entry);</div><div class="line">            IOUtils.copy(tarStream, aos);</div><div class="line">            aos.closeArchiveEntry();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    aos.finish();</div><div class="line">    aos.close();</div><div class="line">    <span class="keyword">boolean</span> unTarStatus = unTar(<span class="keyword">new</span> TarArchiveInputStream(<span class="keyword">new</span> FileInputStream(temp)), output.getParent());</div><div class="line">    StringBuilder builder = <span class="keyword">new</span> StringBuilder();</div><div class="line">    <span class="keyword">if</span> (!unTarStatus)</div><div class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"un tar file error"</span>);</div><div class="line">    <span class="keyword">if</span> (!temp.delete())</div><div class="line">        builder.append(<span class="string">"temp file delete failed, but "</span>);</div><div class="line">    LOGGER.info(builder.append(<span class="string">"copy files "</span>).append(pathInContainer).append(<span class="string">" out of container "</span>).append(containerId).append(<span class="string">" successful"</span>).toString());</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">boolean</span> <span class="title">unTar</span><span class="params">(TarArchiveInputStream tarIn, String outputDir)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">    ArchiveEntry entry;</div><div class="line">    <span class="keyword">boolean</span> newFile = <span class="keyword">false</span>;</div><div class="line">    <span class="keyword">while</span> ((entry = tarIn.getNextEntry()) != <span class="keyword">null</span>) &#123;</div><div class="line">        File tmpFile = <span class="keyword">new</span> File(outputDir + <span class="string">"/"</span> + entry.getName());</div><div class="line">        newFile = tmpFile.createNewFile();</div><div class="line">        OutputStream out = <span class="keyword">new</span> FileOutputStream(tmpFile);</div><div class="line">        <span class="keyword">int</span> length;</div><div class="line">        <span class="keyword">byte</span>[] b = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">2048</span>];</div><div class="line">        <span class="keyword">while</span> ((length = tarIn.read(b)) != -<span class="number">1</span>)</div><div class="line">            out.write(b, <span class="number">0</span>, length);</div><div class="line">        out.close();</div><div class="line">    &#125;</div><div class="line">    tarIn.close();</div><div class="line">    <span class="keyword">return</span> newFile;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
-<li><p><strong>注意及时释放资源！！</strong> <strong>注意及时释放资源！！</strong> <strong>注意及时释放资源！！</strong> 包括文件资源不仅要close还要及时删除；container及时close/kill并remove；client最后要close等。</p>
+<li><p><strong>注意及时释放资源！！</strong> <strong>注意及时释放资源！！</strong> <strong>注意及时释放资源！！</strong> 包括文件资源不仅要close还要及时删除；container及时stop/kill并remove；client最后要close等。</p>
 </li>
 </ol>
 <h2 id="就这些了"><a href="#就这些了" class="headerlink" title="就这些了"></a>就这些了</h2><p>项目地址：<a href="https://github.com/ProgramLeague/Avalon-Executive" target="_blank" rel="external">ProgramLeague / Avalon-Executive</a></p>
@@ -519,6 +519,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/27/hello-cryptography-4/" rel="next" title="你好，密码学(4)：密码系统和流密码">
+                <i class="fa fa-chevron-left"></i> 你好，密码学(4)：密码系统和流密码
+              </a>
             
           </div>
 
@@ -607,7 +611,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
