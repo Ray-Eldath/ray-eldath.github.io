@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-07-27T15:15:18.798Z</updated>
+  <updated>2017-07-30T09:22:48.791Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -16,11 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>你好，密码学(5)：伪随机数生成器和攻击OTP密码</title>
+    <link href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/"/>
+    <id>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</id>
+    <published>2017-07-30T09:08:17.000Z</published>
+    <updated>2017-07-30T09:22:48.791Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;密码学I：伪随机数生成器和攻击OTP密码&quot;&gt;&lt;a href=&quot;#密码学I：伪随机数生成器和攻击OTP密码&quot; class=&quot;headerlink&quot; title=&quot;密码学I：伪随机数生成器和攻击OTP密码&quot;&gt;&lt;/a&gt;密码学I：伪随机数生成器和攻击OTP密码&lt;/h1&gt;&lt;
+    
+    </summary>
+    
+    
+      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
+    
+      <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+  </entry>
+  
+  <entry>
     <title>你好，密码学(4)：密码系统、OTP密码和密码的安全性</title>
     <link href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
     <id>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</id>
     <published>2017-07-27T09:57:44.000Z</published>
-    <updated>2017-07-27T15:15:18.798Z</updated>
+    <updated>2017-07-30T09:22:03.142Z</updated>
     
     <summary type="html">
     
