@@ -1,15 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -36,9 +47,7 @@
 
   
   
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -72,11 +81,9 @@
 
 
 
-  
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="//cdn.jsdelivr.net/fontawesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!," />
@@ -90,30 +97,30 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="你好，密码学(4)：密码系统、OTP密码和密码的安全性  简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。  喵。 密码系统引言经常在网上看到这样的问题：  密文：&amp;lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&amp;gt; 求破解？  遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有">
+<meta name="description" content="简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。  喵。 密码系统引言经常在网上看到这样的问题：  密文：&amp;lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&amp;gt; 求破解？  遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有趣，很多人就会马上拿出纸笔，开始写写划划。 但是，慢着">
 <meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你好，密码学(4)：密码系统、OTP密码和密码的安全性">
 <meta property="og:url" content="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/index.html">
 <meta property="og:site_name" content="Eldath's Blog">
-<meta property="og:description" content="你好，密码学(4)：密码系统、OTP密码和密码的安全性  简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。  喵。 密码系统引言经常在网上看到这样的问题：  密文：&amp;lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&amp;gt; 求破解？  遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有">
+<meta property="og:description" content="简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。  喵。 密码系统引言经常在网上看到这样的问题：  密文：&amp;lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&amp;gt; 求破解？  遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有趣，很多人就会马上拿出纸笔，开始写写划划。 但是，慢着">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/8.png?t=1501156464202">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/33.jpg">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/1498625083235424.png">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/90.png?t=1501159488633">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-4/ClaudeShannon_MFO3807.jpg">
-<meta property="og:updated_time" content="2017-07-30T09:22:03.142Z">
+<meta property="og:updated_time" content="2017-08-06T14:57:27.625Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好，密码学(4)：密码系统、OTP密码和密码的安全性">
-<meta name="twitter:description" content="你好，密码学(4)：密码系统、OTP密码和密码的安全性  简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。  喵。 密码系统引言经常在网上看到这样的问题：  密文：&amp;lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&amp;gt; 求破解？  遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有">
+<meta name="twitter:description" content="简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。  喵。 密码系统引言经常在网上看到这样的问题：  密文：&amp;lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&amp;gt; 求破解？  遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有趣，很多人就会马上拿出纸笔，开始写写划划。 但是，慢着">
 <meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png">
 
 
@@ -122,9 +129,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -145,11 +153,10 @@
   <link rel="canonical" href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
 
 
-<!--<script src="//cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
-<link href="/pace.css" rel="stylesheet" />-->
 
 
-  <title> 你好，密码学(4)：密码系统、OTP密码和密码的安全性 | Eldath's Blog </title>
+
+  <title>你好，密码学(4)：密码系统、OTP密码和密码的安全性 | Eldath's Blog</title>
   
 
 
@@ -157,15 +164,12 @@
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-97484560-1', 'auto');
   ga('send', 'pageview');
-
 </script>
-
 
 
   <script type="text/javascript">
@@ -177,6 +181,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -242,7 +247,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -252,7 +257,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -262,7 +267,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -317,6 +322,7 @@
 </nav>
 
 
+
  </div>
     </header>
 
@@ -335,7 +341,11 @@
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -353,14 +363,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                你好，密码学(4)：密码系统、OTP密码和密码的安全性
-              
-            
-          </h2>
+          <h2 class="post-title" itemprop="name headline">你好，密码学(4)：密码系统、OTP密码和密码的安全性</h2>
         
 
         <div class="post-meta">
@@ -396,6 +399,7 @@
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -403,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,217
+                  2,192
                 </span>
               
 
@@ -431,19 +435,21 @@
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
 
       
-        <h1 id="你好，密码学-4-：密码系统、OTP密码和密码的安全性"><a href="#你好，密码学-4-：密码系统、OTP密码和密码的安全性" class="headerlink" title="你好，密码学(4)：密码系统、OTP密码和密码的安全性"></a>你好，密码学(4)：密码系统、OTP密码和密码的安全性</h1><p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png" class="full-image"></p>
+        <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png" class="full-image"></p>
 <blockquote>
 <p>简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要<del>董</del>懂的基本知识密码系统。</p>
 </blockquote>
 <p><del>喵。</del></p>
-<h2 id="密码系统"><a href="#密码系统" class="headerlink" title="密码系统"></a>密码系统</h2><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><p>经常在网上看到这样的问题：</p>
+<h1 id="密码系统"><a href="#密码系统" class="headerlink" title="密码系统"></a>密码系统</h1><h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>经常在网上看到这样的问题：</p>
 <blockquote>
 <p>密文：&lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&gt;</p>
 <p>求破解？</p>
@@ -457,7 +463,7 @@
 <p>但是，这种加密方式仍然符合表达式：$E(m)\longleftrightarrow D(m)$啊， 为什么说它不是一种密码呢？</p>
 <p>这就要引入<strong>密码系统</strong>了。</p>
 <p>（注：这里所指的“密文”，是“密码系统”中的“密文”）</p>
-<h3 id="密码系统的定义"><a href="#密码系统的定义" class="headerlink" title="密码系统的定义"></a>密码系统的定义</h3><p>通常来说，我们所指的密码系统，由<strong>一个三元组$\mathscr{(K,\: M,\: C)}$</strong>（贴心地告诉你：这三个看不清的花体是$(K, \: M, \:C)$）构成：</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>通常来说，我们所指的密码系统，由<strong>一个三元组$\mathscr{(K,\: M,\: C)}$</strong>（贴心地告诉你：这三个看不清的花体是$(K, \: M, \:C)$）构成：</p>
 <ul>
 <li>$\mathscr K$：Key，所有可能<strong>密钥</strong>组成的集合。</li>
 <li>$\mathscr M$：Message，所有可能<strong>明文</strong>组成的集合。</li>
@@ -478,7 +484,7 @@
 </blockquote>
 <p>用符号来表示，就是：<br>$$<br>\forall\:m \in \mathscr M,\;k \in \mathscr K \<br>D(k,\: E(k,\: m))=m<br>$$<br>这就得到了密码学中非常重要的<strong>一致性方程（等式）</strong>。</p>
 <p>虽然该方程表述的东西是显而易见的，但还是要指出：一个密码只有满足一致性方程，才能保证解密的正常进行。</p>
-<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>除了一致性原则之外，算法$E$和$D$还有一个特性：</p>
+<h2 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h2><p>除了一致性原则之外，算法$E$和$D$还有一个特性：</p>
 <ul>
 <li>算法$E$<strong>通常</strong>是一个<strong>随机化算法</strong>：对于一个给定的输入，算法$E$<strong>通常</strong>会依据自行生成的随机数进行加密操作。</li>
 <li>算法$D$<strong>一定</strong>是一个<strong>确定化算法</strong>：对于一个给定的输入，算法$D$<strong>一定</strong>会给出相同的明文。</li>
@@ -488,10 +494,10 @@
 <blockquote>
 <p>因此，本文开头提到的“密码”不是密码的原因，就在于其不存在密钥，所以也就没有密码的环境了。</p>
 </blockquote>
-<h2 id="第一个密♂码：One-Time-Pad（一次性密码本）"><a href="#第一个密♂码：One-Time-Pad（一次性密码本）" class="headerlink" title="第一个密♂码：One Time Pad（一次性密码本）"></a>第一个密♂码：One Time Pad（一次性密码本）</h2><blockquote>
+<h1 id="第一个密♂码：One-Time-Pad（一次性密码本）"><a href="#第一个密♂码：One-Time-Pad（一次性密码本）" class="headerlink" title="第一个密♂码：One Time Pad（一次性密码本）"></a>第一个密♂码：One Time Pad（一次性密码本）</h1><blockquote>
 <p>因对于”One Time Pad”这一英文对应的译法较多（“一次性密码本”，“一次一密”，“一次性便签密码”），故在以后表述此密码时，均采用其英文表达One Time Pad或其缩写OTP。</p>
 </blockquote>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>使用先前对于“密码系统”的说明，我们来定义一下这个密♂码的环境（密码系统）：</p>
+<h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>使用先前对于“密码系统”的说明，我们来定义一下这个密♂码的环境（密码系统）：</p>
 <ul>
 <li>$\mathscr K = {0, \: 1}^n$</li>
 <li>$\mathscr M = {0, \: 1}^n$</li>
@@ -505,11 +511,11 @@
 <li>$D(k, \: c)=k\oplus c$</li>
 </ul>
 <p>为了使这个密♂码成为密♂码而不是“密码”，我们需要证明它满足一致性方程：<br>$$<br>\begin{align}<br>D(K, \: E(k, \: m))&amp;=D(k, \: k \oplus m)\<br>&amp;= k\oplus(k\oplus m) \<br>&amp;= (k\oplus k)\oplus m \<br>&amp;=0\oplus m \<br>&amp;=m<br>\end{align}<br>$$<br>（上述表达式中的$\oplus$表示异或运算，关于异或运算的详细解释请见<a href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/">你好，密码学(3)：离散概率（速成课）（续）</a>）</p>
-<h3 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h3><ul>
+<h2 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h2><ul>
 <li>使用OTP密♂码，我们能极快极快地加密或解密，即使消息的长度非常长。因为做异或运算对于计算机来说是非常简单且快速的事情。</li>
 <li>我们能获得<strong>超乎想像的、完美的</strong>安全性。（关于 密码的安全性 的定义及 OTP密码安全性极高 的证明将在下文给出）</li>
 </ul>
-<h3 id="但是…-…"><a href="#但是…-…" class="headerlink" title="但是… …"></a>但是… …</h3><p><strong>OTP密♂码是不可能实现哒！</strong></p>
+<h2 id="但是…-…"><a href="#但是…-…" class="headerlink" title="但是… …"></a>但是… …</h2><p><strong>OTP密♂码是不可能实现哒！</strong></p>
 <p><strong>OTP密♂码是不可能实现哒！</strong></p>
 <p><strong>OTP密♂码是不可能实现哒！</strong></p>
 <p><img src="http://ray-eldath.image.alimmdn.com/emoji/1498625083235424.png" alt="惊不惊喜意不意外"></p>
@@ -524,7 +530,7 @@
 <blockquote>
 <p>81311012714191810278</p>
 </blockquote>
-<h2 id="密码的安全性"><a href="#密码的安全性" class="headerlink" title="密码的安全性"></a>密码的安全性</h2><h3 id="定义和阐释"><a href="#定义和阐释" class="headerlink" title="定义和阐释"></a>定义和阐释</h3><p>在对OTP密码的讨论中，我们提到了其安全性极强。因此这就有一个问题：用什么来衡量密码的安全性呢？</p>
+<h1 id="密码的安全性"><a href="#密码的安全性" class="headerlink" title="密码的安全性"></a>密码的安全性</h1><h2 id="定义和阐释"><a href="#定义和阐释" class="headerlink" title="定义和阐释"></a>定义和阐释</h2><p>在对OTP密码的讨论中，我们提到了其安全性极强。因此这就有一个问题：用什么来衡量密码的安全性呢？</p>
 <p>在这里，我们就必须<del>祭</del>请出著名的信息论之父：克劳德·香农</p>
 <p><img src="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-4/ClaudeShannon_MFO3807.jpg" alt="Claude Shannon，引自 zh.wikipedia.org/zh-hans/克劳德·香农"></p>
 <blockquote>
@@ -538,47 +544,67 @@
 <p>该描述表明：</p>
 <p><strong>对于一个完美安全的密码，如果攻击者截获来任意一段密文，该密文来自任意一段明文的可能性均相等。即不可能知道其来自那一段明文。</strong></p>
 <p>即：<br>$$<br>\mathtt{given}\quad c \quad \mathtt{can\;\:not\:\;tell\;\:if\;\:message\;\:is}\quad m_1\:\:\mathtt{or}\:\:m_2\\<br>(\forall\:m_1,\;m_2)<br>$$<br><strong>但是</strong>（没错又是但是），一个完美安全的密码<strong>并不是</strong>牢不可破的。因为完美安全的定义描述了一个完美安全的算法“免疫”任何<em>仅</em>针对密文的攻击。但攻击一个密码的方式不止<em>仅</em>针对密文攻击一种。（比如旁路攻击）</p>
-<h3 id="“OTP密码具有完美安全性”"><a href="#“OTP密码具有完美安全性”" class="headerlink" title="“OTP密码具有完美安全性”"></a>“OTP密码具有完美安全性”</h3><p>要证明一个密码具有完美安全性，只要证明它满足上面的等式就好了：<br>$$<br>\mathtt{for\;\:OTP: \qquad if\quad}E(k, \: m)=c\\<br>\begin{align}<br>k\oplus m &amp;= c\<br>k&amp;=m\oplus c<br>\end{align}<br>\#{k\in \mathscr K:\;\:E(k,\:m)=c}\;=\;1\qquad \forall m, \: c<br>$$<br>因此，这就证明了“OTP密码具有完美安全性”。</p>
+<h2 id="“OTP密码具有完美安全性”"><a href="#“OTP密码具有完美安全性”" class="headerlink" title="“OTP密码具有完美安全性”"></a>“OTP密码具有完美安全性”</h2><p>要证明一个密码具有完美安全性，只要证明它满足上面的等式就好了：<br>$$<br>\mathtt{for\;\:OTP: \qquad if\quad}E(k, \: m)=c\\<br>\begin{align}<br>k\oplus m &amp;= c\<br>k&amp;=m\oplus c<br>\end{align}<br>\#{k\in \mathscr K:\;\:E(k,\:m)=c}\;=\;1\qquad \forall m, \: c<br>$$<br>因此，这就证明了“OTP密码具有完美安全性”。</p>
 <p><strong>但</strong>没有证明OTP密码绝对安全，因为还存在唯密文攻击以外的攻击方式。</p>
 <h1 id="lt-完-gt"><a href="#lt-完-gt" class="headerlink" title="&lt;完&gt;"></a>&lt;完&gt;</h1>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>=。=</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://res.cloudinary.com/ray-eldath/image/upload/v1491709835/wechat-reward.jpg" alt="Ray Eldath WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
 
-      
-    </div>
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://res.cloudinary.com/ray-eldath/image/upload/v1491709834/alipay-reward.jpg" alt="Ray Eldath Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
 
-    <div>
-      
-        
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      Ray Eldath
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/" title="你好，密码学(4)：密码系统、OTP密码和密码的安全性">http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
+    
 
+  </div>
+</div>
 
-      
-    </div>
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Ray Eldath
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/" title="你好，密码学(4)：密码系统、OTP密码和密码的安全性">http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
@@ -594,7 +620,7 @@
       
 
       
-        
+      
       
 
       
@@ -622,7 +648,12 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
+
 
 
     <div class="post-spread">
@@ -662,6 +693,9 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -691,7 +725,7 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives">
+              <a href="/archives/">
                 <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -728,9 +762,11 @@
               <span class="links-of-author-item">
                 <a href="mailto:eldath.ray@protonmail.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-fw fa-envelope-o"></i>
+                    <i class="fa fa-fw fa-globe"></i>
                   
-                  Email
+                    
+                      Email
+                    
                 </a>
               </span>
             
@@ -739,25 +775,31 @@
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="Zhihu">
                   
                     <i class="fa fa-fw fa-question-circle-o"></i>
                   
-                  知乎
+                    
+                      Zhihu
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/eldath" target="_blank" title="微博">
+                <a href="http://weibo.com/eldath" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  微博
+                    
+                      Weibo
+                    
                 </a>
               </span>
             
@@ -817,7 +859,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#你好，密码学-4-：密码系统、OTP密码和密码的安全性"><span class="nav-number">1.</span> <span class="nav-text">你好，密码学(4)：密码系统、OTP密码和密码的安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#密码系统"><span class="nav-number">1.1.</span> <span class="nav-text">密码系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引言"><span class="nav-number">1.1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#密码系统的定义"><span class="nav-number">1.1.2.</span> <span class="nav-text">密码系统的定义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性原则"><span class="nav-number">1.2.</span> <span class="nav-text">一致性原则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">1.2.1.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第一个密♂码：One-Time-Pad（一次性密码本）"><span class="nav-number">1.3.</span> <span class="nav-text">第一个密♂码：One Time Pad（一次性密码本）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#好处"><span class="nav-number">1.3.2.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#但是…-…"><span class="nav-number">1.3.3.</span> <span class="nav-text">但是… …</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#密码的安全性"><span class="nav-number">1.4.</span> <span class="nav-text">密码的安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#定义和阐释"><span class="nav-number">1.4.1.</span> <span class="nav-text">定义和阐释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#“OTP密码具有完美安全性”"><span class="nav-number">1.4.2.</span> <span class="nav-text">“OTP密码具有完美安全性”</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-完-gt"><span class="nav-number">2.</span> <span class="nav-text"><完></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#密码系统"><span class="nav-number">1.</span> <span class="nav-text">密码系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性原则"><span class="nav-number">1.3.</span> <span class="nav-text">一致性原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">1.4.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个密♂码：One-Time-Pad（一次性密码本）"><span class="nav-number">2.</span> <span class="nav-text">第一个密♂码：One Time Pad（一次性密码本）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好处"><span class="nav-number">2.2.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#但是…-…"><span class="nav-number">2.3.</span> <span class="nav-text">但是… …</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密码的安全性"><span class="nav-number">3.</span> <span class="nav-text">密码的安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义和阐释"><span class="nav-number">3.1.</span> <span class="nav-text">定义和阐释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“OTP密码具有完美安全性”"><span class="nav-number">3.2.</span> <span class="nav-text">“OTP密码具有完美安全性”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-完-gt"><span class="nav-number">4.</span> <span class="nav-text"><完></span></a></li></ol></div>
             
 
           </div>
@@ -825,13 +867,6 @@
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -862,7 +897,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Gemini
   </a>
 </div>
 
@@ -873,6 +908,13 @@
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
   </div>
@@ -896,49 +938,41 @@
   
 
 
-  
 
 
 
-  
-  
 
 
 
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+
+
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
@@ -946,22 +980,22 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
 
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -974,12 +1008,6 @@
 
 
 	
-
-
-
-
-
-  
 
 
 
@@ -1024,7 +1052,7 @@
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 
@@ -1048,6 +1076,8 @@
 
 
   
+
+  
   
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -1067,9 +1097,11 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
+
+  
 
   
 

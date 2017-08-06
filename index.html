@@ -1,15 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -36,9 +47,7 @@
 
   
   
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -72,14 +81,12 @@
 
 
 
-  
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="//cdn.jsdelivr.net/fontawesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="eldath, ray, eldath ray, ray eldath, blog, tech, life, startalk" />
+  <meta name="keywords" content="eldath, ray, eldath ray, ray eldath, blog, tech, life, java, cryptography" />
 
 
 
@@ -90,7 +97,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -113,9 +120,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -136,11 +144,10 @@
   <link rel="canonical" href="http://ray-eldath.tech/"/>
 
 
-<!--<script src="//cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
-<link href="/pace.css" rel="stylesheet" />-->
 
 
-  <title> Eldath's Blog </title>
+
+  <title>Eldath's Blog</title>
   
 
 
@@ -148,15 +155,12 @@
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-97484560-1', 'auto');
   ga('send', 'pageview');
-
 </script>
-
 
 
   <script type="text/javascript">
@@ -168,6 +172,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -235,7 +240,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -245,7 +250,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -255,7 +260,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -310,6 +315,7 @@
 </nav>
 
 
+
  </div>
     </header>
 
@@ -328,7 +334,11 @@
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -347,16 +357,8 @@
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/30/hello-cryptography-5/" itemprop="url">
-                  你好，密码学(5)：伪随机数生成器和攻击OTP密码
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/07/30/hello-cryptography-5/" itemprop="url">你好，密码学(5)：伪随机数生成器和攻击OTP密码</a></h2>
         
 
         <div class="post-meta">
@@ -392,6 +394,7 @@
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -399,7 +402,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,946
+                  2,929
                 </span>
               
 
@@ -427,8 +430,10 @@
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -436,12 +441,16 @@
       
         
           
-          密码学I：伪随机数生成器和攻击OTP密码
+          
 在开始之前，请让我大喊一声：
 Unlimited Blade Works !!!
 好了。我们现在开始。
 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。
-本节我们将对收尾上节，并讨论一些必
+本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。
+“OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中很难实现。
+那么，有没有一种密码，既具有完美安全，密钥长度又没有那么长呢？
+为什么这么说？
+因为当然没有啊！(/
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -453,18 +462,15 @@ Unlimited Blade Works !!!
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -478,6 +484,10 @@ Unlimited Blade Works !!!
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -490,7 +500,11 @@ Unlimited Blade Works !!!
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -509,16 +523,8 @@ Unlimited Blade Works !!!
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/27/hello-cryptography-4/" itemprop="url">
-                  你好，密码学(4)：密码系统、OTP密码和密码的安全性
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/07/27/hello-cryptography-4/" itemprop="url">你好，密码学(4)：密码系统、OTP密码和密码的安全性</a></h2>
         
 
         <div class="post-meta">
@@ -554,6 +560,7 @@ Unlimited Blade Works !!!
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -561,7 +568,7 @@ Unlimited Blade Works !!!
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,217
+                  2,192
                 </span>
               
 
@@ -589,8 +596,10 @@ Unlimited Blade Works !!!
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -598,7 +607,7 @@ Unlimited Blade Works !!!
       
         
           
-          你好，密码学(4)：密码系统、OTP密码和密码的安全性
+          
 
 简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。
 
@@ -608,7 +617,12 @@ Unlimited Blade Works !!!
 密文：&lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&gt;
 求破解？
 
-遇到这种一串
+遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有趣，很多人就会马上拿出纸笔，开始写写划划。
+但是，慢着：上面这一串玩意，是密文吗？
+为什么这么说？
+因为它当然不是啊！(///ω///)
+
+上面给出的密文
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -620,18 +634,15 @@ Unlimited Blade Works !!!
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -645,6 +656,10 @@ Unlimited Blade Works !!!
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -657,7 +672,11 @@ Unlimited Blade Works !!!
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -676,16 +695,8 @@ Unlimited Blade Works !!!
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/07/10/codepad-or-oj-with-docker/" itemprop="url">
-                  基于Docker的Codepad / OJ构想与实现（伪）
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/07/10/codepad-or-oj-with-docker/" itemprop="url">基于Docker的Codepad / OJ构想与实现（伪）</a></h2>
         
 
         <div class="post-meta">
@@ -721,6 +732,7 @@ Unlimited Blade Works !!!
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -756,8 +768,10 @@ Unlimited Blade Works !!!
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -766,7 +780,9 @@ Unlimited Blade Works !!!
         
           
           
-基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了
+基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了ProgramLeague / Avalon-Executive这个还很不完善的雏形。
+今天刚把核心功能测试跑过，为了庆祝一下，就写了这篇文章。
+构想起先我的想法和基于 Docker 容器的沙盒化评测
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -778,18 +794,15 @@ Unlimited Blade Works !!!
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -803,6 +816,10 @@ Unlimited Blade Works !!!
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -815,7 +832,11 @@ Unlimited Blade Works !!!
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -834,16 +855,8 @@ Unlimited Blade Works !!!
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/05/28/avalon-quick-start-guide/" itemprop="url">
-                  Avalon 快速食用指南
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/05/28/avalon-quick-start-guide/" itemprop="url">Avalon 快速食用指南</a></h2>
         
 
         <div class="post-meta">
@@ -879,6 +892,7 @@ Unlimited Blade Works !!!
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -914,8 +928,10 @@ Unlimited Blade Works !!!
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -929,7 +945,11 @@ Unlimited Blade Works !!!
 
 直接食用Avalon
 将Avalon作为依赖用于您自己的项目
-将您的项目作为Avalon的插件（仅限于v0.0.1b以后的RELEASE版本或46b2068a
+将您的项目作为Avalon的插件（仅限于v0.0.1b以后的RELEASE版本或46b2068afe及以后的快照版本）
+
+请直接单击左方目录中的对应标题名跳转到相应部分。
+一切的初始! 本部分为另两部分的共同先导步骤，请完成本章步骤后再进行对应的后续操作 !
+安装Perl首先，由于Avalon依
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -941,18 +961,15 @@ Unlimited Blade Works !!!
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -966,6 +983,10 @@ Unlimited Blade Works !!!
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -978,7 +999,11 @@ Unlimited Blade Works !!!
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/05/28/avalon-profile-description/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -997,16 +1022,8 @@ Unlimited Blade Works !!!
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/05/28/avalon-profile-description/" itemprop="url">
-                  Avalon 配置文件说明
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/05/28/avalon-profile-description/" itemprop="url">Avalon 配置文件说明</a></h2>
         
 
         <div class="post-meta">
@@ -1042,6 +1059,7 @@ Unlimited Blade Works !!!
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -1077,8 +1095,10 @@ Unlimited Blade Works !!!
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1092,7 +1112,11 @@ Unlimited Blade Works !!!
 配置文件构成Avalon的配置文件主要有以下几个：
 
 config.json：位于根目录下，是主配置文件
-plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
+plugins.json：位于bin\data\plugin目录下，用于配置Avalon插件。
+database.properties：位于根目录下，用于配置Avalon消息记录功能的数据库。
+
+本文将重点围绕这三个文件中各个配置项的说明进行。
+config.json（主配置文件）该配置文
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1104,18 +1128,15 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1129,6 +1150,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1141,7 +1166,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1160,16 +1189,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/04/20/hello-cryptography-3/" itemprop="url">
-                  你好，密码学(3)：离散概率（速成课）（续）
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/04/20/hello-cryptography-3/" itemprop="url">你好，密码学(3)：离散概率（速成课）（续）</a></h2>
         
 
         <div class="post-meta">
@@ -1205,6 +1226,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -1212,7 +1234,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,165
+                  1,150
                 </span>
               
 
@@ -1240,8 +1262,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1250,7 +1274,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
           
           
-密码学I：离散概率（速成课）（续）导览课程地址请见Coursera。
+导览课程地址请见Coursera。
 对于离散概率的更详细解释，请见：WikiBooks (English)
 
 注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …
@@ -1259,7 +1283,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 
 欢迎访问作者博客
 
-若未阅读上篇文章密码学I：离散概率的，强烈
+若未阅读上篇文章密码学I：离散概率的，强烈建议前去阅读。
+独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$事件的任何信息，则称$A$、$B$两事件是互相独立的。即：$$Pr[A\;\:\mathtt{and}\;\:B]=Pr[A]\cdo
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1271,18 +1296,15 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1296,6 +1318,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1308,7 +1334,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/04/17/spanish-note-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1327,16 +1357,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/04/17/spanish-note-1/" itemprop="url">
-                  西班牙语笔记(1)：基础1
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/04/17/spanish-note-1/" itemprop="url">西班牙语笔记(1)：基础1</a></h2>
         
 
         <div class="post-meta">
@@ -1372,6 +1394,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -1379,7 +1402,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,331
+                  2,321
                 </span>
               
 
@@ -1407,8 +1430,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1417,10 +1442,13 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
           
           
-西班牙语笔记(1)：基础1来源：Duolinguo: 基础1
+来源：Duolinguo: 基础1
 本文不以CC BY-NC-SA开源发布。引用请向来源处咨询。
 导言嗨，欢迎开始学习多邻国的西班牙语课程！
-在学习第一个技能基础 1 的过程中，大家可能会产生一些疑问。因此，在下面我们对于西班牙语的一些语法中做了一些简单的讲解，希望可以帮
+在学习第一个技能基础 1 的过程中，大家可能会产生一些疑问。因此，在下面我们对于西班牙语的一些语法中做了一些简单的讲解，希望可以帮助解答大家的一部分疑惑。
+所有的中文语例使用现代标准汉语。
+语例前加星号（*）表示该语例是不合语法的。
+语法A. 代词的人称、性和数人称 是与语言中的行为动作相关的话语角色。在包括中文和西班牙语在内的许多语言里，存在三个人称：
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1432,18 +1460,15 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1457,6 +1482,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1469,7 +1498,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/04/08/blog-system-update-successful/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1488,16 +1521,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/04/08/blog-system-update-successful/" itemprop="url">
-                  博客系统更新成功
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/04/08/blog-system-update-successful/" itemprop="url">博客系统更新成功</a></h2>
         
 
         <div class="post-meta">
@@ -1533,6 +1558,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -1568,8 +1594,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1594,18 +1622,15 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1619,6 +1644,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1631,7 +1660,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1650,16 +1683,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/03/24/hello-cryptography-2/" itemprop="url">
-                  你好，密码学(2)：离散概率（速成课）
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/03/24/hello-cryptography-2/" itemprop="url">你好，密码学(2)：离散概率（速成课）</a></h2>
         
 
         <div class="post-meta">
@@ -1695,6 +1720,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -1730,8 +1756,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1745,7 +1773,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 
 注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …
 
-基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的
+基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。
+$P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$上的元素分配一个值。
+
+例如：对于${0,1}^n$，即U表示所有两位的二进制串集合。此时$U={0
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1757,18 +1788,15 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1782,6 +1810,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1794,7 +1826,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/03/18/hello-cryptography-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1813,16 +1849,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
         
           <h2 class="post-title" itemprop="name headline">
-            
-            
-              
                 
-                <a class="post-title-link" href="/2017/03/18/hello-cryptography-1/" itemprop="url">
-                  你好，密码学(1)：什么是密码学
-                </a>
-              
-            
-          </h2>
+                <a class="post-title-link" href="/2017/03/18/hello-cryptography-1/" itemprop="url">你好，密码学(1)：什么是密码学</a></h2>
         
 
         <div class="post-meta">
@@ -1858,6 +1886,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -1893,8 +1922,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
@@ -1913,7 +1944,19 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 
 安全通信
 使用$k$密钥加密的信息是绝对安全且可信的。
-个人理解：即
+个人理解：即 密钥安全 ≡ 信息安全 ，密钥可信完整 ≡ 信息可信完整
+
+
+
+
+
+关键：密码学应保证信息的安全性和完整性。
+但是密码学还能做到更多
+
+数字签名
+
+关键：基于内容的签署函数
+个人理解：即内容（文本）
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1925,18 +1968,15 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         
       
     </div>
+    
+    
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
-    <div>
-      
-    </div>
+    
 
     <footer class="post-footer">
       
@@ -1950,6 +1990,10 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         <div class="post-eof"></div>
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
@@ -1982,6 +2026,9 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -2002,7 +2049,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives">
+              <a href="/archives/">
                 <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -2039,9 +2086,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
               <span class="links-of-author-item">
                 <a href="mailto:eldath.ray@protonmail.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-fw fa-envelope-o"></i>
+                    <i class="fa fa-fw fa-globe"></i>
                   
-                  Email
+                    
+                      Email
+                    
                 </a>
               </span>
             
@@ -2050,25 +2099,31 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="Zhihu">
                   
                     <i class="fa fa-fw fa-question-circle-o"></i>
                   
-                  知乎
+                    
+                      Zhihu
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/eldath" target="_blank" title="微博">
+                <a href="http://weibo.com/eldath" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  微博
+                    
+                      Weibo
+                    
                 </a>
               </span>
             
@@ -2121,13 +2176,6 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       
 
       
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
-      
 
     </div>
   </aside>
@@ -2157,7 +2205,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Gemini
   </a>
 </div>
 
@@ -2168,6 +2216,13 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
   </div>
@@ -2191,49 +2246,41 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
 
 
-  
 
 
 
-  
-  
 
 
 
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+
+
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
@@ -2241,18 +2288,22 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
 
 
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -2282,23 +2333,6 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 
 
 
-  
-    <script type="text/javascript">
-      (function(d, s) {
-        var j, e = d.getElementsByTagName(s)[0];
-        if (typeof LivereTower === 'function') { return; }
-        j = d.createElement(s);
-        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-        j.async = true;
-        e.parentNode.insertBefore(j, e);
-      })(document, 'script');
-    </script>
-  
-
-
-
-
-
 
   
 
@@ -2315,7 +2349,7 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 
@@ -2339,6 +2373,8 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
 
 
   
+
+  
   
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -2358,9 +2394,11 @@ plugins.json：位于bin\data\plugin目录下，用于配置Avalon插
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
+
+  
 
   
 

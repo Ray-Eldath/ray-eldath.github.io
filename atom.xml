@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-07-30T09:22:48.791Z</updated>
+  <updated>2017-08-06T14:58:10.552Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -20,11 +20,13 @@
     <link href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/"/>
     <id>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</id>
     <published>2017-07-30T09:08:17.000Z</published>
-    <updated>2017-07-30T09:22:48.791Z</updated>
+    <updated>2017-08-06T14:58:10.552Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;密码学I：伪随机数生成器和攻击OTP密码&quot;&gt;&lt;a href=&quot;#密码学I：伪随机数生成器和攻击OTP密码&quot; class=&quot;headerlink&quot; title=&quot;密码学I：伪随机数生成器和攻击OTP密码&quot;&gt;&lt;/a&gt;密码学I：伪随机数生成器和攻击OTP密码&lt;/h1&gt;&lt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在开始之前，请让我大喊一声：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;U
     
     </summary>
     
@@ -42,11 +44,13 @@
     <link href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
     <id>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</id>
     <published>2017-07-27T09:57:44.000Z</published>
-    <updated>2017-07-30T09:22:03.142Z</updated>
+    <updated>2017-08-06T14:57:27.625Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;你好，密码学-4-：密码系统、OTP密码和密码的安全性&quot;&gt;&lt;a href=&quot;#你好，密码学-4-：密码系统、OTP密码和密码的安全性&quot; class=&quot;headerlink&quot; title=&quot;你好，密码学(4)：密码系统、OTP密码和密码的安全性&quot;&gt;&lt;/a&gt;你好，密码
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简介：本文主要介绍了第一个我们接触到
     
     </summary>
     
@@ -129,12 +133,12 @@
     <link href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/"/>
     <id>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</id>
     <published>2017-04-20T08:00:25.000Z</published>
-    <updated>2017-07-27T12:18:38.401Z</updated>
+    <updated>2017-08-06T14:56:39.460Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;密码学I：离散概率（速成课）（续）&quot;&gt;&lt;a href
+&lt;h1 id=&quot;导览&quot;&gt;&lt;a href=&quot;#导览&quot; class=&quot;h
     
     </summary>
     
@@ -152,12 +156,12 @@
     <link href="http://ray-eldath.tech/2017/04/17/spanish-note-1/"/>
     <id>http://ray-eldath.tech/2017/04/17/spanish-note-1/</id>
     <published>2017-04-17T11:54:51.000Z</published>
-    <updated>2017-04-17T12:51:08.313Z</updated>
+    <updated>2017-08-06T14:59:06.847Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/spanish-note-1.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;西班牙语笔记-1-：基础1&quot;&gt;&lt;a href=&quot;
+&lt;p&gt;来源：&lt;a href=&quot;http://www.duolin
     
     </summary>
     
@@ -240,13 +244,13 @@
     <link href="http://ray-eldath.tech/2016/12/03/note-about-subtitle/"/>
     <id>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</id>
     <published>2016-12-03T13:47:05.000Z</published>
-    <updated>2017-04-16T14:03:30.433Z</updated>
+    <updated>2017-08-06T14:58:31.445Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;别问我为啥配这图&lt;/del&gt;&lt;/p&gt;
-&lt;h1 id=&quot;
+&lt;p&gt;本规范最初
     
     </summary>
     
@@ -329,7 +333,7 @@
     <link href="http://ray-eldath.tech/2016/10/07/something-about-my-blog/"/>
     <id>http://ray-eldath.tech/2016/10/07/something-about-my-blog/</id>
     <published>2016-10-07T03:23:49.000Z</published>
-    <updated>2017-04-16T13:55:05.082Z</updated>
+    <updated>2017-08-06T14:58:48.558Z</updated>
     
     <summary type="html">
     

@@ -1,15 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 
 
 
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" media="all" href="/lib/Han/dist/han.min.css?v=3.3">
+
 
 
 
@@ -36,9 +47,7 @@
 
   
   
-    
-  
-  <link href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet" type="text/css" />
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -72,11 +81,9 @@
 
 
 
-  
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="//cdn.jsdelivr.net/fontawesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
   <meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!," />
@@ -90,20 +97,20 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
 
 
 
-<meta name="description" content="密码学I：伪随机数生成器和攻击OTP密码 在开始之前，请让我大喊一声： Unlimited Blade Works !!! 好了。我们现在开始。 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。 “OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度">
+<meta name="description" content="在开始之前，请让我大喊一声： Unlimited Blade Works !!! 好了。我们现在开始。 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。 “OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中很难实现。">
 <meta name="keywords" content="Tech,Series Articles,Hello, Cryptography!">
 <meta property="og:type" content="article">
 <meta property="og:title" content="你好，密码学(5)：伪随机数生成器和攻击OTP密码">
 <meta property="og:url" content="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/index.html">
 <meta property="og:site_name" content="Eldath's Blog">
-<meta property="og:description" content="密码学I：伪随机数生成器和攻击OTP密码 在开始之前，请让我大喊一声： Unlimited Blade Works !!! 好了。我们现在开始。 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。 “OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度">
+<meta property="og:description" content="在开始之前，请让我大喊一声： Unlimited Blade Works !!! 好了。我们现在开始。 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。 “OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中很难实现。">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/8.png?t=1501156464202">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/Claude-Elwood-Shannon.jpg@ 310h_1l.png">
@@ -112,10 +119,10 @@
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/snipaste20170730_145640.png?t=1501397834041">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/90.png?t=1501159488633">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/snipaste20170730_163519.png?t=1501403729500">
-<meta property="og:updated_time" content="2017-07-30T09:22:48.791Z">
+<meta property="og:updated_time" content="2017-08-06T14:58:10.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好，密码学(5)：伪随机数生成器和攻击OTP密码">
-<meta name="twitter:description" content="密码学I：伪随机数生成器和攻击OTP密码 在开始之前，请让我大喊一声： Unlimited Blade Works !!! 好了。我们现在开始。 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。 “OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度">
+<meta name="twitter:description" content="在开始之前，请让我大喊一声： Unlimited Blade Works !!! 好了。我们现在开始。 上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。 “OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中很难实现。">
 <meta name="twitter:image" content="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png">
 
 
@@ -124,9 +131,10 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":true,"scrollpercent":true},
+    scheme: 'Gemini',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true,"onmobile":true},
     fancybox: true,
+    tabs: true,
     motion: true,
     duoshuo: {
       userId: '0',
@@ -147,11 +155,10 @@
   <link rel="canonical" href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/"/>
 
 
-<!--<script src="//cdn.jsdelivr.net/pace/1.0.2/pace.min.js"></script>
-<link href="/pace.css" rel="stylesheet" />-->
 
 
-  <title> 你好，密码学(5)：伪随机数生成器和攻击OTP密码 | Eldath's Blog </title>
+
+  <title>你好，密码学(5)：伪随机数生成器和攻击OTP密码 | Eldath's Blog</title>
   
 
 
@@ -159,15 +166,12 @@
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
   ga('create', 'UA-97484560-1', 'auto');
   ga('send', 'pageview');
-
 </script>
-
 
 
   <script type="text/javascript">
@@ -179,6 +183,7 @@
       s.parentNode.insertBefore(hm, s);
     })();
   </script>
+
 
 
 
@@ -244,7 +249,7 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
+          <a href="/about/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
@@ -254,7 +259,7 @@
       
         
         <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
+          <a href="/archives/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
@@ -264,7 +269,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -319,6 +324,7 @@
 </nav>
 
 
+
  </div>
     </header>
 
@@ -337,7 +343,11 @@
   
   
 
-  <article class="post post-type-post " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -355,14 +365,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">
-            
-            
-              
-                你好，密码学(5)：伪随机数生成器和攻击OTP密码
-              
-            
-          </h2>
+          <h2 class="post-title" itemprop="name headline">你好，密码学(5)：伪随机数生成器和攻击OTP密码</h2>
         
 
         <div class="post-meta">
@@ -398,6 +401,7 @@
           
             <div class="post-wordcount">
               
+                
                 <span class="post-meta-item-icon">
                   <i class="fa fa-file-word-o"></i>
                 </span>
@@ -405,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,946
+                  2,929
                 </span>
               
 
@@ -433,25 +437,27 @@
       </header>
     
 
-
-    <div class="post-body" itemprop="articleBody">
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
 
       
       
 
       
-        <h1 id="密码学I：伪随机数生成器和攻击OTP密码"><a href="#密码学I：伪随机数生成器和攻击OTP密码" class="headerlink" title="密码学I：伪随机数生成器和攻击OTP密码"></a>密码学I：伪随机数生成器和攻击OTP密码</h1><p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png" class="full-image"></p>
+        <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png" class="full-image"></p>
 <p>在开始之前，请让我大喊一声：</p>
 <p><strong>Unlimited Blade Works !!!</strong></p>
 <p>好了。我们现在开始。</p>
-<h2 id="上节回顾"><a href="#上节回顾" class="headerlink" title="上节回顾"></a>上节回顾</h2><p>在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。</p>
+<h1 id="上节回顾"><a href="#上节回顾" class="headerlink" title="上节回顾"></a>上节回顾</h1><p>在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。</p>
 <p>本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。</p>
-<h2 id="“OTP密码是最优情况”"><a href="#“OTP密码是最优情况”" class="headerlink" title="“OTP密码是最优情况”"></a>“OTP密码是最优情况”</h2><h3 id="引语"><a href="#引语" class="headerlink" title="引语"></a>引语</h3><p>上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中<strong>很难实现</strong>。</p>
+<h1 id="“OTP密码是最优情况”"><a href="#“OTP密码是最优情况”" class="headerlink" title="“OTP密码是最优情况”"></a>“OTP密码是最优情况”</h1><h2 id="引语"><a href="#引语" class="headerlink" title="引语"></a>引语</h2><p>上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中<strong>很难实现</strong>。</p>
 <p>那么，有没有一种密码，<strong>既具有完美安全，密钥长度又没有那么长呢？</strong></p>
 <p>为什么这么说？</p>
 <p><strong>因为当然没有啊！</strong>(///ω///)</p>
 <p><img src="http://ray-eldath.image.alimmdn.com/emoji/8.png?t=1501156464202" alt="没想到吧"></p>
-<h3 id="没想到吧！"><a href="#没想到吧！" class="headerlink" title="没想到吧！"></a>没想到吧！</h3><p>怎么样！<strong>没想到吧！</strong></p>
+<h2 id="没想到吧！"><a href="#没想到吧！" class="headerlink" title="没想到吧！"></a>没想到吧！</h2><p>怎么样！<strong>没想到吧！</strong></p>
 <p>让我们再次<del>祭</del>请出克劳德·香农教授：</p>
 <p><img src="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/Claude-Elwood-Shannon.jpg@ 310h_1l.png" alt="克劳德·香农 来源：a0.att.hudong.com"></p>
 <p><del>怎么样！帅不帅！</del></p>
@@ -463,10 +469,10 @@
 </blockquote>
 <p>（注：香农完整论文请见<a href="http://math.harvard.edu/~ctm/home/text/others/shannon/entropy/entropy.pdf" target="_blank" rel="external">(PDF) A Mathematical Theory of Communication  by C.E. Shannon hosted by the Harvard Mathematics Department at Harvard University</a>）</p>
 <p><strong>所以… …</strong></p>
-<h2 id="伪随机数生成器（PRG）"><a href="#伪随机数生成器（PRG）" class="headerlink" title="伪随机数生成器（PRG）"></a>伪随机数生成器（PRG）</h2><p>在攻击OTP密码（嗯？）和讨论流密码（下篇讲）之前，我们需要了解一个相当重要的玩意：<strong>伪随机数生成器（Pseudo-random Generator, PRG）</strong>。</p>
-<h3 id="这有啥用？"><a href="#这有啥用？" class="headerlink" title="这有啥用？"></a>这有啥用？</h3><p>本篇不会涉及到流密码。但为了说明PRG的用途，在这里还是要提一下。</p>
+<h1 id="伪随机数生成器（PRG）"><a href="#伪随机数生成器（PRG）" class="headerlink" title="伪随机数生成器（PRG）"></a>伪随机数生成器（PRG）</h1><p>在攻击OTP密码（嗯？）和讨论流密码（下篇讲）之前，我们需要了解一个相当重要的玩意：<strong>伪随机数生成器（Pseudo-random Generator, PRG）</strong>。</p>
+<h2 id="这有啥用？"><a href="#这有啥用？" class="headerlink" title="这有啥用？"></a>这有啥用？</h2><p>本篇不会涉及到流密码。但为了说明PRG的用途，在这里还是要提一下。</p>
 <p>流密码实现的基本思路，就是将<strong>随机</strong>的密钥换成<strong>伪随机</strong>的密钥；即对输入的密钥$k$应用一个伪随机数生成器$G$，将其扩充为一个<em>长得多</em>的伪随机密钥$G(k)$，随后使用这个$G(k)$完成加密过程。</p>
-<h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h3><p>本质上<del>江</del>讲，PRG就是一个<strong>高效</strong>的、<strong>确定</strong>的、<strong>不可预测</strong>的函数$G$，能将一个<strong>长度为$s$的二进制数字符串</strong>，扩充为一个<strong>长得多的、长度为$n$的二进制数字符串</strong>。即：</p>
+<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>本质上<del>江</del>讲，PRG就是一个<strong>高效</strong>的、<strong>确定</strong>的、<strong>不可预测</strong>的函数$G$，能将一个<strong>长度为$s$的二进制数字符串</strong>，扩充为一个<strong>长得多的、长度为$n$的二进制数字符串</strong>。即：</p>
 <p><img src="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/snipaste20170727_234252.png?t=1501406395829" alt=""></p>
 <ul>
 <li><strong>高效</strong>：可理解为在特定时间内完成，或在<a href="https://zh.wikipedia.org/wiki/多項式時間" target="_blank" rel="external">多项式时间</a>内完成。本系列文章中的“高效”均采用这个定义。</li>
@@ -483,7 +489,7 @@
 <ul>
 <li><strong>不可忽略</strong>：可理解为函数值大于某个特定概率值$\varepsilon$（例如$\varepsilon\gt {1 \over 2^{30}} $）；或对于函数$\varepsilon:Z^{\ge0}\rightarrow R^{\ge0}$，函数值大于$1$除以某个多项式的值的可能性无限大（即$\exists \:d:\varepsilon(\lambda) \ge {1 \over {\lambda^d}}\quad \mathtt{inf.\;\: often}\quad(\varepsilon &gt; {1\over \mathtt{poly}},\; \mathtt{for \;\: many\;\:}\lambda)$）（别问窝后面的定义啥意思，自己想。<del>窝也看不懂</del>）。</li>
 </ul>
-<h3 id="典型的弱PRG实现"><a href="#典型的弱PRG实现" class="headerlink" title="典型的弱PRG实现"></a>典型的弱PRG实现</h3><p><strong>这是反例！！请勿在要求密码学强度的系统中使用这些实现！！</strong></p>
+<h2 id="典型的弱PRG实现"><a href="#典型的弱PRG实现" class="headerlink" title="典型的弱PRG实现"></a>典型的弱PRG实现</h2><p><strong>这是反例！！请勿在要求密码学强度的系统中使用这些实现！！</strong></p>
 <p><strong>这是反例！！请勿在要求密码学强度的系统中使用这些实现！！</strong></p>
 <p><strong>这是反例！！请勿在要求密码学强度的系统中使用这些实现！！</strong></p>
 <ul>
@@ -505,12 +511,12 @@
 <p><strong>请勿在密码学强度系统中使用编程语言提供的通用伪随机数生成器实现！！</strong></p>
 <p>请查看使用的编程语言是否有提供密码学强度的伪随机数生成器实现。<del>没有就自己实现一个。</del></p>
 <p>这点相当重要。类似Kerberos 4的系统就因为伪随机数生成器实现的问题而被攻破。（参见<a href="https://zh.wikipedia.org/wiki/Kerberos#.E5.8E.86.E5.8F.B2" target="_blank" rel="external">维基百科 - Kerberos#历史</a>）</p>
-<h2 id="攻击OTP密码"><a href="#攻击OTP密码" class="headerlink" title="攻击OTP密码"></a>攻击OTP密码</h2><p>看到这个标题，我不确定会不会有人心生疑问：</p>
+<h1 id="攻击OTP密码"><a href="#攻击OTP密码" class="headerlink" title="攻击OTP密码"></a>攻击OTP密码</h1><p>看到这个标题，我不确定会不会有人心生疑问：</p>
 <p><strong>OTP密码不是完美安全的吗？又怎么能被攻破呢？</strong></p>
 <p><strong>是的！</strong>OTP密码确实完美安全，但“完美安全”指的是免疫任何<em>唯密文攻击</em>。而本节所述的攻击大多是针对密码实现的攻击。（也就是说这些实现或多或少的不严格符合OTP密码的定义）</p>
 <p><img src="http://ray-eldath.image.alimmdn.com/emoji/90.png?t=1501159488633" alt="。。。。。。"></p>
 <p><del>好啦！让我们开始吧！</del></p>
-<h3 id="Attack-1：使用相同密码本加密多于一个的不同密文"><a href="#Attack-1：使用相同密码本加密多于一个的不同密文" class="headerlink" title="Attack 1：使用相同密码本加密多于一个的不同密文"></a>Attack 1：使用相同密码本加密多于一个的不同密文</h3><p>我们来通过一个例子看看，当使用同一密码本加密两条（此处以两条为例）的不同密文时会发生什么：</p>
+<h2 id="Attack-1：使用相同密码本加密多于一个的不同密文"><a href="#Attack-1：使用相同密码本加密多于一个的不同密文" class="headerlink" title="Attack 1：使用相同密码本加密多于一个的不同密文"></a>Attack 1：使用相同密码本加密多于一个的不同密文</h2><p>我们来通过一个例子看看，当使用同一密码本加密两条（此处以两条为例）的不同密文时会发生什么：</p>
 <p>由于上文已经介绍了PRG的相关知识，因此下文中将使用$PRG(k)$代替前文中的$k$，从而使论述更为可信。</p>
 <p><strong>首先</strong>，我需要得到这两个消息的加密结果（密文）：<br>$$<br>c_1=m_1\oplus PRG(k)\\<br>c_2=m_2\oplus PRG(k)<br>$$<br><strong>Q1：那么，当我计算$c_1\oplus c_2$时，会得到什么呢？</strong></p>
 <p><strong>先不要往下看，先自己想想！</strong></p>
@@ -536,7 +542,7 @@
 <p>在上文对PRG的讨论中，我们指出PRG函数输出的是<strong>一个比输入长得多的字符串</strong>，（请允许我去掉那一长串形容词）因此我们可以直接将该长输出<strong>分段</strong>，然后每段加密不同的明文：</p>
 <p><img src="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/snipaste20170730_163519.png?t=1501403729500" alt="capture1"></p>
 <p>从而为每个明文分配不同的伪随机密钥。</p>
-<h3 id="Attack-2：不完整的密文"><a href="#Attack-2：不完整的密文" class="headerlink" title="Attack 2：不完整的密文"></a>Attack 2：不完整的密文</h3><p>从<a href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/">上篇文章</a>对OTP密码的讨论中可以看出，OTP密码<strong>并没有提供对密文的完整性保护</strong>；也就是说，攻击者可以<strong>不被发现地修改密文，从而对明文造成特定影响</strong>。</p>
+<h2 id="Attack-2：不完整的密文"><a href="#Attack-2：不完整的密文" class="headerlink" title="Attack 2：不完整的密文"></a>Attack 2：不完整的密文</h2><p>从<a href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/">上篇文章</a>对OTP密码的讨论中可以看出，OTP密码<strong>并没有提供对密文的完整性保护</strong>；也就是说，攻击者可以<strong>不被发现地修改密文，从而对明文造成特定影响</strong>。</p>
 <p><strong>Q2：我们使用OTP加密明文$m$将得到$m\oplus k$，但若攻击者截获此密文，并对其施加$\oplus p$，再解密被施加了操作的密文，我会得到什么？</strong></p>
 <p><strong>。</strong></p>
 <p><strong>。</strong></p>
@@ -553,42 +559,62 @@
 <h1 id="lt-完-gt"><a href="#lt-完-gt" class="headerlink" title="&lt;完&gt;"></a>&lt;完&gt;</h1>
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>=。=</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>Donate</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="https://res.cloudinary.com/ray-eldath/image/upload/v1491709835/wechat-reward.jpg" alt="Ray Eldath WeChat Pay"/>
+        <p>WeChat Pay</p>
+      </div>
+    
 
-      
-    </div>
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="https://res.cloudinary.com/ray-eldath/image/upload/v1491709834/alipay-reward.jpg" alt="Ray Eldath Alipay"/>
+        <p>Alipay</p>
+      </div>
+    
 
-    <div>
-      
-        
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      Ray Eldath
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/" title="你好，密码学(5)：伪随机数生成器和攻击OTP密码">http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
+    
 
+  </div>
+</div>
 
-      
-    </div>
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    Ray Eldath
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/" title="你好，密码学(5)：伪随机数生成器和攻击OTP密码">http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
@@ -604,7 +630,7 @@
       
 
       
-        
+      
       
 
       
@@ -628,7 +654,12 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
+
 
 
     <div class="post-spread">
@@ -668,6 +699,9 @@
   </div>
 
   <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -697,7 +731,7 @@
 
           
             <div class="site-state-item site-state-posts">
-              <a href="/archives">
+              <a href="/archives/">
                 <span class="site-state-item-count">16</span>
                 <span class="site-state-item-name">日志</span>
               </a>
@@ -734,9 +768,11 @@
               <span class="links-of-author-item">
                 <a href="mailto:eldath.ray@protonmail.com" target="_blank" title="Email">
                   
-                    <i class="fa fa-fw fa-envelope-o"></i>
+                    <i class="fa fa-fw fa-globe"></i>
                   
-                  Email
+                    
+                      Email
+                    
                 </a>
               </span>
             
@@ -745,25 +781,31 @@
                   
                     <i class="fa fa-fw fa-github"></i>
                   
-                  GitHub
+                    
+                      GitHub
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="知乎">
+                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="Zhihu">
                   
                     <i class="fa fa-fw fa-question-circle-o"></i>
                   
-                  知乎
+                    
+                      Zhihu
+                    
                 </a>
               </span>
             
               <span class="links-of-author-item">
-                <a href="http://weibo.com/eldath" target="_blank" title="微博">
+                <a href="http://weibo.com/eldath" target="_blank" title="Weibo">
                   
                     <i class="fa fa-fw fa-weibo"></i>
                   
-                  微博
+                    
+                      Weibo
+                    
                 </a>
               </span>
             
@@ -823,7 +865,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#密码学I：伪随机数生成器和攻击OTP密码"><span class="nav-number">1.</span> <span class="nav-text">密码学I：伪随机数生成器和攻击OTP密码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#上节回顾"><span class="nav-number">1.1.</span> <span class="nav-text">上节回顾</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“OTP密码是最优情况”"><span class="nav-number">1.2.</span> <span class="nav-text">“OTP密码是最优情况”</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#引语"><span class="nav-number">1.2.1.</span> <span class="nav-text">引语</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#没想到吧！"><span class="nav-number">1.2.2.</span> <span class="nav-text">没想到吧！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#伪随机数生成器（PRG）"><span class="nav-number">1.3.</span> <span class="nav-text">伪随机数生成器（PRG）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#这有啥用？"><span class="nav-number">1.3.1.</span> <span class="nav-text">这有啥用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#定义"><span class="nav-number">1.3.2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不可预测性"><span class="nav-number">1.3.3.</span> <span class="nav-text">不可预测性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#典型的弱PRG实现"><span class="nav-number">1.3.4.</span> <span class="nav-text">典型的弱PRG实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#攻击OTP密码"><span class="nav-number">1.4.</span> <span class="nav-text">攻击OTP密码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Attack-1：使用相同密码本加密多于一个的不同密文"><span class="nav-number">1.4.1.</span> <span class="nav-text">Attack 1：使用相同密码本加密多于一个的不同密文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attack-1：更好的实现"><span class="nav-number">1.4.2.</span> <span class="nav-text">Attack 1：更好的实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attack-2：不完整的密文"><span class="nav-number">1.4.3.</span> <span class="nav-text">Attack 2：不完整的密文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Attack-2：更好的实现"><span class="nav-number">1.4.4.</span> <span class="nav-text">Attack 2：更好的实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-完-gt"><span class="nav-number">2.</span> <span class="nav-text"><完></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#上节回顾"><span class="nav-number">1.</span> <span class="nav-text">上节回顾</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#“OTP密码是最优情况”"><span class="nav-number">2.</span> <span class="nav-text">“OTP密码是最优情况”</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引语"><span class="nav-number">2.1.</span> <span class="nav-text">引语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#没想到吧！"><span class="nav-number">2.2.</span> <span class="nav-text">没想到吧！</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#伪随机数生成器（PRG）"><span class="nav-number">3.</span> <span class="nav-text">伪随机数生成器（PRG）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#这有啥用？"><span class="nav-number">3.1.</span> <span class="nav-text">这有啥用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">3.2.</span> <span class="nav-text">定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#不可预测性"><span class="nav-number">3.2.1.</span> <span class="nav-text">不可预测性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#典型的弱PRG实现"><span class="nav-number">3.3.</span> <span class="nav-text">典型的弱PRG实现</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#攻击OTP密码"><span class="nav-number">4.</span> <span class="nav-text">攻击OTP密码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Attack-1：使用相同密码本加密多于一个的不同密文"><span class="nav-number">4.1.</span> <span class="nav-text">Attack 1：使用相同密码本加密多于一个的不同密文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Attack-1：更好的实现"><span class="nav-number">4.1.1.</span> <span class="nav-text">Attack 1：更好的实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Attack-2：不完整的密文"><span class="nav-number">4.2.</span> <span class="nav-text">Attack 2：不完整的密文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Attack-2：更好的实现"><span class="nav-number">4.2.1.</span> <span class="nav-text">Attack 2：更好的实现</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-完-gt"><span class="nav-number">5.</span> <span class="nav-text"><完></span></a></li></ol></div>
             
 
           </div>
@@ -831,13 +873,6 @@
       <!--/noindex-->
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -868,7 +903,7 @@
 <div class="theme-info">
   主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
+    NexT.Gemini
   </a>
 </div>
 
@@ -879,6 +914,13 @@
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
     
 
   </div>
@@ -902,49 +944,41 @@
   
 
 
-  
 
 
 
-  
-  
 
 
 
-  
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+
+
+
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fastclick/1.0.6/fastclick.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazyload/1.9.3/jquery.lazyload.min.js"></script>
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.min.js"></script>
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/velocity/1.2.3/velocity.ui.min.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
   
-  <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
 
 
 
@@ -952,22 +986,22 @@
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.0"></script>
-
-
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
 
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
 
 
 
@@ -980,12 +1014,6 @@
 
 
 	
-
-
-
-
-
-  
 
 
 
@@ -1030,7 +1058,7 @@
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.0"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
 
 
 
@@ -1054,6 +1082,8 @@
 
 
   
+
+  
   
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
@@ -1073,9 +1103,11 @@
         }
       });
     </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
+
+  
 
   
 
