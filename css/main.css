@@ -1065,14 +1065,12 @@ pre .javascript .function {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .back-to-top {
-    right: 20px;
-    opacity: 0.8;
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
   .back-to-top {
-    right: 20px;
-    opacity: 0.8;
+    display: none !important;
   }
 }
 .back-to-top.back-to-top-on {
@@ -1803,6 +1801,16 @@ pre .javascript .function {
 .sidebar a:hover {
   color: #eee;
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    display: none !important;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    display: none !important;
+  }
+}
 .sidebar-inner {
   position: relative;
   padding: 20px 10px;
@@ -1824,14 +1832,12 @@ pre .javascript .function {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   .sidebar-toggle {
-    right: 20px;
-    opacity: 0.8;
+    display: none !important;
   }
 }
 @media (max-width: 767px) {
   .sidebar-toggle {
-    right: 20px;
-    opacity: 0.8;
+    display: none !important;
   }
 }
 .sidebar-toggle-line {
@@ -1937,7 +1943,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffb538;
+  background: #466595;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2046,32 +2052,6 @@ pre .javascript .function {
 }
 .post-toc .nav .active-current > a:hover {
   color: #fc6423;
-}
-.sidebar-active #sidebar-dimmer {
-  opacity: 0.7;
-  -webkit-transform: translateX(-150%);
-  -webkit-transform: translateX(-150%);
-  -moz-transform: translateX(-150%);
-  -ms-transform: translateX(-150%);
-  -o-transform: translateX(-150%);
-  transform: translateX(-150%);
-  transition: opacity 0.2s;
-}
-#sidebar-dimmer {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 200%;
-  height: 100%;
-  background: #000;
-  opacity: 0;
-  transition: opacity 0.2s, transform 0s 0.2s;
-}
-@media (max-width: 767px) {
-  #sidebar-dimmer {
-    display: block;
-  }
 }
 .footer {
   font-size: 14px;
