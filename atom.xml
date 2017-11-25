@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-08-06T14:58:10.553Z</updated>
+  <updated>2017-11-25T19:04:54.296Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -20,22 +20,25 @@
     <link href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/"/>
     <id>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</id>
     <published>2017-07-30T09:08:17.000Z</published>
-    <updated>2017-08-06T14:58:10.553Z</updated>
+    <updated>2017-11-25T19:04:54.296Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;在开始之前，请让我大喊一声：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;U
+&lt;p&gt;&lt;strong&gt;Unlimited Blade Works !!!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;好了。我们现在开始。&lt;/p&gt;
+&lt;h1 id=&quot;上节回顾&quot;&gt;&lt;a href=&quot;#上节回顾&quot; class=&quot;headerlink&quot; title=&quot;上节回顾&quot;&gt;&lt;/a&gt;上节回顾&lt;/h1&gt;&lt;p&gt;在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。&lt;/p&gt;
+&lt;p&gt;本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。&lt;/p&gt;
     
     </summary>
     
     
       <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
       <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
@@ -44,22 +47,23 @@
     <link href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
     <id>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</id>
     <published>2017-07-27T09:57:44.000Z</published>
-    <updated>2017-08-06T14:57:27.626Z</updated>
+    <updated>2017-11-25T19:04:44.611Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;简介：本文主要介绍了第一个我们接触到
+&lt;p&gt;简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要&lt;del&gt;董&lt;/del&gt;懂的基本知识密码系统。&lt;/p&gt;
+&lt;/blockquote&gt;
     
     </summary>
     
     
       <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
       <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
@@ -68,12 +72,13 @@
     <link href="http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/"/>
     <id>http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</id>
     <published>2017-07-10T15:03:57.000Z</published>
-    <updated>2017-07-10T15:23:21.730Z</updated>
+    <updated>2017-11-25T19:03:34.847Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;基于Docker的Code
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;基于Docker的Codepad-OJ构想与实现（伪）&quot;&gt;&lt;a href=&quot;#基于Docker的Codepad-OJ构想与实现（伪）&quot; class=&quot;headerlink&quot; title=&quot;基于Docker的Codepad / OJ构想与实现（伪）&quot;&gt;&lt;/a&gt;基于Docker的Codepad / OJ构想与实现（伪）&lt;/h1&gt;&lt;h2 id=&quot;渊源&quot;&gt;&lt;a href=&quot;#渊源&quot; class=&quot;headerlink&quot; title=&quot;渊源&quot;&gt;&lt;/a&gt;渊源&lt;/h2&gt;&lt;p&gt;本人一直在忙一个项目&lt;a href=&quot;https://github.com/Ray-Eldath/Avalon&quot;&gt;Avalon&lt;/a&gt;，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的&lt;a href=&quot;https://oi.men.ci/docker-sandbox-judger/&quot;&gt;基于 Docker 容器的沙盒化评测系统&lt;/a&gt;及其相关项目&lt;a href=&quot;https://github.com/Menci/docker-sandbox&quot;&gt;Menci / docker-sandbox&lt;/a&gt;，终于做出了&lt;a href=&quot;https://github.com/ProgramLeague/Avalon-Executive&quot;&gt;ProgramLeague / Avalon-Executive&lt;/a&gt;这个还很不完善的雏形。&lt;/p&gt;
+&lt;p&gt;今天刚把核心功能测试跑过，&lt;del&gt;为了庆祝一下&lt;/del&gt;，就写了这篇文章。&lt;/p&gt;
     
     </summary>
     
@@ -87,12 +92,18 @@
     <link href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/"/>
     <id>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</id>
     <published>2017-05-28T07:17:47.000Z</published>
-    <updated>2017-06-06T06:03:36.383Z</updated>
+    <updated>2017-11-25T19:03:17.618Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; clas
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; class=&quot;headerlink&quot; title=&quot;导言&quot;&gt;&lt;/a&gt;导言&lt;/h1&gt;&lt;p&gt;本文将介绍多种快速食用Avalon的方法，请遵照文内步骤进行。&lt;/p&gt;
+&lt;p&gt;首先，本文将提供两种食用Avalon的主要方向，请依自己的应用选择：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接食用Avalon&lt;/li&gt;
+&lt;li&gt;将Avalon作为依赖用于您自己的项目&lt;/li&gt;
+&lt;li&gt;将您的项目作为Avalon的插件（&lt;strong&gt;仅限于&lt;code&gt;v0.0.1b&lt;/code&gt;以后的RELEASE版本或&lt;code&gt;46b2068afe&lt;/code&gt;及以后的快照版本&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
@@ -110,12 +121,13 @@
     <link href="http://ray-eldath.tech/2017/05/28/avalon-profile-description/"/>
     <id>http://ray-eldath.tech/2017/05/28/avalon-profile-description/</id>
     <published>2017-05-28T07:07:05.000Z</published>
-    <updated>2017-06-06T05:59:19.615Z</updated>
+    <updated>2017-11-25T19:03:01.586Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-profile-description.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; cl
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-profile-description.jpg&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; class=&quot;headerlink&quot; title=&quot;导言&quot;&gt;&lt;/a&gt;导言&lt;/h1&gt;&lt;p&gt;本文主要说明Avalon的配置文件构成及详细的配置项。&lt;/p&gt;
+&lt;p&gt;本文件适用的Avalon版本：所有版本。&lt;/p&gt;
     
     </summary>
     
@@ -133,44 +145,26 @@
     <link href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/"/>
     <id>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</id>
     <published>2017-04-20T08:00:25.000Z</published>
-    <updated>2017-08-06T14:56:39.461Z</updated>
+    <updated>2017-11-25T19:04:33.229Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;导览&quot;&gt;&lt;a href=&quot;#导览&quot; class=&quot;h
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;导览&quot;&gt;&lt;a href=&quot;#导览&quot; class=&quot;headerlink&quot; title=&quot;导览&quot;&gt;&lt;/a&gt;导览&lt;/h1&gt;&lt;p&gt;课程地址请见&lt;a href=&quot;https://www.coursera.org/learn/crypto/lecture/JkDRg/discrete-probability-crash-course-cont&quot;&gt;Coursera&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;对于离散概率的更详细解释，请见：&lt;a href=&quot;https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Discrete_Probability&quot;&gt;WikiBooks (English)&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：文章中对专业名词进行解释的链接均来自&lt;a href=&quot;https://zh.wikipedia.org/&quot;&gt;维基百科&lt;/a&gt;，中国大陆读者若想访问请自备… …&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;若未阅读上篇文章&lt;a href=&quot;https://www.zybuluo.com/lizhaohan001/note/670313&quot;&gt;密码学I：离散概率&lt;/a&gt;的，&lt;em&gt;强烈&lt;/em&gt;建议前去阅读。&lt;/strong&gt;&lt;/p&gt;
     
     </summary>
     
     
       <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
       <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
     
-  </entry>
-  
-  <entry>
-    <title>西班牙语笔记(1)：基础1</title>
-    <link href="http://ray-eldath.tech/2017/04/17/spanish-note-1/"/>
-    <id>http://ray-eldath.tech/2017/04/17/spanish-note-1/</id>
-    <published>2017-04-17T11:54:51.000Z</published>
-    <updated>2017-08-06T14:59:06.847Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/spanish-note-1.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;p&gt;来源：&lt;a href=&quot;http://www.duolin
-    
-    </summary>
-    
-    
-      <category term="Spanlish" scheme="http://ray-eldath.tech/tags/Spanlish/"/>
-    
-      <category term="Language learning" scheme="http://ray-eldath.tech/tags/Language-learning/"/>
-    
-      <category term="Note" scheme="http://ray-eldath.tech/tags/Note/"/>
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
@@ -179,12 +173,14 @@
     <link href="http://ray-eldath.tech/2017/04/08/blog-system-update-successful/"/>
     <id>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</id>
     <published>2017-04-08T14:34:57.000Z</published>
-    <updated>2017-07-10T15:03:39.214Z</updated>
+    <updated>2017-11-25T19:03:26.212Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/blog-system-update-successful.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;博客系统更新成功&quot;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/blog-system-update-successful.jpg@800w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;博客系统更新成功&quot;&gt;&lt;a href=&quot;#博客系统更新成功&quot; class=&quot;headerlink&quot; title=&quot;博客系统更新成功&quot;&gt;&lt;/a&gt;博客系统更新成功&lt;/h1&gt;&lt;p&gt;不知过了多久，我终于想起来博客系统需要更新… …&lt;/p&gt;
+&lt;p&gt;于是又开始挑选静态网页生成器和模板，最终决定使用&lt;a href=&quot;https://hexo.io/zh-cn/&quot;&gt;Hexo&lt;/a&gt;而不是&lt;a href=&quot;http://jekyllcn.com&quot;&gt;Jekyll&lt;/a&gt;（因为Hexo有漂亮的模板啊）~&lt;/p&gt;
+&lt;p&gt;文章迁移完成。应该没啥问题了。&lt;/p&gt;
     
     </summary>
     
@@ -198,21 +194,21 @@
     <link href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/"/>
     <id>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</id>
     <published>2017-03-24T05:56:16.000Z</published>
-    <updated>2017-07-27T12:18:09.050Z</updated>
+    <updated>2017-11-25T19:04:13.053Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;你好，密码学-1-：离散概率（速成课）&quot;&gt;&lt;a hr
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你好，密码学-1-：离散概率（速成课）&quot;&gt;&lt;a href=&quot;#你好，密码学-1-：离散概率（速成课）&quot; class=&quot;headerlink&quot; title=&quot;你好，密码学(1)：离散概率（速成课）&quot;&gt;&lt;/a&gt;你好，密码学(1)：离散概率（速成课）&lt;/h1&gt;
     
     </summary>
     
     
       <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
       <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
@@ -221,21 +217,21 @@
     <link href="http://ray-eldath.tech/2017/03/18/hello-cryptography-1/"/>
     <id>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</id>
     <published>2017-03-18T05:53:13.000Z</published>
-    <updated>2017-04-20T07:43:26.028Z</updated>
+    <updated>2017-11-25T19:04:03.059Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;你好，密码学-1-：什么是密码学&quot;&gt;&lt;a href=
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;你好，密码学-1-：什么是密码学&quot;&gt;&lt;a href=&quot;#你好，密码学-1-：什么是密码学&quot; class=&quot;headerlink&quot; title=&quot;你好，密码学(1)：什么是密码学&quot;&gt;&lt;/a&gt;你好，密码学(1)：什么是密码学&lt;/h1&gt;
     
     </summary>
     
     
       <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
     
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
       <category term="Hello, Cryptography!" scheme="http://ray-eldath.tech/tags/Hello-Cryptography/"/>
+    
+      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
     
   </entry>
   
@@ -244,13 +240,14 @@
     <link href="http://ray-eldath.tech/2016/12/03/note-about-subtitle/"/>
     <id>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</id>
     <published>2016-12-03T13:47:05.000Z</published>
-    <updated>2017-08-06T14:58:31.446Z</updated>
+    <updated>2017-11-25T19:05:10.364Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;del&gt;别问我为啥配这图&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;本规范最初
+&lt;p&gt;本规范最初版制定2016年12月03日，最后更新于2016年12月03日。&lt;/p&gt;
+&lt;p&gt;建议订阅RSS或Watch仓库以获取最新更新。&lt;/p&gt;
     
     </summary>
     
@@ -260,85 +257,17 @@
   </entry>
   
   <entry>
-    <title>密码学(1)：古典密码学（下）</title>
-    <link href="http://ray-eldath.tech/2016/10/13/cryptography-2/"/>
-    <id>http://ray-eldath.tech/2016/10/13/cryptography-2/</id>
-    <published>2016-10-13T13:39:52.000Z</published>
-    <updated>2017-04-16T14:00:22.425Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/cryptography-2.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;你好，密码学-1-：古典密码学（下）&quot;&gt;&lt;a href=&quot;#你好
-    
-    </summary>
-    
-    
-      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
-    
-      <category term="Cryptography" scheme="http://ray-eldath.tech/tags/Cryptography/"/>
-    
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>密码学(1)：古典密码学（上）</title>
-    <link href="http://ray-eldath.tech/2016/10/11/cryptography-1/"/>
-    <id>http://ray-eldath.tech/2016/10/11/cryptography-1/</id>
-    <published>2016-10-11T07:25:35.000Z</published>
-    <updated>2017-04-16T13:58:05.369Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/cryptography-1.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;你好，密码学-1-：古典密码学（上）&quot;&gt;&lt;a href=&quot;#你好
-    
-    </summary>
-    
-    
-      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
-    
-      <category term="Cryptography" scheme="http://ray-eldath.tech/tags/Cryptography/"/>
-    
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>密码学(0)：概述</title>
-    <link href="http://ray-eldath.tech/2016/10/10/cryptography-0/"/>
-    <id>http://ray-eldath.tech/2016/10/10/cryptography-0/</id>
-    <published>2016-10-10T11:59:29.000Z</published>
-    <updated>2017-04-16T13:55:55.344Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/cryptography-0.png&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerl
-    
-    </summary>
-    
-    
-      <category term="Tech" scheme="http://ray-eldath.tech/tags/Tech/"/>
-    
-      <category term="Cryptography" scheme="http://ray-eldath.tech/tags/Cryptography/"/>
-    
-      <category term="Series Articles" scheme="http://ray-eldath.tech/tags/Series-Articles/"/>
-    
-  </entry>
-  
-  <entry>
     <title>博客落成有感</title>
     <link href="http://ray-eldath.tech/2016/10/07/something-about-my-blog/"/>
     <id>http://ray-eldath.tech/2016/10/07/something-about-my-blog/</id>
     <published>2016-10-07T03:23:49.000Z</published>
-    <updated>2017-08-06T14:58:48.558Z</updated>
+    <updated>2017-11-25T19:05:19.463Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/something-about-my-blog.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
-&lt;div class=&quot;note danger
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/something-about-my-blog.jpg@800w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+&lt;div class=&quot;note danger&quot;&gt;&lt;p&gt;&lt;strong&gt;（此篇博客为旧版&lt;code&gt;Jekyll&lt;/code&gt;系统的部署事项，对本博客新的&lt;code&gt;Hexo&lt;/code&gt;系统不适用，已不再更新）&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;在和&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;Jekyll&lt;/a&gt;和&lt;a href=&quot;https://github.com/Huxpro/huxblog-boilerplate&quot;&gt;huxblog-boilerplate&lt;/a&gt;苦苦纠缠了两天半之后… …我的博客 &lt;strong&gt;终！于！落！成！&lt;/strong&gt; 了！喜大普奔啊！&lt;br&gt;咳咳… …所以我稍稍谈谈用 &lt;del&gt;该死的&lt;/del&gt; Jekyll在gthub pages建博客时的注意事项… …都是经过痛苦调试换来的经验呀。&lt;/p&gt;
     
     </summary>
     
@@ -352,13 +281,16 @@
     <link href="http://ray-eldath.tech/2016/10/06/hello-world/"/>
     <id>http://ray-eldath.tech/2016/10/06/hello-world/</id>
     <published>2016-10-06T14:12:32.000Z</published>
-    <updated>2017-04-16T13:53:32.947Z</updated>
+    <updated>2017-11-25T19:05:02.077Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-world.jpg@800w_1l&quot; class=&quot;full-image&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-world.jpg@800w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;“Yeah It’s on.”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Thing goes well, now my blog is running now.&lt;/p&gt;
+&lt;h2 id=&quot;Hello-World-Hello-Blog&quot;&gt;&lt;a href=&quot;#Hello-World-Hello-Blog&quot; class=&quot;headerlink&quot; title=&quot;Hello World, Hello Blog !&quot;&gt;&lt;/a&gt;Hello World, Hello Blog !&lt;/h2&gt;&lt;p&gt;————Eldath at 2016-10-06&lt;/p&gt;
     
     </summary>
     

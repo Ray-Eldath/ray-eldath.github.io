@@ -14,13 +14,6 @@
 
 
 
-  
-  
-    
-    
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
-
 
 
 
@@ -36,13 +29,13 @@
 
 
 
-  <meta name="google-site-verification" content="QdtC5jYsMSZ0zyzafCg1N43nr6tEuKqVriq6fx_vFXg" />
+  <meta name="google-site-verification" content="ISRo5Nj4n0cphESVI2sbMDs9Z2YPwKHDS5_95ox3qHo" />
 
 
 
+  <meta name="msvalidate.01" content="ACB26890DC148E984BCA4F791CAA13B3" />
 
 
-  <meta name="yandex-verification" content="03cbd86af2d76a91" />
 
 
 
@@ -68,26 +61,26 @@
 <link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png?v=5.1.3">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png?v=5.1.3">
 
 
-  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=5.1.3" color="#222">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg?v=5.1.3" color="#222">
 
 
-  <link rel="manifest" href="/images/favicon/manifest.json">
+  <link rel="manifest" href="/images/favicons/manifest.json">
 
 
-  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml" />
+  <meta name="msapplication-config" content="/images/favicons/browserconfig.xml" />
 
 
 
-  <meta name="keywords" content="eldath, ray, eldath ray, ray eldath, blog, tech, life, java, cryptography" />
+  <meta name="keywords" content="ray, eldath, ray-eldath, Ray Eldath, Blog, Personal Page, Software Engineer, Cryptography" />
 
 
 
@@ -118,7 +111,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '5.1.3',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -131,7 +124,7 @@
       apiKey: '2ac0dd0a1534d30465ee6f51034fd0e9',
       indexName: 'eldath',
       hits: {"per_page":10},
-      labels: {"input_placeholder":"搜索...","hits_empty":"没有找到与 ${query} 相关的结果","hits_stats":"找到相关结果 ${hits} 个， 用时 ${time}ms"}
+      labels: {"input_placeholder":"键入以搜索文章...","hits_empty":"我们无法找到匹配查询 ${query} 的任何结果","hits_stats":"${time}毫秒内找到${hits}条结果"}
     }
   };
 </script>
@@ -159,16 +152,6 @@
   ga('send', 'pageview');
 </script>
 
-
-  <script type="text/javascript">
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?a638485a53f3ce751df592f258180618";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 
 
 
@@ -239,6 +222,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-links">
+          <a href="/about#Eldath的朋友们" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
+            
+            链接
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-tags">
           <a href="/tags/" rel="section">
             
@@ -255,16 +248,6 @@
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-links">
-          <a href="/about#Eldath的朋友们" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
-            
-            链接
           </a>
         </li>
       
@@ -376,7 +359,19 @@
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:04:54+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -440,18 +435,12 @@
 
       
         
-          
-          
-在开始之前，请让我大喊一声：
-Unlimited Blade Works !!!
-好了。我们现在开始。
-上节回顾在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。
-本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。
-“OTP密码是最优情况”引语上节提到，OTP密码由于密钥长度需等于明文长度，因此在实际中很难实现。
-那么，有没有一种密码，既具有完美安全，密钥长度又没有那么长呢？
-为什么这么说？
-因为当然没有啊！(/
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png" class="full-image" /></p>
+<p>在开始之前，请让我大喊一声：</p>
+<p><strong>Unlimited Blade Works !!!</strong></p>
+<p>好了。我们现在开始。</p>
+<h1 id="上节回顾"><a href="#上节回顾" class="headerlink" title="上节回顾"></a>上节回顾</h1><p>在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。</p>
+<p>本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/07/30/hello-cryptography-5/#more" rel="contents">
@@ -542,7 +531,19 @@ Unlimited Blade Works !!!
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:04:44+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -606,24 +607,10 @@ Unlimited Blade Works !!!
 
       
         
-          
-          
-
-简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。
-
-喵。
-密码系统引言经常在网上看到这样的问题：
-
-密文：&lt;~k_l(pLoKL*^#cE*kEMV$Xh3Z+V#~&gt;
-求破解？
-
-遇到这种一串大小写混杂、各种特殊字符、以及各种奇怪字形的密文（先姑且叫做密文吧），可能是因为破解的过程实在太过有趣，很多人就会马上拿出纸笔，开始写写划划。
-但是，慢着：上面这一串玩意，是密文吗？
-为什么这么说？
-因为它当然不是啊！(///ω///)
-
-上面给出的密文
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png" class="full-image" /></p>
+<blockquote>
+<p>简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要<del>董</del>懂的基本知识密码系统。</p>
+</blockquote>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/07/27/hello-cryptography-4/#more" rel="contents">
@@ -714,7 +701,19 @@ Unlimited Blade Works !!!
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:03:34+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -778,12 +777,9 @@ Unlimited Blade Works !!!
 
       
         
-          
-          
-基于Docker的Codepad / OJ构想与实现（伪）渊源本人一直在忙一个项目Avalon，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的基于 Docker 容器的沙盒化评测系统及其相关项目Menci / docker-sandbox，终于做出了ProgramLeague / Avalon-Executive这个还很不完善的雏形。
-今天刚把核心功能测试跑过，为了庆祝一下，就写了这篇文章。
-构想起先我的想法和基于 Docker 容器的沙盒化评测
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/codepad-or-oj-with-docker.jpg@800w_1l" class="full-image" /></p>
+<h1 id="基于Docker的Codepad-OJ构想与实现（伪）"><a href="#基于Docker的Codepad-OJ构想与实现（伪）" class="headerlink" title="基于Docker的Codepad / OJ构想与实现（伪）"></a>基于Docker的Codepad / OJ构想与实现（伪）</h1><h2 id="渊源"><a href="#渊源" class="headerlink" title="渊源"></a>渊源</h2><p>本人一直在忙一个项目<a href="https://github.com/Ray-Eldath/Avalon">Avalon</a>，有一天突然心血来潮，想为它加一个在线程序执行的功能，查阅了很多资料，其中包括对本项目颇有助益的<a href="https://oi.men.ci/docker-sandbox-judger/">基于 Docker 容器的沙盒化评测系统</a>及其相关项目<a href="https://github.com/Menci/docker-sandbox">Menci / docker-sandbox</a>，终于做出了<a href="https://github.com/ProgramLeague/Avalon-Executive">ProgramLeague / Avalon-Executive</a>这个还很不完善的雏形。</p>
+<p>今天刚把核心功能测试跑过，<del>为了庆祝一下</del>，就写了这篇文章。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/07/10/codepad-or-oj-with-docker/#more" rel="contents">
@@ -874,7 +870,19 @@ Unlimited Blade Works !!!
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:03:17+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -938,19 +946,14 @@ Unlimited Blade Works !!!
 
       
         
-          
-          
-导言本文将介绍多种快速食用Avalon的方法，请遵照文内步骤进行。
-首先，本文将提供两种食用Avalon的主要方向，请依自己的应用选择：
-
-直接食用Avalon
-将Avalon作为依赖用于您自己的项目
-将您的项目作为Avalon的插件（仅限于v0.0.1b以后的RELEASE版本或46b2068afe及以后的快照版本）
-
-请直接单击左方目录中的对应标题名跳转到相应部分。
-一切的初始! 本部分为另两部分的共同先导步骤，请完成本章步骤后再进行对应的后续操作 !
-安装Perl首先，由于Avalon依
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg" class="full-image" /></p>
+<h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>本文将介绍多种快速食用Avalon的方法，请遵照文内步骤进行。</p>
+<p>首先，本文将提供两种食用Avalon的主要方向，请依自己的应用选择：</p>
+<ul>
+<li>直接食用Avalon</li>
+<li>将Avalon作为依赖用于您自己的项目</li>
+<li>将您的项目作为Avalon的插件（<strong>仅限于<code>v0.0.1b</code>以后的RELEASE版本或<code>46b2068afe</code>及以后的快照版本</strong>）</li>
+</ul>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/05/28/avalon-quick-start-guide/#more" rel="contents">
@@ -1041,7 +1044,19 @@ Unlimited Blade Works !!!
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:03:01+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -1105,19 +1120,9 @@ Unlimited Blade Works !!!
 
       
         
-          
-          
-导言本文主要说明Avalon的配置文件构成及详细的配置项。
-本文件适用的Avalon版本：所有版本。
-配置文件构成Avalon的配置文件主要有以下几个：
-
-config.json：位于根目录下，是主配置文件
-plugins.json：位于bin\data\plugin目录下，用于配置Avalon插件。
-database.properties：位于根目录下，用于配置Avalon消息记录功能的数据库。
-
-本文将重点围绕这三个文件中各个配置项的说明进行。
-config.json（主配置文件）该配置文
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/avalon-profile-description.jpg" class="full-image" /></p>
+<h1 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h1><p>本文主要说明Avalon的配置文件构成及详细的配置项。</p>
+<p>本文件适用的Avalon版本：所有版本。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/05/28/avalon-profile-description/#more" rel="contents">
@@ -1208,7 +1213,19 @@ config.json（主配置文件）该配置文
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:04:33+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -1234,7 +1251,7 @@ config.json（主配置文件）该配置文
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,150
+                  1,142
                 </span>
               
 
@@ -1272,187 +1289,16 @@ config.json（主配置文件）该配置文
 
       
         
-          
-          
-导览课程地址请见Coursera。
-对于离散概率的更详细解释，请见：WikiBooks (English)
-
-注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …
-
-
-
-欢迎访问作者博客
-
-若未阅读上篇文章密码学I：离散概率的，强烈建议前去阅读。
-独立性定义独立性：若存在两事件$A$、$B$，$A$事件的发生无法向你提供关于$B$事件的任何信息，则称$A$、$B$两事件是互相独立的。即：$$Pr[A\;\:\mathtt{and}\;\:B]=Pr[A]\cdo
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png" class="full-image" /></p>
+<h1 id="导览"><a href="#导览" class="headerlink" title="导览"></a>导览</h1><p>课程地址请见<a href="https://www.coursera.org/learn/crypto/lecture/JkDRg/discrete-probability-crash-course-cont">Coursera</a>。</p>
+<p>对于离散概率的更详细解释，请见：<a href="https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Discrete_Probability">WikiBooks (English)</a></p>
+<blockquote>
+<p>注意：文章中对专业名词进行解释的链接均来自<a href="https://zh.wikipedia.org/">维基百科</a>，中国大陆读者若想访问请自备… …</p>
+</blockquote>
+<p><strong>若未阅读上篇文章<a href="https://www.zybuluo.com/lizhaohan001/note/670313">密码学I：离散概率</a>的，<em>强烈</em>建议前去阅读。</strong></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/20/hello-cryptography-3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2017/04/17/spanish-note-1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Ray Eldath">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Eldath's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/04/17/spanish-note-1/" itemprop="url">西班牙语笔记(1)：基础1</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-17T19:54:51+08:00">
-                2017-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,321
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  8
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body han-init-context" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-来源：Duolinguo: 基础1
-本文不以CC BY-NC-SA开源发布。引用请向来源处咨询。
-导言嗨，欢迎开始学习多邻国的西班牙语课程！
-在学习第一个技能基础 1 的过程中，大家可能会产生一些疑问。因此，在下面我们对于西班牙语的一些语法中做了一些简单的讲解，希望可以帮助解答大家的一部分疑惑。
-所有的中文语例使用现代标准汉语。
-语例前加星号（*）表示该语例是不合语法的。
-语法A. 代词的人称、性和数人称 是与语言中的行为动作相关的话语角色。在包括中文和西班牙语在内的许多语言里，存在三个人称：
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/04/17/spanish-note-1/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1540,7 +1386,19 @@ config.json（主配置文件）该配置文
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:03:26+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -1604,14 +1462,10 @@ config.json（主配置文件）该配置文
 
       
         
-          
-          
-博客系统更新成功不知过了多久，我终于想起来博客系统需要更新… …
-于是又开始挑选静态网页生成器和模板，最终决定使用Hexo而不是Jekyll（因为Hexo有漂亮的模板啊）~
-文章迁移完成。应该没啥问题了。
-呐！
-
-          
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/blog-system-update-successful.jpg@800w_1l" class="full-image" /></p>
+<h1 id="博客系统更新成功"><a href="#博客系统更新成功" class="headerlink" title="博客系统更新成功"></a>博客系统更新成功</h1><p>不知过了多久，我终于想起来博客系统需要更新… …</p>
+<p>于是又开始挑选静态网页生成器和模板，最终决定使用<a href="https://hexo.io/zh-cn/">Hexo</a>而不是<a href="http://jekyllcn.com">Jekyll</a>（因为Hexo有漂亮的模板啊）~</p>
+<p>文章迁移完成。应该没啥问题了。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/04/08/blog-system-update-successful/#more" rel="contents">
@@ -1702,7 +1556,19 @@ config.json（主配置文件）该配置文
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:04:13+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -1766,18 +1632,8 @@ config.json（主配置文件）该配置文
 
       
         
-          
-          
-你好，密码学(1)：离散概率（速成课）导览课程地址请见Coursera。
-对于分布概率的更详细解释，请见：WikiBooks (English)
-
-注意：文章中对专业名词进行解释的链接均来自维基百科，中国大陆读者若想访问请自备… …
-
-基本定义$U$：一个总是有限集的全集。通常是n位二进制字符串的集合，记为${0,1}^n$。
-$P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$上的元素分配一个值。
-
-例如：对于${0,1}^n$，即U表示所有两位的二进制串集合。此时$U={0
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png" class="full-image" /></p>
+<h1 id="你好，密码学-1-：离散概率（速成课）"><a href="#你好，密码学-1-：离散概率（速成课）" class="headerlink" title="你好，密码学(1)：离散概率（速成课）"></a>你好，密码学(1)：离散概率（速成课）</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/24/hello-cryptography-2/#more" rel="contents">
@@ -1868,7 +1724,19 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
             
 
             
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:04:03+08:00">
+                2017-11-26
+              </time>
             
           </span>
 
@@ -1932,35 +1800,181 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
 
       
         
-          
-          
-你好，密码学(1)：什么是密码学导览课程地址请见Coursera。
-密码学的核心
-
-安全密钥的构造
-在协议结束时，两方均能获得一个只有通信双方知道的密钥$k$。
-通信双方均能确信自己是在和对方通信。（而不是和其它什么人通信）
-
-
-安全通信
-使用$k$密钥加密的信息是绝对安全且可信的。
-个人理解：即 密钥安全 ≡ 信息安全 ，密钥可信完整 ≡ 信息可信完整
-
-
-
-
-
-关键：密码学应保证信息的安全性和完整性。
-但是密码学还能做到更多
-
-数字签名
-
-关键：基于内容的签署函数
-个人理解：即内容（文本）
-          ...
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png" class="full-image" /></p>
+<h1 id="你好，密码学-1-：什么是密码学"><a href="#你好，密码学-1-：什么是密码学" class="headerlink" title="你好，密码学(1)：什么是密码学"></a>你好，密码学(1)：什么是密码学</h1>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/03/18/hello-cryptography-1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ray-eldath.tech/2016/12/03/note-about-subtitle/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ray Eldath">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eldath's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/12/03/note-about-subtitle/" itemprop="url">游戏古登堡计划视频组后期工作规范（草案）</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-03T21:47:05+08:00">
+                2016-12-03
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2017-11-26T03:05:10+08:00">
+                2017-11-26
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  535
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  2
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body han-init-context" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p><img src="http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg" class="full-image" /></p>
+<p><del>别问我为啥配这图</del></p>
+<p>本规范最初版制定2016年12月03日，最后更新于2016年12月03日。</p>
+<p>建议订阅RSS或Watch仓库以获取最新更新。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2016/12/03/note-about-subtitle/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -2052,7 +2066,7 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2065,7 +2079,7 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2088,31 +2102,31 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
                 <span class="links-of-author-item">
                   <a href="mailto:ray.eldath@protonmail.com" target="_blank" title="E-Mail">
                     
-                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                      <i class="fa fa-fw fa-envelope"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
                   <a href="https://github.com/Ray-Eldath" target="_blank" title="GitHub">
                     
-                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                      <i class="fa fa-fw fa-github"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
-                  <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="Zhihu">
+                  <a href="https://www.zhihu.com/people/eldath-ray/activities" target="_blank" title="知乎">
                     
-                      <i class="fa fa-fw fa-question-circle-o"></i>Zhihu</a>
-                </span>
-              
-                <span class="links-of-author-item">
-                  <a href="https://stackoverflow.com/users/8711684/ray-eldath?tab=profile" target="_blank" title="StackOverflow">
-                    
-                      <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                      <i class="fa fa-fw fa-question-circle-o"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
                   <a href="https://twitter.com/ray_eldath" target="_blank" title="Twitter">
                     
-                      <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                      <i class="fa fa-fw fa-twitter"></i></a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://stackoverflow.com/users/8711684/ray-eldath?tab=profile" target="_blank" title="StackOverflow">
+                    
+                      <i class="fa fa-fw fa-stack-overflow"></i></a>
                 </span>
               
             
@@ -2137,13 +2151,6 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
 
       
 
-      
-        <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
-          
-            <span id="scrollpercent"><span>0</span>%</span>
-          
-        </div>
       
 
     </div>
@@ -2193,6 +2200,11 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
       </div>
     </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
     
 
   </div>
