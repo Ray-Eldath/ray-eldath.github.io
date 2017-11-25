@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-flash.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -30,6 +37,7 @@
 
 
   <meta name="google-site-verification" content="QdtC5jYsMSZ0zyzafCg1N43nr6tEuKqVriq6fx_vFXg" />
+
 
 
 
@@ -52,38 +60,31 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg?v=5.1.3" color="#222">
+
+
+  <link rel="manifest" href="/images/favicon/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml" />
+
 
 
   <meta name="keywords" content="eldath, ray, eldath ray, ray eldath, blog, tech, life, java, cryptography" />
@@ -93,11 +94,6 @@
 
 
   <link rel="alternate" href="/atom.xml" title="Eldath's Blog" type="application/atom+xml" />
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
 
 
 
@@ -121,10 +117,11 @@
   var CONFIG = {
     root: '/',
     scheme: 'Gemini',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true,"onmobile":false},
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
     fancybox: true,
     tabs: true,
-    motion: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -176,12 +173,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -192,8 +183,7 @@
   
 
   <div class="container sidebar-position-left 
-   page-home 
- ">
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -249,6 +239,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -259,12 +259,12 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+        <li class="menu-item menu-item-links">
+          <a href="/about#Eldath的朋友们" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-link"></i> <br />
             
-            标签
+            链接
           </a>
         </li>
       
@@ -344,7 +344,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -399,7 +399,7 @@
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   2,929
@@ -415,7 +415,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   11
@@ -510,7 +510,7 @@ Unlimited Blade Works !!!
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -565,7 +565,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   2,192
@@ -581,7 +581,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   8
@@ -682,7 +682,7 @@ Unlimited Blade Works !!!
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -737,7 +737,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   1,163
@@ -753,7 +753,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   5
@@ -842,7 +842,7 @@ Unlimited Blade Works !!!
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -897,7 +897,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   1,710
@@ -913,7 +913,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   7
@@ -1009,7 +1009,7 @@ Unlimited Blade Works !!!
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1064,7 +1064,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   518
@@ -1080,7 +1080,7 @@ Unlimited Blade Works !!!
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   2
@@ -1176,7 +1176,7 @@ config.json（主配置文件）该配置文
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1231,7 +1231,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   1,150
@@ -1247,7 +1247,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   4
@@ -1344,7 +1344,7 @@ config.json（主配置文件）该配置文
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1399,7 +1399,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   2,321
@@ -1415,7 +1415,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   8
@@ -1508,7 +1508,7 @@ config.json（主配置文件）该配置文
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1563,7 +1563,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   79
@@ -1579,7 +1579,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   1
@@ -1670,7 +1670,7 @@ config.json（主配置文件）该配置文
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1725,7 +1725,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   1,380
@@ -1741,7 +1741,7 @@ config.json（主配置文件）该配置文
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   5
@@ -1836,7 +1836,7 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ray Eldath">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.png">
+      <meta itemprop="image" content="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1891,7 +1891,7 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
                   <i class="fa fa-file-word-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">字数统计</span>
+                  <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
                   986
@@ -1907,7 +1907,7 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   3
@@ -2033,150 +2033,117 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
 
       
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="http://ray-eldath.image.alimmdn.com/special/avatar-big.png"
-               alt="Ray Eldath" />
-          <p class="site-author-name" itemprop="name">Ray Eldath</p>
-           
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="http://ray-eldath.image.alimmdn.com/special/avatar-big.jpg"
+                alt="Ray Eldath" />
+            
+              <p class="site-author-name" itemprop="name">Ray Eldath</p>
               <p class="site-description motion-element" itemprop="description"></p>
-           
-        </div>
-        <nav class="site-state motion-element">
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
 
           
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">16</span>
-                <span class="site-state-item-name">日志</span>
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:ray.eldath@protonmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/Ray-Eldath" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="Zhihu">
+                    
+                      <i class="fa fa-fw fa-question-circle-o"></i>Zhihu</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://stackoverflow.com/users/8711684/ray-eldath?tab=profile" target="_blank" title="StackOverflow">
+                    
+                      <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://twitter.com/ray_eldath" target="_blank" title="Twitter">
+                    
+                      <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+            <div class="cc-license motion-element" itemprop="license">
+              <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+                <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
               </a>
             </div>
           
 
           
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
           
 
-        </nav>
-
-        
-          <div class="feed-link motion-element">
-            <a href="/atom.xml" rel="alternate">
-              <i class="fa fa-rss"></i>
-              RSS
-            </a>
-          </div>
-        
-
-        <div class="links-of-author motion-element">
           
-            
-              <span class="links-of-author-item">
-                <a href="mailto:eldath.ray@protonmail.com" target="_blank" title="Email">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      Email
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/Ray-Eldath" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/eldath-ray" target="_blank" title="Zhihu">
-                  
-                    <i class="fa fa-fw fa-question-circle-o"></i>
-                  
-                    
-                      Zhihu
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/eldath" target="_blank" title="Weibo">
-                  
-                    <i class="fa fa-fw fa-weibo"></i>
-                  
-                    
-                      Weibo
-                    
-                </a>
-              </span>
-            
-          
+
         </div>
-
-        
-        
-          <div class="cc-license motion-element" itemprop="license">
-            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
-              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
-            </a>
-          </div>
-        
-
-        
-        
-          <div class="links-of-blogroll motion-element links-of-blogroll-block">
-            <div class="links-of-blogroll-title">
-              <i class="fa  fa-fw fa-globe"></i>
-              Links
-            </div>
-            <ul class="links-of-blogroll-list">
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://ice1000.org/" title="ice1000" target="_blank">ice1000</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://fydui.github.io" title="果冻の随笔" target="_blank">果冻の随笔</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://miao.ricardo2001zg.moe" title="\#单身可撩#/Ric" target="_blank">\#单身可撩#/Ric</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="http://akiris.esy.es" title="地狱通信" target="_blank">地狱通信</a>
-                </li>
-              
-                <li class="links-of-blogroll-item">
-                  <a href="https://chanhsi.tk" title="湛兮的树洞" target="_blank">湛兮的树洞</a>
-                </li>
-              
-            </ul>
-          </div>
-        
-
-        
-
-
       </section>
 
       
 
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
       
 
     </div>
@@ -2189,42 +2156,43 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Ray Eldath</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Gemini
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.3</div>
+
+
+
+  <div class="footer-custom">Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a></div>
 
 
         
+
+
+
+
+
+
 
         
       </div>
     </footer>
 
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-          <span id="scrollpercent"><span>0</span>%</span>
-        
-      </div>
     
 
   </div>
@@ -2251,9 +2219,6 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
   
 
 
-
-  
-  
 
 
 
@@ -2284,19 +2249,13 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
   
   <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
 
-  
-  <script type="text/javascript" src="/lib/three/three.min.js"></script>
-
-  
-  <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
 
 
 
@@ -2304,22 +2263,18 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
   
 
 
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.3"></script>
 
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.3"></script>
 
 
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
   
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
 
 
 
@@ -2350,6 +2305,8 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
 
 
 
+
+
   
 
 
@@ -2365,7 +2322,7 @@ $P$：全集上的$U$概率分布，为一个函数，即$P$。该函数为$U$�
   <script src="/lib/algolia-instant-search/instantsearch.min.js"></script>
   
 
-  <script src="/js/src/algolia-search.js?v=5.1.2"></script>
+  <script src="/js/src/algolia-search.js?v=5.1.3"></script>
 
 
 

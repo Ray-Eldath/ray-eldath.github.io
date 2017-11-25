@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ray-eldath.tech/about/index.html</loc>
+    
+    <lastmod>2017-11-25T17:28:54.747Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ray-eldath.tech/2017/04/17/spanish-note-1/</loc>
     
     <lastmod>2017-08-06T14:59:06.847Z</lastmod>
@@ -18,28 +25,28 @@
   <url>
     <loc>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</loc>
     
-    <lastmod>2017-08-06T14:58:31.445Z</lastmod>
+    <lastmod>2017-08-06T14:58:31.446Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</loc>
     
-    <lastmod>2017-08-06T14:58:10.552Z</lastmod>
+    <lastmod>2017-08-06T14:58:10.553Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</loc>
     
-    <lastmod>2017-08-06T14:57:27.625Z</lastmod>
+    <lastmod>2017-08-06T14:57:27.626Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</loc>
     
-    <lastmod>2017-08-06T14:56:39.460Z</lastmod>
+    <lastmod>2017-08-06T14:56:39.461Z</lastmod>
     
   </url>
   
@@ -53,14 +60,14 @@
   <url>
     <loc>http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</loc>
     
-    <lastmod>2017-07-10T15:23:21.729Z</lastmod>
+    <lastmod>2017-07-10T15:23:21.730Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</loc>
     
-    <lastmod>2017-07-10T15:03:39.213Z</lastmod>
+    <lastmod>2017-07-10T15:03:39.214Z</lastmod>
     
   </url>
   
@@ -74,21 +81,14 @@
   <url>
     <loc>http://ray-eldath.tech/2017/05/28/avalon-profile-description/</loc>
     
-    <lastmod>2017-06-06T05:59:19.614Z</lastmod>
+    <lastmod>2017-06-06T05:59:19.615Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</loc>
     
-    <lastmod>2017-04-20T07:43:26.027Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/about/index.html</loc>
-    
-    <lastmod>2017-04-16T14:28:11.297Z</lastmod>
+    <lastmod>2017-04-20T07:43:26.028Z</lastmod>
     
   </url>
   
@@ -102,7 +102,7 @@
   <url>
     <loc>http://ray-eldath.tech/2016/10/11/cryptography-1/</loc>
     
-    <lastmod>2017-04-16T13:58:05.368Z</lastmod>
+    <lastmod>2017-04-16T13:58:05.369Z</lastmod>
     
   </url>
   
@@ -124,13 +124,6 @@
     <loc>http://ray-eldath.tech/tags/index.html</loc>
     
     <lastmod>2017-04-09T03:52:41.510Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/404.html</loc>
-    
-    <lastmod>2017-04-08T09:29:02.968Z</lastmod>
     
   </url>
   
