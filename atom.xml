@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ray-eldath.tech/"/>
-  <updated>2017-11-26T07:37:58.031Z</updated>
+  <updated>2017-11-26T07:43:32.311Z</updated>
   <id>http://ray-eldath.tech/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="http://ray-eldath.tech/2017/07/30/hello-cryptography-5/"/>
     <id>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</id>
     <published>2017-07-30T09:08:17.000Z</published>
-    <updated>2017-11-26T07:37:58.031Z</updated>
+    <updated>2017-11-26T07:43:32.311Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;上节回顾&quot;&gt;&lt;a href=&quot;#上节回顾&quot; class=&quot;headerlink&quot; title=&quot;上节回顾&quot;&gt;&lt;/a&gt;上节回顾&lt;/h1&gt;&lt;p&gt;在上一节中，我们讨论了第一个完整的密码OTP密码，并以通过香农提出的密码安全理论衡量了OTP的安全性是完美的。&lt;/p&gt;
 &lt;p&gt;本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。&lt;/p&gt;
     
@@ -44,11 +44,11 @@
     <link href="http://ray-eldath.tech/2017/07/27/hello-cryptography-4/"/>
     <id>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</id>
     <published>2017-07-27T09:57:44.000Z</published>
-    <updated>2017-11-26T07:37:35.030Z</updated>
+    <updated>2017-11-26T07:43:35.130Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要&lt;del&gt;董&lt;/del&gt;懂的基本知识密码系统。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -89,11 +89,11 @@
     <link href="http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/"/>
     <id>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</id>
     <published>2017-05-28T07:17:47.000Z</published>
-    <updated>2017-11-26T07:38:57.500Z</updated>
+    <updated>2017-11-26T07:44:07.477Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-quick-start-guide.jpg@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; class=&quot;headerlink&quot; title=&quot;导言&quot;&gt;&lt;/a&gt;导言&lt;/h1&gt;&lt;p&gt;本文将介绍多种快速食用Avalon的方法，请遵照文内步骤进行。&lt;/p&gt;
 &lt;p&gt;首先，本文将提供两种食用Avalon的主要方向，请依自己的应用选择：&lt;/p&gt;
 &lt;ul&gt;
@@ -116,11 +116,11 @@
     <link href="http://ray-eldath.tech/2017/05/28/avalon-profile-description/"/>
     <id>http://ray-eldath.tech/2017/05/28/avalon-profile-description/</id>
     <published>2017-05-28T07:07:05.000Z</published>
-    <updated>2017-11-26T07:39:07.991Z</updated>
+    <updated>2017-11-26T07:44:08.183Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-profile-description.jpg@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/avalon-profile-description.jpg@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;导言&quot;&gt;&lt;a href=&quot;#导言&quot; class=&quot;headerlink&quot; title=&quot;导言&quot;&gt;&lt;/a&gt;导言&lt;/h1&gt;&lt;p&gt;本文主要说明Avalon的配置文件构成及详细的配置项。&lt;/p&gt;
 &lt;p&gt;本文件适用的Avalon版本：所有版本。&lt;/p&gt;
     
@@ -138,11 +138,11 @@
     <link href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/"/>
     <id>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</id>
     <published>2017-04-20T08:00:25.000Z</published>
-    <updated>2017-11-26T07:37:37.700Z</updated>
+    <updated>2017-11-26T07:43:38.101Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;h1 id=&quot;导览&quot;&gt;&lt;a href=&quot;#导览&quot; class=&quot;headerlink&quot; title=&quot;导览&quot;&gt;&lt;/a&gt;导览&lt;/h1&gt;&lt;p&gt;课程地址请见&lt;a href=&quot;https://www.coursera.org/learn/crypto/lecture/JkDRg/discrete-probability-crash-course-cont&quot;&gt;Coursera&lt;/a&gt;。&lt;/p&gt;
 &lt;p&gt;对于离散概率的更详细解释，请见：&lt;a href=&quot;https://en.wikibooks.org/wiki/High_School_Mathematics_Extensions/Discrete_Probability&quot;&gt;WikiBooks (English)&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
@@ -187,11 +187,11 @@
     <link href="http://ray-eldath.tech/2017/03/24/hello-cryptography-2/"/>
     <id>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</id>
     <published>2017-03-24T05:56:16.000Z</published>
-    <updated>2017-11-26T07:38:06.222Z</updated>
+    <updated>2017-11-26T07:43:50.382Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
     
     </summary>
     
@@ -209,11 +209,11 @@
     <link href="http://ray-eldath.tech/2017/03/18/hello-cryptography-1/"/>
     <id>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</id>
     <published>2017-03-18T05:53:13.000Z</published>
-    <updated>2017-11-26T07:38:33.288Z</updated>
+    <updated>2017-11-26T07:44:08.899Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
     
     </summary>
     
@@ -231,11 +231,11 @@
     <link href="http://ray-eldath.tech/2016/12/03/note-about-subtitle/"/>
     <id>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</id>
     <published>2016-12-03T13:47:05.000Z</published>
-    <updated>2017-11-26T07:37:50.645Z</updated>
+    <updated>2017-11-26T07:43:25.141Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg@750-x&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;http://ray-eldath.image.alimmdn.com/header/note-about-subtitle.jpg@750w_1l&quot; class=&quot;full-image&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;本规范最初版制定2016年12月03日，最后更新于2016年12月03日。&lt;/p&gt;
 &lt;p&gt;建议订阅RSS或Watch仓库以获取最新更新。&lt;/p&gt;
     
