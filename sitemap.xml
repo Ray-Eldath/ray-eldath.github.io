@@ -2,86 +2,86 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://ray-eldath.tech/2016/10/07/something-about-my-blog/</loc>
-    
-    <lastmod>2017-11-25T19:05:19.463Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</loc>
-    
-    <lastmod>2017-11-25T19:05:10.364Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2016/10/06/hello-world/</loc>
-    
-    <lastmod>2017-11-25T19:05:02.077Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</loc>
-    
-    <lastmod>2017-11-25T19:04:54.296Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</loc>
-    
-    <lastmod>2017-11-25T19:04:44.611Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</loc>
-    
-    <lastmod>2017-11-25T19:04:33.229Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</loc>
-    
-    <lastmod>2017-11-25T19:04:13.053Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</loc>
-    
-    <lastmod>2017-11-25T19:04:03.059Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</loc>
-    
-    <lastmod>2017-11-25T19:03:34.847Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://ray-eldath.tech/2017/04/08/blog-system-update-successful/</loc>
     
-    <lastmod>2017-11-25T19:03:26.212Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</loc>
-    
-    <lastmod>2017-11-25T19:03:17.618Z</lastmod>
+    <lastmod>2017-11-26T07:39:15.920Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://ray-eldath.tech/2017/05/28/avalon-profile-description/</loc>
     
-    <lastmod>2017-11-25T19:03:01.586Z</lastmod>
+    <lastmod>2017-11-26T07:39:07.991Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/05/28/avalon-quick-start-guide/</loc>
+    
+    <lastmod>2017-11-26T07:38:57.500Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/07/10/codepad-or-oj-with-docker/</loc>
+    
+    <lastmod>2017-11-26T07:38:41.531Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</loc>
+    
+    <lastmod>2017-11-26T07:38:33.288Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/03/24/hello-cryptography-2/</loc>
+    
+    <lastmod>2017-11-26T07:38:06.222Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/07/30/hello-cryptography-5/</loc>
+    
+    <lastmod>2017-11-26T07:37:58.031Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2016/12/03/note-about-subtitle/</loc>
+    
+    <lastmod>2017-11-26T07:37:50.645Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</loc>
+    
+    <lastmod>2017-11-26T07:37:37.700Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</loc>
+    
+    <lastmod>2017-11-26T07:37:35.030Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2016/10/06/hello-world/</loc>
+    
+    <lastmod>2017-11-26T07:33:46.659Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ray-eldath.tech/2016/10/07/something-about-my-blog/</loc>
+    
+    <lastmod>2017-11-26T07:33:13.586Z</lastmod>
     
   </url>
   
