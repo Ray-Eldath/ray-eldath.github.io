@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</loc>
+    
+    <lastmod>2018-01-25T04:35:47.920Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ray-eldath.tech/2017/03/18/hello-cryptography-1/</loc>
     
     <lastmod>2017-11-26T07:44:08.899Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>http://ray-eldath.tech/2017/04/20/hello-cryptography-3/</loc>
     
     <lastmod>2017-11-26T07:43:38.101Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ray-eldath.tech/2017/07/27/hello-cryptography-4/</loc>
-    
-    <lastmod>2017-11-26T07:43:35.130Z</lastmod>
     
   </url>
   

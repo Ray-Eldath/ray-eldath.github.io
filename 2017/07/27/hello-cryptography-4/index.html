@@ -140,7 +140,7 @@
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/1498625083235424.png">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/emoji/90.png?t=1501159488633">
 <meta property="og:image" content="http://ray-eldath.image.alimmdn.com/post/hello-cryptography-4/ClaudeShannon_MFO3807.jpg">
-<meta property="og:updated_time" content="2017-11-26T07:43:35.130Z">
+<meta property="og:updated_time" content="2018-01-25T04:35:47.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="你好，密码学(4)：密码系统、OTP密码和密码的安全性">
 <meta name="twitter:description" content="简介：本文主要介绍了第一个我们接触到的密码系统流密码和必须要董懂的基本知识密码系统。">
@@ -513,10 +513,10 @@
 <blockquote>
 <p>因此，本文开头提到的“密码”不是密码的原因，就在于其不存在密钥，所以也就没有密码的环境了。</p>
 </blockquote>
-<h1 id="第一个密♂码：One-Time-Pad（一次性密码本）"><a href="#第一个密♂码：One-Time-Pad（一次性密码本）" class="headerlink" title="第一个密♂码：One Time Pad（一次性密码本）"></a>第一个密♂码：One Time Pad（一次性密码本）</h1><blockquote>
+<h1 id="第一个密码：One-Time-Pad（一次性密码本）"><a href="#第一个密码：One-Time-Pad（一次性密码本）" class="headerlink" title="第一个密码：One Time Pad（一次性密码本）"></a>第一个密码：One Time Pad（一次性密码本）</h1><blockquote>
 <p>因对于”One Time Pad”这一英文对应的译法较多（“一次性密码本”，“一次一密”，“一次性便签密码”），故在以后表述此密码时，均采用其英文表达One Time Pad或其缩写OTP。</p>
 </blockquote>
-<h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>使用先前对于“密码系统”的说明，我们来定义一下这个密♂码的环境（密码系统）：</p>
+<h2 id="定义-1"><a href="#定义-1" class="headerlink" title="定义"></a>定义</h2><p>使用先前对于“密码系统”的说明，我们来定义一下这个密码的环境（密码系统）：</p>
 <ul>
 <li>$\mathscr K = {0, \: 1}^n$</li>
 <li>$\mathscr M = {0, \: 1}^n$</li>
@@ -524,19 +524,19 @@
 </ul>
 <p>所以，三元组中的每个部分都是：所有$n$位的二进制字符串。<del>哈哈。</del></p>
 <p>而密钥则是一个<strong>与密文等长的<em>随机</em>二进制字符串</strong>。</p>
-<p>然后，我们再来定义一下密♂码自身：</p>
+<p>然后，我们再来定义一下密码自身：</p>
 <ul>
 <li>$E(k, \: m)=k\oplus m:=c$</li>
 <li>$D(k, \: c)=k\oplus c$</li>
 </ul>
-<p>为了使这个密♂码成为密♂码而不是“密码”，我们需要证明它满足一致性方程：<br>$$<br>\begin{align}<br>D(K, \: E(k, \: m))&amp;=D(k, \: k \oplus m)\<br>&amp;= k\oplus(k\oplus m) \<br>&amp;= (k\oplus k)\oplus m \<br>&amp;=0\oplus m \<br>&amp;=m<br>\end{align}<br>$$<br>（上述表达式中的$\oplus$表示异或运算，关于异或运算的详细解释请见<a href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/">你好，密码学(3)：离散概率（速成课）（续）</a>）</p>
+<p>为了使这个密码成为密码而不是“密码”，我们需要证明它满足一致性方程：<br>$$<br>\begin{align}<br>D(K, \: E(k, \: m))&amp;=D(k, \: k \oplus m)\<br>&amp;= k\oplus(k\oplus m) \<br>&amp;= (k\oplus k)\oplus m \<br>&amp;=0\oplus m \<br>&amp;=m<br>\end{align}<br>$$<br>（上述表达式中的$\oplus$表示异或运算，关于异或运算的详细解释请见<a href="http://ray-eldath.tech/2017/04/20/hello-cryptography-3/">你好，密码学(3)：离散概率（速成课）（续）</a>）</p>
 <h2 id="好处"><a href="#好处" class="headerlink" title="好处"></a>好处</h2><ul>
-<li>使用OTP密♂码，我们能极快极快地加密或解密，即使消息的长度非常长。因为做异或运算对于计算机来说是非常简单且快速的事情。</li>
+<li>使用OTP密码，我们能极快极快地加密或解密，即使消息的长度非常长。因为做异或运算对于计算机来说是非常简单且快速的事情。</li>
 <li>我们能获得<strong>超乎想像的、完美的</strong>安全性。（关于 密码的安全性 的定义及 OTP密码安全性极高 的证明将在下文给出）</li>
 </ul>
-<h2 id="但是…-…"><a href="#但是…-…" class="headerlink" title="但是… …"></a>但是… …</h2><p><strong>OTP密♂码是不可能实现哒！</strong></p>
-<p><strong>OTP密♂码是不可能实现哒！</strong></p>
-<p><strong>OTP密♂码是不可能实现哒！</strong></p>
+<h2 id="但是…-…"><a href="#但是…-…" class="headerlink" title="但是… …"></a>但是… …</h2><p><strong>OTP密码是不可能实现哒！</strong></p>
+<p><strong>OTP密码是不可能实现哒！</strong></p>
+<p><strong>OTP密码是不可能实现哒！</strong></p>
 <p><img src="http://ray-eldath.image.alimmdn.com/emoji/1498625083235424.png" alt="惊不惊喜意不意外"></p>
 <p>怎么样！<strong>惊不惊喜意不意外！</strong></p>
 <p>为什么呢？</p>
@@ -850,7 +850,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#密码系统"><span class="nav-number">1.</span> <span class="nav-text">密码系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性原则"><span class="nav-number">1.3.</span> <span class="nav-text">一致性原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">1.4.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个密♂码：One-Time-Pad（一次性密码本）"><span class="nav-number">2.</span> <span class="nav-text">第一个密♂码：One Time Pad（一次性密码本）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好处"><span class="nav-number">2.2.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#但是…-…"><span class="nav-number">2.3.</span> <span class="nav-text">但是… …</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密码的安全性"><span class="nav-number">3.</span> <span class="nav-text">密码的安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义和阐释"><span class="nav-number">3.1.</span> <span class="nav-text">定义和阐释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“OTP密码具有完美安全性”"><span class="nav-number">3.2.</span> <span class="nav-text">“OTP密码具有完美安全性”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-完-gt"><span class="nav-number">4.</span> <span class="nav-text"><完></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#密码系统"><span class="nav-number">1.</span> <span class="nav-text">密码系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#引言"><span class="nav-number">1.1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#定义"><span class="nav-number">1.2.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#一致性原则"><span class="nav-number">1.3.</span> <span class="nav-text">一致性原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特性"><span class="nav-number">1.4.</span> <span class="nav-text">特性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一个密码：One-Time-Pad（一次性密码本）"><span class="nav-number">2.</span> <span class="nav-text">第一个密码：One Time Pad（一次性密码本）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义-1"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#好处"><span class="nav-number">2.2.</span> <span class="nav-text">好处</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#但是…-…"><span class="nav-number">2.3.</span> <span class="nav-text">但是… …</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密码的安全性"><span class="nav-number">3.</span> <span class="nav-text">密码的安全性</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#定义和阐释"><span class="nav-number">3.1.</span> <span class="nav-text">定义和阐释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#“OTP密码具有完美安全性”"><span class="nav-number">3.2.</span> <span class="nav-text">“OTP密码具有完美安全性”</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#lt-完-gt"><span class="nav-number">4.</span> <span class="nav-text"><完></span></a></li></ol></div>
             
 
           </div>
@@ -870,7 +870,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
