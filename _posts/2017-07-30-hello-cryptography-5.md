@@ -13,8 +13,6 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png@750w_
 
 本节我们将对收尾上节，并讨论一些必要的知识PRG和针对OTP密码的攻击。
 
-<!-- more -->
-
 # “OTP密码是最优情况”
 
 ## 引语
@@ -44,13 +42,17 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png@750w_
 **若一个密码完美安全，则其全体密钥的数量的必须不少于全体明文的数量**
 
 即：
+
 $$
 |\mathscr K|\ge |\mathscr M|
 $$
+
 也就是说... ...
+
 $$
 \mathtt{for \;\: perfect \;\: key,}\quad len(k)\ge len(m)
 $$
+
 因此，OTP密码的密钥长度等于明文长度，其实是完美密码中的**最优情况**。
 
 > 因此，对于上篇文章中评论提出的问题：~~对于“足够长的PSK”~~没有足够长的PSK，最“足够”长就是和明文一样长。
@@ -72,6 +74,7 @@ $$
 ## 定义
 
 本质上~~江~~讲，PRG就是一个**高效**的、**确定**的、**不可预测**的函数$G$，能将一个**长度为$s$的二进制数字符串**，扩充为一个**长得多的、长度为$n$的二进制数字符串**。即：
+
 $$
 \text{for OTP : $\qquad$ if }\quad E(k,\:m)=c\\
 \begin{align}
@@ -102,9 +105,11 @@ $$
 （其实这么安排是为了便于理解。**真的**，你们要相信我）
 
 如果一个“PRG”函数$G$是可预测的，那么说明存在一个高效的函数$A$，能过**通过$G$的输出的前1位字符串，还原出余下的位**。即：
+
 $$
 \exists \:i:\quad G(k)|_{1,...,i} \overset{A}\longrightarrow G(k)|_{i+1}
 $$
+
 如果一个“PRG”是可预测的，那么若一个攻击者截获了密文，并且事先知道明文的前缀；（例如必须以“Dear Ray Eldath: ”开头，~~哈哈~~）那么他可以将截获的密文与该前缀异或，得到的就是$G(k)$的前缀。由于该“PRG”是可预测的，因此该攻击者就能通过$G(k)$的前缀，还原出整个$k$。
 
 **严格地讲**（有兴趣的阅读，跳过此部分对后续内容理解没有影响），不可预测性阐述对于所有的$i$，没有有效的破解算法$A$，能以**不可忽略**的概率预测出第$i+1$位。
@@ -116,9 +121,11 @@ $$
 > 本节内容增补于2018.1.24
 
 我们说一个PRG是安全的，就意味着我们认为这个PRG的输出是**均匀**的。也就是说，**一个PRG$G$是安全的，当且仅当它的输出分布与均匀随机分布*不可区分* **。即：
+
 $$
 [\;k\overset{R} \longleftarrow \mathscr K \text{,  output }G(k)\;] \quad \text{is `indistinguishable` from } \quad [\;r\overset{R} \longleftarrow {\{0,1\&} ^n\text{,  output r}\;]
 $$
+
 这意味着由于种子空间太小而远远小于全体二进制字符串空间的PRG输出空间（见下图），要与全体二进制字符串空间**不可区分**。
 
 ![Venn](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/Venn.png)
@@ -130,6 +137,7 @@ $$
 ### 1. 二进制串是否随机：统计测试
 
 统计测试**是一个算法$A$，它以$n$位的二进制字符串作为输入，输出其是否随机**：
+
 $$
 \text{for } \;\: x={\{0, 1\}}^n \text{, }\quad A(x)=
 \begin{cases}
@@ -138,15 +146,16 @@ $$
 \end{cases}
 $$
 
-
 它*可能*会采取以下策略来判断一个二进制字符串$x$是否是随机的：
 
 1. $A(x)=1$，当且仅当**$x$中$0$出现的次数**和**$1$出现的次数**差距**足够小**：
+
    $$
    A(x)=1 \quad \iff \quad  |\:\#0(x)-\#1(x)\:| \le 10 \sqrt n \quad \text{(for example)}
    $$
 
 2. $A(x)=1$，当且仅当$x$中**连续出现$00$序列**（即两个$0$挨着）的次数**足够小**：
+
    $$
    A(x)=1 \quad \iff \quad  |\:\#00(x)-\frac n 4 \: | \le 10 \sqrt x \quad \text{(for example)}
    $$
@@ -161,7 +170,7 @@ $$
 
 ![](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/Snipaste_2018-01-25_18-37-35.png)
 
-> 妈呀这公式打得费劲死了ヾ|≧_≦|〃
+> 妈呀这公式打得费劲死了ヾ\|≧_≦\|〃
 
 由于$\underset{PRG} {Adv}$是一个概率的差，因而它只能取$0$和$1$之间（包括$0$和$1$）的值，即$\underset{PRG}{Adv} \in [0,\:1]$。
 
@@ -274,10 +283,12 @@ $$
 由于上文已经介绍了PRG的相关知识，因此下文中将使用$PRG(k)$代替前文中的$k$，从而使论述更为可信。
 
 **首先**，我需要得到这两个消息的加密结果（密文）：
+
 $$
 c_1=m_1\oplus PRG(k)\\\\
 c_2=m_2\oplus PRG(k)
 $$
+
 **Q1：那么，当我计算$c_1\oplus c_2$时，会得到什么呢？**
 
 **先不要往下看，先自己想想！**
