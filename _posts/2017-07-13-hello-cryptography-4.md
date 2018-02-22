@@ -8,8 +8,6 @@ tags: 技术 你好，密码学 系列文章
 cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png
 ---
 
-> 简介：本文
->
 > ~~喵。~~
 
 # 密码系统

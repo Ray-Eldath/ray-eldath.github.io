@@ -4,7 +4,7 @@ title: 你好，密码学(5)：伪随机数生成器和攻击OTP密码
 date: 2017-07-30
 categories: 技术
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png@750w_1l
+cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png
 ---
 
 # 上节回顾
