@@ -4,7 +4,7 @@ title: 你好，密码学(2)：离散概率（速成课）
 date: 2017-04-25
 categories: 技术
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-2.png
+cover: https://res.cloudinary.com/ray-eldath/image/upload/header/hello-cryptography-2.png
 ---
 
 # 导览

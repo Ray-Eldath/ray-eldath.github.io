@@ -3,12 +3,12 @@ layout: post
 title: 你好，密码学(1)：什么是密码学
 date: 2017-04-14
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png
+cover: https://res.cloudinary.com/ray-eldath/image/upload/header/hello-cryptography-1.png
 ---
 
 ## 密码学的核心
 
-![Slide 1](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-1/slide-1.png)
+![Slide 1](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-1/slide-1.png)
 
 - 安全密钥的构造
 
@@ -25,7 +25,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-1.png
 
 ## 但是密码学还能做到更多
 
-![Slide 2](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-1/slide-2.png)
+![Slide 2](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-1/slide-2.png)
 
 - **数字签名**
 

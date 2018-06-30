@@ -4,7 +4,7 @@ title: 你好，密码学(6)：流密码基础 - 定义及其应用
 date: 2018-02-22
 categories: 技术
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-6.png
+cover: https://res.cloudinary.com/ray-eldath/image/upload/header/hello-cryptography-6.png
 ---
 
 # 回顾 & 导言
@@ -22,7 +22,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-6.png
 首先，我们定义了**一次性密码本（OTP）**密码：
 
 $$
-E(k,\:m)=m\oplus k\qquad D(k,\:c)=c\oplus k\quad(\;\|k\|=\|m\|\;)
+E(k,\:m)=m\oplus k\qquad D(k,\:c)=c\oplus k\quad(\;|k|=|m|\;)
 $$
 
 OTP密码的加密和解密都仅仅是做了一个简单的异或运算，但它却具有**完美安全性**：密文不透露有关明文的*任何*信息。但是，纵使这是一种完美安全的密码，它却无法实现，因为香~~浓~~农曾证明过以下定理：
@@ -44,7 +44,7 @@ OTP密码的加密和解密都仅仅是做了一个简单的异或运算，但�
 为解决OTP不可实现的问题，流密码引入了一个*不可预测*的PRG$G$，将输入的密钥$k$（又称为“种子”，我们将在下文中交替使用这两种称法）送入$G$，从而得到一个**和明文一样长的**伪随机密钥$G(k)$，再使用这个伪随机密钥完成加密过程。即：
 
 $$
-E(k,\:m)=m\oplus G(k)\qquad D(k,\:c)=c\oplus G(k)\quad(\;\|\:G(k)\:\|=\|m\|\;)
+E(k,\:m)=m\oplus G(k)\qquad D(k,\:c)=c\oplus G(k)\quad(\;|\:G(k)\:|=|m|\;)
 $$
 
 这就解决了OTP不可实现的问题。因为输入的密钥$k$的长度显然是远远小于明文的长度的，只是使用PRG$G$将其进行扩充而已。
@@ -73,17 +73,17 @@ $$
 以下简要介绍LFSR运行的基本操作：
 
 1. **初始化。**首先，LFSR会以给定的种子（即密钥）初始化寄存器，以位（比特）为单位：
-  ![LFSR - 1](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/LFSR+-+1.png)
+  ![LFSR - 1](https://res.cloudinary.com/ray-eldath/image/upload/v1530350327/post/hello-cryptography-6/LFSR%20-%201.png)
 
 2. **抽头。**随后，LFSR从这些比特位中随机选取一些（称作“抽头”），并计算这些抽头的异或：
 
-  ![LFSR - 2](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/LFSR+-+2.png)
+  ![LFSR - 2](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/LFSR%20-%202.png)
 
   图中绿色的即为抽头。橙色的为将所有抽头异或的结果。
 
 3. **位移并附加。**最后，LFSR将这些抽头异或的结果附加到寄存器开头，并使寄存器向右位移，最后一个比特位作为结果输出：
 
-   ![LFSR - 3](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/LFSR+-+3.png)
+   ![LFSR - 3](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/LFSR%20-%203.png)
 
 > 用ProcessOn做这些插图累死了... ...（´□｀川）
 >
@@ -113,17 +113,17 @@ CSS使用5字节（也就是40比特）长度的密钥和两个LFSR：一个长1
 
 1. **初始化。**CSS使用$1$接上5字节种子的前两个字节初始化17比特的LFSR，再用$1$接上5字节种子的后三个字节初始化25比特的LFSR：
 
-   ![CSS - 1](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/CSS+-+1.png)
+   ![CSS - 1](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/CSS%20-%201.png)
 
-   图中$\|\|$表示“拼接”。这个符号在之前的一些文章中也有出现。
+   图中$||$表示“拼接”。这个符号在之前的一些文章中也有出现。
 
 2. **运行。**CSS将每个LFSR都运行八轮。
 
-   ![CSS - 2](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/CSS+-+2.png)
+   ![CSS - 2](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/CSS%20-%202.png)
 
 3. **求和后求模，得到一个字节。**最后，CSS将两个LFSR的输出求和并对256求模，得到一个字节。本轮结束。
 
-   ![CSS - 3](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/CSS+-+3.png)
+   ![CSS - 3](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/CSS%20-%203.png)
 
 总的来说，CSS初始化后每轮运行每个LFSR各8轮（产生八个输出），随后将这些输出求和并模256，得到一个字节。
 
@@ -139,13 +139,13 @@ CSS是一个相当简单的密码。易于硬件实现、速度快，在廉价�
 
 1. 首先，我们将密文与已知的明文头部异或，可以得到一段很短的CSS输出头部（图中青色部分）：
 
-   ![CSS Crack - 1](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/CSS+Crack+-+1.png)
+   ![CSS Crack - 1](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/CSS%20Crack%20-%201.png)
 
    为方便说明，下边我们都假设已知的明文头部为20字节，得到的CSS输出也为20字节。
 
 2. 随后，我们**猜测**第一个17比特长度LFSR的初始状态，运行它以输出20字节，再用先前得到的CSS输出头部减去这个LFSR的输出，根据CSS的定义，这时我们得到的这个字串（可能）是25比特长度LFSR的一个可能输出。
 
-   ![CSS Crack - 2](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/CSS+Crack+-+2.png)
+   ![CSS Crack - 2](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/CSS%20Crack%20-%202.png)
 
 3. 事实上，判断一个20字节的字串是否来自一个25比特长度的LFSR是简单的。这里将包含一个循环判断逻辑：
 
@@ -167,6 +167,6 @@ CSS是一个相当简单的密码。易于硬件实现、速度快，在廉价�
 
 本节中，我们讨论了一个并不强健的PRG（LFSR）和基于这个PRG的同样并不强健的流密码系统（CSS），这些密码系统均已被攻破。在下一节，《流密码基础：定义及其应用（续）》中，我们将讨论一个现代的流密码系统：Salsa20。
 
-> 其实关于Salsa20的玩意已经差不多了的...这里不一起发出来主要是因为现在的内容已经很多了...而且...[我有一点疑问](https://www.zhihu.com/question/267463624)...
+> 其实关于Salsa20的玩意已经差不多了的...
 
 ## <完>

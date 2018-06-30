@@ -4,7 +4,7 @@ title: 你好，密码学(5)：伪随机数生成器和攻击OTP密码
 date: 2017-07-30
 categories: 技术
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png
+cover: https://res.cloudinary.com/ray-eldath/image/upload/header/hello-cryptography-5.png
 ---
 
 # 上节回顾
@@ -25,7 +25,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png
 
 **因为当然没有啊！**(///ω///)
 
-![没想到吧](http://ray-eldath.image.alimmdn.com/emoji/8.png?t=1501156464202)
+![没想到吧](https://res.cloudinary.com/ray-eldath/image/upload/emoji/8.png?t=1501156464202)
 
 ## 没想到吧！
 
@@ -33,7 +33,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-5.png
 
 让我们再次~~祭~~请出克劳德·香农教授：
 
-![克劳德·香农 来源：a0.att.hudong.com](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/Claude-Elwood-Shannon.jpg@310h_1l.png)
+![克劳德·香农 来源：a0.att.hudong.com](https://res.cloudinary.com/ray-eldath/image/upload/c_scale,w_310/v1530350316/post/hello-cryptography-5/Claude-Elwood-Shannon.jpg)
 
 ~~怎么样！帅不帅！~~
 
@@ -100,7 +100,7 @@ $$
 
 **所以**，下面我们将讨论*可预测性*。
 
-![想不到吧](http://ray-eldath.image.alimmdn.com/emoji/33.jpg)
+![想不到吧](https://res.cloudinary.com/ray-eldath/image/upload/emoji/33.jpg)
 
 （其实这么安排是为了便于理解。**真的**，你们要相信我）
 
@@ -128,7 +128,7 @@ $$
 
 这意味着由于种子空间太小而远远小于全体二进制字符串空间的PRG输出空间（见下图），要与全体二进制字符串空间**不可区分**。
 
-![Venn](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-6/Venn.png)
+![Venn](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-6/Venn.png)
 
 这*并不是一个显然的特性*。从上图可以看出，要使远小于蓝色圆框（代表全体二进制字符串）与红色圆形（代表PRG输出）**不可区分**，是困难的。
 
@@ -168,7 +168,7 @@ $$
 
 统计测试$A$相对于PRG$G$的优势，是**$A$认为$G$输出的伪随机序列作为输入是随机的**的概率，与**$A$认为真随机序列$r$作是随机的**的概率的差：
 
-![](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/Snipaste_2018-01-25_18-37-35.png)
+![](https://res.cloudinary.com/ray-eldath/image/upload/v1530351922/post/hello-cryptography-5/Snipaste_2018-01-25_18-37-35.png)
 
 > 妈呀这公式打得费劲死了ヾ\|≧_≦\|〃
 
@@ -212,7 +212,7 @@ $$
 
 因为要求证是否有一个安全的PRG算法，等价于证明$P\ne NP$。
 
-![](http://ray-eldath.image.alimmdn.com/emoji/90.png)
+![](https://res.cloudinary.com/ray-eldath/image/upload/emoji/90.png)
 
 > 关于为何如此，我还没找到相关的论文。麻烦找到过相关资料的读者告知一下*＜(´・ω・)っ
 
@@ -238,7 +238,7 @@ $$
 
 - **[线性同余方法](https://zh.wikipedia.org/wiki/線性同餘方法)**：该方法被广泛应用于**统计学强度**的系统中。关于线性同余方法，维基百科的解释已经很清楚了，在此不过多解释：
 
-    ![维基百科 - 线性同余方法#随机性 摘自zh.wikipedia.org](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/snipaste20170730_145640.png?t=1501397834041)
+    ![维基百科 - 线性同余方法#随机性 摘自zh.wikipedia.org](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-5/snipaste20170730_145640.png?t=1501397834041)
 
     此外，对线性同余方法的改进，请见[清华大学学报（自然科学版）# 2009.02 - 改进线性同余法随机数发生器](http://www.cnki.com.cn/Article/CJFDTotal-QHXB200902009.htm)。
 
@@ -272,7 +272,7 @@ $$
 
 
 
-![。。。。。。](http://ray-eldath.image.alimmdn.com/emoji/90.png?t=1501159488633)
+![。。。。。。](https://res.cloudinary.com/ray-eldath/image/upload/emoji/90.png?t=1501159488633)
 
 ~~好啦！让我们开始吧！~~
 
@@ -335,7 +335,7 @@ $$
 
 在上文对PRG的讨论中，我们指出PRG函数输出的是**一个比输入长得多的字符串**，（请允许我去掉那一长串形容词）因此我们可以直接将该长输出**分段**，然后每段加密不同的明文：
 
-![capture1](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/snipaste20170730_163519.png?t=1501403729500)
+![capture1](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-5/snipaste20170730_163519.png?t=1501403729500)
 
 从而为每个明文分配不同的伪随机密钥。
 

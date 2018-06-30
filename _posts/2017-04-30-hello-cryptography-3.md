@@ -4,7 +4,7 @@ title: 你好，密码学(3)：离散概率（续）
 date: 2017-04-30
 categories: 技术
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png
+cover: https://res.cloudinary.com/ray-eldath/image/upload/header/hello-cryptography-3.png
 ---
 
 # 导览
@@ -16,7 +16,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-3.png
 > 注意：文章中对专业名词进行解释的链接均来自[中文维基百科](https://zh.wikipedia.org/)，中国大陆读者若想访问请自备... ...
 > 欢迎访问[作者博客](http://ray-eldath.tech/)。
 
-**若未阅读上篇文章密码学I：离散概率的，*强烈*建议前去阅读。**
+**若未阅读上篇文章[密码学I：离散概率](https://ray-eldath.github.io/)的，*强烈*建议前去阅读。**
 
 # 独立性
 
@@ -84,7 +84,7 @@ $$
 
 ## 应用
 
-![slide-1](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-3/slide-1.png)
+![slide-1](https://res.cloudinary.com/ray-eldath/image/upload/post/hello-cryptography-3/slide-1.png)
 
 所以只要取样个数超过全集大小的平方根，抽到相同元素的概率将会很快趋近于$1$。
 

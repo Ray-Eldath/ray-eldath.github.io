@@ -20,7 +20,7 @@ footer:
 author: 'Ray Eldath'
 nickname: 'Eldath'
 bio: '祈愿的碎片啊 请成为永恒的存在'
-avatar: 'http://ray-eldath.image.alimmdn.com/basic/avatar.png'
+avatar: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/avatar.jpg'
 
 # Search
 search: true
@@ -39,8 +39,8 @@ livere_uid: MTAyMC8yODEwMC80Njcz
 reward:
   enable: true
   reward_comment: '真诚赞赏 手有余香'
-  wechatpay: 'http://ray-eldath.image.alimmdn.com/basic/wechatpay.jpg'
-  alipay: 'http://ray-eldath.image.alimmdn.com/basic/alipay.jpg'
+  wechatpay: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/wechatpay.jpg'
+  alipay: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/alipay.jpg'
 
 # b2t 回到顶部 by Ray-Eldath
 b2t: true

@@ -5,7 +5,7 @@ subtitle: 主要介绍了第一个我们接触到的密码系统OTP密码和必�
 date: 2017-07-13
 categories: 技术
 tags: 技术 你好，密码学 系列文章
-cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png
+cover: https://res.cloudinary.com/ray-eldath/image/upload/header/hello-cryptography-4.png
 ---
 
 > ~~喵。~~
@@ -28,7 +28,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png
 
 **因为它当然不是啊！**(///ω///)
 
-![emoji](http://ray-eldath.image.alimmdn.com/emoji/8.png)
+![emoji](https://res.cloudinary.com/ray-eldath/image/upload/emoji/8.png)
 
 上面给出的密文示例，仅仅是使用[Online ASCII85 encoder](https://www.tools4noobs.com/online_tools/ascii85_encode/)将一串中文字符的编码结果而已。
 
@@ -58,7 +58,7 @@ cover: http://ray-eldath.image.alimmdn.com/header/hello-cryptography-4.png
 
 **当然不是的啦！**(///ω///)
 
-![img](http://ray-eldath.image.alimmdn.com/emoji/33.jpg)
+![img](https://res.cloudinary.com/ray-eldath/image/upload/emoji/33.jpg)
 
 ## 一致性原则
 
@@ -137,7 +137,7 @@ $$
 
 **OTP密码是不可能实现哒！**
 
-![emoji](http://ray-eldath.image.alimmdn.com/emoji/1498625083235424.png)
+![emoji](https://res.cloudinary.com/ray-eldath/image/upload/emoji/1498625083235424.png)
 
 怎么样！**惊不惊喜意不意外！**
 
@@ -147,7 +147,7 @@ $$
 
 该密码要求，在发送方传输消息的第一位**之前**，就必须传输**和明文一样长**的密钥。但是，若发送方和接收方之间有一条安全的途径能够传输这一**和明文一样长**的密钥，那两方之间完全可以传输**和密钥一样长**的明文，也就不需要这个密码进行加密和解密了。
 
-![emoji](http://ray-eldath.image.alimmdn.com/emoji/90.png)
+![emoji](https://res.cloudinary.com/ray-eldath/image/upload/emoji/90.png)
 
 **但是，即便如此**，今后我们也能看到OTP密码的思想实际上是很有用的。
 
@@ -163,7 +163,7 @@ $$
 
 在这里，我们就必须~~祭~~请出著名的信息论之父：克劳德·香农
 
-![Claude-Elwood-Shannon](http://ray-eldath.image.alimmdn.com/post/hello-cryptography-5/Claude-Elwood-Shannon.jpg@280w_1l)
+![Claude-Elwood-Shannon](https://res.cloudinary.com/ray-eldath/image/upload/c_scale,w_280/post/hello-cryptography-5/Claude-Elwood-Shannon.jpg)
 
 图片引自[维基百科 - 克劳德·香农](http://zh.wikipedia.org/zh-hans/%25E5%2585%258B%25E5%258A%25B3%25E5%25BE%25B7%25C2%25B7%25E9%25A6%2599%25E5%2586%259C)。
 

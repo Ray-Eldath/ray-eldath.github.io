@@ -8,8 +8,7 @@ refer to:
 <style media="screen">
   .scroll {
     z-index: 10000;
-    display: none;
-    width: 56px;
+    display: inline;
     height: 24px;
     background: #222;
     color: #fff;
@@ -23,8 +22,9 @@ refer to:
   }
 </style>
 <div class="scroll">
-  <i class="fa fa-arrow-up"></i>
-  <span class="scrollpercent"></span><span> %</span>
+  <i class="fa fa-arrow-up" style="margin-left: 4px"></i>
+  <span class="scrollpercent" style="margin-left: -2px"></span>
+  <span style="margin-left: -4px; margin-right: 4px">%</span>
 </div>
 
 <script src="/assets/js/util.js"></script>
