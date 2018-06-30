@@ -13,7 +13,7 @@ layout: default
 
     <ul class="tags-list">
         <li>
-        {% if site.recommend-tags and site.tags.size>0 %}
+        {% if site.recommend-tags and site.tags.size > 0 %}
             {% for tag in site.tags %}
             <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
             {% endfor %}
@@ -26,9 +26,7 @@ layout: default
             <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             {% endfor %}
         </li>
-        
-        </div>
-        {% endfor%}
+        {% endfor %}
     </ul>
 </main>
     
