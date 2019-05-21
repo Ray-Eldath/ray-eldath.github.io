@@ -42,7 +42,7 @@ reward:
   wechatpay: 'http://img02.sogoucdn.com/app/a/100520146/f465805179217dbe43428118503c450e'
   alipay: 'http://img04.sogoucdn.com/app/a/100520146/7d559f124fccc7a574ae21550fc3e98f'
 
-# b2t 回到顶部 by Hulu
+# b2t 回到顶部 by Ray-Eldath
 b2t: true
 
 # MathJax 公式支持
