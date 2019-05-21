@@ -32,8 +32,24 @@ nightMode: true
 disqus: false
 disqus_url: 'https://liaokeyu.disqus.com/embed.js'
 
-livere: true
+livere: false
 livere_uid: Mi8xLzM=
+
+# Gitalk
+
+gitalk:
+
+  enable: true    #是否开启Gitalk评论
+
+  clientID: '7ff4834ac72c1737b9ee'    #生成的clientID
+
+  clientSecret: 'f969b011e13fb68f519313f45fd9e5fc62a63f65'   #同上
+
+  repo: hulushuo.github.io    #仓库名称
+
+  owner: hulushuo    #github用户名
+
+  admin: hulushuo
 
 # Reward 赞赏功能 by Ray-Eldath
 reward:
