@@ -20,7 +20,7 @@ footer:
 author: 'Hulu'
 nickname: '哪吒'
 bio: '抬头看 远离地平线'
-avatar: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/avatar.jpg'
+avatar: 'http://img04.sogoucdn.com/app/a/100520146/5e2589ddbcdd59b9604d53f22af168aa'
 
 # Search
 search: true
@@ -33,16 +33,16 @@ disqus: false
 disqus_url: 'https://liaokeyu.disqus.com/embed.js'
 
 livere: true
-livere_uid: MTAyMC8yODEwMC80Njcz
+livere_uid: Mi8xLzM
 
 # Reward 赞赏功能 by Ray-Eldath
 reward:
   enable: true
-  reward_comment: '真诚赞赏 手有余香'
-  wechatpay: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/wechatpay.jpg'
-  alipay: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/alipay.jpg'
+  reward_comment: '取之于民 用之于民'
+  wechatpay: 'http://img02.sogoucdn.com/app/a/100520146/f465805179217dbe43428118503c450e'
+  alipay: 'http://img04.sogoucdn.com/app/a/100520146/7d559f124fccc7a574ae21550fc3e98f'
 
-# b2t 回到顶部 by Ray-Eldath
+# b2t 回到顶部 by Hulu
 b2t: true
 
 # MathJax 公式支持
@@ -60,10 +60,10 @@ postPatterns: 'circuitBoard'
 
 # SNS settings 配置社交网站url: email, weibo, zhihu, twitter, instagram, juejin, github, douban, facebook, dribble, uicn, jianshu, medium, linkedin
 sns:
-  email: 'mailto:ray.eldath@outlook.com'
-  zhihu: '//www.zhihu.com/people/eldath-ray/activities'
-  github: '//github.com/Ray-Eldath'
-  twitter: '//twitter.com/ray_eldath'
+  email: 'mailto:1367393535@qq.com'
+  zhihu: '//www.zhihu.com/people/ma-yong-hao-2/activities'
+  github: '//github.com/hulushuo'
+  linkedin: '//www.linkedin.com/in/永浩-马-5a7233173/'
 
 # Tags 设置标签
 recommend-tags: true # whether or not display recommend-tags on the sidebar
