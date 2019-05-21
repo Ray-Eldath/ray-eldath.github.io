@@ -1,11 +1,11 @@
 # Site settings 配置站点
-title: Ray Eldath's Blog
-description: '热爱知识的高中生。</br> 高二 / 爵士鼓 / 编程 / Java / Kotlin / 科幻'
-keyword: 'ray eldath, eldath, kotlin, java, program, computer, tech, sci-fi'
-url: 'http://ray-eldath.tech' # your host
+title: Hulu&小破孩
+description: '我思故我在。</br> 商哲 / 百科全书 / Philosophy / 计算机 / 读书 / Saying'
+keyword: 'Hulu, 哪吒, learning, reading, 哲学, computer'
+url: '' # your host
 
 # if you don't need baseurl, you should leave this value blank.
-baseurl: ''
+baseurl: 'https://hulushuo.github.io'
 
 # Navigation links
 nav:
@@ -14,12 +14,12 @@ nav:
 
 # Footer
 footer:
-  since: 2017
+  since: 2019
 
 # Author 配置博主信息
-author: 'Ray Eldath'
-nickname: 'Eldath'
-bio: '祈愿的碎片啊 请成为永恒的存在'
+author: 'Hulu'
+nickname: '哪吒'
+bio: '抬头看 远离地平线'
 avatar: 'https://res.cloudinary.com/ray-eldath/image/upload/basic/avatar.jpg'
 
 # Search
