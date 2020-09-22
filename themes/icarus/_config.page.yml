@@ -1,0 +1,36 @@
+# Sidebar widget configurations
+# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+widgets:
+    -
+        position: left
+        type: profile
+        author: Ray Eldath
+        author_title: 迷茫max......
+        location: 广东省
+        avatar: /img/avatar.jpg
+        follow_link: 'https://github.com/Ray-Eldath'
+        social_links:
+            GitHub:
+                icon: fab fa-github
+                url: 'https://github.com/Ray-Eldath'
+            Telegram Channel:
+                icon: fab fa-telegram
+                url: 'https://t.me/kaworunagisa17'
+            Email:
+                icon: fas fa-inbox
+                url: 'mailto://ray.eldath@outlook.com'
+            RSS:
+                icon: fas fa-rss
+                url: atom.xml
+    -
+        position: left
+        type: links
+        links:
+            df聚聚: 'https://dark-flames.com/'
+            e哥: 'https://edward40.com/'
+            billow姐姐: 'https://billow.fun/'
+            BIE: 'https://9bie.org/'
+            迪龙: 'https://cnblogs.com/Dillonh'
+            zyf聚聚: 'https://zhuyi.fan/'
+            Raptazure: 'https://raptazure.github.io/'
+            湛兮酱: 'https://dubuqian.cn/'

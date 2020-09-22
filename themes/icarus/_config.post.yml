@@ -1,0 +1,12 @@
+# Sidebar widget configurations
+# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+widgets:
+    -
+        position: left
+        type: toc
+    -
+        position: left
+        type: recent_posts
+    -
+        type: tags
+        position: left

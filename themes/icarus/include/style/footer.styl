@@ -1,0 +1,25 @@
+/* ---------------------------------
+ *            Page Footer
+ * --------------------------------- */
+footer.footer
+    margin-top: 2rem
+    border-top: 10px solid transparent
+    border-image: linear-gradient(90deg, #52E5E7 0%, #130CB7 100%)
+    border-image-slice: 1
+
+    .level-start
+        +mobile()
+            text-align: center
+
+    .level-end
+        .field
+            flex-wrap: wrap
+            align-items: center
+
+            +mobile()
+                justify-content: center
+                margin-top: 1rem
+
+.footer-logo
+    img
+        max-height: 1.5 * $logo-height

@@ -1,0 +1,191 @@
+﻿<html>
+  <head>
+    <title>Ray Eldath's Blog - 已下线</title>
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.loli.net/css?family=Lato|Noto+Sans+SC&display=swap"
+    />
+
+    <style>
+      .background-box {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        z-index: -5;
+      }
+
+      .background {
+        position: absolute;
+        left: -6px;
+        top: -6px;
+        height: 105%;
+        width: 105%;
+        background: url("https://source.unsplash.com/1080x720/daily?landscape,nature")
+          no-repeat;
+        background-size: cover;
+        filter: blur(4px);
+      }
+
+      .box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        z-index: 100;
+      }
+
+      .main {
+        margin: 20px auto;
+        font-family: Lato, "Noto Sans SC", "Source Han Sans", "思源黑体", Arial,
+          sans-serif;
+        width: 550px;
+      }
+
+      .section {
+        border-radius: 14px;
+        padding: 30px;
+        margin: auto;
+        margin-top: 20px;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .section .title {
+        text-align: center;
+        font-weight: 500;
+        font-size: 2em;
+      }
+
+      .top {
+        margin-top: 250px;
+        background: white;
+      }
+
+      .top .avatar {
+        border: solid white 4px;
+        margin: -120px auto 0;
+        max-width: 155px;
+        border-radius: 100%;
+        overflow: hidden;
+      }
+
+      .top {
+        text-align: center;
+      }
+
+      .top .name {
+        font-size: 2rem;
+        line-height: 2;
+        font-weight: bold;
+      }
+
+      .top .slogan {
+        font-size: 1.1em;
+        line-height: 1;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .btn {
+        text-align: center;
+        display: block;
+        margin-bottom: 6px;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 5px;
+        color: white;
+        background: #3377b6;
+      }
+
+      .hitokoto {
+        background: rgba(255, 255, 255, 0.3);
+        padding: 1em;
+      }
+
+      .hitokoto #hitokoto {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .hitokoto .mark {
+        color: rgba(0, 217, 255, 0.6);
+      }
+
+      .footer {
+        color: rgba(0, 0, 0, 0.3);
+        margin-top: 1em;
+        margin-bottom: -1.5em;
+      }
+    </style>
+
+    <script
+      src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto"
+      defer
+    ></script>
+  </head>
+
+  <body>
+    <div class="box">
+      <div class="main">
+        <section class="section top">
+          <div class="avatar">
+            <img
+              src="https://cdn.v2ex.com/gravatar/9d125609ac41144ece2d5c44760832ff?s=350"
+              alt="Ray Eldath"
+              style="width: 100%"
+            />
+          </div>
+          <div class="name">Ray Eldath</div>
+          <div class="slogan">十 里 寒 塘 路 ， 烟 花 一 半 醒 。</div>
+        </section>
+        <section class="section" style="padding: 12px">
+          <iframe
+            frameborder="no"
+            border="0"
+            marginwidth="0"
+            marginheight="0"
+            width="100%"
+            height="86"
+            src="//music.163.com/outchain/player?type=2&id=496517051&auto=1&height=66"
+          ></iframe>
+        </section>
+        <section class="section">
+          <div class="title">再会。</div>
+          <p>
+            由于个人原因，个人博客上所有内容自 2019年8月9日
+            起永久下线。感谢各位的关注。原有文章可在我的知乎上查看。
+          </p>
+          <p>再会。</p>
+        </section>
+        <section class="section">
+          <a
+            href="https://www.zhihu.com/people/eldath-ray/"
+            class="btn zhihu"
+            style="background: rgb(0, 132, 255)"
+            target="_blank"
+            >我的知乎</a
+          >
+          <a
+            href="https://github.com/Ray-Eldath"
+            class="btn github"
+            style="background: rgb(36, 41, 46);"
+            target="_blank"
+            >我的 GitHub</a
+          >
+        </section>
+        <section class="section hitokoto">
+          <span class="mark" style="float: left; margin-right: 4px">『</span>
+          <span title="由 一言 提供" id="hitokoto">:D 获取中...</span>
+          <span class="mark" style="float: right; margin-left: 4px"> 』</span>
+        </section>
+
+        <div class="footer">©. 2019. Ray Eldath.</div>
+      </div>
+    </div>
+
+    <div class="background-box">
+      <div class="background"></div>
+    </div>
+  </body>
+</html>

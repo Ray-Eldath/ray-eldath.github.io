@@ -1,0 +1,41 @@
+/* ---------------------------------
+ *         Responsive Layout
+ * --------------------------------- */
+// +widescreen()
+//     .is-1-column .container, .is-2-column .container
+//         max-width: $desktop
+//         width: $desktop
+
++fullhd()
+    .is-2-column .container
+        max-width: $widescreen
+        width: $widescreen
+
+    .is-1-column .container
+        max-width: $desktop
+        width: $desktop
+        
+    article
+        &.article-post
+            padding: 4rem
+            padding-top: 2rem
+
++tablet()
+    .is-sticky
+        position: -webkit-sticky
+        position: sticky
+        top: 1.5rem
+        z-index: 99
+
+    .column-main, .column-left, .column-right, .column-right-shadow
+        &.is-sticky
+            top: .75rem
+            align-self: flex-start
+
++mobile()
+    .section
+        padding: 1.5rem 1rem
+
+    article
+        &.article
+            padding: 1rem

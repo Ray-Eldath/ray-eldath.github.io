@@ -1,0 +1,217 @@
+# Version of the configuration file
+version: 4.0.0
+# Icarus theme variant, can be "default" or "cyberpunk"
+variant: default
+# Path or URL to the website's logo
+logo: /img/logo.png
+# Page metadata configurations
+head:
+    # URL or path to the website's icon
+    favicon: /img/favicon.ico
+    # URL or path to the website's RSS atom.xml
+    rss: /atom.xml
+# Page top navigation bar configurations
+navbar:
+    # Naviagtion menu items
+    menu:
+        主页: /
+        归档: /archives
+        分类: /categories
+        标签: /tags
+        留言板: /messages
+        关于我: /about
+    # Links to be shown on the right of the navigation bar
+    #links:
+    #    Download on GitHub:
+    #        icon: fab fa-github
+    #        url: 'https://github.com/ppoffice/hexo-theme-icarus'
+# Page footer configurations
+footer:
+    # Links to be shown on the right of the footer section
+    links:
+        本站所有文章基于 CC-BY-NC 4.0 协议授权:
+            icon: fab fa-creative-commons
+            url: 'https://creativecommons.org/licenses/by-nc/4.0/'
+# Article related configurations
+article:
+    # Code highlight settings
+    highlight:
+        # Code highlight themes
+        # https://github.com/highlightjs/highlight.js/tree/master/src/styles
+        theme: atom-one-dark
+        # Show copy code button
+        clipboard: true
+        # Default folding status of the code blocks. Can be "", "folded", "unfolded"
+        fold: unfolded
+    # Whether to show estimated article reading time
+    readtime: true
+    # Article licensing block
+    licenses:
+        'CC BY-NC 4.0':
+            icon: fab fa-creative-commons-nc
+            url: 'https://creativecommons.org/licenses/by-nc/4.0/'
+# Search plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Search/
+search:
+    type: insight
+# Comment plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
+comment:
+    type: valine
+    app_id: mlvRhOYGPn7xXJKPMcz0ratS-gzGzoHsz
+    app_key: DmO8z8RWunPvzkRmNEFOyn2c
+    meta: ["nick", "mail", "link"]
+    avatar: retro
+    required_fields: ["nick", "mail"]
+# Donate plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
+donates:
+    ## Alipay donate button configurations
+    #-
+    #    type: alipay
+    #    # Alipay qrcode image URL
+    #    qrcode: ''
+    # "Buy me a coffee" donate button configurations
+    -
+        type: buymeacoffee
+        # URL to the "Buy me a coffee" page
+        url: 'https://www.buymeacoffee.com/RayEldath'
+    ## Patreon donate button configurations
+    #-
+    #    type: patreon
+    #    # URL to the Patreon page
+    #    url: ''
+    # Paypal donate button configurations
+    #-
+    #    type: paypal
+    #    # Paypal business ID or email address
+    #    business: ''
+    #    # Currency code
+    #    currency_code: USD
+    ## Wechat donate button configurations
+    #-
+    #    type: wechat
+    #    # Wechat qrcode image URL
+    #    qrcode: ''
+# Share plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Share/
+share:
+    type: addtoany
+# Sidebar configurations.
+# Please be noted that a sidebar is only visible when it has at least one widget
+sidebar:
+    # Left sidebar configurations
+    left:
+        # Whether the sidebar sticks to the top when page scrolls
+        sticky: true
+    # Right sidebar configurations
+    right:
+        # Whether the sidebar sticks to the top when page scrolls
+        sticky: false
+# Sidebar widget configurations
+# http://ppoffice.github.io/hexo-theme-icarus/categories/Widgets/
+widgets:
+    -
+        position: left
+        type: profile
+        author: Ray Eldath
+        author_title: 迷茫max......
+        location: 广东省
+        avatar: /img/avatar.jpg
+        follow_link: 'https://github.com/Ray-Eldath'
+        social_links:
+            GitHub:
+                icon: fab fa-github
+                url: 'https://github.com/Ray-Eldath'
+            Telegram Channel:
+                icon: fab fa-telegram
+                url: 'https://t.me/kaworunagisa17'
+            Email:
+                icon: fas fa-inbox
+                url: 'mailto://ray.eldath@outlook.com'
+            RSS:
+                icon: fas fa-rss
+                url: atom.xml
+    -
+        position: left
+        type: links
+        links:
+            df聚聚: 'https://dark-flames.com/'
+            e哥: 'https://edward40.com/'
+            billow姐姐: 'https://billow.fun/'
+            BIE: 'https://9bie.org/'
+            迪龙: 'https://cnblogs.com/Dillonh'
+            zyf聚聚: 'https://zhuyi.fan/'
+            Raptazure: 'https://raptazure.github.io/'
+            湛兮酱: 'https://dubuqian.cn/'
+         
+    -
+        position: right
+        type: recent_posts
+    -
+        position: right
+        type: categories
+    -
+        position: right
+        type: tags
+    #-
+    #    position: left
+    #    type: adsense
+    #    # AdSense client ID
+    #    client_id: ''
+    #    # AdSense AD unit ID
+    #    slot_id: ''
+# Plugin configurations
+# https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
+plugins:
+    # Enable page startup animations
+    animejs: true
+    # Show the "back to top" button
+    back_to_top: true
+    # Baidu Analytics plugin settings
+    # https://tongji.baidu.com
+    baidu_analytics:
+        # Baidu Analytics tracking ID
+        tracking_id: 
+    # BuSuanZi site/page view counter
+    # https://busuanzi.ibruce.info
+    busuanzi: false
+    # CNZZ statistics
+    # https://www.umeng.com/web
+    cnzz:
+        # CNZZ tracker id
+        id: 
+        # CNZZ website id
+        web_id: 
+    # Enable the lightGallery and Justified Gallery plugins
+    gallery: true
+    # Google Analytics plugin settings
+    # https://analytics.google.com
+    google_analytics:
+        # Google Analytics tracking ID
+        tracking_id: UA-97484560-2
+    # Hotjar user feedback plugin
+    # https://www.hotjar.com/
+    hotjar:
+        # Hotjar site id
+        site_id: 
+    # Enable the KaTeX math typesetting supprot
+    # https://katex.org/
+    katex: true
+    # Enable the MathJax math typesetting support
+    # https://www.mathjax.org/
+    mathjax: false
+    # Enable the Outdated Browser plugin
+    # http://outdatedbrowser.com/
+    outdated_browser: true
+    # Show a progress bar at top of the page on page loading
+    progressbar: true
+# CDN provider settings
+# https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
+providers:
+    # Name or URL template of the JavaScript and/or stylesheet CDN provider
+    cdn: cdnjs
+    # Name or URL template of the webfont CDN provider
+    fontcdn: google
+    # Name or URL of the fontawesome icon font CDN provider
+    iconcdn: "https://cdn.bootcdn.net/ajax/libs/font-awesome/5.13.1/css/all.min.css"
