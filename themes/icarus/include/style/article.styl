@@ -9,6 +9,33 @@ $article-font-size ?= 1.2rem
 
 article
     &.media
+        color: $text-light
+
+        a
+            color: inherit
+
+            &:hover
+                color: $primary
+
+        .image
+            width: 64px
+            height: 64px
+
+            img
+                object-fit: cover
+                width: 100%
+                height: 100%
+
+        .title
+            @extend .is-size-6
+            margin-bottom: .25em
+
+        .date, .categories
+            @extend .is-size-7
+
+        .categories
+            @extend .is-uppercase
+
         .media-content
             color: $text-light
 
@@ -74,10 +101,11 @@ article
                 footer
                     strong + cite
                         margin-left: .5em
-            
+
             .message.message-immersive
                 border-radius: 0
-                margin: 0 0-($card-content-padding) $card-content-padding 0-($card-content-padding)
+                margin: 0 0 - $card-content-padding $card-content-padding 0 - $card-content-padding
+
                 .message-body
                     border: none
 
@@ -104,11 +132,6 @@ article
             .level-item:not(:last-child)
                 margin-left: .75rem
                 margin-right: 0
-
-.thumbnail
-    object-fit: cover
-    width: 100% !important
-    height: 100% !important
 
 // Overflow table
 .table-overflow
@@ -150,7 +173,7 @@ article
         content: '\f25e'
         font-size: 200px
         font-family: 'Font Awesome 5 Brands'
-        opacity: 0.1
+        opacity: .1
 
     .level-left
         flex-wrap: wrap
@@ -164,7 +187,7 @@ article
             @extend .mb-1
 
         a
-            @extend .size-small, .has-text-grey
+            @extend .is-size-7, .has-text-grey
 
     .licensing-meta
         .level-item
@@ -178,7 +201,22 @@ article
             vertical-align: bottom
 
         h6
-            @extend .size-small
-        
+            @extend .is-size-7
+
         a
             color: inherit
+
+a
+    &.article-nav-prev
+        span
+            text-align: left
+            flex-shrink: 1
+            word-wrap: break-word
+            white-space: normal
+
+    &.article-nav-next
+        span
+            text-align: right
+            flex-shrink: 1
+            word-wrap: break-word
+            white-space: normal

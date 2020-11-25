@@ -6,7 +6,7 @@ widgets:
         type: profile
         author: Ray Eldath
         author_title: 迷茫max......
-        location: 广东省
+        location:
         avatar: /img/avatar.jpg
         follow_link: 'https://github.com/Ray-Eldath'
         social_links:
@@ -34,3 +34,4 @@ widgets:
             zyf聚聚: 'https://zhuyi.fan/'
             Raptazure: 'https://raptazure.github.io/'
             湛兮酱: 'https://dubuqian.cn/'
+            Klein Log: 'https://blog.lenva.tech/'

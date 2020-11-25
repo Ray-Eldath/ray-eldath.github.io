@@ -32,14 +32,14 @@ class Profile extends Component {
         } = this.props;
         return <div class="card widget">
             <div class="card-content" style="padding-bottom: 1rem">
-                <nav class="level" style="margin-top .75em !important; margin-bottom: .75em !important">
+                <nav class="level" style="margin-top: .75em !important; margin-bottom: .75em !important">
                     <div class="level-item has-text-centered flex-shrink-1">
                         <div>
                             <figure class="image is-128x128 mx-auto mb-2">
                                 <img class={'avatar' + (avatarRounded ? ' is-rounded' : '')} src={avatar} alt={author} />
                             </figure>
                             {author ? <p class="title is-size-3 is-block line-height-inherit">{author}</p> : null}
-                            {authorTitle ? <p style="font-size: 1.1em !important" class="is-size-6 is-block">{authorTitle}</p> : null}
+                            {authorTitle ? <p style="margin-top: .2em; font-size: 1.15em !important" class="is-size-6 is-block">{authorTitle}</p> : null}
                             {location ? <p style="margin-top: 4px; opacity: 0.6" class="is-size-6 is-flex justify-content-center">
                                 <i class="fas fa-map-marker-alt mr-1"></i>
                                 <span>{location}</span>
@@ -50,7 +50,7 @@ class Profile extends Component {
                 {/* <nav class="level is-mobile">
                     <div class="level-item has-text-centered is-marginless">
                         <div>
-                            <p class="heading is-size-6">{counter.post.title}</p>
+                            <p class="heading">{counter.post.title}</p>
                             <a href={counter.post.url}>
                                 <p class="title">{counter.post.count}</p>
                             </a>
@@ -58,7 +58,7 @@ class Profile extends Component {
                     </div>
                     <div class="level-item has-text-centered is-marginless">
                         <div>
-                            <p class="heading is-size-6">{counter.category.title}</p>
+                            <p class="heading">{counter.category.title}</p>
                             <a href={counter.category.url}>
                                 <p class="title">{counter.category.count}</p>
                             </a>
@@ -66,7 +66,7 @@ class Profile extends Component {
                     </div>
                     <div class="level-item has-text-centered is-marginless">
                         <div>
-                            <p class="heading is-size-6">{counter.tag.title}</p>
+                            <p class="heading">{counter.tag.title}</p>
                             <a href={counter.tag.url}>
                                 <p class="title">{counter.tag.count}</p>
                             </a>
@@ -148,7 +148,7 @@ Profile.Cacheable = cacheComponent(Profile, 'widget.profile', props => {
                 url: url_for('/tags')
             }
         },
-        followLink: url_for(follow_link),
+        followLink: follow_link ? url_for(follow_link) : undefined,
         followTitle: __('widget.follow'),
         socialLinks
     };
