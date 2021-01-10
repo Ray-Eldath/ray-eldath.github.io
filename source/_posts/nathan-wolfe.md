@@ -1,5 +1,5 @@
 ---
-title: "[旧文] [译] 病毒学家内森·拉尔夫：我无比期待“最后一场瘟疫”"
+title: "[译] 病毒学家内森·拉尔夫：我无比期待“最后一场瘟疫”"
 date: 2020-08-17 12:03:26
 cover: /science/nathan-wolfe/cover.jpg
 thumbnail: /science/nathan-wolfe/cover.jpg
