@@ -6,7 +6,8 @@ thumbnail: /img/thoughts-on-rust-1.jpg
 toc: true
 tags:
  - Rust
- - 编程语言
+ - 程序设计范式（paradigm）
+ - 程序设计语言
 categories: programming
 ---
 
