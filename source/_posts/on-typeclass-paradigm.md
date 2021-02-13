@@ -33,8 +33,6 @@ Typeclass 范式是对于 *表达式问题 Expression Problem* 的一个重要�
 
 具体见文末 “主要引述来源”。
 
-由于 SML 相当冷门（因而更难以熟悉），我们在这一节上花费了大量笔墨。接下来看一看其它语言中的 typeclass。
-
 ## Typeclass in SML: Module System
 
 ML 族语言自 1970 年代，LCF 定理证明器（theorem prover）的元语言（**M**eta **L**anguage）演化而来。SML（Standard ML）以及 ML 族语言，作为 *严格求值（strict evaluation）*、*静态类型*的*函数式*语言的典例，启发了大量语言的设计，并对编程语言的形式化定义和验证等研究方向做出了重要贡献。
@@ -129,6 +127,10 @@ val it = true : bool
 *ML Module System* 是一个完备、丰富、强大的模块系统，它的能力远远不止于此（比如，*sharing constraints* 等并未提及）。
 
 最后，顺带一提，我们在一个接口中包含了一个*类型*（`type elem`），并且接口中的其它定义依赖于这个类型定义（`val compare : elem -> elem -> int`），这在很多语言中被称作 **联合类型 associated type**。
+
+---
+
+由于 SML 相当冷门（因而更难以熟悉），我们在这一节上花费了大量笔墨。接下来看一看其它语言中的 typeclass。
 
 ## Typeclass in Haskell: `class` & `instance`
 
