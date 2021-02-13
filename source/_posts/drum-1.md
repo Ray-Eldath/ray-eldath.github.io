@@ -38,7 +38,7 @@ categories: music
 
 以下内容，尤其是历史相关的内容将会必不可少地涉及一些专业名词，但并不影响阅读和主旨大意，略过即可。对这些名词的解释说明将是后续文章的主要内容。
 
-<span class="tag is-info is-light is-medium"><i class="fas fa-camera"></i>&nbsp;Photo by &nbsp; <a herf="https://unsplash.com/@gabebarletta?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gabriel Barletta</a> &nbsp; on &nbsp; <a herf="https://unsplash.com/s/photos/drum-kit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>
+<span class="tag is-info is-light is-medium"><i class="fas fa-camera"></i>&nbsp;Photo by &nbsp; <a href="https://unsplash.com/@gabebarletta?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Gabriel Barletta</a> &nbsp; on &nbsp; <a herf="https://unsplash.com/s/photos/drum-kit?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>.</span>
 
 ## 爵士鼓（架子鼓）
 

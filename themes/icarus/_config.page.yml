@@ -8,7 +8,7 @@ widgets:
         author_title: 迷茫max......
         location:
         avatar: /img/avatar.jpg
-        follow_link: 'https://github.com/Ray-Eldath'
+        follow_link: 'https://t.me/kaworunagisa17'
         social_links:
             GitHub:
                 icon: fab fa-github
@@ -26,12 +26,8 @@ widgets:
         position: left
         type: links
         links:
-            df聚聚: 'https://dark-flames.com/'
-            e哥: 'https://edward40.com/'
-            billow姐姐: 'https://billow.fun/'
-            BIE: 'https://9bie.org/'
-            迪龙: 'https://cnblogs.com/Dillonh'
-            zyf聚聚: 'https://zhuyi.fan/'
-            Raptazure: 'https://raptazure.github.io/'
-            湛兮酱: 'https://dubuqian.cn/'
-            Klein Log: 'https://blog.lenva.tech/'
+            我的朋友们: /friends
+            知乎（已不活跃）: https://zhihu.com/people/eldath-ray
+            B站（空）: https://space.bilibili.com/45485880
+            推特（不告诉你）: https://twitter.com/404
+            很帅的域名: https://han.ninha/

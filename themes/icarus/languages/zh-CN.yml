@@ -19,7 +19,7 @@ common:
 widget:
     follow: '关注我'
     recents: '最新文章'
-    links: '朋友们'
+    links: '链接'
     catalogue: '目录'
     subscribe_email: '订阅更新'
     subscribe: '订阅'

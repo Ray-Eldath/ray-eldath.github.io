@@ -45,7 +45,7 @@ categories: programming
 
 本文将包含以上概要的第一到三部分。其实原本真的真的不想写这么多……. 😥😥😥😥😥😥
 
-<span class="tag is-info is-light is-medium"><i class="fas fa-image"></i>&nbsp; Cover image by&nbsp; <a herf="https://twitter.com/kazari_kwsn/status/1348046283940929536">かざり</a> &nbsp;on&nbsp; <a herf="https://twitter.com/kazari_kwsn/status/1348046283940929536">Twitter</a>.</span>
+<span class="tag is-info is-light is-medium"><i class="fas fa-image"></i>&nbsp; Cover image by&nbsp; <a href="https://twitter.com/kazari_kwsn/status/1348046283940929536">かざり</a> &nbsp;on&nbsp; <a href="https://twitter.com/kazari_kwsn/status/1348046283940929536">Twitter</a>.</span>
 
 ## 编程语言的哲学
 
