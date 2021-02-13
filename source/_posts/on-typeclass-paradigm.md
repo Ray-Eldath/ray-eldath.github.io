@@ -67,13 +67,13 @@ end
 structure IntOrd = Ord(IntComparable)
 {% endcodeblock %}
 
-`signature` / `structure` 之间的配合是 *ML Module System* 的重要方面，前者基于类型签名约定了一个*接口*（同样，不是 Java 意义上的接口…… 每次都要在术语处特别和 Java 划清界限实在是 😒😒😒），而后者则是对这一接口的实现。有趣的是，和绝大多数语言中类似*接口*的机制的设计不同，这一实现过程并不是简单的要求 “一摸一样”，而是存在着复杂有趣的 ***签名匹配 signature matching*** 机制。这一机制提供了接口中重要的*隐藏*方面。
+`signature` / `structure` 之间的配合是 *ML Module System* 的重要方面，前者基于类型签名约定了一个*接口*（同样，不是 Java 意义上的接口…… 每次都要在术语处特别和 Java 划清界限实在是 😒😒😒），而后者则是对这一接口的实现。有趣的是，和绝大多数语言中类似*接口*的机制的设计不同，这一实现过程并不是简单的要求 “一模一样”，而是存在着复杂有趣的 ***签名匹配 signature matching*** 机制。这一机制提供了接口中重要的*隐藏*方面。
 
-回归正题，我们首先定义 `signature COMPARABLE`，这类似于 Haskell 中的 `class`。随后，我们希望为内置类型 `int` 实现这一 typeclass（这一过程称作 *ascription*）——我们定义了 `structure IntComparable : COMPARABLE`（这类似 Haskell 中的 `instance`），没错，冒号 `:` 正是 “实现” 的意思。
+回归正题，我们首先定义 `signature COMPARABLE`，这类似于 Haskell 中的 `class`。随后，我们希望为内置类型 `int` 实现这一 typeclass（这一过程称作 *ascription*）——我们定义了 `structure IntComparable : COMPARABLE`（这类似 Haskell 中的 `instance`），没错，冒号 `:` 正是 “实现自” 的意思。
 
 至此我们已经完成常规意义下的 typeclass 范式——定义一个*接口*，并使既有类型实现这个接口。
 
-处于演示目的，我复杂化了这个示例除了：除了单纯的 typeclass 范式之外，此处演示了基于 typeclass 范式的后半截逻辑：在一个既有类型的 typeclass 实现之上，定义 “任何实现了这个 typeclass 的类型，都具有这些操作”。这是通过一个看起来有点奇怪的关键字 `functor` 实现的。`functor` （称作 *module function*）基于一个已有的 `signature` 完成这一转换路径：如果一组元素 `{A}` 在一个类型 `X` 上有定义，那么 `X` 上就会有另一组元素 `{B}`（在这里，`{A} = { type elem, fun compare }`；`X = int`；`{B} = { fun le, fun eq, fun ge }`）。
+出于演示目的，我复杂化了这个示例：除了单纯的 typeclass 范式之外，此处演示了基于 typeclass 范式的后半截逻辑：在一个既有类型的 typeclass 实现之上，定义 “任何实现了这个 typeclass 的类型，都具有这些操作”。这是通过一个看起来有点奇怪的关键字 `functor` 实现的。`functor` （称作 *module function*）基于一个已有的 `signature` 完成这一转换路径：如果一组元素 `{A}` 在一个类型 `X` 上有定义，那么 `X` 上就会有另一组元素 `{B}`（在这里，`{A} = { type elem, fun compare }`；`X = int`；`{B} = { fun le, fun eq, fun ge }`）。
 
 > 这个转换路径听起来是不是很像 mixin…？
 >
@@ -217,7 +217,7 @@ fn eq<TT, T: Comparable<Elem = TT>>(x: T, y: TT) -> bool { x.compare(y) == 0 }
 fn ge<TT, T: Comparable<Elem = TT>>(x: T, y: TT) -> bool { x.compare(y) >= 0 }
 {% endcodeblock %}
 
-作为一门函数式气氛较弱的语言，强制的显式类型标注（并重复两次）、以及需要通过 *泛型 generic* 指明类型约束使这段 Rust 代码稍显冗杂——这和大多数工业级语言一样。
+作为一门函数式气氛较弱的语言，强制的显式类型标注（并重复两次）、以及需要通过 *泛型 generic* 指明类型约束使这段 Rust 代码稍显冗杂——大多数工业级语言都只能做到这个程度。
 
 演示如下：
 
@@ -372,6 +372,8 @@ val res3: Boolean = true
 - Griesemer, R., Hu, R., Kokke, W., Lange, J., Taylor, I. L., Toninho, B., ... & Yoshida, N. (2020). Featherweight go. *Proceedings of the ACM on Programming Languages*, *4*(OOPSLA), 1-29.
 - MacQueen, D., Harper, R., & Reppy, J. (2020). The history of Standard ML. *Proceedings of the ACM on Programming Languages*, *4*(HOPL), 1-100.
 - *Notes on SML97's Value Restriction*, Geoffrey Smith.  http://users.cs.fiu.edu/~smithg/cop4555/valrestr.html
+- *Simon Peyton-Jones: Escape from the ivory tower: the Haskell journey*, SPJ  Simon Peyton-Jones.  https://youtu.be/re96UgMk6GQ
+- 《简单聊聊编程语言的哲学，以及关于 Rust 的一些想法 (1)》, Myself.  https://ray-eldath.me/programming/thoughts-on-rust-1
 - **HOPL3:** Stroustrup, B. (2020). Thriving in a crowded and changing world: C++ 2006–2020. *Proceedings of the ACM on Programming Languages*, *4*(HOPL), 1-168.
 - *No 'Concepts' in C++0x*, Bjarne Stroustrup.  https://accu.org/journals/overload/17/92/stroustrup_1576/
 - https://en.cppreference.com/w/cpp/compiler_support
@@ -379,8 +381,8 @@ val res3: Boolean = true
 - 一些语言的 Playground**（都超级好用！）**：
   - Rust：https://play.rust-lang.org/
   - Scala：https://scastie.scala-lang.org/
-- Haskell 使用 *ghci* REPL 编写
-- SML 使用 *Standard ML of New Jersey* REPL 编写
+- Haskell 部分使用 *ghci* REPL 编写
+- SML 部分使用 *Standard ML of New Jersey* REPL 编写
 
 ---
 
