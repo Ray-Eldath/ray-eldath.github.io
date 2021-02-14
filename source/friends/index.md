@@ -6,7 +6,7 @@ donates:
 
 # 都超级可爱！XD
 
-<div class="columns" style="margin: .4em; margin-top: 2em;">
+<div class="columns" style="margin: 1em; margin-top: 1.5em;">
   <!-- First Column -->
   <div class="column" style="padding: 0.5rem">
     <div class="card">
@@ -52,6 +52,21 @@ donates:
           </div>
         </div>
         <div class="content"><strike>头像和ID每日一换的</strike><em>千里冰冰万里封封</em>（光速逃</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1" style="margin: 0">
+          <img src="/img/friends/raptazure.jpg">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://cnblogs.com/Dillonh">Raptazure</a>
+          </div>
+        </div>
+        <div class="content"><strike>又是PLT聚聚</strike>是染酱！好耶！🎉</div>
       </div>
     </div>
   </div>
@@ -135,9 +150,6 @@ donates:
         <div class="content">好耶！是姐姐（x</div>
       </div>
     </div>
-  </div>
-  <!-- Fourth Column -->
-  <div class="column" style="padding: 0.5rem">
     <div class="card">
       <div class="card-image">
         <figure class="image is-1by1" style="margin: 0">
@@ -151,21 +163,6 @@ donates:
           </div>
         </div>
         <div class="content"><strike>现任迪龙跳动公司CEO</strike></div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-1by1" style="margin: 0">
-          <img src="/img/friends/raptazure.jpg">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://cnblogs.com/Dillonh">Raptazure</a>
-          </div>
-        </div>
-        <div class="content"><strike>又是PLT聚聚</strike>是染酱！好耶！🎉</div>
       </div>
     </div>
   </div>
