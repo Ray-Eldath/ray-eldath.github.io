@@ -15,7 +15,7 @@
     "babel-plugin-inferno": "^6.1.1",
     "bulma-stylus": "0.8.0",
     "hexo": "^5.2.0",
-    "hexo-component-inferno": "^0.10.4",
+    "hexo-component-inferno": "^0.10.5",
     "hexo-generator-archive": "^1.0.0",
     "hexo-generator-category": "^1.0.0",
     "hexo-generator-feed": "^3.0.0",

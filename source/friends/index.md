@@ -63,7 +63,7 @@ donates:
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://cnblogs.com/Dillonh">Raptazure</a>
+            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://raptazure.github.io/">Raptazure</a>
           </div>
         </div>
         <div class="content"><strike>又是PLT聚聚</strike>是染酱！好耶！🎉</div>
