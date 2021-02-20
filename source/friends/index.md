@@ -117,6 +117,21 @@ donates:
         <div class="content"><strike>可爱的小学弟</strike>我要瑞秋！</div>
       </div>
     </div>
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1" style="margin: 0">
+          <img src="/img/friends/wayslog.jpg">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://www.notion.so/NIKA-LOREM-f6204fadd5514b8d841f0cd1717d43df">wayslog</a>
+          </div>
+        </div>
+        <div class="content"><strike>其实是 <strong>g</strong>ayslog 啦</strike></div>
+      </div>
+    </div>
   </div>
   <!-- Third Column -->
   <div class="column" style="padding: 0.5rem">
@@ -163,6 +178,21 @@ donates:
           </div>
         </div>
         <div class="content"><strike>现任迪龙跳动公司CEO</strike></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1" style="margin: 0">
+          <img src="/img/friends/srx.jpg">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://blog.flandre.info/">北海若聚聚</a>
+          </div>
+        </div>
+        <div class="content">网上超严肃，其实现实中是一只可爱的<strike>瘦宅</strike>话痨！！</div>
       </div>
     </div>
   </div>
