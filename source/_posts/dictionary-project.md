@@ -12,6 +12,10 @@ article:
          - fab fa-creative-commons-nc
          - fab fa-creative-commons-nd
        url: https://creativecommons.org/licenses/by-nc-nd/4.0/
+tags:
+ - 程序设计范式（paradigm）
+ - 程序设计语言
+categories: programming
 ---
 
 在传统意义上，词典是**包容、严肃、客观、权威**的代名词。
