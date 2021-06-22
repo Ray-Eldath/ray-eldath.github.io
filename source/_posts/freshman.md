@@ -5,8 +5,7 @@ cover: /img/freshman.jpg
 thumbnail: /img/freshman.jpg
 excerpt: 😞😖😭
 tags:
- - 矫情
- - 没什么用的回忆
+ - 学年总结
 categories: life
 ---
 
