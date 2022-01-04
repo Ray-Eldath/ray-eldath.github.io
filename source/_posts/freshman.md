@@ -5,7 +5,7 @@ cover: /img/freshman.jpg
 thumbnail: /img/freshman.jpg
 excerpt: 😞😖😭
 tags:
- - 学年总结
+ - 总结
 categories: life
 ---
 
