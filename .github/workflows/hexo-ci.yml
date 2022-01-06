@@ -1,0 +1,64 @@
+name: Hexo Deploy
+
+# 只监听 master 分支的改动
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 获取博客源码和主题
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Checkout theme repo
+        uses: actions/checkout@v2
+        with:
+          repository: printempw/hexo-theme-murasaki
+          ref: master
+          path: themes/murasaki
+
+      # 这里用的是 Node.js 14.x
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14'
+
+      # 设置 yarn 缓存，npm 的话可以看 actions/cache@v2 的文档示例
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Use yarn cache
+        uses: actions/cache@v2
+        id: yarn-cache
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      # 安装依赖
+      - name: Install dependencies
+        run: |
+          yarn install --prefer-offline --frozen-lockfile
+
+      # 从之前设置的 secret 获取部署私钥
+      - name: Set up environment
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        run: |
+          sudo timedatectl set-timezone "Asia/Shanghai"
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+
+      # 生成并部署
+      - name: Deploy
+        run: |
+          npx hexo deploy --generate
