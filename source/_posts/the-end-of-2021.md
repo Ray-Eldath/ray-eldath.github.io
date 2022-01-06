@@ -32,7 +32,9 @@ categories: life
 </article>
 <!-- more -->
 
-<span class="tag is-light is-medium"><i class="fas fa-image"></i>&nbsp;&nbsp;本文中所有照片均经过裁切和压缩以加快页面加载速度——各位看个意思就好。</span>
+<article class="message">
+  <div class="message-body"><i class="fas fa-image"></i>&nbsp;&nbsp;本文中所有照片均经过裁切和压缩以加快页面加载速度——各位看个意思就好。</div>
+</article>
 
 ## *PingCAP*，人生第一份工作
 
