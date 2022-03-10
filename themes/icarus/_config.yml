@@ -149,7 +149,7 @@ comment:
     visitor: false                                # Optional
     emoji:                                        # Optional
       - 'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji'
-    dark: auto                                    # Optional
+    dark: false                                   # Optional
     required_meta: ['nick', 'mail']               # Optional
     login: enable                                 # Optional
     avatar: retro

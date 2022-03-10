@@ -37,6 +37,12 @@ module.exports = class extends Component {
                 <Footer config={config} helper={helper} />
                 <Scripts site={site} config={config} helper={helper} page={page} />
                 <Search config={config} helper={helper} />
+                <style>{`
+                    :root {
+                        --waline-theme-color: #3273dc;
+                        --waline-active-color: #2a5db0;
+                    }
+                `}</style>
             </body>
         </html>;
     }
