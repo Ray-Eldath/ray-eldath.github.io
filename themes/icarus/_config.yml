@@ -152,6 +152,7 @@ comment:
     dark: auto                                    # Optional
     required_meta: ['nick', 'mail']               # Optional
     login: enable                                 # Optional
+    avatar: retro
     highlight: true                               # Optional
     math: false                                   # Optional
     copyright: true                               # Optional
