@@ -32,12 +32,6 @@
         }
     });
 
-    $('img').parent().parent().each(function() {
-        if($(this)[0].tagName == "P") {
-            $(this).css("text-align", "center");
-        }
-    });
-
     function adjustNavbar() {
         const navbarWidth = $('.navbar-main .navbar-start').outerWidth() + $('.navbar-main .navbar-end').outerWidth();
         if ($(document).outerWidth() < navbarWidth) {

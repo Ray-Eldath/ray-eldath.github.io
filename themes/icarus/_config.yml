@@ -143,12 +143,18 @@ search:
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
 comment:
-    type: valine
-    app_id: mlvRhOYGPn7xXJKPMcz0ratS-gzGzoHsz
-    app_key: DmO8z8RWunPvzkRmNEFOyn2c
-    meta: ["nick", "mail", "link"]
-    avatar: retro
-    required_fields: ["nick", "mail"]
+    type: waline
+    server_url: https://waline-ray-eldath-me.vercel.app/
+    lang: zh-CN                                   # Optional
+    visitor: false                                # Optional
+    emoji:                                        # Optional
+      - 'https://cdn.jsdelivr.net/gh/walinejs/emojis@1.0.0/tw-emoji'
+    dark: auto                                    # Optional
+    required_meta: ['nick', 'mail']               # Optional
+    login: enable                                 # Optional
+    highlight: true                               # Optional
+    math: false                                   # Optional
+    copyright: true                               # Optional
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 donates:
@@ -255,7 +261,7 @@ widgets:
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/
 plugins:
     # Enable page startup animations
-    animejs: true
+    animejs: false
     # Show the "back to top" button
     back_to_top: true
     # Baidu Analytics plugin settings
@@ -305,15 +311,15 @@ plugins:
         site_id: 
     # Enable the KaTeX math typesetting supprot
     # https://katex.org/
-    katex: false
+    katex: true
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
-    mathjax: true
+    mathjax: false
     # Enable the Outdated Browser plugin
     # http://outdatedbrowser.com/
     outdated_browser: true
     # Show a progress bar at top of the page on page loading
-    progressbar: true
+    progressbar: false
     # Statcounter statistics
     # https://statcounter.com/
     statcounter:
@@ -330,8 +336,8 @@ plugins:
 # https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/speed-up-your-site-with-custom-cdn/
 providers:
     # Name or URL template of the JavaScript and/or stylesheet CDN provider
-    cdn: cdnjs
+    cdn: jsdelivr
     # Name or URL template of the webfont CDN provider
     fontcdn: google
     # Name or URL of the fontawesome icon font CDN provider
-    iconcdn: "https://cdn.bootcdn.net/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    iconcdn: "https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css"

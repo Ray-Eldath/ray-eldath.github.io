@@ -24,6 +24,7 @@ widget:
     subscribe_email: '订阅更新'
     subscribe: '订阅'
     adsense: '广告'
+    followit: 'follow.it'
 article:
     created_at: '%s发表'
     updated_at: '%s更新'
@@ -31,8 +32,8 @@ article:
     comments: '评论'
     read_time: '%s读完'
     word_count:
-        one: '约%d字'
-        other: '约%d字'
+        one: '大约%d个字'
+        other: '大约%d个字'
     licensing:
         author: '作者'
         created_at: '发布于'

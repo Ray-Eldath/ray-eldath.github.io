@@ -49,6 +49,8 @@ module.exports = class extends Component {
             favicon
         } = head;
 
+        const noIndex = helper.is_archive() || helper.is_category() || helper.is_tag();
+
         const language = page.lang || page.language || config.language;
         const fontCssUrl = {
             default: fontcdn('Noto+Serif+SC:wght@400;700&family=Bitter:wght@400;700&family=Fira+Code&display=swap', 'css2'),
@@ -107,9 +109,18 @@ module.exports = class extends Component {
             structuredImages = page.photos;
         }
 
+        let followItVerificationCode = null;
+        if (Array.isArray(config.widgets)) {
+            const widget = config.widgets.find(widget => widget.type === 'followit');
+            if (widget) {
+                followItVerificationCode = widget.verification_code;
+            }
+        }
+
         return <head>
             <meta charset="utf-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+            {noIndex ? <meta name="robots" content="noindex" /> : null}
             {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
             <title>{getPageTitle(page, config.title, helper)}</title>
@@ -141,10 +152,12 @@ module.exports = class extends Component {
                 facebookAppId={open_graph.fb_app_id} /> : null}
 
             {typeof structured_data === 'object' && structured_data !== null ? <StructuredData
-                title={structured_data.title || config.title}
+                title={structured_data.title || page.title || config.title}
                 description={structured_data.description || page.description || page.excerpt || page.content || config.description}
                 url={structured_data.url || page.permalink || url}
                 author={structured_data.author || config.author}
+                publisher={structured_data.publisher || config.title}
+                publisherLogo={structured_data.publisher_logo || config.logo}
                 date={page.date}
                 updated={page.updated}
                 images={structuredImages} /> : null}
@@ -160,6 +173,8 @@ module.exports = class extends Component {
 
             {adsenseClientId ? <script data-ad-client={adsenseClientId}
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script> : null}
+
+            {followItVerificationCode ? <meta name="follow.it-verification-code" content={followItVerificationCode} /> : null}
         </head>;
     }
 };
