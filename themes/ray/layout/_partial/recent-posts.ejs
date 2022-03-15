@@ -1,0 +1,30 @@
+<% if (page.posts.length > 0) { %>
+    <div id="recent-posts">
+        <h1>Recent Posts</h1>
+        <% page.posts.sort('date', -1).limit(10).each(post => { %>
+            <div class="card recent-post-item">
+                <% if (post.cover) { %>
+                    <div class="card-image">
+                        <figure class="image is-16by9">
+                            <a href="<%= url_for(post.path) %>">
+                                <img class="fill" src="<%= post.cover %>" alt="<%= post.title %>">
+                            </a>
+                        </figure>
+                    </div>
+                <% } %>
+                <div class="card-content">
+                    <div class="content">
+                        <h2>
+                            <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+                        </h2>
+                        <time datetime="<%= post.date.toJSON() %>">
+                            <%= date(post.date) %>
+                        </time>
+                        <p><%- post.excerpt %></p>
+                    </div>
+                </div>
+            </div>
+        <% }); %>
+        </ul>
+    </div>
+<% } %>

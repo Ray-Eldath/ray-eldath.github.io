@@ -1,0 +1,38 @@
+html
+  background-color #f7f7f7
+
+body
+#top
+  display flex
+  flex-direction column
+  align-items center
+  font-family 'Bitter', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Hiragino Sans GB', 'WenQuanYi Micro Hei', sans-serif
+  line-height 1.5rem
+  font-weight 400
+
+  .recent-post-item
+    margin-bottom 3rem
+
+    .content
+      h1, h2, h3
+        margin-top .5em
+
+
+#paginator
+  display flex
+
+  a, span:not(:last-child)
+    padding-right 10px
+
+//    CUSTOM BULMA CSS
+
+.card
+  background-color #fff
+  box-shadow 0 2px 3px alpha(black, 5%), 0 0 1px alpha(black, 10%)
+  color #4a4a4a
+  max-width 100%
+  position relative
+
+  img.fill
+    object-fit cover
+

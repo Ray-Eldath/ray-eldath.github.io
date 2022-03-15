@@ -1,0 +1,9 @@
+{
+  "name": "ray",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "dependencies": {
+    "hexo-renderer-stylus": "^2.0.1"
+  }
+}

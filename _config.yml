@@ -48,9 +48,16 @@ highlight:
   enable: true
   line_number: true
   auto_detect: false
-  tab_replace: ''
+  tab_replace: '    '
   wrap: true
   hljs: false
+# highlight:
+#   enable: false
+# prismjs:
+#   enable: true
+#   line_number: true
+#   preprocess: true
+#   tab_replace: '    '
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')

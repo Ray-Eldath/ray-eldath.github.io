@@ -1,0 +1,12 @@
+<div class="columns is-centered">
+    <div class="column is-7">
+        <%- partial('_partial/recent-posts') %>
+
+        <div id="paginator">
+            <%- paginator({
+                prev_text: ' <',
+                next_text: ' >'
+            }) %>
+        </div>
+    </div>
+</div>
