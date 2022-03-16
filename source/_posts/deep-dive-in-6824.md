@@ -29,6 +29,15 @@ categories: programming
 
 最后，显然的一点是，没有分布式和存储领域的前辈们慷慨无私地分享自己完成这一课程的宝贵经验，这篇文章不可能诞生。特别需要感谢 [OneSizeFitsQuorum 的一系列讲解](https://github.com/OneSizeFitsQuorum/MIT6.824-2021)，尽管本文使用的方案与之迥异，却也殊途同归。其它对本文作者很有帮助的参考资料亦附在文末，推荐各位读者前往阅读。**本文作者对本文的所有疏漏负全部责任。若有任何问题、讨论（比如，你的解决方法很可能比我的更好，我*非常希望*你能在评论区告诉我）或建议，欢迎在评论区留言。**
 
+<article class="message is-info">
+  <div class="message-header">
+    <p><i class="fas fa-edit"></i> &nbsp; 修订日志</p>
+  </div>
+  <div class="message-body">
+      <strong>EDIT 2022/3/16</strong>：更新了「LeaseRead with noop - wait-free 读」一节中有关 <i>ReadIndex</i> 和 <i>LeaseRead</i> 的表述，使之更加清晰。
+  </div>
+</article>
+
 # 写在前面
 
 **或许这段话并不合适出现在一篇*标榜*为（实际上不一定符合）「深入」的文章中，但还是必须指出几点*非常重要*的 rules of thumb：**
@@ -151,9 +160,15 @@ const (
 
 ## 解决方法
 
-> 本节包含大量 “剧透”，可能影响你的学习体验。
->
-> 我谨慎控制了剧透程度使之影响不至于过分严重，故本部分给出的代码脉络大多不太完整，仍有不少需要思考的细节。
+<article class="message is-warning">
+  <div class="message-header">
+    <p><i class="fas fa-bell"></i> &nbsp; Spoiler Alert</p>
+  </div>
+  <div class="message-body">
+    <p>本节包含大量 “剧透”，可能影响你的学习体验。</p>
+      <p>我谨慎控制了剧透程度使之影响不至于过分严重，故本部分给出的代码脉络大多不太完整，仍有不少需要思考的细节。</p>
+  </div>
+</article>
 
 ### 解决问题场景
 
@@ -432,7 +447,7 @@ func (kv *ShardKV) applyMsg(v raft.ApplyMsg) (string, Err) {
 
 ### wait-free 读
 
-另外一点问题是，网上对于 *ReadIndex* 的描述大多都提到了**「记录当前 `commitIndex` 为 `readIndex`，随后等待本地的 `lastApplied >= readIndex` 时才能查询并返回请求」**这一额外的「延迟查询」步骤，但却鲜有文字介绍这一步骤的原因和必要性。
+另外一点问题是，网上对于 *ReadIndex* 的描述大多都提到了**「记录当前 `commitIndex` 为 `readIndex`，随后等待本地的 `lastApplied >= readIndex` 时才能查询并返回请求」**（见 [Ongaro 2014]）这一额外的「延迟查询」步骤，但却鲜有文字介绍这一步骤的原因和必要性。
 
 > **小专栏：non-blocking 和 wait-free**
 >
@@ -440,9 +455,11 @@ func (kv *ShardKV) applyMsg(v raft.ApplyMsg) (string, Err) {
 >
 > 注意到一个实现是 wait-free 的并不意味着它就一定比 non-blocking 的实现**在算法意义上更优**。有可能仅仅是它的一致性性质更弱，或暴露的接口更低级，这有点类似 Chubby 和 ZooKeeper 之间的关系（[Hunt 2010]）。
 
-对于 *ReadIndex* 和 *LeaseRead* 优化，如果读和写请求都由 Leader 处理，并且一个写请求直到被应用到状态机（apply）后才会回复，那么去掉等待步骤仍然满足线性一致性，且具有只读 wait-free 的良好性质。因为一个写请求在应用后才会返回，那么之后的读请求一定可以（如果你的锁协议没有炸掉的话）读到最新的写，而并行的写和读无论是否读取到和它并行的写的结果都是满足线性一致性的。所以只要读和写都由 Leader 处理、且写仅在 apply 后才予以回复，那么 *ReadIndex* 和 *LeaseRead* 优化的 wait-free 实现都满足线性一致性。
+对于 *FollowerRead*，如果 Follower 在处理只读请求前不询问并等待当前 Leader 的 `commitIndex`，那么显然**会破坏线性一致性**。因为即便一条日志已经被提交，由于提交是异步的（提交仅仅说明前移了 `commitIndex`，但是要等这些条目都应用到状态机中，还要等 applier 循环*异步地逐个递增*本地 `lastApplied`，直到 `lastApplied >= commitIndex`），可能出现一个条目 Follower 先应用而 Leader 后应用的情况，所以具有 wait-free 性质的 *FollowerRead* 实现不满足线性一致性。当然这里还有一点优化是向 *Leader 之外的多数节点*（而不是当前 Leader）询问 `commitIndex` 并等待，由于在多数节点上的 `commitIndex` 最终也一定会被应用，所以这样可以分担 Leader 的压力，然而实践中这样的优化是否有明显价值还有待考证。
 
-而对于 *FollowerRead*，如果 Follower 在处理只读请求前不询问并等待当前 Leader 的 `commitIndex`，那么显然**会破坏线性一致性**。因为即便一条日志已经被提交，由于提交是异步的（提交仅仅说明前移了 `commitIndex`，但是要等这些条目都应用到状态机中，还要等 applier 循环*异步地逐个递增*本地 `lastApplied`，直到 `lastApplied >= commitIndex`），可能出现一个条目 Follower 先应用而 Leader 后应用的情况，所以具有 wait-free 性质的 *FollowerRead* 实现不满足线性一致性。当然这里还有一点优化是向 *Leader 之外的多数节点*（而不是当前 Leader）询问 `commitIndex` 并等待，由于在多数节点上的 `commitIndex` 最终也一定会被应用，所以这样可以分担 Leader 的压力，然而实践中这样的优化是否有明显价值还有待考证。
+而对于 *ReadIndex* 和 *LeaseRead* 优化，如果读和写请求都由 Leader 处理，并且一个写请求直到被应用到状态机（apply）后才会回复，那么去掉等待步骤仍然满足线性一致性，且具有只读 wait-free 的良好性质。因为一个写请求在应用后才会返回，那么之后的读请求一定可以（如果你的锁协议没有炸掉的话）读到最新的写，而并行的写和读无论是否读取到和它并行的写的结果都是满足线性一致性的。所以只要读和写都由 Leader 处理、且写仅在 apply 后才予以回复，那么 *ReadIndex* 和 *LeaseRead* 优化的 wait-free 实现都满足线性一致性。
+
+有些读者可能会疑惑为何 *ReadIndex* 和 *LeaseRead* 的 wait-free 实现无需担心 Follower 和 Leader 的 applier 循环间不同步的问题（这个问题导致 wait-free 的 *FollowerRead* *不满足*线性一致性）。原因是在 *ReadIndex* 和 *LeaseRead* 优化中读写都是由当前的有效 Leader 处理的，而新 Leader 上任时会提交 noop 从而保证新 Leader 的 `lastApplied` 至少和老 Leader 的一样大。
 
 本实现是只读请求 wait-free（访存后直接返回）的 *LeaseRead* 优化。
 
@@ -541,6 +558,7 @@ cfg.mu.Unlock()
 ## 参考文献
 
 - **\[Ongaro 2013\]**: Ongaro, Diego, and John Ousterhout. "In search of an understandable consensus algorithm (extended version)." (2013).
+- **[Ongaro 2014]**: Ongaro, Diego. *Consensus: Bridging theory and practice*. Stanford University, 2014.
 - **\[Valois 1994\]**: Valois, John D. "Implementing lock-free queues." *Proceedings of the seventh international conference on Parallel and Distributed Computing Systems*. 1994.
 - **\[Hunt 2010\]**: Hunt, Patrick, et al. "{ZooKeeper}: Wait-free Coordination for Internet-scale Systems." *2010 USENIX Annual Technical Conference (USENIX ATC 10)*. 2010.
 
