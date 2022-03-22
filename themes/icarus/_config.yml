@@ -226,22 +226,15 @@ widgets:
             Telegram Channel:
                 icon: fab fa-telegram
                 url: 'https://t.me/kaworunagisa17'
+            Twitter:
+                icon: fab fa-twitter
+                url: 'https://twitter.com/nagisakaworu17'
             Email:
-                icon: fas fa-inbox
+                icon: fas fa-envelope-square
                 url: 'mailto://ray.eldath@outlook.com'
             RSS:
                 icon: fas fa-rss
                 url: atom.xml
-    -
-        position: left
-        type: links
-        links:
-            我的朋友们: /friends
-            知乎（已不活跃）: https://zhihu.com/people/eldath-ray
-            B站（空）: https://space.bilibili.com/45485880
-            推特（不告诉你）: https://twitter.com/404
-            很帅的域名: https://han.ninha/
-         
     -
         position: right
         type: recent_posts
