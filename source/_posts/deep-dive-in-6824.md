@@ -1,6 +1,8 @@
 ---
 title: "深入 MIT 6.824：实现 LeaseRead 和全异步 shardkv"
 date: 2022-03-15 22:33:40
+updated: 2022-11-10 02:40:27
+show_updated: true
 cover: /img/deep-dive-in-6824.jpg
 thumbnail: /img/deep-dive-in-6824.jpg
 toc: true
