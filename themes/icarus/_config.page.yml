@@ -5,8 +5,8 @@ widgets:
         position: left
         type: profile
         author: Ray Eldath
-        author_title: 迷茫max......
-        location:
+        author_title: DB & Systems
+        location: Guangzhou, China
         avatar: /img/avatar.jpg
         follow_link: 'https://t.me/kaworunagisa17'
         social_links:
@@ -16,8 +16,11 @@ widgets:
             Telegram Channel:
                 icon: fab fa-telegram
                 url: 'https://t.me/kaworunagisa17'
+            Twitter:
+                icon: fab fa-twitter
+                url: 'https://twitter.com/nagisakaworu17'
             Email:
-                icon: fas fa-inbox
+                icon: fas fa-envelope-square
                 url: 'mailto://ray.eldath@outlook.com'
             RSS:
                 icon: fas fa-rss

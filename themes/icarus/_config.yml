@@ -104,8 +104,8 @@ navbar:
         分类: /categories
         标签: /tags
         留言板: /messages
-        关于我👦: /about
-        朋友们🎉: /friends
+        关于我: /about
+        朋友们: /friends
     # Links to be shown on the right of the navigation bar
     #links:
     #    Download on GitHub:
@@ -215,8 +215,8 @@ widgets:
         position: left
         type: profile
         author: Ray Eldath
-        author_title: 迷茫max......
-        location:
+        author_title: DB & Systems
+        location: Guangzhou, China
         avatar: /img/avatar.jpg
         follow_link: 'https://t.me/kaworunagisa17'
         social_links:

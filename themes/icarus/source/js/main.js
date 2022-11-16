@@ -62,9 +62,9 @@
         $('figure.highlight').addClass('hljs');
         $('figure.highlight .code .line span').each(function() {
             const classes = $(this).attr('class').split(/\s+/);
-            if (classes.length === 1) {
-                $(this).addClass('hljs-' + classes[0]);
-                $(this).removeClass(classes[0]);
+            for (let clazz of classes) {
+                $(this).addClass('hljs-' + clazz);
+                $(this).removeClass(clazz);
             }
         });
 

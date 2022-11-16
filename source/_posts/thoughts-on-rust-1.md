@@ -1,6 +1,8 @@
 ---
 title: "简单聊聊编程语言的哲学，以及关于 Rust 的一些想法 (1)"
 date: 2021-02-12 22:29:31
+updated: 2022-11-17 01:54:46
+show_updated: true
 cover: /img/thoughts-on-rust-1.jpg
 thumbnail: /img/thoughts-on-rust-1.jpg
 toc: true
@@ -15,21 +17,29 @@ categories: programming
 >
 > 草，写着写着发现越写越长，**一点也不「小」嘛。**
 >
-> 感觉这样下去真的不行，如果每次动笔都是起码五千字——意味着好几天的全天候无休码字、占用了所有的空闲时间、导致长久的眼睛酸疼的话，很快就要丧失更新博文的动力了…… 😥😥😥
->
-> 我应该**真的**尝试一下**「小」**作品的体例才是。
+> 或许我真的应该尝试一下「小」作品的体例才是。
 
 我的长期TODO列表里已经躺着五六篇以“博文”开头的条目——原本想着寒假一周一篇很快就能写完，然而到现在也没动笔。爆肝填坑了一个星期，今天实在有点累，不大想打开 RustLion，于是把这篇坑了很久的文章写一写。
 
-> 在这几篇坑了这么久的文章中其实有一篇已经写了前半部分了，然而咕了太久后半部分要写什么都有点不大记得，于是只能前功尽弃…… 😥😥
+> 在这几篇坑了这么久的文章中其实有一篇已经写了前半部分了，然而咕了太久后半部分要写什么都有点不大记得，于是只能前功尽弃…
 
 本文的主要内容是从**我个人的经验**出发，简单聊聊对于 Rust 的一些想法和体会。我会尽量避开诸如 “文档质量良好”、“很有特点” 这类宽泛的概括，而尽量将自己在使用 Rust 编程的过程中感受到的一些特别之处、尤其是和此前经历的不同之处拿来说说。我期望如此行文能使得本文对无论是 Rust 初学者、还是仍在观望的开发者甚至是 Rust 老手们都能带来一定启发。
+
+<article class="message is-warning">
+  <div class="message-header">
+    <p><i class="fas fa-exclamation-triangle"></i>&nbsp; 可能过时</p>
+  </div>
+  <div class="message-body">
+    <p><strong>2022/11/17：</strong>经过快两年的学习和工业实践，我对编程语言又有了新的认识。本文中对于 Ruby 的评论、尤其是对于 Ruby <i>优于</i> Python 的评论，已不再是我当前的看法。不过，很大程度上我仍然保持着占本文主要篇幅的对 Rust 的各种见解，但由于在过去的一年间我的兴趣发生了重大转移（转向系统、尤其是数据系统的领域），我现在较少使用 Rust 语言（这恰恰是由于在本文中提出的一系列 Rust 语言设计不尽人意的原因），较少关注 Rust 语言社区，也更少广泛地思考编程语言本身，本文中的许多观点可能不再能反映编程语言发展的最新情况。</p>
+    <p>如上文所述，占本文主要篇幅的观点并未明显改变，如果将来发生这种情况，我会修订或补正本文。</p>
+  </div>
+</article>
 
 <!-- more -->
 
 本文将主要按这些体会主要关注的语言侧面组织，每一点之间的内容基本独立，我将尽量涉及从语言哲学到线程安全的实现细节等多个方面和层次的内容。
 
-由于篇幅原因，本文将分截为两到三篇文章发出。其实原本不想写这么多……. 😥😥😥 以下是文章内容的粗略概要（很可能有变动）：
+由于篇幅原因，本文将分截为两到三篇文章发出。以下是文章内容的粗略概要（很可能有变动）：
 
 1. 编程语言的哲学
 2. Rust: “be explicit”
@@ -43,7 +53,7 @@ categories: programming
 8. 结语：“language adopted to fill a niche”
 9. 第二部分：主要引述来源
 
-本文将包含以上概要的第一到三部分。其实原本真的真的不想写这么多……. 😥😥😥😥😥😥
+本文将包含以上概要的第一到三部分。其实原本真的真的不想写这么多……
 
 <span class="tag is-info is-light is-medium"><i class="fas fa-image"></i>&nbsp; Cover image by&nbsp; <a href="https://twitter.com/kazari_kwsn/status/1348046283940929536">かざり</a> &nbsp;on&nbsp; <a href="https://twitter.com/kazari_kwsn/status/1348046283940929536">Twitter</a>.</span>
 
@@ -86,9 +96,7 @@ categories: programming
 
 - **Ruby：极致的脚本语言**
 
-  Ruby 的许多特性强烈地偏向对脚本语言的良好支持。在我看来几乎从任何一个可以想象的方面来说 Ruby 都要比 Python 更加合适作为脚本语言的*默认选择*…… 比如 Ruby 支持任意地方法覆写，你甚至可以覆写在 `Int` 中定义的 `+` 方法从而立刻把REPL给崩掉… 比如 Ruby 非常好地普及了守护（guard）的使用，从而使得大量的 idiom 有了 one-liner；比如这是一门动态类型语言，编译器只会阻止很少的事情；比如 Ruby 简洁的闭包语法（事实上 Rust 中的闭包语法正是沿袭自 Ruby）、do 语句以及对各种常用集合操作的良好支持，使得以闭包作为参数的标准库API基本可以替代循环；比如各种高度动态的语言特性和内省（introspect）机制。良好和高度动态的设计使得 Ruby 不仅适合编写各种 *dirty but works* 脚本，同样也适合工业的快速成型。
-  
-  > ~~希望 Python 早日凉透。（光速逃~~
+  Ruby 的许多特性强烈地偏向对脚本语言的良好支持。在我看来几乎从任何一个可以想象的方面来说 Ruby 都要比 Python 更加合适作为脚本语言的*默认选择*。比如 Ruby 支持任意地方法覆写，你甚至可以覆写在 `Int` 中定义的 `+` 方法从而立刻把REPL给崩掉… 比如 Ruby 非常好地普及了守护（guard）的使用，从而使得大量的 idiom 有了 one-liner；比如这是一门动态类型语言，编译器只会阻止很少的事情；比如 Ruby 简洁的闭包语法（事实上 Rust 中的闭包语法正是沿袭自 Ruby）、do 语句以及对各种常用集合操作的良好支持，使得以闭包作为参数的标准库API基本可以替代循环；比如各种高度动态的语言特性和内省（introspect）机制。良好和高度动态的设计使得 Ruby 不仅适合编写各种 *dirty but works* 脚本，同样也适合工业的快速成型。
 
 
 ## Rust: “be explicit”
@@ -212,7 +220,7 @@ Rust 具有复杂的类型系统。在 Rust 中，不仅值和引用（以及和
 
 ### 并发和线程安全
 
-我真的好累，眼睛还疼~~学校里还没有人喜欢我~~ 😥😥😥，所以这个部分只能简单写写算了。
+我真的好累，眼睛还疼~~学校里还没有人喜欢我~~，所以这个部分只能简单写写算了。
 
 在一门没有运行时的语言里实现易用的并发是有挑战性的——特别是*线程安全*的并发。Rust 通过向标准库中引入几个设计精巧的 API —— `Sync`、`Send`、`Pin` 等——较好地解决了这个问题。Rust 一个重要的并发库 [tokio](https://tokio.rs/) 生态完整（包括基本*协程*支持、同步原语（*信号量  semaphore*、*通道  channel*）、流式并发、网络和网络包解析、结构化日志等等）、文档质量优异（事实上 tokio 的教程是我所了解过的开源项目中质量最高的之一 🤩），一定程度上简化了在 Rust 中实现线程安全并发的困难。
 
@@ -247,11 +255,9 @@ Rust 具有复杂的类型系统。在 Rust 中，不仅值和引用（以及和
 - rust-lang/rfcs#1210 - specialization  https://github.com/rust-lang/rfcs/blob/master/text/1210-impl-specialization.md
 - 《当我们在谈论编程语言的时候我们在谈论什么》，千里冰冰  https://ice1000.org/plct/0
 - https://github.com/Ray-Eldath/Telesteller/blob/master/src/server.rs
-- *Programming Languages, Part A*. Dan Grossman.  https://www.coursera.org/learn/programming-languages
-- *Programming Languages, Part C*. Dan Grossman.  https://www.coursera.org/learn/programming-languages-part-c
 - MacQueen, D., Harper, R., & Reppy, J. (2020). The history of Standard ML. *Proceedings of the ACM on Programming Languages*, *4*(HOPL), 1-100.
 
-本文就这么**多**。感觉其实没讲什么很有意思的东西。。。。然而我真是要累死了 😑😑
+本文就这么**多**。感觉其实没讲什么很有意思的东西...
 
 希望还有机会写完本文。祝大家新年 **Ruaaaaaaaaa**st 愉快！
 
