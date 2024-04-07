@@ -1,0 +1,4236 @@
+0
+00:00:00,000 --> 00:00:11,039
+[ Music ] [ Applause ] >> Right.
+
+1
+00:00:11,039 --> 00:00:17,620
+Welcome to the annual Computer Science Distinguished Lecture and Dinner at Churchill College.
+
+2
+00:00:17,620 --> 00:00:24,500
+So this is an event where we celebrate computer science in the broadest sense,
+
+3
+00:00:24,500 --> 00:00:28,600
+which of course spills into other disciplines such as mathematics and electrical engineering.
+
+4
+00:00:29,760 --> 00:00:35,840
+And we have undergrads, grad students, alumni, and some others here.
+
+5
+00:00:35,840 --> 00:00:44,979
+And before I introduce our distinguished speaker, the usual hygiene is that there's an emergency exit there.
+
+6
+00:00:44,979 --> 00:00:50,740
+There is no fire drill planned, so if the alarm goes off, kindly leave by the exit.
+
+7
+00:00:50,740 --> 00:00:59,200
+The arrangements for the rest of this evening, we anticipate that although you will have many, many questions for the speaker,
+
+8
+00:00:59,200 --> 00:01:08,599
+we will go informal in a bit over an hour's time at latest so that we can give people who have not changed for dinner the chance to race to their rooms and do so.
+
+9
+00:01:08,599 --> 00:01:17,460
+And the reception will then start about 7 o'clock in the buttery area, and after half an hour or so, we'll go up to dinner.
+
+10
+00:01:17,460 --> 00:01:23,019
+Now because of the success of these events, we can no longer get everybody in the one room.
+
+11
+00:01:23,019 --> 00:01:28,079
+So students, graduate and undergraduates, and sponsors will be in the fellows' dining room,
+
+12
+00:01:28,079 --> 00:01:33,039
+while alumni will be exercising their rights to dine in hall.
+
+13
+00:01:33,039 --> 00:01:35,539
+So that's the hygiene.
+
+14
+00:01:35,539 --> 00:01:37,560
+And now for our distinguished speaker.
+
+15
+00:01:37,560 --> 00:01:45,920
+Simon Pettenjones is I'm sure known to everybody of us and doesn't need much introduction as the guy who produced Haskell,
+
+16
+00:01:45,920 --> 00:01:50,579
+a distinguished scientist at Microsoft Research in Cambridge.
+
+17
+00:01:50,939 --> 00:01:56,120
+He worked for many years just across the yard from us in the Roger Needham building.
+
+18
+00:01:56,120 --> 00:02:01,060
+Now he's in the further reaches of town near the station.
+
+19
+00:02:01,060 --> 00:02:08,219
+But of course, many of us are using Haskell and things that followed from it every day in our work.
+
+20
+00:02:08,219 --> 00:02:14,379
+Simon came to Cambridge in 2000, was it, roundabout?
+
+21
+00:02:14,379 --> 00:02:22,719
+>> 1998. >> 1998. He was one of the first people that Roger Needham hired when Microsoft Research was set up here in Cambridge.
+
+22
+00:02:22,719 --> 00:02:27,479
+He's had a distinguished academic career before he worked as an industrial researcher.
+
+23
+00:02:27,479 --> 00:02:34,860
+And recently he was elected to be a fellow of the Royal Society in recognition of his contribution to programming languages.
+
+24
+00:02:34,860 --> 00:02:37,360
+Simon, that's some journey.
+
+25
+00:02:37,360 --> 00:02:40,039
+And perhaps you'll tell us about it.
+
+26
+00:02:40,039 --> 00:02:42,800
+>> Yeah. Okay. Good. All right.
+
+27
+00:02:42,800 --> 00:02:43,340
+Well, thank you.
+
+28
+00:02:43,340 --> 00:02:45,780
+It's very nice to be here.
+
+29
+00:02:45,780 --> 00:02:49,680
+Since you've -- I feel a little underdressed compared to all of you,
+
+30
+00:02:49,680 --> 00:02:54,860
+but I figure that as a speaker I get to exercise privileges in being underdressed.
+
+31
+00:02:54,860 --> 00:03:01,000
+So -- but however, since you're all sitting at the back, I'm going to come to the back too and I'm going to wander around on the stage.
+
+32
+00:03:01,000 --> 00:03:03,099
+So the -- I think the camera can follow.
+
+33
+00:03:03,099 --> 00:03:06,379
+So this is about a 30-year journey.
+
+34
+00:03:06,379 --> 00:03:09,819
+And I'm just going to kind of tell you a little bit about how it was for us.
+
+35
+00:03:09,819 --> 00:03:11,960
+And I hope that you'll sort of engage.
+
+36
+00:03:11,960 --> 00:03:14,740
+I'm very conscious that this is a Friday evening.
+
+37
+00:03:14,919 --> 00:03:19,139
+So some of you have been sitting through a whole week of computer science lectures from other people.
+
+38
+00:03:19,139 --> 00:03:22,420
+And so I'm all standing between you and dinner.
+
+39
+00:03:22,420 --> 00:03:28,199
+But nevertheless, if you could do me the favor of being sort of awake and engaged and ask questions or make comments as we go,
+
+40
+00:03:28,199 --> 00:03:31,159
+I promise we will finish on time by hook or by crook, okay?
+
+41
+00:03:31,159 --> 00:03:36,479
+If you just sit there like bread puddings, I'll be very disappointed and probably I will stop speaking after a bit, okay?
+
+42
+00:03:36,479 --> 00:03:40,939
+So I want you to cast your mind back to 1976.
+
+43
+00:03:41,240 --> 00:03:48,560
+Those of you who were born in 1976, this is when John Hughes and I became Cambridge undergraduates.
+
+44
+00:03:48,560 --> 00:03:51,420
+So I went to Trinity and John Hughes was at Churchill.
+
+45
+00:03:51,420 --> 00:03:55,840
+He's -- we were both studying mathematics.
+
+46
+00:03:55,840 --> 00:03:58,439
+It was a tremendous shock for me studying mathematics.
+
+47
+00:03:58,439 --> 00:04:00,099
+John was clearly better prepared.
+
+48
+00:04:00,099 --> 00:04:03,319
+And he ended up getting a first in maths after three years.
+
+49
+00:04:03,319 --> 00:04:04,719
+I failed maths altogether.
+
+50
+00:04:04,719 --> 00:04:08,240
+I decided after two years, I decided mathematics at Cambridge was just too difficult.
+
+51
+00:04:08,240 --> 00:04:14,000
+So I switched to electrical sciences, which is a sort of electronics degree in engineering faculty, which I enjoyed a lot.
+
+52
+00:04:14,000 --> 00:04:17,540
+So -- but I failed at maths.
+
+53
+00:04:17,540 --> 00:04:20,720
+And then we both took a postgraduate diploma in computer science.
+
+54
+00:04:20,720 --> 00:04:23,680
+So in those days, you know, computing was rather less well established.
+
+55
+00:04:23,680 --> 00:04:27,160
+It was the days of the Intel 8008 had just about come out.
+
+56
+00:04:27,160 --> 00:04:31,120
+And there were -- in fact, the first 16-bit microprocessors were just emerging.
+
+57
+00:04:31,120 --> 00:04:36,740
+The Texas 99000 was a machine that we built physically in the Cambridge lab while we were here.
+
+58
+00:04:36,740 --> 00:04:42,550
+The university had one mainframe computer called Phoenix, which John and I would -- could use,
+
+59
+00:04:42,550 --> 00:04:47,360
+but only late at night because the undergraduates got a small amount of credit.
+
+60
+00:04:47,360 --> 00:04:48,759
+Academics got a lot of credit.
+
+61
+00:04:48,759 --> 00:04:53,279
+And the computer had a very elaborate accounting system that meant your credit went a lot further at night.
+
+62
+00:04:53,279 --> 00:04:58,259
+So between 1 a.m. and 4 a.m. was optimum for computing at Cambridge in those days.
+
+63
+00:04:58,259 --> 00:05:00,360
+So we became rather white-faced.
+
+64
+00:05:00,360 --> 00:05:04,620
+So not only were we here, but also Arthur Norman was here.
+
+65
+00:05:04,620 --> 00:05:06,860
+Now, do any of you recognize him?
+
+66
+00:05:06,860 --> 00:05:10,740
+So he's still a -- he's still supervising in the computer lab, is he not?
+
+67
+00:05:10,740 --> 00:05:12,699
+Are you any of you his supervisees?
+
+68
+00:05:12,699 --> 00:05:14,759
+Not actually.
+
+69
+00:05:14,759 --> 00:05:16,019
+Interesting.
+
+70
+00:05:16,019 --> 00:05:18,620
+So -- but at least you recognize him.
+
+71
+00:05:18,620 --> 00:05:22,360
+So he was a -- you know, he was here when John and I were here.
+
+72
+00:05:22,360 --> 00:05:23,860
+And he was completely inspirational.
+
+73
+00:05:23,860 --> 00:05:26,560
+He is the reason that I got interested in functional programming.
+
+74
+00:05:26,560 --> 00:05:31,160
+As I went to a talk he gave about this weird way of writing programs.
+
+75
+00:05:31,160 --> 00:05:34,779
+And it was completely incomprehensible to me to begin with, but completely addictive.
+
+76
+00:05:34,779 --> 00:05:38,100
+So he's responsible for a lot, Arthur is.
+
+77
+00:05:38,100 --> 00:05:41,879
+Now, back then -- and this is what Arthur was telling us about.
+
+78
+00:05:41,879 --> 00:05:50,860
+It was 1976. The late '70s were a time of sort of a great deal of activity in functional programming and computer architecture.
+
+79
+00:05:50,860 --> 00:05:53,159
+There were papers by Steele and Sussman.
+
+80
+00:05:53,159 --> 00:05:56,340
+Have any of you ever read the Lambda the Ultimate papers?
+
+81
+00:05:56,340 --> 00:05:57,680
+Lambda the Ultimate Procedural?
+
+82
+00:05:57,680 --> 00:05:59,100
+Lambda the Ultimate Go-To?
+
+83
+00:05:59,100 --> 00:06:00,240
+Read any of these?
+
+84
+00:06:00,839 --> 00:06:01,800
+No, you're so young.
+
+85
+00:06:01,800 --> 00:06:03,259
+This is a terrifying thing.
+
+86
+00:06:03,259 --> 00:06:06,259
+So go read them, because even now they make good reading.
+
+87
+00:06:06,259 --> 00:06:10,259
+And they're very -- and they were -- they came out of MIT, Guy Steele and Jerry Sussman.
+
+88
+00:06:10,259 --> 00:06:15,360
+And they were explaining how if you had Lambda, you really had everything you wanted in a programming language.
+
+89
+00:06:15,360 --> 00:06:17,660
+And so that's why, you know, Lisp was going to be so great.
+
+90
+00:06:17,660 --> 00:06:21,019
+But also there was a sort of pure functional programming.
+
+91
+00:06:21,019 --> 00:06:23,660
+Lisp had become a bit side-effected by then.
+
+92
+00:06:23,660 --> 00:06:25,100
+There was a pure functional programming stream.
+
+93
+00:06:25,100 --> 00:06:28,939
+Lazy functional programming was beginning to make an inroads.
+
+94
+00:06:28,939 --> 00:06:33,300
+This was with Friedman and Wise, and "cons should not evaluate its arguments."
+
+95
+00:06:33,300 --> 00:06:35,360
+That's another classic paper you might enjoy reading.
+
+96
+00:06:35,360 --> 00:06:38,920
+And people were building actual machines to execute these.
+
+97
+00:06:38,920 --> 00:06:41,600
+The MIT was building data flow machines.
+
+98
+00:06:41,600 --> 00:06:45,840
+And there was a real commercial machine, the Lisp Symbolics.
+
+99
+00:06:45,840 --> 00:06:49,639
+A company called Symbolics was making machines designed only to execute Lisp.
+
+100
+00:06:49,639 --> 00:06:50,800
+So it was pretty exciting.
+
+101
+00:06:50,800 --> 00:06:52,240
+Lots of stuff was going on.
+
+102
+00:06:52,240 --> 00:06:54,720
+And one particular thing caught my attention.
+
+103
+00:06:54,720 --> 00:06:58,159
+David Turner was writing papers about SK Combinators,
+
+104
+00:06:58,159 --> 00:07:05,420
+which were -- an idea from logic that David appropriated and explained how you could translate functional programs into this mess of S and K.
+
+105
+00:07:05,420 --> 00:07:06,819
+Here, I've given you a little example.
+
+106
+00:07:06,819 --> 00:07:12,699
+That Lambda term can be translated to that chunk of S and K Combinators.
+
+107
+00:07:12,699 --> 00:07:16,540
+And you can execute them very directly, as it turned out.
+
+108
+00:07:16,540 --> 00:07:22,060
+So this so inspired me that I ended up writing my diploma dissertation about it.
+
+109
+00:07:22,060 --> 00:07:26,420
+I was sort of comparing the relative efficiencies of Lambda Calculus and SK Combinators.
+
+110
+00:07:26,420 --> 00:07:28,500
+I now rather think that's a fairly silly thing to do.
+
+111
+00:07:28,500 --> 00:07:32,019
+But it got published in the 1982 Lisbon Functional Programming Conference.
+
+112
+00:07:32,019 --> 00:07:35,060
+So that was my first published paper.
+
+113
+00:07:35,060 --> 00:07:37,579
+It was John Hughes' first published paper at that same conference.
+
+114
+00:07:37,579 --> 00:07:48,180
+But the two years before, at the previous Lisbon Functional Programming Conference, this paper was published, which was about a hardware incarnation,
+
+115
+00:07:48,180 --> 00:07:54,819
+an actual micro-coded machine built out of hardware with wire wrap, to execute those very same SK Combinators that I was described.
+
+116
+00:07:55,060 --> 00:07:58,139
+And this paper was written by the very same Arthur Norman.
+
+117
+00:07:58,139 --> 00:07:59,939
+He's the last author here.
+
+118
+00:07:59,939 --> 00:08:04,980
+Thomas Clark, Phil Gladstone, and I think it's Colin Maclean.
+
+119
+00:08:04,980 --> 00:08:05,860
+I never knew him so well.
+
+120
+00:08:05,860 --> 00:08:07,300
+But these were my colleagues at Cambridge.
+
+121
+00:08:07,300 --> 00:08:09,620
+So we were building machines to run functional programs.
+
+122
+00:08:09,620 --> 00:08:10,660
+It was so exciting.
+
+123
+00:08:10,660 --> 00:08:13,740
+So all of this was going on.
+
+124
+00:08:13,740 --> 00:08:18,139
+And as a backdrop to this, John Backus had...
+
+125
+00:08:18,139 --> 00:08:20,220
+So all this was sort of stuff happening.
+
+126
+00:08:20,500 --> 00:08:26,879
+But then Backus, who was kind of like God, had just got the Turing Award, which as many of you will know,
+
+127
+00:08:26,879 --> 00:08:29,379
+is the sort of Nobel Prize for Computer Science.
+
+128
+00:08:29,379 --> 00:08:31,860
+So awarded by the ACM.
+
+129
+00:08:31,860 --> 00:08:34,419
+So and when you get the Turing Award, you get to give a lecture.
+
+130
+00:08:34,419 --> 00:08:36,659
+And his Turing Award lecture had this title.
+
+131
+00:08:36,659 --> 00:08:41,179
+Can programming be liberated from the von Neumann style?
+
+132
+00:08:41,179 --> 00:08:41,879
+By which he meant,
+
+133
+00:08:41,879 --> 00:08:48,820
+can we get away from imperative programming with its sort of side effects that mutate memory and instead think in a purely functional style?
+
+134
+00:08:48,940 --> 00:08:52,139
+And in his talk, he introduced FP, his language FP.
+
+135
+00:08:52,139 --> 00:08:56,740
+And he said we should build machines that will execute those programs more efficiently.
+
+136
+00:08:56,740 --> 00:08:58,500
+So it was all terribly exciting, right?
+
+137
+00:08:58,500 --> 00:09:01,059
+Because it was kind of like validating all this stuff.
+
+138
+00:09:01,059 --> 00:09:06,940
+It was saying, yes, all this stuff about functional programming, lazy then data flow machines and SK combinators.
+
+139
+00:09:06,940 --> 00:09:08,139
+That is the right thing to do.
+
+140
+00:09:08,139 --> 00:09:10,500
+You know, God was saying this is the right thing to do.
+
+141
+00:09:10,500 --> 00:09:12,019
+This is in 1977.
+
+142
+00:09:12,019 --> 00:09:17,940
+So just at the right moment, when, you know, when John and I were studying this stuff, Bacchus was saying this and he was really saying, you know,
+
+143
+00:09:17,940 --> 00:09:21,580
+have no truck with the grubby compromises of imperative programming.
+
+144
+00:09:21,580 --> 00:09:27,659
+Just, you know, be liberated to do purely functional programming and go and build new languages and new computers to execute them.
+
+145
+00:09:27,659 --> 00:09:29,740
+What an inspiring call to action.
+
+146
+00:09:29,740 --> 00:09:30,120
+See?
+
+147
+00:09:30,120 --> 00:09:33,580
+So. So we took him into the Edward.
+
+148
+00:09:33,580 --> 00:09:38,860
+It turned out that the latter part, the new build, the new computer architect, that turned out to be a bad idea.
+
+149
+00:09:38,860 --> 00:09:40,299
+But I'll come to that.
+
+150
+00:09:40,299 --> 00:09:41,779
+So what was the result of all this?
+
+151
+00:09:41,779 --> 00:09:44,299
+Well, it was quite chaotic, actually.
+
+152
+00:09:44,419 --> 00:09:49,860
+What happened was that lots of bright young things among, you know, at one stage I was a bright young thing,
+
+153
+00:09:49,860 --> 00:09:53,220
+sort of started up doing stuff like this and building languages or computers.
+
+154
+00:09:53,220 --> 00:09:56,980
+And so it was a great deal of diversity evolved in the research community.
+
+155
+00:09:56,980 --> 00:10:00,340
+By the time I'd left Cambridge, I'd been working for a couple of years for a small company.
+
+156
+00:10:00,340 --> 00:10:04,299
+And I was now at UCL, University College in London, in the computer science department there.
+
+157
+00:10:04,299 --> 00:10:06,820
+John was doing a PhD in Oxford by now.
+
+158
+00:10:06,820 --> 00:10:11,019
+And so lots of languages emerged and many compilers and many architectures.
+
+159
+00:10:11,019 --> 00:10:14,220
+These architectures were mostly doomed.
+
+160
+00:10:14,220 --> 00:10:17,659
+They turned out special purpose architectures to run functional programs.
+
+161
+00:10:17,659 --> 00:10:20,539
+They didn't work very well compared to the power of Intel.
+
+162
+00:10:20,539 --> 00:10:22,899
+And so eventually we gave up on it.
+
+163
+00:10:22,899 --> 00:10:24,659
+We'd only just write compilers.
+
+164
+00:10:24,659 --> 00:10:28,100
+So and then in 1987, so this is sort of fast forwarding a bit, right?
+
+165
+00:10:28,100 --> 00:10:32,019
+So through five years, there was a at the FPCA conference.
+
+166
+00:10:32,019 --> 00:10:35,139
+So FPCA, Functional Programming and Computer Architecture.
+
+167
+00:10:35,139 --> 00:10:39,980
+You see right there in the title was the idea that this is all about architecture as well.
+
+168
+00:10:39,980 --> 00:10:46,059
+Lisbon Functional Programming and FPCA finally merged to become the International Conference on Functional Programming annually,
+
+169
+00:10:46,059 --> 00:10:47,620
+which is now happening.
+
+170
+00:10:47,620 --> 00:10:49,179
+They were each biannual before.
+
+171
+00:10:49,179 --> 00:10:55,220
+Anyway, FPCA in 1987, a group of us met and said, well, look, we should just it was the lazy functional programmers.
+
+172
+00:10:55,220 --> 00:10:55,460
+Right.
+
+173
+00:10:55,460 --> 00:11:01,019
+So the lazy guys, you know, that were the strict guys who were kind of represented the establishment.
+
+174
+00:11:01,019 --> 00:11:01,340
+Right.
+
+175
+00:11:01,340 --> 00:11:09,259
+They were the sort of ML community, the Rod Burstles and Joe Stoy and and and Larry Paulsons of this world who were, you know,
+
+176
+00:11:09,259 --> 00:11:11,059
+from Edinburgh and had built Edinburgh LCF.
+
+177
+00:11:11,059 --> 00:11:13,139
+So they were kind of a generation ahead of us.
+
+178
+00:11:13,139 --> 00:11:15,500
+They had millions of good ideas that we're busy stealing.
+
+179
+00:11:15,500 --> 00:11:19,580
+But they they represented for us, you know, they were the establishment.
+
+180
+00:11:19,580 --> 00:11:22,340
+And we were the sort of insurgents doing lazy functional programming.
+
+181
+00:11:22,340 --> 00:11:23,220
+So we got together.
+
+182
+00:11:23,220 --> 00:11:28,019
+So we should just have a rather than have lots of different languages.
+
+183
+00:11:28,019 --> 00:11:29,820
+Wouldn't it make sense to just define one language?
+
+184
+00:11:29,820 --> 00:11:30,059
+Right.
+
+185
+00:11:30,059 --> 00:11:32,700
+So we just we just thought of it as a simple little job.
+
+186
+00:11:32,700 --> 00:11:33,620
+You know, six months work.
+
+187
+00:11:33,620 --> 00:11:37,460
+We'll define a common syntax and then we will be we won't have to.
+
+188
+00:11:37,460 --> 00:11:38,950
+You know, then we can use each other's programs.
+
+189
+00:11:38,950 --> 00:11:39,460
+That's good.
+
+190
+00:11:39,460 --> 00:11:43,179
+And we can build different compilers and different computer architectures to execute them on.
+
+191
+00:11:43,179 --> 00:11:43,820
+Makes sense.
+
+192
+00:11:43,820 --> 00:11:46,659
+That was a sort of simple little job.
+
+193
+00:11:46,659 --> 00:11:49,379
+And so we're trying to reduce unnecessary diversity.
+
+194
+00:11:49,379 --> 00:11:50,340
+So that was quite good.
+
+195
+00:11:50,340 --> 00:11:51,899
+It did take us a little bit longer than that.
+
+196
+00:11:51,899 --> 00:11:55,409
+Two and a half years before we produced the first Haskell report.
+
+197
+00:11:55,409 --> 00:12:01,940
+Now, I want to give you a little insight into what it's like being a programming language designer.
+
+198
+00:12:01,940 --> 00:12:08,460
+So programming languages, we've all heard of, you know, famous ones, C++ and Java and so forth.
+
+199
+00:12:08,580 --> 00:12:12,220
+But the real life story of most programming languages is like this.
+
+200
+00:12:12,220 --> 00:12:12,899
+Right.
+
+201
+00:12:12,899 --> 00:12:15,860
+So the horizontal axis is time, the vertical axis number of users.
+
+202
+00:12:15,860 --> 00:12:20,980
+Most programming languages, and there are thousands of them, have one user, its author for one year and that's it.
+
+203
+00:12:20,980 --> 00:12:21,340
+Right.
+
+204
+00:12:21,340 --> 00:12:26,899
+So this is now a successful research project that develops a language looks like this.
+
+205
+00:12:26,899 --> 00:12:28,980
+It sort of dies more slowly.
+
+206
+00:12:28,980 --> 00:12:29,220
+Right.
+
+207
+00:12:29,220 --> 00:12:30,340
+You get some papers out of it.
+
+208
+00:12:30,340 --> 00:12:31,059
+Maybe you have some.
+
+209
+00:12:31,059 --> 00:12:33,250
+I mean, this is can be very honorable death.
+
+210
+00:12:33,250 --> 00:12:33,419
+Right.
+
+211
+00:12:33,419 --> 00:12:34,820
+So you can influence things.
+
+212
+00:12:34,820 --> 00:12:35,419
+That's good.
+
+213
+00:12:35,419 --> 00:12:37,620
+But this is more like more or less what happens.
+
+214
+00:12:38,740 --> 00:12:43,820
+Now, of course, the languages that we've all heard of suffer from a regrettable absence of death.
+
+215
+00:12:43,820 --> 00:12:45,379
+They do this.
+
+216
+00:12:45,379 --> 00:12:46,379
+Right.
+
+217
+00:12:46,379 --> 00:12:52,259
+And because they've sort of crossed the threshold of immortality beyond which they cannot be allowed to die because there's too much code written.
+
+218
+00:12:52,259 --> 00:12:54,940
+And so and this that's right.
+
+219
+00:12:54,940 --> 00:12:57,100
+COBOL is definitely in this category.
+
+220
+00:12:57,100 --> 00:12:59,860
+Languages typically reach this these days very quickly.
+
+221
+00:12:59,860 --> 00:13:00,379
+Right.
+
+222
+00:13:00,379 --> 00:13:01,179
+Or not at all.
+
+223
+00:13:01,179 --> 00:13:04,059
+So think about Perl, Clojure, Ruby, Python.
+
+224
+00:13:04,059 --> 00:13:07,299
+They all move through this threshold really quite, quite fast.
+
+225
+00:13:08,419 --> 00:13:10,980
+You know, in the olden days, things happen more slowly.
+
+226
+00:13:10,980 --> 00:13:13,500
+Nowadays, you know, you can sort of download implementations.
+
+227
+00:13:13,500 --> 00:13:14,419
+Things happen pretty fast.
+
+228
+00:13:14,419 --> 00:13:18,470
+And so languages tend to either do this or do this rather quickly.
+
+229
+00:13:18,470 --> 00:13:19,179
+Right.
+
+230
+00:13:19,179 --> 00:13:26,899
+But Haskell, remember, was designed by a group, that is a committee.
+
+231
+00:13:26,899 --> 00:13:29,940
+Now, what do you think happens to committee languages?
+
+232
+00:13:37,139 --> 00:13:39,299
+The omens are not good for committee languages.
+
+233
+00:13:39,299 --> 00:13:42,299
+But strangely, something rather different has happened to Haskell.
+
+234
+00:13:42,299 --> 00:13:45,860
+That we sort of over time, we sort of gained some use.
+
+235
+00:13:45,860 --> 00:13:47,940
+It was initially a kind of fairly academic language.
+
+236
+00:13:47,940 --> 00:13:49,379
+We lived in this kind of academic niche.
+
+237
+00:13:49,379 --> 00:13:51,860
+And then it sort of plateaued for a while.
+
+238
+00:13:51,860 --> 00:13:54,179
+There was, you know, lots of activity in the academic sphere.
+
+239
+00:13:54,179 --> 00:13:57,539
+But then sort of in the early 2000s, things started to pick up.
+
+240
+00:13:57,539 --> 00:14:02,019
+And we began to see Haskell used a lot more in industry for reasons I'll come back to in a second.
+
+241
+00:14:02,019 --> 00:14:04,740
+And and so now there's been a really quite substantial uptick.
+
+242
+00:14:04,740 --> 00:14:13,899
+It's really hard to tell how big it is because I have no data on how many people use Haskell because GHC is an open source compiler and it comes with operating system distributions.
+
+243
+00:14:13,899 --> 00:14:16,019
+I literally have no idea how many people use Haskell.
+
+244
+00:14:16,019 --> 00:14:18,740
+But there's at least some of them, maybe some of them here in this room.
+
+245
+00:14:18,740 --> 00:14:22,299
+Like Joe, for example, is I know at least one is in this room.
+
+246
+00:14:22,299 --> 00:14:30,580
+So so the thing I want to get to you to get hold of here is that Haskell's life story is a bit unusual in programming languages terms.
+
+247
+00:14:30,580 --> 00:14:34,139
+It is neither died quickly, nor was it immortal quickly.
+
+248
+00:14:34,259 --> 00:14:36,740
+It's been sort of in this liminal space for quite a long time.
+
+249
+00:14:36,740 --> 00:14:37,980
+And I think that's been quite a good thing.
+
+250
+00:14:37,980 --> 00:14:40,259
+Incidentally, the lifespan is quite long.
+
+251
+00:14:40,259 --> 00:14:40,570
+Right.
+
+252
+00:14:40,570 --> 00:14:45,340
+So Java, you know, was was probably you weren't even born when Java was was invented, but it was nice.
+
+253
+00:14:45,340 --> 00:14:46,860
+It's a late comer, right?
+
+254
+00:14:46,860 --> 00:14:49,299
+It's 1995. Java first came upon the scene.
+
+255
+00:14:49,299 --> 00:14:51,860
+Haskell was well advanced by then.
+
+256
+00:14:51,860 --> 00:14:54,340
+So there's quite a long story going on here.
+
+257
+00:14:54,340 --> 00:14:56,899
+So let's see.
+
+258
+00:14:56,899 --> 00:15:02,860
+One way to to think about languages, you know, to figure out how much they use, apart from doing telemetry in your compiler,
+
+259
+00:15:02,860 --> 00:15:07,700
+is just to look at some of these little sites that do sort of pop statistics.
+
+260
+00:15:07,700 --> 00:15:09,259
+I like this one.
+
+261
+00:15:09,259 --> 00:15:11,340
+I haven't updated these figures very recently.
+
+262
+00:15:11,340 --> 00:15:19,419
+Several years ago, this is they've mined GitHub and SourceForge and various open source repositories for how many projects use languages.
+
+263
+00:15:19,419 --> 00:15:22,139
+And the exciting thing about this picture is.
+
+264
+00:15:22,139 --> 00:15:26,700
+Haskell is on the chart, right?
+
+265
+00:15:26,700 --> 00:15:29,259
+That is amazingly successful.
+
+266
+00:15:30,379 --> 00:15:37,779
+Ahead of COBOL, somewhat behind assembly language and action script, whatever that is.
+
+267
+00:15:37,779 --> 00:15:41,600
+But hey, being on the chart for an academic language is just amazing.
+
+268
+00:15:41,600 --> 00:15:42,539
+Right.
+
+269
+00:15:42,539 --> 00:15:46,980
+But they do a second pile of statistics, which is quite amusing,
+
+270
+00:15:46,980 --> 00:15:52,539
+which is they mine stack overflow and blog posts to see how much language is being talked about.
+
+271
+00:15:52,539 --> 00:15:54,860
+And we do rather better there.
+
+272
+00:15:54,860 --> 00:15:56,299
+Look at this.
+
+273
+00:15:56,299 --> 00:15:58,980
+Haskell's number five in the talked about categories.
+
+274
+00:15:58,980 --> 00:16:00,500
+Isn't that amazing?
+
+275
+00:16:00,500 --> 00:16:02,090
+Yeah, that's right.
+
+276
+00:16:02,090 --> 00:16:04,500
+So why?
+
+277
+00:16:04,500 --> 00:16:06,500
+So, hmm.
+
+278
+00:16:06,500 --> 00:16:08,299
+Well, it could be it could be all bug reports.
+
+279
+00:16:08,299 --> 00:16:08,730
+Yes.
+
+280
+00:16:08,730 --> 00:16:11,059
+I mean, I said pop statistics,
+
+281
+00:16:11,059 --> 00:16:18,460
+but but at least you can get the idea here that Haskell is a language that a lot of people talk about and nobody uses to a first approximation.
+
+282
+00:16:18,460 --> 00:16:21,289
+And there are some good things about that, as I shall come to.
+
+283
+00:16:21,289 --> 00:16:21,899
+OK.
+
+284
+00:16:21,899 --> 00:16:24,620
+So far, so good.
+
+285
+00:16:24,620 --> 00:16:26,259
+This is the sort of story story.
+
+286
+00:16:26,259 --> 00:16:28,299
+So this is quite a long time ago.
+
+287
+00:16:28,299 --> 00:16:31,019
+I keep stressing 30 years ago is when all this started.
+
+288
+00:16:31,019 --> 00:16:34,659
+Now, 30 years is a fairly long time in anybody's lifetime.
+
+289
+00:16:34,659 --> 00:16:36,899
+It's the entire life of my children.
+
+290
+00:16:36,899 --> 00:16:39,100
+So these are my three children.
+
+291
+00:16:39,100 --> 00:16:42,059
+Michael was born in 1990, somewhat after Haskell.
+
+292
+00:16:42,059 --> 00:16:43,039
+Right.
+
+293
+00:16:43,039 --> 00:16:48,529
+So my children always said to me, look, look, dad, you know, we know that Haskell is your first child and, you know,
+
+294
+00:16:48,529 --> 00:16:51,460
+we're happy to subsist on the crumbs of your affection.
+
+295
+00:16:51,460 --> 00:16:53,139
+And they have subsisted quite well.
+
+296
+00:16:53,139 --> 00:16:55,059
+As you see, I'm very proud of them.
+
+297
+00:16:55,059 --> 00:16:57,419
+And they are now all big and self-propelled.
+
+298
+00:16:58,019 --> 00:17:02,340
+But they did insist that when we got a cat, that the cat was going to be called Haskell.
+
+299
+00:17:02,340 --> 00:17:03,899
+So we still have Haskell the cat.
+
+300
+00:17:03,899 --> 00:17:05,740
+He's still sitting on our sofa.
+
+301
+00:17:05,740 --> 00:17:07,859
+So that's my family.
+
+302
+00:17:07,859 --> 00:17:11,019
+But now there's also a different sort of family, which is Working Group 2.
+
+303
+00:17:11,019 --> 00:17:16,380
+8, which is a sort of working group of functional programmers who get together once a year for a week.
+
+304
+00:17:16,380 --> 00:17:19,579
+This is Working Group 2.8 meeting in 1982.
+
+305
+00:17:19,579 --> 00:17:22,380
+So this is about this is so 92.
+
+306
+00:17:22,380 --> 00:17:23,619
+This is a couple of years.
+
+307
+00:17:23,619 --> 00:17:26,539
+I mean, it's not quite I don't have a picture in 1989, 1990.
+
+308
+00:17:26,940 --> 00:17:29,460
+This is a couple of years after Haskell had been born.
+
+309
+00:17:29,460 --> 00:17:30,849
+Right. So this is Working Group 2.
+
+310
+00:17:30,849 --> 00:17:34,539
+8, more or less meeting in Oxford, courtesy of Joe Stoy.
+
+311
+00:17:34,539 --> 00:17:35,450
+And there are some people.
+
+312
+00:17:35,450 --> 00:17:36,210
+Oh, look.
+
+313
+00:17:36,210 --> 00:17:36,500
+Yes.
+
+314
+00:17:36,500 --> 00:17:42,339
+As it happens, the I, I don't change my wardrobe very much.
+
+315
+00:17:42,339 --> 00:17:47,059
+And this is, in fact, the same jersey which I do still wear fairly regularly.
+
+316
+00:17:47,059 --> 00:17:49,700
+But so now, but now I've now I've enjoyed that.
+
+317
+00:17:49,700 --> 00:17:51,819
+I'm going to take it off because I'm getting a bit exothermic here.
+
+318
+00:17:53,980 --> 00:17:57,019
+But it's a green belt 1990 sweatshirt.
+
+319
+00:17:57,019 --> 00:17:59,259
+So it's 1992. It was quite new.
+
+320
+00:17:59,259 --> 00:18:02,299
+I'm going to move this back down to where it was supposed to be originally.
+
+321
+00:18:02,299 --> 00:18:04,660
+OK, so here are some people in here.
+
+322
+00:18:04,660 --> 00:18:08,099
+So you might you might recognize at least some of these names.
+
+323
+00:18:08,099 --> 00:18:09,339
+So here are their faces.
+
+324
+00:18:09,339 --> 00:18:12,019
+So Phil Wadler is the guy with the with a lot of hair.
+
+325
+00:18:12,019 --> 00:18:15,140
+We'll see him in a slightly less hairy state shortly.
+
+326
+00:18:15,140 --> 00:18:17,579
+Luca Cardelli still works at Microsoft Research.
+
+327
+00:18:17,579 --> 00:18:19,299
+He's now become a systems biologist.
+
+328
+00:18:19,299 --> 00:18:21,460
+He does amazing things about programming cells these days.
+
+329
+00:18:22,180 --> 00:18:24,420
+Jack Dennis there is at MIT.
+
+330
+00:18:24,420 --> 00:18:30,980
+He's one of the grandfathers of data flow machines at static data flow machines, in his case at MIT.
+
+331
+00:18:30,980 --> 00:18:33,059
+Richard Bird, have you all read Bird and Wadler?
+
+332
+00:18:33,059 --> 00:18:35,380
+It's that Richard Bird from Oxford.
+
+333
+00:18:35,380 --> 00:18:38,980
+John Hughes there, who I've mentioned, a Churchill graduate alumnus.
+
+334
+00:18:38,980 --> 00:18:42,740
+It's David Turner who wrote those inspirational papers over there on the right.
+
+335
+00:18:42,740 --> 00:18:45,740
+And Dave McQueen,
+
+336
+00:18:45,740 --> 00:18:52,460
+he's one of the sort of leading lights in ML and was crucially involved in designing ML's amazing module system with its functors and so forth.
+
+337
+00:18:52,460 --> 00:18:56,690
+So these were quite a lot of people are still in working group 2.
+
+338
+00:18:56,690 --> 00:18:58,859
+8, which is meeting in June this year.
+
+339
+00:18:58,859 --> 00:19:00,460
+This is there's other important people in here.
+
+340
+00:19:00,460 --> 00:19:03,579
+There's Dorothy, to whom I'm married and who you will meet at dinner.
+
+341
+00:19:03,579 --> 00:19:06,740
+And since this is 1992, there is Sarah.
+
+342
+00:19:06,740 --> 00:19:10,019
+It was it was in a smaller state in those days.
+
+343
+00:19:23,200 --> 00:19:31,359
+There's a very, GHC is the compiler that write from Haskell and it's running at about 200 commits a month.
+
+344
+00:19:31,359 --> 00:19:34,720
+So it's still in a sort of ferment of innovation.
+
+345
+00:19:34,720 --> 00:19:38,500
+I spent the whole of today writing code in GHC.
+
+346
+00:19:38,500 --> 00:19:40,680
+So it's not a sort of static thing that people are using.
+
+347
+00:19:40,680 --> 00:19:43,099
+It's very much in a state of development.
+
+348
+00:19:43,099 --> 00:19:44,819
+And interestingly,
+
+349
+00:19:44,819 --> 00:19:52,980
+some of the more sort of scary corners of the type system that we've introduced late are the ones that are most eagerly taken up by,
+
+350
+00:19:52,980 --> 00:19:57,240
+not by pointy-headed academics, but by hairy-chested industrial programmers.
+
+351
+00:19:57,240 --> 00:20:04,740
+So this is Joe here, who incidentally is hiring at Myrtle Soft on Station Road.
+
+352
+00:20:04,740 --> 00:20:07,599
+So talk to him afterwards if you're looking for a job.
+
+353
+00:20:07,599 --> 00:20:10,500
+To write Haskell, by the way.
+
+354
+00:20:10,500 --> 00:20:13,000
+And you do scary type system things.
+
+355
+00:20:13,000 --> 00:20:18,759
+The types of their functions involve the bounds of their arrays so that the bounds checking is done statically.
+
+356
+00:20:18,759 --> 00:20:22,720
+They even have a plugin that plugs into GHC that does part of this type checking for them.
+
+357
+00:20:22,720 --> 00:20:25,519
+So there's a lot going on in GHC.
+
+358
+00:20:25,519 --> 00:20:28,519
+That's the message I want you to get from this.
+
+359
+00:20:28,519 --> 00:20:31,039
+And there's a lot of libraries.
+
+360
+00:20:31,039 --> 00:20:32,359
+So initially, that was a big problem.
+
+361
+00:20:32,359 --> 00:20:35,720
+So back in 2000, we had no libraries.
+
+362
+00:20:35,720 --> 00:20:40,359
+So we became, you know, thought, oh, that's one of the reasons that Perl and Python and so forth are so successful,
+
+363
+00:20:40,359 --> 00:20:41,759
+is they have these good library repositories.
+
+364
+00:20:41,759 --> 00:20:49,559
+So not me, I can take no credit for this, but Cabal and Hackage and all of that led to an explosion of libraries of variable quality,
+
+365
+00:20:49,559 --> 00:20:52,240
+some pretty good, which are now very widely used today.
+
+366
+00:20:52,240 --> 00:20:54,720
+And there's a very supportive community.
+
+367
+00:20:54,720 --> 00:20:58,480
+I picked some quotes from the now defunct Haskell Weekly News.
+
+368
+00:20:58,480 --> 00:21:00,799
+Would anybody like to become its editor?
+
+369
+00:21:00,799 --> 00:21:02,039
+I really like the Haskell Weekly News.
+
+370
+00:21:02,039 --> 00:21:06,740
+It never came out weekly, of course, but it was a good culling of sort of quotes from blog posts.
+
+371
+00:21:06,740 --> 00:21:08,240
+I rather like some of these.
+
+372
+00:21:08,240 --> 00:21:13,920
+Let's see, I'd like to explain to you how to write "hello world" in Haskell, but please let me tell you some basic category theory first.
+
+373
+00:21:13,920 --> 00:21:21,639
+(audience laughing) Yes, I can conclude that Haskell is a memetic virus and monads are the eggs that it lays in your brain to infect them.
+
+374
+00:21:21,639 --> 00:21:22,460
+I like this.
+
+375
+00:21:22,460 --> 00:21:25,240
+I particularly like this quote from Guy Steele.
+
+376
+00:21:25,240 --> 00:21:30,759
+So this is the Guy Steele, who, you know, the same Steele of Steele and Sussman.
+
+377
+00:21:30,759 --> 00:21:36,240
+And so this is a little riff on the fact that Alonzo Church was, you know, a big logician who laid a lot of foundations,
+
+378
+00:21:36,240 --> 00:21:41,279
+and the separation of church and state is maintained very carefully in GHC.
+
+379
+00:21:41,279 --> 00:21:42,940
+But this is my favorite, really.
+
+380
+00:21:42,940 --> 00:21:48,000
+I was squashing, but I got frustrated, and typed "fixed error" in GHCI.
+
+381
+00:21:48,000 --> 00:21:53,079
+So this is a little bit of an in-joke, but those of you who've used Haskell, just by the end of the talk,
+
+382
+00:21:53,079 --> 00:21:57,240
+please tell me what "fixed error" will do if you type that to the GHCI prompt.
+
+383
+00:21:57,240 --> 00:22:02,079
+Okay, so a little watershed moment here.
+
+384
+00:22:02,079 --> 00:22:06,079
+So far, we just talked about the process of getting it all started.
+
+385
+00:22:06,079 --> 00:22:09,009
+Now I want to stand back a bit and say, well, why is, you know,
+
+386
+00:22:09,009 --> 00:22:17,740
+why after 30 years is Haskell still in such a frenetic state of development and still something that people might want to come to a talk to listen about,
+
+387
+00:22:17,740 --> 00:22:18,240
+perhaps?
+
+388
+00:22:18,240 --> 00:22:21,039
+And I've tried to sort of stand back and think, well, what are the reasons?
+
+389
+00:22:21,039 --> 00:22:22,679
+I've got, I'm gonna give you three.
+
+390
+00:22:22,679 --> 00:22:30,279
+One is that Haskell keeps faith with a few sort of deep, simple principles, and I'm gonna spend most of my time on that.
+
+391
+00:22:30,279 --> 00:22:36,420
+The second is that it's often said you need a killer app for a language.
+
+392
+00:22:36,420 --> 00:22:38,399
+You know, is it a webby thing?
+
+393
+00:22:38,399 --> 00:22:39,240
+Is it a mobile code?
+
+394
+00:22:39,240 --> 00:22:41,480
+Java, the killer app thing, was mobile code.
+
+395
+00:22:41,480 --> 00:22:44,159
+So with Haskell, what is it?
+
+396
+00:22:44,159 --> 00:22:46,799
+Maybe parallel programming in domain-specific languages.
+
+397
+00:22:46,799 --> 00:22:53,079
+It's not quite as tightly focused as other killer apps, which maybe account for the fact that it hasn't gone through the threshold of immortality.
+
+398
+00:22:53,079 --> 00:22:58,039
+And the third one is that we've been successful at avoiding success at all costs.
+
+399
+00:22:58,039 --> 00:23:03,119
+This is kind of like a little informal motto, but I want to say what I mean by that.
+
+400
+00:23:03,119 --> 00:23:05,159
+So it parenthesizes two ways.
+
+401
+00:23:05,159 --> 00:23:13,440
+It could be either avoid success at all costs, which is clearly something you would want to avoid, or avoid success at all costs,
+
+402
+00:23:13,440 --> 00:23:15,240
+which is sort of what you want to avoid.
+
+403
+00:23:15,240 --> 00:23:17,519
+But what happens if you're too successful too early?
+
+404
+00:23:17,519 --> 00:23:18,399
+None of you have said anything.
+
+405
+00:23:18,399 --> 00:23:19,519
+This is very bad.
+
+406
+00:23:19,519 --> 00:23:22,019
+What happens if you're too successful too quickly?
+
+407
+00:23:22,019 --> 00:23:24,920
+You become?
+
+408
+00:23:24,920 --> 00:23:26,920
+- Java. - And is that a good thing?
+
+409
+00:23:26,920 --> 00:23:27,759
+- You can't change anything.
+
+410
+00:23:27,759 --> 00:23:29,599
+- You can't change anything, yes.
+
+411
+00:23:29,599 --> 00:23:33,779
+If you're too successful, you pass through that threshold, and then your users won't let you change anything, right?
+
+412
+00:23:33,779 --> 00:23:35,299
+So, and this is very, very bad.
+
+413
+00:23:35,299 --> 00:23:41,159
+So if you become successful very, very slowly, then on the way, you can train your users.
+
+414
+00:23:41,159 --> 00:23:49,639
+So GHC's users have been trained over a decade, or two decades, to, when something goes wrong,
+
+415
+00:23:49,639 --> 00:23:55,199
+or the new version of the compiler is incompatible with the old one, instead of yelling and going to standards committee,
+
+416
+00:23:55,199 --> 00:23:58,039
+they just sort of grit their teeth and modify their code.
+
+417
+00:23:58,039 --> 00:23:59,480
+That's great.
+
+418
+00:23:59,480 --> 00:24:04,599
+And they, we even produced a release of GHC with the following property.
+
+419
+00:24:04,599 --> 00:24:10,960
+It only happened on Windows, and it only happened when you were compiling a module which wasn't in the same directory as the current directory.
+
+420
+00:24:10,960 --> 00:24:14,960
+So if you say GHC-C, you know, foo/bar.hs.
+
+421
+00:24:14,960 --> 00:24:15,379
+If bar.
+
+422
+00:24:15,379 --> 00:24:17,119
+hs were type correct, there was no problem.
+
+423
+00:24:17,119 --> 00:24:18,159
+You know, everything would be fine.
+
+424
+00:24:18,159 --> 00:24:24,159
+But if it had a type error, it would report the type error, and then it would delete the source file.
+
+425
+00:24:24,159 --> 00:24:29,359
+(audience laughing) Bad programmer.
+
+426
+00:24:29,359 --> 00:24:32,319
+I don't want to see that code again, right?
+
+427
+00:24:32,319 --> 00:24:38,000
+Now, you would think with any normal compiler, people would sort of be, you know, be on Reddit all day, saying, you know, these complete,
+
+428
+00:24:38,000 --> 00:24:39,279
+these complete idiots.
+
+429
+00:24:39,279 --> 00:24:43,159
+But no, we just got some polite email saying, it's fine, you might want to know about this.
+
+430
+00:24:43,159 --> 00:24:49,440
+You know, I've now got a cron job that crops my files to and fro, so, you know, I never lose anything.
+
+431
+00:24:49,440 --> 00:24:51,519
+And so they sort of worked around it.
+
+432
+00:24:51,519 --> 00:24:53,079
+But you might like to know.
+
+433
+00:24:53,079 --> 00:24:55,279
+So we did fix this one fairly quickly, I think.
+
+434
+00:24:55,279 --> 00:25:00,639
+But it kind of gives you the sense that we sort of operated in partnership with their users for a long time.
+
+435
+00:25:00,639 --> 00:25:03,359
+We didn't, you know, we knew them all by name, actually, to begin with.
+
+436
+00:25:03,359 --> 00:25:09,839
+And we certainly avoided standardization committees, and still have, which is a bit of a two-edged sword,
+
+437
+00:25:09,839 --> 00:25:12,199
+but it does mean that it does make you nimble.
+
+438
+00:25:12,199 --> 00:25:15,159
+Okay, so this is the avoid success thing.
+
+439
+00:25:15,159 --> 00:25:18,400
+So we've been less successful in avoiding success recently.
+
+440
+00:25:18,400 --> 00:25:21,920
+I spend more time worrying about backward compatibility than I used to.
+
+441
+00:25:21,920 --> 00:25:29,480
+But I want to go back then to the first of these, the deep simple principles, and try to say, well, what are some of them?
+
+442
+00:25:29,480 --> 00:25:38,960
+So I'm going to suggest three sort of simple principles that we've adhered to in Haskell, that I think have been quite helpful to us,
+
+443
+00:25:38,960 --> 00:25:41,159
+even though they all had their costs to begin with.
+
+444
+00:25:41,159 --> 00:25:43,400
+So one is a tiny core language.
+
+445
+00:25:43,400 --> 00:25:48,400
+So Haskell now, at least Haskell as understood by GHC, is a vast language.
+
+446
+00:25:48,400 --> 00:25:50,679
+It is big and hairy.
+
+447
+00:25:50,679 --> 00:25:53,240
+If you look at its syntax, it has lots of productions.
+
+448
+00:25:53,240 --> 00:25:58,470
+If you look at the abstract data type representing the algebraic data type representing its syntax tree, it has many, many,
+
+449
+00:25:58,470 --> 00:26:01,799
+like tens of different data types with hundreds of constructors.
+
+450
+00:26:01,799 --> 00:26:03,639
+It is a big language.
+
+451
+00:26:03,639 --> 00:26:10,690
+And therefore, you might think a bit ad hoc, and certainly the surface syntax is a bit ad hoc in many ways,
+
+452
+00:26:10,690 --> 00:26:18,400
+but we take this entire language and we compile it down to a statically typed intermediate language called System FC.
+
+453
+00:26:18,400 --> 00:26:21,000
+Now, System FC is essentially just the lambda calculus.
+
+454
+00:26:21,000 --> 00:26:21,960
+Here it is.
+
+455
+00:26:21,960 --> 00:26:23,359
+Well, here it is in Greek, right?
+
+456
+00:26:23,359 --> 00:26:25,279
+So this is what it would look like if you were looking at BNF.
+
+457
+00:26:25,279 --> 00:26:26,119
+What has it got?
+
+458
+00:26:26,119 --> 00:26:28,319
+Variables, constants, types, coercions.
+
+459
+00:26:28,319 --> 00:26:30,000
+I won't say much about them.
+
+460
+00:26:30,000 --> 00:26:32,440
+Value applications and value abstraction.
+
+461
+00:26:32,440 --> 00:26:33,799
+That's lambda and application.
+
+462
+00:26:33,799 --> 00:26:36,319
+So there's the lambda calculus for you.
+
+463
+00:26:36,319 --> 00:26:38,879
+And those will also do type abstraction and type application.
+
+464
+00:26:38,879 --> 00:26:45,119
+Then let bindings, and then data constructors and case expressions, which it turns out you can encode using lambda,
+
+465
+00:26:45,119 --> 00:26:46,920
+but it's not very efficient or convenient.
+
+466
+00:26:46,920 --> 00:26:48,079
+And then these coercions.
+
+467
+00:26:48,079 --> 00:26:52,159
+So there's the gamma at the top and the E cast by gamma at the bottom go together.
+
+468
+00:27:06,751 --> 00:27:11,071
+Glasgow, we were starting to build GHC and we wanted an intermediate language.
+
+469
+00:27:11,071 --> 00:27:12,951
+So we thought lambda calculus, where should we put the types?
+
+470
+00:27:12,951 --> 00:27:14,591
+We wanted to be statically typed.
+
+471
+00:27:14,591 --> 00:27:30,391
+And we realized that, this was Phil Wadler's insight again, we could just use Girard and Reynolds system F. And that was amazing because I previously thought of system F as something you learned in really pointy-headed theoretical computer science lectures about strong normalization.
+
+472
+00:27:30,391 --> 00:27:35,151
+And now I was able to use it as the actual code for a production compiler.
+
+473
+00:27:35,151 --> 00:27:37,551
+And this isn't a sort of pretend data type.
+
+474
+00:27:37,551 --> 00:27:40,111
+This is the data type that GHC uses today.
+
+475
+00:27:40,111 --> 00:27:47,351
+If you open the box, if you can optimize this language, you can stick in a core-to-core pass in GHC.
+
+476
+00:27:47,351 --> 00:27:54,731
+So I think it's an amazing tribute to Girard and Reynolds that they have something that was so expressive that every time we add new things to GHC,
+
+477
+00:27:54,731 --> 00:27:57,311
+they've all got to translate into this same intermediate language.
+
+478
+00:27:57,311 --> 00:27:58,671
+It's like a sanity check.
+
+479
+00:27:58,671 --> 00:28:01,511
+If you've got to add something to the intermediate language, now we think really carefully.
+
+480
+00:28:01,511 --> 00:28:05,391
+And we've only done that once.
+
+481
+00:28:05,391 --> 00:28:06,391
+Make sense?
+
+482
+00:28:06,391 --> 00:28:07,391
+To the expression language.
+
+483
+00:28:07,391 --> 00:28:08,391
+What?
+
+484
+00:28:08,391 --> 00:28:09,391
+To the expression language.
+
+485
+00:28:09,391 --> 00:28:10,391
+The type language.
+
+486
+00:28:10,391 --> 00:28:11,391
+Even the type language.
+
+487
+00:28:11,391 --> 00:28:12,391
+The type language has got more, yes.
+
+488
+00:28:12,391 --> 00:28:14,511
+I'm sweeping a bit under the rug here.
+
+489
+00:28:14,511 --> 00:28:16,511
+But the expression language is still really small.
+
+490
+00:28:16,511 --> 00:28:19,631
+The types have got more interesting.
+
+491
+00:28:19,631 --> 00:28:23,821
+But the bit that we have added here, right, casts and coercions,
+
+492
+00:28:23,821 --> 00:28:32,511
+those are the expression of the new pieces of the type system that you couldn't express in system F. And that was the bit we thought really carefully about.
+
+493
+00:28:32,511 --> 00:28:34,711
+So keeping faith with this really small core.
+
+494
+00:28:34,711 --> 00:28:38,651
+So anything that didn't fit in this core, we basically don't put in.
+
+495
+00:28:38,651 --> 00:28:45,231
+So that's a really good gatekeeper for making sure that anything you do put in is essentially just superficial syntax.
+
+496
+00:28:45,231 --> 00:28:49,541
+Then it goes into this small language, then it goes right down the optimization pipeline, type-checked at every stage, if you want,
+
+497
+00:28:49,541 --> 00:28:50,591
+before being turned into a language.
+
+498
+00:29:07,263 --> 00:29:09,263
+What happened to the formal semantics of ASCO?
+
+499
+00:29:09,263 --> 00:29:10,863
+That would be a kind of standardization.
+
+500
+00:29:10,863 --> 00:29:14,663
+So we did write a careful report, but it wasn't formalized.
+
+501
+00:29:14,663 --> 00:29:17,463
+But then, so actually there's an interesting tension here.
+
+502
+00:29:17,463 --> 00:29:20,263
+So if you really formalize a language, it's a lot of work.
+
+503
+00:29:20,263 --> 00:29:24,423
+You would do so in Coq or 12th or Isabel these days.
+
+504
+00:29:24,423 --> 00:29:28,303
+And then you're very reluctant to change it.
+
+505
+00:29:28,303 --> 00:29:32,463
+And so ML was formalized, and ML did become very reluctant.
+
+506
+00:29:34,463 --> 00:29:37,103
+So standard ML was difficult to change.
+
+507
+00:29:37,103 --> 00:29:43,823
+And Robin Milner, for very principled reasons, the kind of thing that you're describing, was very reluctant to make any changes in standard ML.
+
+508
+00:29:43,823 --> 00:29:48,863
+Meanwhile, ASCO was all sort of busy, anarchic, just yell, "We'll try it out."
+
+509
+00:29:48,863 --> 00:29:49,703
+So we moved a lot faster.
+
+510
+00:29:49,703 --> 00:29:54,963
+And then eventually O'Camol came along and does not have a standardized semantics, but it's wildly more successful.
+
+511
+00:29:54,963 --> 00:29:56,423
+So there's a real tension there.
+
+512
+00:29:56,423 --> 00:29:58,463
+I don't know how to resolve that.
+
+513
+00:29:58,463 --> 00:30:03,283
+So we ended up, we don't have a formal semantics for ASCO, we just have lots of papers about fragments.
+
+514
+00:30:05,283 --> 00:30:06,483
+Good observation there.
+
+515
+00:30:06,483 --> 00:30:10,403
+All right, second principle, laziness.
+
+516
+00:30:10,403 --> 00:30:15,403
+And laziness was the thing that brought this particular group of people together in the first place.
+
+517
+00:30:15,403 --> 00:30:17,843
+We were lazy functional programmers.
+
+518
+00:30:17,843 --> 00:30:19,003
+Now, what does that mean?
+
+519
+00:30:19,003 --> 00:30:25,843
+That means that a function, when you call a function and you apply a function to it, you call f of the square root of x.
+
+520
+00:30:25,843 --> 00:30:28,763
+Well, usually you'd evaluate the square root of x and then call f.
+
+521
+00:30:28,763 --> 00:30:32,323
+In a lazy language, you build a thunk for the square root of x and call f.
+
+522
+00:30:32,323 --> 00:30:36,363
+And if f needs the value of that argument, it forces it then and only then.
+
+523
+00:30:36,363 --> 00:30:44,663
+So laziness is sort of procrastinates until as long as possible, and tries to avoid doing work as long as possible.
+
+524
+00:30:44,663 --> 00:30:47,283
+But it's not just an implementation idea.
+
+525
+00:30:47,283 --> 00:30:49,703
+It affects pervasively the way you write programs.
+
+526
+00:30:49,703 --> 00:30:51,843
+And John wrote this famous paper.
+
+527
+00:30:51,843 --> 00:30:55,483
+Have you read John Hughes' paper, "Why Functional Programming Matters?"
+
+528
+00:30:55,483 --> 00:31:00,843
+No, if not, you're gonna come up with a reading list after this talk, go read this paper.
+
+529
+00:31:00,843 --> 00:31:06,763
+It's an easy read, and it gives you a very, it's a very beautiful insight into why laziness is not just a trick.
+
+530
+00:31:06,763 --> 00:31:16,963
+It's an expressiveness, it's a feature that enables you to write programs that are more modular than if you don't have it.
+
+531
+00:31:16,963 --> 00:31:18,203
+Go read the paper.
+
+532
+00:31:18,203 --> 00:31:26,523
+So, this was kind of where we were, but the trouble with laziness was that it was kind of embarrassing because we couldn't do any I/O.
+
+533
+00:31:26,523 --> 00:31:30,643
+The trouble with lazy functions is that you can't really do side effects at all.
+
+534
+00:31:30,643 --> 00:31:37,283
+So, in a strict language, you can have a function called print that takes a string, and when you evaluate the call to print,
+
+535
+00:31:37,283 --> 00:31:39,283
+it prints the string as a side effect.
+
+536
+00:31:39,283 --> 00:31:45,083
+And in Lisp and in ML, and pretty much every strict, F#, all strict call-by-value languages do this.
+
+537
+00:31:45,083 --> 00:31:48,103
+They have functions, in quotes, that have side effects.
+
+538
+00:31:48,103 --> 00:31:50,223
+But in a lazy language, that just doesn't make sense.
+
+539
+00:31:50,223 --> 00:31:53,803
+What would F of print yes, print no, print?
+
+540
+00:31:53,803 --> 00:31:58,463
+Well, it depends on F.
+
+541
+00:31:58,463 --> 00:32:02,083
+It could be nothing at all if F of X, Y equals three, right?
+
+542
+00:32:02,083 --> 00:32:07,543
+Or it could, maybe it evaluates X but not Y, in which case it would print yes, or maybe it evaluates Y and not X, but it would print no,
+
+543
+00:32:07,543 --> 00:32:09,023
+and it depends which order it evaluates in.
+
+544
+00:32:09,023 --> 00:32:11,343
+The compiler might change the order of evaluation.
+
+545
+00:32:11,343 --> 00:32:13,423
+I mean, everything is bad, right?
+
+546
+00:32:13,423 --> 00:32:16,843
+And if you have a list that contains print yes and print no,
+
+547
+00:32:16,843 --> 00:32:20,663
+then it would depend on which order the consumer of the list evaluates the elements of the list.
+
+548
+00:32:20,663 --> 00:32:24,903
+So, this is so bad that you just can't do it.
+
+549
+00:32:24,903 --> 00:32:28,303
+So, we never seriously considered having side-effecting functions at all.
+
+550
+00:32:28,303 --> 00:32:30,303
+So, what did we do for I/O?
+
+551
+00:32:30,303 --> 00:32:31,663
+Well, we just didn't have any.
+
+552
+00:32:31,663 --> 00:32:34,343
+So, this is the joy of being an academic, right?
+
+553
+00:32:34,343 --> 00:32:35,623
+Is you can design a language.
+
+554
+00:32:35,623 --> 00:32:39,503
+In 1990, I beg to inform you, it had no input/output.
+
+555
+00:32:39,503 --> 00:32:42,383
+The Haskell program was simply a function from string to string.
+
+556
+00:32:42,383 --> 00:32:44,063
+That was what it was, right?
+
+557
+00:32:44,063 --> 00:32:50,903
+And you could just write that function, and then to run your program, you applied the program to the input string,
+
+558
+00:32:50,903 --> 00:32:52,343
+which you got to type at the terminal somewhere.
+
+559
+00:32:52,343 --> 00:32:53,583
+But this was a bit embarrassing.
+
+560
+00:32:53,583 --> 00:33:02,543
+So, after a bit, we thought, well, maybe instead of producing a string, we'll produce a sequence of commands, like print hello or delete this file,
+
+561
+00:33:02,543 --> 00:33:04,183
+which we can execute.
+
+562
+00:33:04,183 --> 00:33:10,203
+So, we would imagine that to run the program, you call the program, passing it some input, and you get back a string of commands,
+
+563
+00:33:10,203 --> 00:33:15,483
+which some external command execution engine would sort of, the evil operating system.
+
+564
+00:33:15,483 --> 00:33:19,143
+The function of the program is very good and pure, and produces only a data structure,
+
+565
+00:33:19,143 --> 00:33:23,783
+and the evil side-effecting operating system consumes these commands and executes them.
+
+566
+00:33:23,783 --> 00:33:26,503
+Well, that's not very good if you want to read a file, right?
+
+567
+00:33:26,503 --> 00:33:30,623
+Because if you open a file and you want to read its contents, how does the program get access to the contents?
+
+568
+00:33:30,623 --> 00:33:37,323
+Ah, maybe we can apply the function to the result of the evil external thing doing its work.
+
+569
+00:33:37,323 --> 00:33:42,243
+So, now there's a sort of loop between the pure functional program and the evil external operating system.
+
+570
+00:33:42,243 --> 00:33:43,383
+It didn't work very well at all.
+
+571
+00:33:43,383 --> 00:33:47,923
+So, it was very embarrassing for a number of years.
+
+572
+00:33:47,923 --> 00:33:50,983
+But the good thing about being an academic is you're allowed to be embarrassed.
+
+573
+00:33:50,983 --> 00:33:54,823
+You can just say, that's the way it is, and we'll figure it out eventually.
+
+574
+00:33:54,823 --> 00:34:02,223
+And then Phil, this is Phil Wadler in a slightly less hairy state, he was at Glasgow along with John Hughes, and myself, and Mary Sheeran,
+
+575
+00:34:02,223 --> 00:34:04,983
+and John Lodgebury, all at Glasgow at the same time in the '90s.
+
+576
+00:34:04,983 --> 00:34:13,743
+And he then read papers by Eugenio Moggi, who's a very clever Italian computer scientist, but on the theoretical end.
+
+577
+00:34:13,743 --> 00:34:16,503
+And he has very small, you know those very small round glasses?
+
+578
+00:34:16,503 --> 00:34:19,663
+That's Eugenio Moggi, he's an amazing guy.
+
+579
+00:34:19,663 --> 00:34:21,183
+But completely incomprehensible.
+
+580
+00:34:21,183 --> 00:34:22,743
+I mean, as a person, delightful.
+
+581
+00:34:22,743 --> 00:34:25,063
+But as a computer scientist, completely incomprehensible.
+
+582
+00:34:25,063 --> 00:34:32,783
+But Phil had the ability to read papers by clever people like Eugenio Moggi and translate them into a language that the rest of us could understand.
+
+583
+00:34:32,783 --> 00:34:35,583
+And he wrote this paper, Comprehending Monads, which you should all read,
+
+584
+00:34:35,583 --> 00:34:45,543
+because it was the first time that anybody had explained how this rather obscure concept of a monad could be used as a way of structuring programs to accomplish something useful.
+
+585
+00:34:45,543 --> 00:34:48,423
+So, he was talking about the Lisp monad and the Maybe monad and so forth.
+
+586
+00:34:48,423 --> 00:34:54,703
+But then, in talking to Phil, he and I together came up with the idea that you could also use these monad things for doing IO.
+
+587
+00:34:54,703 --> 00:34:59,623
+And we wrote this paper, Imperative Functional Programming, in 1992,
+
+588
+00:34:59,623 --> 00:35:07,523
+which was the first time in which we really said Haskell is the world's finest imperative programming language.
+
+589
+00:35:07,523 --> 00:35:13,023
+And it was a huge revelation, but suddenly we could understand how to do IO in a functional language.
+
+590
+00:35:13,023 --> 00:35:17,863
+So here is a one slide introduction to monadic IO, for those of you who have not come across it.
+
+591
+00:35:17,863 --> 00:35:18,703
+The idea is this.
+
+592
+00:35:18,703 --> 00:35:20,703
+We're gonna have a type called IOT.
+
+593
+00:35:20,703 --> 00:35:24,003
+And you should think of values of this type as being like actions.
+
+594
+00:35:24,003 --> 00:35:26,344
+Something that you can do, if you like, a shell script.
+
+595
+00:35:26,344 --> 00:35:28,143
+It's something that can be performed.
+
+596
+00:35:28,143 --> 00:35:31,663
+But it is a value in its own right, in the sense that a shell script is a piece of text, right?
+
+597
+00:35:31,663 --> 00:35:32,583
+It's a value in its own right.
+
+598
+00:35:32,583 --> 00:35:33,543
+But you can run it, right?
+
+599
+00:35:33,543 --> 00:35:38,943
+So, an IOT is an action that you, when performed, may do some input/output before delivering some result.
+
+600
+00:35:38,943 --> 00:35:40,983
+So, toUpper is a pure function.
+
+601
+00:35:40,983 --> 00:35:42,543
+It just takes a character and delivers a character.
+
+602
+00:35:42,543 --> 00:35:44,183
+No actions involved at all.
+
+603
+00:35:44,183 --> 00:35:48,303
+But getChar is a, does some IO, right?
+
+604
+00:35:48,303 --> 00:35:50,223
+So, it's one of these IO action things.
+
+605
+00:35:50,223 --> 00:35:52,703
+And it's going to, but it returns a character.
+
+606
+00:35:52,703 --> 00:35:59,663
+PutChar takes a character and produces, as its result, an action, which, when performed, will put the character on the screen.
+
+607
+00:35:59,663 --> 00:36:00,503
+That make sense?
+
+608
+00:36:00,503 --> 00:36:02,423
+Now, all we need is a way, these are primitive things.
+
+609
+00:36:02,423 --> 00:36:05,423
+Now, oh, so the main program is going to be an action.
+
+610
+00:36:05,423 --> 00:36:07,663
+To run the program is to perform the action.
+
+611
+00:36:07,663 --> 00:36:09,703
+That's what running the program means.
+
+612
+00:36:09,703 --> 00:36:12,683
+And then we just need a way to compose the actions together.
+
+613
+00:36:12,683 --> 00:36:15,943
+And that's what these monadic operations, the monadic bind does.
+
+614
+00:36:15,943 --> 00:36:24,263
+So, this was, you know, a monad is, in aeogeneo, well, in the standard mathematical logic terminology, it's a type constructor, in this case, IO,
+
+615
+00:36:24,263 --> 00:36:26,263
+together with these two operations, return and bind.
+
+616
+00:36:26,263 --> 00:36:27,543
+So, what does bind do?
+
+617
+00:36:27,543 --> 00:36:33,463
+It takes an action returning a value of type A, and a function that, given the value returned by this,
+
+618
+00:36:33,463 --> 00:36:40,483
+will produce an action returning a value of type B, and glues them together sequentially to make a single action, which, when performed,
+
+619
+00:36:40,483 --> 00:36:45,423
+will first do this guy, and then do this guy, and before returning the result.
+
+620
+00:36:45,423 --> 00:36:47,884
+And so, now, here's how we can cobble together.
+
+621
+00:36:47,884 --> 00:36:52,743
+We can do getchar, and the second argument of this bind thing is a function.
+
+622
+00:36:52,743 --> 00:36:54,384
+There's the function, so there's the lambda.
+
+623
+00:36:54,384 --> 00:37:02,983
+Bind the result, do another getchar, bind the result, print the second one, and that putchar, remember, returns nothing.
+
+624
+00:37:02,983 --> 00:37:05,823
+So, we'll don't have anything to bind there, and then, finally, we'll return.
+
+625
+00:37:05,823 --> 00:37:06,663
+What does return do?
+
+626
+00:37:06,663 --> 00:37:11,943
+It just does no input/output, and returns a value of type A, the value you gave it.
+
+627
+00:37:11,943 --> 00:37:18,463
+So, these incredibly simple ingredients allowed us to compositionally build big, complicated IO actions or little ones.
+
+628
+00:37:18,463 --> 00:37:19,623
+It was a huge liberation.
+
+629
+00:37:19,623 --> 00:37:21,783
+Suddenly, we knew how to do IO.
+
+630
+00:37:21,783 --> 00:37:25,103
+This idea has turned out to be incredibly influential in practice.
+
+631
+00:37:25,103 --> 00:37:36,073
+So, it's infected lots of other languages now, and even things like F#, and F# calls them workflows, rather than monads,
+
+632
+00:37:36,073 --> 00:37:44,643
+which is a very sensible idea, but the main thing is that you have, it's pure, Haskell is pure by default, but has these values, these IO values,
+
+633
+00:37:44,643 --> 00:37:50,023
+which are, sort of, the pure part and the imperative part is sort of mixed together,
+
+634
+00:37:50,023 --> 00:37:54,983
+but the boundary between the two is kept very clear by the type system.
+
+635
+00:37:54,983 --> 00:37:57,463
+It's like a membrane that lives between the two.
+
+636
+00:37:57,463 --> 00:37:59,023
+It's a very, very nice way to,
+
+637
+00:37:59,023 --> 00:38:03,983
+you can do functional programming and imperative programming in the same language without screwing up the functional bit.
+
+638
+00:38:03,983 --> 00:38:06,463
+Fantastic.
+
+639
+00:38:06,463 --> 00:38:08,183
+So, credit to Phil and Eugenio.
+
+640
+00:38:08,183 --> 00:38:09,543
+This was our mistake, right?
+
+641
+00:38:09,543 --> 00:38:12,263
+So, workflow, I now think would be a much better name.
+
+642
+00:38:12,263 --> 00:38:14,183
+A warm, fuzzy thing would have been good.
+
+643
+00:38:14,183 --> 00:38:20,363
+Monad does sound rather scary, but it has the effect of filtering out people who want to learn Haskell, so that's good.
+
+644
+00:38:20,363 --> 00:38:26,323
+Here's a picture that I often use to explain what's going on.
+
+645
+00:38:26,323 --> 00:38:31,963
+Here's languages that are completely useless, but very safe, and that was what Haskell was to begin with, you know, when it could do no IO,
+
+646
+00:38:31,963 --> 00:38:37,223
+and languages that are rather dangerous, but can do anything, like C, and really, everybody is trying to move here,
+
+647
+00:38:37,223 --> 00:38:43,283
+languages that are sort of safe and useful, and Haskell's doing it by moving up this way, right, by adding controlled effects,
+
+648
+00:38:43,283 --> 00:38:50,043
+and everyone else is doing it by trying to corral the effects, you know, to reduce the pervasiveness, like, you know, thread local state.
+
+649
+00:38:50,043 --> 00:38:55,083
+It's just an example of trying to corral side effects into sort of safe regions.
+
+650
+00:38:55,083 --> 00:38:57,844
+Haskell sort of starts from the safe bit and tries to move upwards.
+
+651
+00:38:57,844 --> 00:38:59,243
+And so, there's a bit of interplay here.
+
+652
+00:38:59,243 --> 00:39:08,243
+So, we, you know, I sit there envying what the imperative program, you mean you can just open the file right there in the middle of this functional?
+
+653
+00:39:08,243 --> 00:39:09,884
+How nice that would be.
+
+654
+00:39:09,884 --> 00:39:17,373
+But there's some traffic in the other direction, so when we adopted transactional memory, we had some ideas that really couldn't, you know,
+
+655
+00:39:17,373 --> 00:39:22,363
+that the imperative guys had never had, and we had those ideas because we had this very pure setting.
+
+656
+00:39:22,363 --> 00:39:27,323
+So, there's a nice paper about software transactional memory in Haskell you might like to read sometime.
+
+657
+00:39:27,323 --> 00:39:35,923
+So, the conclusion to this little story is just, well, relentlessly pursuing a sort of single,
+
+658
+00:39:35,923 --> 00:39:42,963
+even slightly unrealistic idea and sticking to it is one of the glorious things that you're allowed to do when you're a researcher in a university.
+
+659
+00:39:42,963 --> 00:39:48,963
+And, you know, we should, it's an amazing liberty that we're given, and we should, you know,
+
+660
+00:39:48,963 --> 00:39:53,283
+we should value it a lot rather than complaining at our masters for not funding us properly all the time.
+
+661
+00:39:53,283 --> 00:39:55,123
+It's an amazing thing.
+
+662
+00:39:55,123 --> 00:39:57,603
+And, well, in this case, it was very productive.
+
+663
+00:39:57,603 --> 00:40:02,363
+Okay, third simple principle.
+
+664
+00:40:02,363 --> 00:40:04,763
+Oh, I wanted to, oh, let's see.
+
+665
+00:40:04,763 --> 00:40:06,243
+Did anybody have any questions about laziness?
+
+666
+00:40:06,243 --> 00:40:12,683
+I just wanted to, I forgot, there's one thing I wanted to say, which is, laziness was the thing that initially brought us together,
+
+667
+00:40:12,683 --> 00:40:20,603
+but I now think that the important thing about it is not so much the lazy functional program, that's quite convenient and nice and modular,
+
+668
+00:40:20,603 --> 00:40:21,643
+I do like it.
+
+669
+00:40:21,643 --> 00:40:26,723
+The really important thing was that it prevented us from making those deals with the devil, right?
+
+670
+00:40:26,723 --> 00:40:30,723
+And forced us to be embarrassed for long enough to come up with the Monad idea, right?
+
+671
+00:40:30,723 --> 00:40:34,243
+So, now we know about that, you know, where we're doing it all over again,
+
+672
+00:40:34,243 --> 00:40:39,003
+I couldn't really imagine starting with a call by value language that was relentlessly pure.
+
+673
+00:40:40,043 --> 00:40:41,203
+Does that make sense?
+
+674
+00:40:41,203 --> 00:40:45,243
+But you would have the support for laziness, and indeed, you know, we're all moving towards that.
+
+675
+00:41:11,744 --> 00:41:13,184
+- Yeah, OCaml and Haskell.
+
+676
+00:41:13,184 --> 00:41:18,764
+So OCaml sort of grew, it's another long time scale project, right?
+
+677
+00:41:18,764 --> 00:41:26,684
+Grew out of INRIA, and it was the sort of core research language of a group that steadily became more and more practical and more widely used.
+
+678
+00:41:26,684 --> 00:41:34,124
+It's a call by value language, and call by value languages have the nice property that their performance characteristics are a bit better behaved,
+
+679
+00:41:34,124 --> 00:41:34,304
+right?
+
+680
+00:41:34,304 --> 00:41:36,264
+So it's good for industrial application.
+
+681
+00:41:36,264 --> 00:41:41,903
+It was also, you know, it was an exemplar of the ML module system approach, and that's pervasively true in OCaml.
+
+682
+00:41:41,903 --> 00:41:49,523
+So I would just say, they're sort of culturally, they represent a different collection of compromises, if you like, in the design space.
+
+683
+00:41:49,523 --> 00:41:55,344
+And they each have, but I think nowadays, you know, in the olden days, we sort of, we saw we're not there.
+
+684
+00:41:55,344 --> 00:41:58,864
+Now we think, well, you know, I could easily have been there, right?
+
+685
+00:41:58,864 --> 00:42:01,344
+If I'd been born on a different planet or something.
+
+686
+00:42:01,344 --> 00:42:05,063
+It's just, there's a sort of, there's a lot of understanding between the two.
+
+687
+00:42:05,063 --> 00:42:08,023
+There's just a different set of compromises.
+
+688
+00:42:08,023 --> 00:42:14,224
+And actually, you know, I meet with the OCaml people who are busy re-engineering their compiler to be more system F-like in that sense.
+
+689
+00:42:24,896 --> 00:42:27,215
+Would it make sense to make the standard libraries more strict?
+
+690
+00:42:27,215 --> 00:42:29,376
+Just application more strict.
+
+691
+00:42:29,376 --> 00:42:30,735
+Maybe, yeah.
+
+692
+00:42:30,735 --> 00:42:35,976
+I mean, it would be a bit difficult now, because laziness is kind of assumed.
+
+693
+00:42:35,976 --> 00:42:43,675
+But I think you could well design-- and indeed, GHC now has a flag, -x strict, a language extension,
+
+694
+00:42:43,675 --> 00:42:47,416
+which makes all function applications strict in that module.
+
+695
+00:42:47,416 --> 00:42:48,936
+You could do that, yeah.
+
+696
+00:42:48,936 --> 00:42:52,976
+But you'd have to be fairly careful about going through the libraries and making them more strict.
+
+697
+00:42:52,976 --> 00:42:57,296
+Maybe more efficient if you did a bit.
+
+698
+00:42:57,296 --> 00:42:59,256
+OK, how are we doing?
+
+699
+00:42:59,256 --> 00:43:00,336
+We have 12 minutes, yes?
+
+700
+00:43:00,336 --> 00:43:01,695
+[INAUDIBLE]
+
+701
+00:43:01,695 --> 00:43:02,976
+Oh, OK, for microphone, yes.
+
+702
+00:43:02,976 --> 00:43:05,135
+[INAUDIBLE]
+
+703
+00:43:05,135 --> 00:43:06,655
+OK, I want to say a bit about types.
+
+704
+00:43:06,655 --> 00:43:07,896
+So this is the last thing I'm going to talk about.
+
+705
+00:43:07,896 --> 00:43:08,655
+It's about types.
+
+706
+00:43:08,655 --> 00:43:16,615
+So this is another thing that turned out to be quite important in Haskell's history and completely unexpected.
+
+707
+00:43:16,615 --> 00:43:21,536
+So the laziness thing, the monad thing, was completely unexpected.
+
+708
+00:43:21,536 --> 00:43:23,856
+It was not part of our initial design recipe.
+
+709
+00:43:23,856 --> 00:43:25,695
+It was just forced on us by laziness.
+
+710
+00:43:25,695 --> 00:43:27,976
+Type classes were completely unexpected.
+
+711
+00:43:27,976 --> 00:43:30,215
+So here's the starting point.
+
+712
+00:43:30,215 --> 00:43:33,536
+Back in 1990, we just borrowed from ML.
+
+713
+00:43:33,536 --> 00:43:39,695
+The Hindemith-Milner type system, just amazing thing with parametric polymorphism, absolutely fantastic.
+
+714
+00:43:39,695 --> 00:43:47,016
+But with some difficulties, functions that are sort of nearly polymorphic, like sort, you can sort a list of any kind of value,
+
+715
+00:43:47,016 --> 00:43:50,735
+provided you can compare those values for ordering.
+
+716
+00:43:50,735 --> 00:43:55,976
+You can print any kind of value, provided you can serialize it in some way.
+
+717
+00:43:55,976 --> 00:43:58,655
+So there's some functions like this that weren't quite polymorphic.
+
+718
+00:43:58,655 --> 00:44:00,936
+And numeric functions, like plus, were also that.
+
+719
+00:44:00,936 --> 00:44:06,456
+We want to be able to add on floats and complex numbers and reels and matrices, but not on absolutely everything.
+
+720
+00:44:06,456 --> 00:44:09,016
+So this was kind of like an embarrassing wart.
+
+721
+00:44:09,016 --> 00:44:17,175
+And most languages sort of solve this embarrassing wart in a variety of ways, but usually by baking it into some kind of runtime.
+
+722
+00:44:17,175 --> 00:44:22,376
+All types support ordering, even functions and things that really shouldn't.
+
+723
+00:44:22,376 --> 00:44:24,215
+But we weren't very happy with this.
+
+724
+00:44:24,215 --> 00:44:30,056
+Remember Haskell, deeply principled language, full of theoretical people who didn't care about industrial applications at this stage.
+
+725
+00:44:30,056 --> 00:44:34,296
+And then in 1988, or was it '89?
+
+726
+00:44:34,296 --> 00:44:37,816
+1988, we were heavily involved in this.
+
+727
+00:44:37,816 --> 00:44:46,655
+And this very same Phil Wadler produced this email to the then FP Lang C Committee, which is the sort of predecessor of the Haskell Committee,
+
+728
+00:44:46,655 --> 00:44:49,896
+in which fully formed, he produced the type class idea.
+
+729
+00:44:49,896 --> 00:44:52,816
+It was just an astonishing piece of work.
+
+730
+00:44:52,816 --> 00:44:56,215
+He published a paper with his student Steve Blott a year or two later.
+
+731
+00:44:56,215 --> 00:45:03,905
+And here's the idea in brief, that instead of square having the type for all A, A to A, which obviously isn't true, you can't add functions,
+
+732
+00:45:03,905 --> 00:45:07,576
+it has for all A, where the A lies in class num.
+
+733
+00:45:07,576 --> 00:45:10,576
+It's a sort of form of bounded polymorphism, if you like.
+
+734
+00:45:10,576 --> 00:45:14,456
+And then sort would have a-- sort, the type should be ordered.
+
+735
+00:45:14,456 --> 00:45:16,096
+Serialize, the type should be showable.
+
+736
+00:45:16,096 --> 00:45:20,016
+Remember, the type should be able to satisfy equality.
+
+737
+00:45:20,016 --> 00:45:24,256
+But this was more than just a notation for saying the function is a bit less polymorphic.
+
+738
+00:45:24,256 --> 00:45:27,336
+It came with a sort of an extensibility mechanism.
+
+739
+00:45:27,336 --> 00:45:30,496
+There weren't just these fixed number of things built in.
+
+740
+00:45:30,496 --> 00:45:32,256
+There was-- you could define new classes.
+
+741
+00:45:32,256 --> 00:45:35,056
+So here is the class num defined in the library.
+
+742
+00:45:35,056 --> 00:45:38,096
+That's all that GHC knows about it, is the library definition.
+
+743
+00:45:38,096 --> 00:45:42,655
+It declared the class and give the type signatures of each of the methods of the class.
+
+744
+00:45:42,655 --> 00:45:43,936
+Forget object-oriented classes.
+
+745
+00:45:43,936 --> 00:45:45,655
+You just have to-- this is Haskell type classes.
+
+746
+00:45:45,655 --> 00:45:47,976
+It's more like an object-oriented interface.
+
+747
+00:45:47,976 --> 00:45:52,056
+And then you can make an existing type, an instance of a new class,
+
+748
+00:45:52,056 --> 00:45:57,776
+by an instance declaration in which you explain that plus is implemented by plus int.
+
+749
+00:45:57,776 --> 00:46:00,175
+Presumably, you have some way to add ints.
+
+750
+00:46:00,175 --> 00:46:04,135
+And that's going to be the plus int function and so forth.
+
+751
+00:46:04,135 --> 00:46:11,615
+And better yet, Phil explained, that you could understand all of this by translation into a kind of lambda calculus language.
+
+752
+00:46:11,615 --> 00:46:13,936
+So this yellow stuff is Haskell source code.
+
+753
+00:46:13,936 --> 00:46:18,336
+Blue stuff is this intermediate language, system FC.
+
+754
+00:46:18,336 --> 00:46:21,856
+So square has type for all num num n n to n.
+
+755
+00:46:21,856 --> 00:46:27,376
+But in the intermediate language, this num n becomes an ordinary value argument, just another argument to square.
+
+756
+00:46:27,376 --> 00:46:28,016
+And here it is.
+
+757
+00:46:28,016 --> 00:46:30,655
+It's called D. And I'm giving it to this multiply.
+
+758
+00:46:30,655 --> 00:46:31,896
+So what is D?
+
+759
+00:46:31,896 --> 00:46:36,056
+D is simply a record of the functions in the num class.
+
+760
+00:46:36,056 --> 00:46:39,615
+So when I say a record of, here's a data type declaration for this num.
+
+761
+00:46:39,615 --> 00:46:41,296
+And it's just got a single constructor.
+
+762
+00:46:41,296 --> 00:46:46,376
+And it lists the functions that you need to do numeric operations.
+
+763
+00:46:46,376 --> 00:46:53,615
+And star, now this star, becomes just a selector that picks out the-- well, here's num with its however many arguments it's got.
+
+764
+00:46:53,615 --> 00:46:57,576
+But I'm just going to pick out the second one, because that's the second operation.
+
+765
+00:46:57,576 --> 00:46:59,775
+So star now takes a single argument.
+
+766
+00:46:59,775 --> 00:47:04,016
+It's a selector, which pulls out of this sort of V table that I've passed along.
+
+767
+00:47:04,016 --> 00:47:06,896
+It pulls out of the V table, the multiplication function.
+
+768
+00:47:06,896 --> 00:47:10,816
+And then it applies that function to the two arguments.
+
+769
+00:47:10,816 --> 00:47:13,016
+So it's kind of simple, elegant, beautiful.
+
+770
+00:47:13,016 --> 00:47:14,056
+Some runtime overhead.
+
+771
+00:47:14,056 --> 00:47:17,016
+But hey, everything composed beautifully.
+
+772
+00:47:17,016 --> 00:47:18,856
+And so we were just all over this.
+
+773
+00:47:18,856 --> 00:47:20,376
+We thought, Philip, you're a genius.
+
+774
+00:47:20,376 --> 00:47:21,856
+We're just going to do this.
+
+775
+00:47:21,856 --> 00:47:27,056
+Because it resolved all our awkwardnesses in a very simple way.
+
+776
+00:47:27,056 --> 00:47:28,976
+That's a one slide introduction to type class.
+
+777
+00:47:28,976 --> 00:47:30,856
+[INAUDIBLE]
+
+778
+00:47:30,856 --> 00:47:31,376
+Oh, yes.
+
+779
+00:47:31,376 --> 00:47:34,296
+Now, so it looks as if this is going to happen at runtime, doesn't it?
+
+780
+00:47:34,296 --> 00:47:40,135
+But then maybe if you see a call to square given a particular record, perhaps you could specialize the square.
+
+781
+00:47:40,135 --> 00:47:43,695
+So that's the job of the compiler, indeed.
+
+782
+00:47:43,695 --> 00:47:44,376
+So here we are.
+
+783
+00:47:44,376 --> 00:47:46,735
+We first of all didn't understand what Phil was talking about.
+
+784
+00:47:46,735 --> 00:47:48,775
+Then we became wildly enthusiastic about it.
+
+785
+00:47:48,775 --> 00:47:51,336
+Then we tried to run it and found it was run really slowly.
+
+786
+00:47:51,336 --> 00:47:54,615
+And then there was an awful lot of hacking to do just what you're describing,
+
+787
+00:47:54,615 --> 00:47:59,016
+to specialize these functions for particular arguments and to do so recursively.
+
+788
+00:47:59,016 --> 00:48:02,896
+So now the compiler-- now we'd be able to generate fast code.
+
+789
+00:48:02,896 --> 00:48:05,336
+And now, of course, we think that everybody should do this.
+
+790
+00:48:05,336 --> 00:48:07,536
+And in fact, quite a lot of people do.
+
+791
+00:48:07,536 --> 00:48:09,216
+So it's quite a long journey here.
+
+792
+00:48:09,216 --> 00:48:13,976
+Over about a decade it took to really resolve all of these things.
+
+793
+00:48:13,976 --> 00:48:20,016
+And in fact, it wasn't just-- the basic idea that Phil put forth was incredibly inspiring.
+
+794
+00:48:20,016 --> 00:48:25,775
+But it has turned out to lead to a complete plethora of follow on work.
+
+795
+00:48:25,775 --> 00:48:34,016
+It's been like some pieces of research, some papers you think, that paper opened the door to a whole research area.
+
+796
+00:48:34,016 --> 00:48:35,256
+And that's what happened here.
+
+797
+00:48:35,256 --> 00:48:37,216
+It's just tons of stuff happened to type class.
+
+798
+00:48:37,216 --> 00:48:40,016
+We'll not talk about today.
+
+799
+00:48:40,016 --> 00:48:46,775
+One of the particular pieces of serendipity though that was that Haskell already had higher kinded type variables.
+
+800
+00:48:46,775 --> 00:48:55,556
+And the higher kinded type variables and the type classes and the monads all came together in a violent exothermic reaction in the class monad,
+
+801
+00:48:55,556 --> 00:48:59,135
+which allowed us to abstract over which monad you were using.
+
+802
+00:48:59,135 --> 00:49:01,576
+So this was another thing that we did not anticipate.
+
+803
+00:49:01,576 --> 00:49:02,816
+It just worked.
+
+804
+00:49:02,816 --> 00:49:10,536
+And it made the whole monad story work not just for IO, but for lists and maybes and other monads that in fact people write every day.
+
+805
+00:49:10,536 --> 00:49:12,376
+They invent new monads all the time.
+
+806
+00:49:12,376 --> 00:49:13,416
+That was pretty amazing.
+
+807
+00:49:13,416 --> 00:49:17,296
+So let's see.
+
+808
+00:49:17,296 --> 00:49:24,336
+I just want to-- this slide is just recording a little homage to Jim Mattson, who was a research assistant.
+
+809
+00:49:24,336 --> 00:49:27,256
+This was in 1995, so in the mid '90s.
+
+810
+00:49:27,256 --> 00:49:30,735
+And the users were great and our research assistants were incredible.
+
+811
+00:49:30,735 --> 00:49:32,456
+So this is some user who was complaining.
+
+812
+00:49:32,456 --> 00:49:36,735
+He said, poor we soul-- this was in Scotland, remember-- I hate to see you suffer like this.
+
+813
+00:49:36,735 --> 00:49:37,496
+Don't do anything.
+
+814
+00:49:37,496 --> 00:49:40,416
+I will devote an entire day to intense self-flagellation.
+
+815
+00:49:40,416 --> 00:49:47,456
+And by the end of the day, you will either have a working compiler or there will be one fewer research assistants on the ACWA project,
+
+816
+00:49:47,456 --> 00:49:50,096
+which is the EPSRC funded project I had.
+
+817
+00:49:50,096 --> 00:49:54,416
+So they were truly dedicated to making GHC into a good compiler.
+
+818
+00:49:54,416 --> 00:49:56,536
+OK.
+
+819
+00:49:56,536 --> 00:49:59,695
+Now, then type classes were good.
+
+820
+00:49:59,695 --> 00:50:05,655
+But then type classes in a way kicked open the door to saying, maybe we could do really interesting things in types.
+
+821
+00:50:05,655 --> 00:50:09,896
+And so in the end-- and this partly goes back to a question about standardization-- in the end,
+
+822
+00:50:09,896 --> 00:50:16,416
+Haskell has turned out to be an amazing laboratory for exploring weird type system stuff.
+
+823
+00:50:16,416 --> 00:50:20,496
+So I don't underthink polymorphic recursion, the higher kind of type variables I've mentioned.
+
+824
+00:50:20,496 --> 00:50:22,456
+Polymorphic functions as constructor arguments.
+
+825
+00:50:22,456 --> 00:50:28,376
+And then indeed as arguments of functions in general, existential data types, GADTs, type families.
+
+826
+00:50:28,376 --> 00:50:29,135
+It goes on and on.
+
+827
+00:50:29,135 --> 00:50:34,536
+So it's like one of those grow bags that you buy from a shop and you put your tomatoes in.
+
+828
+00:50:34,536 --> 00:50:35,816
+They go vroom.
+
+829
+00:50:35,816 --> 00:50:38,096
+That's what happens to type systems in Haskell.
+
+830
+00:50:38,096 --> 00:50:41,775
+It's been a very fertile laboratory.
+
+831
+00:50:41,775 --> 00:50:46,496
+Now, you might say, is this just a kind of exercise in self-gratification?
+
+832
+00:50:46,496 --> 00:50:48,175
+We do it because we can.
+
+833
+00:50:48,175 --> 00:50:55,735
+So I want to give you a little type system apology for why I think it's actually quite interesting and important to work on type systems.
+
+834
+00:50:55,735 --> 00:50:56,296
+And here it is.
+
+835
+00:50:56,296 --> 00:51:00,816
+So we would all like to have some confidence that our programs work.
+
+836
+00:51:00,816 --> 00:51:06,016
+One way to do that is to verify them using some kind of automatic theorem proof of technology.
+
+837
+00:51:06,016 --> 00:51:07,896
+So that's at this end of the spectrum, right?
+
+838
+00:51:07,896 --> 00:51:13,056
+So you can use Coq or Isabel and prove some formal theorem about your program.
+
+839
+00:51:13,056 --> 00:51:16,175
+But I think of these tools as a bit like tactical nuclear weapons.
+
+840
+00:51:16,175 --> 00:51:17,536
+They require skilled operators.
+
+841
+00:51:17,536 --> 00:51:19,456
+They have an awful lot of knobs.
+
+842
+00:51:19,456 --> 00:51:21,655
+There's a lot of collateral damage.
+
+843
+00:51:21,655 --> 00:51:23,456
+But they kind of get the job done.
+
+844
+00:51:23,456 --> 00:51:25,816
+But you do need to be quite clever to use them.
+
+845
+00:51:25,816 --> 00:51:30,296
+And indeed, when people first start to use Coq or Isabel, you don't hear from them for two years.
+
+846
+00:51:30,296 --> 00:51:31,816
+They sort of go dark.
+
+847
+00:51:31,816 --> 00:51:34,976
+And then they emerge with all their pain receptors destroyed.
+
+848
+00:51:34,976 --> 00:51:38,576
+And they say, Coq, the only way to live is to do everything in Coq.
+
+849
+00:51:38,576 --> 00:51:39,856
+I don't write programs anymore.
+
+850
+00:51:39,856 --> 00:51:42,695
+I just write Coq proofs.
+
+851
+00:51:42,695 --> 00:51:45,695
+But at the other end of the spectrum, are programs with no types at all.
+
+852
+00:51:45,695 --> 00:51:53,016
+I can't imagine how anybody writes programs like that, that they want to run and continue to run over a period of a decade or two.
+
+853
+00:51:53,016 --> 00:51:55,016
+And then you might have simply typed programs.
+
+854
+00:51:55,016 --> 00:51:56,296
+And there the types just get in the way.
+
+855
+00:51:56,296 --> 00:51:59,175
+And then you have sort of ML style typing, Haskell style typing.
+
+856
+00:51:59,175 --> 00:52:02,376
+So here the type system has become more expressive.
+
+857
+00:52:02,376 --> 00:52:05,896
+And therefore, you can say more about what your program does.
+
+858
+00:52:05,896 --> 00:52:07,216
+Now, why is that important?
+
+859
+00:52:07,216 --> 00:52:10,096
+Well, here is a picture of a program.
+
+860
+00:52:10,096 --> 00:52:12,256
+So this is all programs.
+
+861
+00:52:12,256 --> 00:52:13,976
+The red ones are the programs that work.
+
+862
+00:52:13,976 --> 00:52:17,655
+That is, the programs that do what you want.
+
+863
+00:52:17,655 --> 00:52:19,816
+This lot is the programs that are well typed.
+
+864
+00:52:19,816 --> 00:52:23,936
+Now, of course, it's very reasonable that there are a lot of well typed programs that don't work.
+
+865
+00:52:23,936 --> 00:52:31,296
+If your result is meant to be the square root of the input, and you type the square of the input, well, it's well typed.
+
+866
+00:52:31,296 --> 00:52:32,856
+But it doesn't give the right answer.
+
+867
+00:52:32,856 --> 00:52:34,456
+So there are many, many programs here.
+
+868
+00:52:34,456 --> 00:52:35,216
+And that's OK.
+
+869
+00:52:35,216 --> 00:52:37,976
+But this area is really annoying.
+
+870
+00:52:37,976 --> 00:52:41,296
+Because that's programs that work perfectly well, but you can't write.
+
+871
+00:52:41,296 --> 00:52:47,175
+So in a simply typed language over here, like Pascal, this was really, really annoying.
+
+872
+00:52:47,175 --> 00:52:49,896
+You could write reverse on a list of Booleans.
+
+873
+00:52:49,896 --> 00:52:55,416
+But then if you wanted reverse on a list of characters, well, you had to have a new list type and a new reverse function.
+
+874
+00:52:55,416 --> 00:52:56,816
+It was really annoying.
+
+875
+00:52:56,816 --> 00:52:57,536
+So what do we do?
+
+876
+00:52:57,536 --> 00:52:58,856
+Parametric polymorphism.
+
+877
+00:52:58,856 --> 00:53:02,735
+Make the type system a bit more expressive and reduce this area of pain.
+
+878
+00:53:02,735 --> 00:53:05,416
+So the goal of more expressive type systems, in my view,
+
+879
+00:53:05,416 --> 00:53:12,816
+is to reduce this zone by moving this thing this way in order so that the type system says more and more of what you want.
+
+880
+00:53:12,816 --> 00:53:14,856
+It excludes more bad programs.
+
+881
+00:53:14,856 --> 00:53:16,456
+And it allows more good programs.
+
+882
+00:53:16,456 --> 00:53:23,416
+And Joe here is doing some pretty amazing things near the leeching edge of here.
+
+883
+00:53:23,416 --> 00:53:26,096
+And it's actually practically useful.
+
+884
+00:53:26,096 --> 00:53:27,135
+Well, I hope they work.
+
+885
+00:53:27,135 --> 00:53:27,856
+I hope they work.
+
+886
+00:53:27,856 --> 00:53:29,816
+Well, the type system says they do.
+
+887
+00:53:29,816 --> 00:53:31,256
+And Lint is checking that they do.
+
+888
+00:53:31,256 --> 00:53:33,775
+Well, actually, probably not checking the bounds bit.
+
+889
+00:53:33,775 --> 00:53:38,476
+So there's a sort of simple plan for world domination here, which is to say, look,
+
+890
+00:53:38,476 --> 00:53:47,536
+static type systems are the world's most widely used formal verification mechanism by three or four orders of magnitude.
+
+891
+00:53:47,536 --> 00:53:52,256
+Lots of professional programmers use static type systems every day and are happy with it.
+
+892
+00:53:52,256 --> 00:53:56,655
+The compilers run these theorem provers called type checkers every day.
+
+893
+00:53:56,655 --> 00:53:58,135
+Every time the program is compiled.
+
+894
+00:53:58,135 --> 00:54:06,896
+So if we could build on that success by making the type system more expressive so that it accepts more good programs and rejects more bad programs,
+
+895
+00:54:06,896 --> 00:54:07,856
+that would be cool.
+
+896
+00:54:07,856 --> 00:54:13,296
+But you have to do that without getting so weird and wacky that you lose your programmers.
+
+897
+00:54:13,296 --> 00:54:17,735
+So that's the experiment that we're engaged in, is seeing how far can you push the boundary.
+
+898
+00:54:17,735 --> 00:54:19,655
+So we're going in the direction of dependent types.
+
+899
+00:54:19,655 --> 00:54:21,655
+So when will people start falling off the wagon?
+
+900
+00:54:21,655 --> 00:54:25,735
+And can we make it so that if they don't need dependent types, they don't even trip over them?
+
+901
+00:54:25,735 --> 00:54:27,496
+That's the experiment we're engaged in.
+
+902
+00:54:27,496 --> 00:54:41,256
+And I think the fact that these systems are actually finding use in industrial practice is kind of an encouraging reason to believe this isn't just an exercise in academics doing things because they can.
+
+903
+00:54:41,256 --> 00:54:45,856
+It actually might be useful and eventually important.
+
+904
+00:54:45,856 --> 00:54:47,615
+Now, it's half past 6. Is it half past 6?
+
+905
+00:54:47,615 --> 00:54:48,536
+Yeah, half past 5. Half past 6.
+
+906
+00:54:48,536 --> 00:54:49,056
+Yes, good.
+
+907
+00:54:49,056 --> 00:54:52,775
+So I'm going to skip this and just come to a close.
+
+908
+00:54:54,775 --> 00:54:56,175
+Let's see.
+
+909
+00:54:56,175 --> 00:55:00,096
+I just wanted to stand back a bit at the end and say, what have I learned from all this?
+
+910
+00:55:00,096 --> 00:55:01,726
+So one thing is,
+
+911
+00:55:01,726 --> 00:55:10,976
+I really love the fact that Haskell is a language that people can use to write programs in and that GHC is a compiler that actually works and generates fast code.
+
+912
+00:55:10,976 --> 00:55:13,216
+But the ideas are super important.
+
+913
+00:55:13,216 --> 00:55:17,456
+I really try hard whenever we do something new to write a paper about it.
+
+914
+00:55:17,456 --> 00:55:20,056
+Not because you get paper-- well, of course you get it.
+
+915
+00:55:20,056 --> 00:55:21,816
+Yes, because you get paper brownie points.
+
+916
+00:55:21,816 --> 00:55:28,976
+But also because you express in that very transferable form a key idea.
+
+917
+00:55:28,976 --> 00:55:35,175
+And the way that in functional programming, theory and practice come closer together and you can tunnel between them is very exciting.
+
+918
+00:55:35,175 --> 00:55:44,376
+So I think Haskell, because it has this very simple core,
+
+919
+00:55:44,376 --> 00:55:53,896
+has served as a kind of lab in which some ideas like this can be particularly straightforwardly exposed, if you like, and have practical utility.
+
+920
+00:55:53,896 --> 00:55:59,376
+And so that's all sort of a bit worthy and dull.
+
+921
+00:55:59,376 --> 00:56:04,296
+But what I kind of like is that Haskell is also a language which people play in.
+
+922
+00:56:04,296 --> 00:56:07,536
+They just get to enjoy it because it's kind of expressive.
+
+923
+00:56:07,536 --> 00:56:14,056
+And they do weird embedded domain-specific language for probabilistic programming or quantum mechanics or not theory.
+
+924
+00:56:14,056 --> 00:56:16,816
+Read Dan Pipponi's blog posts.
+
+925
+00:56:16,816 --> 00:56:18,416
+I have no idea what he's talking about.
+
+926
+00:56:18,416 --> 00:56:23,256
+Or functional reactive programming.
+
+927
+00:56:23,256 --> 00:56:25,655
+That was a whole revelation.
+
+928
+00:56:25,655 --> 00:56:36,536
+And I also just wanted to reflect that sometimes people say, how could you-- could we repeat that story?
+
+929
+00:56:36,536 --> 00:56:40,256
+What did you do?
+
+930
+00:56:40,256 --> 00:56:41,695
+Could we do the same things again?
+
+931
+00:56:41,695 --> 00:56:44,496
+I think that's quite hard because luck plays a lot of roles.
+
+932
+00:56:45,775 --> 00:56:49,216
+Technical excellence is a kind of necessary, but it's absolutely not sufficient.
+
+933
+00:56:49,216 --> 00:56:50,735
+You kind of need to be lucky as well.
+
+934
+00:56:50,735 --> 00:56:52,175
+And we certainly were lucky.
+
+935
+00:56:52,175 --> 00:56:54,456
+So I've explained a lot of the things.
+
+936
+00:56:54,456 --> 00:57:01,056
+We had a lot of luck with some intellectual breakthroughs, the Monad thing and the type class thing and the higher-kinded stuff.
+
+937
+00:57:01,056 --> 00:57:03,135
+All that came together at a particular moment.
+
+938
+00:57:03,135 --> 00:57:04,296
+That was very lucky.
+
+939
+00:57:04,296 --> 00:57:09,296
+The particular people involved worked very well together and sometimes were very co-located.
+
+940
+00:57:09,296 --> 00:57:11,135
+That was quite lucky.
+
+941
+00:57:11,135 --> 00:57:12,816
+There was all this sort of ferment.
+
+942
+00:57:12,816 --> 00:57:15,576
+John Backus's lecture that set us all off, that was amazing.
+
+943
+00:57:15,576 --> 00:57:19,135
+So it's difficult to reproduce all of these things.
+
+944
+00:57:19,135 --> 00:57:25,025
+But I will come back to say that actually Cambridge had a big part to play in this fight,
+
+945
+00:57:25,025 --> 00:57:34,976
+the sort of launch pad that Arthur Norman and the computer lab in general gave to John and me and more broadly with other colleagues in other parts of the world.
+
+946
+00:57:34,976 --> 00:57:37,376
+Phil was doing his PhD in Stanford at the same time.
+
+947
+00:57:37,376 --> 00:57:39,296
+But Cambridge's launch pad was very important.
+
+948
+00:57:51,744 --> 00:57:53,983
+I thought I'm not going to do a PhD.
+
+949
+00:57:53,983 --> 00:57:57,224
+And in fact, I never did a PhD, so I still don't have one.
+
+950
+00:57:57,224 --> 00:58:00,224
+But I thought, I'll never come back to Cambridge.
+
+951
+00:58:00,224 --> 00:58:04,744
+And it was a great surprise to me when in 1998, Microsoft started this lab, and here I am.
+
+952
+00:58:04,744 --> 00:58:05,983
+So that's it.
+
+953
+00:58:05,983 --> 00:58:09,744
+Has anybody got any other comments or thoughts or questions?
+
+954
+00:58:09,744 --> 00:58:11,144
+We can talk about it.
+
+955
+00:58:11,144 --> 00:58:15,304
+Was there much of a line from Christopher Strachey and Peter Landon?
+
+956
+00:58:15,304 --> 00:58:16,423
+Oh, yes, microphones, yes.
+
+957
+00:58:16,423 --> 00:58:21,023
+I was wondering if there was much of a line from Christopher Strachey and Peter Landon and so on to this.
+
+958
+00:58:21,023 --> 00:58:22,503
+Was there a line from Peter Landon?
+
+959
+00:58:22,503 --> 00:58:23,503
+Did he go and buy the ML?
+
+960
+00:58:23,503 --> 00:58:24,003
+Yes.
+
+961
+00:58:24,003 --> 00:58:30,224
+So we were totally-- no, no, no. So we were totally inspired by Peter Landon and the next 700 programming languages.
+
+962
+00:58:30,224 --> 00:58:32,063
+And Christopher Strachey's work on semantics.
+
+963
+00:58:32,063 --> 00:58:36,644
+So we were all sort of steeped in denotational semantics in those days.
+
+964
+00:58:36,644 --> 00:58:37,824
+I could barely understand it.
+
+965
+00:58:37,824 --> 00:58:40,144
+Remember, I only did two years of math.
+
+966
+00:58:40,144 --> 00:58:45,184
+But those were all sort of very important part of the sort of culture that led up to it, yes.
+
+967
+00:58:45,184 --> 00:58:47,463
+And Christopher, of course, was at Oxford.
+
+968
+00:58:47,463 --> 00:58:49,624
+And John Hughes was doing a PhD at-- he was where?
+
+969
+00:58:49,624 --> 00:58:50,463
+He was at Cambridge.
+
+970
+00:58:50,463 --> 00:58:51,063
+Strachey was at Cambridge.
+
+971
+00:58:51,063 --> 00:58:51,744
+Was he?
+
+972
+00:58:51,744 --> 00:58:54,224
+I don't think he was at Cambridge when I was at Cambridge, wasn't he?
+
+973
+00:58:54,224 --> 00:58:55,983
+When was Christopher Strachey at Cambridge?
+
+974
+00:58:55,983 --> 00:58:56,583
+I don't know.
+
+975
+00:58:56,583 --> 00:58:57,144
+Maybe he was.
+
+976
+00:58:57,144 --> 00:58:58,344
+I think maybe it was before.
+
+977
+00:58:58,344 --> 00:59:00,784
+One of the things that he stood for in CPL was Cambridge.
+
+978
+00:59:00,784 --> 00:59:02,503
+I'm not sure I ever met him.
+
+979
+00:59:02,503 --> 00:59:02,983
+No.
+
+980
+00:59:02,983 --> 00:59:04,583
+In fact, I don't think I ever met him.
+
+981
+00:59:04,583 --> 00:59:08,264
+He was definitely in a sort of godlike firmament, sort of lived in Oxford far away.
+
+982
+00:59:08,264 --> 00:59:12,463
+So John, I think, knew him because he was when he was doing his PhD there.
+
+983
+00:59:12,463 --> 00:59:15,864
+Yeah. Sorry.
+
+984
+00:59:15,864 --> 00:59:20,104
+So you said that the-- you showed a graph of the language growing.
+
+985
+00:59:20,104 --> 00:59:24,824
+And you said you were very happy that Haskell didn't grow as fast because you were able to try lots of things.
+
+986
+00:59:24,824 --> 00:59:30,304
+And in the end, you said you now are trying new experiments and hoping to not lose your programmers.
+
+987
+00:59:30,304 --> 00:59:33,903
+But does that mean you kind of want this graph to kind of tail off now and just stay as it is?
+
+988
+00:59:33,903 --> 00:59:34,423
+No, no.
+
+989
+00:59:34,423 --> 00:59:39,903
+No, I would really like the graph to keep rising steadily, but maybe not explosively.
+
+990
+00:59:39,903 --> 00:59:49,384
+So what I-- I'm anxious about getting into a situation in which we really can't make any changes because too many people use it.
+
+991
+00:59:49,384 --> 00:59:51,543
+So at the moment, we're sort of steadily growing.
+
+992
+00:59:51,543 --> 00:59:54,943
+Quite a lot of companies are now using Haskell.
+
+993
+00:59:54,943 --> 01:00:00,704
+And I think they've sort of-- they've adapted to the mode of things will change a bit.
+
+994
+01:00:00,704 --> 01:00:03,344
+We're quite careful about not gratuitously breaking things.
+
+995
+01:00:03,344 --> 01:00:10,704
+Almost all Haskell's language extensions, all GHC's language extensions, are if you don't use it, it'll do what it did before.
+
+996
+01:00:10,704 --> 01:00:14,903
+The libraries are a bit harder because they do tend to change a bit, and that does cause pain.
+
+997
+01:00:14,903 --> 01:00:18,543
+But we try to do it slowly.
+
+998
+01:00:18,543 --> 01:00:21,463
+So I suppose it's still-- I would definitely hope for steady growth.
+
+999
+01:00:21,463 --> 01:00:28,784
+Because I think of Haskell as kind of like a-- you know the way that fungi grow under the ground in tendrils?
+
+1000
+01:00:28,784 --> 01:00:31,983
+So even though there are mushrooms in the woods, they're all one plant, really.
+
+1001
+01:00:31,983 --> 01:00:32,903
+They're all connected.
+
+1002
+01:00:32,903 --> 01:00:36,184
+So I think of Haskell as like a sort of fungus that's growing underground.
+
+1003
+01:00:36,184 --> 01:00:37,704
+Because not many big companies use Haskell.
+
+1004
+01:00:37,704 --> 01:00:39,784
+Because they think, well, we get the programmers.
+
+1005
+01:00:39,784 --> 01:00:42,704
+But quite a lot of small companies like Mertlesoft do.
+
+1006
+01:00:42,704 --> 01:00:48,184
+So I think Haskell is like this sort of fun-- and people in big companies are often using it in their spare time or for odd tools.
+
+1007
+01:00:48,184 --> 01:00:51,463
+So maybe one day, all the mushrooms will pop up at once.
+
+1008
+01:00:51,463 --> 01:00:53,624
+And we'll suddenly get to world domination.
+
+1009
+01:00:53,624 --> 01:00:55,704
+And we'll discover, oh, it was there all the time.
+
+1010
+01:00:55,704 --> 01:01:01,503
+Whatever happened to the other distributions of Haskell?
+
+1011
+01:01:01,503 --> 01:01:06,144
+Oh, so the other-- you mean other implementations of Haskell, like GHC and HUGS?
+
+1012
+01:01:06,144 --> 01:01:06,624
+Yes.
+
+1013
+01:01:06,624 --> 01:01:09,543
+So here, this is a bit sad, really.
+
+1014
+01:01:09,543 --> 01:01:15,423
+I think a health-- it would be healthier if we had more implementations of the same language.
+
+1015
+01:01:15,423 --> 01:01:23,614
+But it is-- now that Haskell has become very big and has become mission critical to people who then want to use these extensions,
+
+1016
+01:01:23,614 --> 01:01:26,824
+it becomes extremely difficult to compete.
+
+1017
+01:01:26,824 --> 01:01:28,384
+So there's a big lock-in effect.
+
+1018
+01:01:28,384 --> 01:01:32,184
+And the lock-in effect has meant, in effect, HUGS is-- HUGS is effectively dead.
+
+1019
+01:01:32,184 --> 01:01:38,604
+JHC, which is a very interesting Haskell compiler, and NHC-- there were several other Haskell compilers for Haskell 98,
+
+1020
+01:01:38,604 --> 01:01:40,523
+which was a language that we did standardize.
+
+1021
+01:01:40,523 --> 01:01:42,664
+But sadly, too many people want to use other things.
+
+1022
+01:01:42,664 --> 01:01:46,023
+So I regard it as a sadness, but I don't know how to fix it.
+
+1023
+01:01:46,023 --> 01:01:52,144
+It's too big a job to implement a language the size of Haskell and maintain that over time.
+
+1024
+01:01:52,144 --> 01:01:54,943
+It's hard.
+
+1025
+01:01:54,943 --> 01:01:56,943
+We can only do it by involving a lot of people.
+
+1026
+01:01:56,943 --> 01:02:12,014
+Having talked about the problems of resolving the evil on the outside of the operating system and the purity of Haskell,
+
+1027
+01:02:12,014 --> 01:02:16,184
+have you considered the alternative of subverting the operating system and writing it in Haskell?
+
+1028
+01:02:16,184 --> 01:02:17,064
+Oh, yes, absolutely.
+
+1029
+01:02:17,064 --> 01:02:17,564
+Why not?
+
+1030
+01:02:17,564 --> 01:02:19,184
+The operating system has a good plan.
+
+1031
+01:02:19,184 --> 01:02:23,304
+Yes. And a number of people have tried to do that.
+
+1032
+01:02:23,304 --> 01:02:30,943
+Galois has something which is called HALVM, which I think is still available, which actually runs the Haskell runtime on the bare metal.
+
+1033
+01:02:30,943 --> 01:02:32,184
+So they implement the whole operating system.
+
+1034
+01:02:32,184 --> 01:02:33,443
+They implement it quite a lot.
+
+1035
+01:02:33,443 --> 01:02:38,903
+But if building a programming language is a big challenge, building an operating system is a really big challenge,
+
+1036
+01:02:38,903 --> 01:02:40,903
+just to make it useful enough to people.
+
+1037
+01:02:40,903 --> 01:02:43,264
+And it's hard to sustain that challenge.
+
+1038
+01:02:43,264 --> 01:02:44,864
+So experimentally, yes.
+
+1039
+01:02:44,864 --> 01:02:48,623
+Practically, unless you become the way to do it.
+
+1040
+01:03:06,239 --> 01:03:06,839
+name?
+
+1041
+01:03:06,839 --> 01:03:07,599
+How did Haskell come by its name?
+
+1042
+01:03:07,599 --> 01:03:09,999
+Oh, well, so the protocol was as follows.
+
+1043
+01:03:09,999 --> 01:03:11,079
+We all sat in a room.
+
+1044
+01:03:11,079 --> 01:03:12,799
+This was the Haskell committee.
+
+1045
+01:03:12,799 --> 01:03:18,079
+We all wrote on a board all the names of the language that we thought would be good names.
+
+1046
+01:03:18,079 --> 01:03:20,969
+And then we crossed out names that we thought would be bad names.
+
+1047
+01:03:20,969 --> 01:03:23,919
+And that left us with a fairly small number.
+
+1048
+01:03:23,919 --> 01:03:26,159
+And Currie was one of those.
+
+1049
+01:03:26,159 --> 01:03:31,929
+But we decided Currie was a bit too hack and it was too prone to be joked about.
+
+1050
+01:03:31,929 --> 01:03:33,459
+So we ended up with Haskell.
+
+1051
+01:03:33,459 --> 01:03:38,109
+Haskell is the first name of Haskell Currie, who was the logician in the 1930s and '40s.
+
+1052
+01:03:38,109 --> 01:03:39,919
+So he was a sort of foundational person.
+
+1053
+01:03:39,919 --> 01:03:48,239
+So Paul Hudak actually went to see Haskell Currie's widow to say, would it be okay if we used her husband's name for our language?
+
+1054
+01:03:48,239 --> 01:03:49,049
+She was very nice to him.
+
+1055
+01:03:49,049 --> 01:03:51,789
+She gave him tea and said, she said, yes, you can use his name.
+
+1056
+01:03:51,789 --> 01:03:54,079
+But Haskell, he never really did like the name.
+
+1057
+01:03:54,079 --> 01:03:58,699
+But we stuck with it.
+
+1058
+01:03:58,699 --> 01:04:07,599
+The only disadvantage, everybody thinks it's Pascal to begin with.
+

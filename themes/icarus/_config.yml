@@ -223,9 +223,9 @@ widgets:
             GitHub:
                 icon: fab fa-github
                 url: 'https://github.com/Ray-Eldath'
-            Telegram Channel:
-                icon: fab fa-telegram
-                url: 'https://t.me/kaworunagisa17'
+            # Telegram Channel:
+                # icon: fab fa-telegram
+                # url: 'https://t.me/kaedeharakazuha17'
             Twitter:
                 icon: fab fa-twitter
                 url: 'https://twitter.com/nagisakaworu17'
@@ -305,10 +305,10 @@ plugins:
         site_id: 
     # Enable the KaTeX math typesetting supprot
     # https://katex.org/
-    katex: true
+    katex: false
     # Enable the MathJax math typesetting support
     # https://www.mathjax.org/
-    mathjax: false
+    mathjax: true
     # Enable the Outdated Browser plugin
     # http://outdatedbrowser.com/
     outdated_browser: true

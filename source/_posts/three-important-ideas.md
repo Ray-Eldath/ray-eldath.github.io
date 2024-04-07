@@ -1,6 +1,8 @@
 ---
 title: "计算机领域的三个重要思想：抽象，分层和高阶"
 date: 2021-03-06 02:53:11
+updated: 2024-04-08 00:23:22
+show_updated: true
 cover: /img/three-important-ideas.jpg
 thumbnail: /img/three-important-ideas.jpg
 toc: true
@@ -12,7 +14,7 @@ categories: programming
 
 昨晚看了点比较有意思的东西，于是决定写一篇文章简单讲一下。
 
-本文致力于概括本寒对计算机界三个重要思想的体会和认识。我希望做的并不是简单的百科全书式的列举（“`A` 体现了抽象思想；`B` 体现了分层思想…”），而是从这些思想中选取几个我个人**较有体会**（或者是我单纯觉得**十分有趣**）的侧面拿来细讲。这些侧面仅仅能覆盖这些思想应用范围中十分微小的一部分，它们**并不是**最有代表性的、**亦非**最为重要的——仅仅因为，我个人对这点侧面有些体会，或者我个人认为它比较有趣而已。
+本文致力于概括我对计算机界三个重要思想的体会和认识。我希望做的并不是简单的百科全书式的列举（“`A` 体现了抽象思想；`B` 体现了分层思想…”），而是从这些思想中选取几个我个人**较有体会**（或者是我单纯觉得**十分有趣**）的侧面拿来细讲。这些侧面仅仅能覆盖这些思想应用范围中十分微小的一部分，它们**并不是**最有代表性的、**亦非**最为重要的——仅仅因为，我个人对这点侧面有些体会，或者我个人认为它比较有趣而已。
 
 同样需要强调，和本博客大多数文章一样，本文**个人意见色彩浓厚——本文并不客观，更绝不权威。**
 
@@ -36,7 +38,7 @@ categories: programming
 
 于是我开始思考，**偏向工业的程序员们应该如何对待抽象概念（尤其是从数学界借用的）？**学习这些抽象概念到底能不能（以及如何能）提升一般程序员、或者是计算机产业界对代码的理解和认识？学习这些抽象概念，我们是否能籍以此成为更好的程序员呢？
 
-我想我对于这个问题不是太有发言权，于是我给 Dan Grossman 写了一封邮件——这位 Dan Grossman 大概是 PLT 学界（和教学界）的重要人物（某种程度上，因为听过他在 Coursera 上的系列课程 Programming Languages，也是我的 *“技术偶像”*（我一直在找一个不那么中二不那么尴尬的词，但是一直没有找到，如果你有什么比较好的建议非常欢迎在评论区告诉我… :-|），我简单翻译了下这封邮件，其中从 Bjarne 的一篇论文（见文末）中他和 Alexander Stepanov 之间的 “私人通讯” 里引用了一段话 ：
+Dan Grossman 教授回复了这一问题——这位 Dan Grossman 大概是 PLT 学界（和教学界）的重要人物（某种程度上，因为我曾听过他在 Coursera 上的系列课程 Programming Languages），我简单翻译了我的提问和回复（经编辑）：
 
 > Dr. Dan:
 >
@@ -50,10 +52,6 @@ categories: programming
 >
 > **So, here’s my question:** What’s your opinion towards these abstractions, many of them are quoted directly from abstract mathematics? Can learn these abstractions helping me be a better programmer? And if I just “know” them but not “understand” them in a more abstract manner (which is the Abstract Algebraic), can I still be a better programmer? Would you recommend a “Joe Coder” to learn or use these words during his career? Will you write some easy-to-read articles to make “Joe Coder” learn them by showing them bunches of analogies?
 >
-> My personal answer is No. And here I quoted a paragraph from Bjarne’s paper and is said by Alexander Stepanov:
->
-> > At that time I discovered the works of Euler and my perception of the nature of mathematics underwent a dramatic transformation. I was de-Bourbakized, stopped believing in sets, and was expelled from the Cantorian paradise. I still believe in abstraction, but now I know that one ends with abstraction, not starts with it. I learned that one has to adapt abstractions to reality and not the other way around. Mathematics stopped being a science of theories but reappeared to me as a science of numbers and shapes.
->
 > As a personal answer I’d like to say that reading those articles, just “knowing” them won’t help you become a better programmer. And using those words in libraries makes things even **worse**. A programmer should be honored if and only if they use and write things technical superior, not something mathematical superior. 
 >
 > And this is my question. I’m eagerly waiting for your reply, as I think your opinion could really help me being a better programmer, and should I learn these concepts, how can learning them help me (if it could).
@@ -66,11 +64,7 @@ categories: programming
 >
 > 这样的一种趋势——令人困惑的词语用来故弄玄虚，令人困惑的文章读来一无所有——并不好。就我而言，我认为这些抽象概念并不大有用。**仅仅**知道 JavaScript 里的 Promise 本质上是 Monad，而 Functor “是一个盒子 box” 并*不能*帮助你成为更好地程序员，而在你自己的库中使用这些词语只会让后来者觉得不舒服。
 >
-> **所以，这就是我的疑问：**您对于这些抽象——它们中的很多直接引用自抽象的数学分支，有什么看法？学习这些抽象能否帮助我们成为更好的程序员？如果仅仅只是 “知道” 它们但却未以一种更加抽象的视野（即抽象代数）“理解” 它们，我们是否仍然能成为更好的程序员呢？您是否会推荐一位 “大众程序员” 去学习或使用这些东西？
->
-> 我个人的回答是，它们不能。在这儿我引用 Bjarne 的论文中的一段话，它们来自 Alexander Stepanov：
->
-> > **当时我发现了欧拉的作品，我对数学本质的认识发生了巨大的转变。我被去布尔巴克化了，不再相信集合，被逐出了康托尔的天堂。我仍然相信抽象，但现在我知道，一个人经抽象走向末路，而不是自抽象开启旅途。我知道了，人必须使抽象适应现实，而不是反其道而行之。数学不再是一门理论的科学，而是作为一门数字和形状的科学重新出现在我的面前。**
+> **所以，这就是我的疑问：** 您对于这些抽象——它们中的很多直接引用自抽象的数学分支，有什么看法？学习这些抽象能否帮助我们成为更好的程序员？如果仅仅只是 “知道” 它们但却未以一种更加抽象的视野（即抽象代数）“理解” 它们，我们是否仍然能成为更好的程序员呢？您是否会推荐一位 “大众程序员” 去学习或使用这些东西？
 >
 > 我个人的回答是，阅读这些文章，仅仅 “知道” 它们并不能帮助你成为更好的程序员，而在库中使用这些词只会让现状恶化。一个程序员应该以（且只以）使用或编写了技术上更佳的东西为荣，而不是数学上更佳的东西。
 >
@@ -80,9 +74,9 @@ categories: programming
 >
 > **Have a nice day!**
 > Ray Eldath
-> GitHub: github.com/Ray-Eldath MyBlog: han.ninja
+> GitHub: github.com/Ray-Eldath MyBlog: ray-eldath.me
 
-数日之后（非常惊喜又不大意外地）收到了 Dan 的回邮。他在回邮中说：
+Dan 回复如下：
 
 > Ray,
 >
@@ -95,7 +89,19 @@ categories: programming
 > Best,
 > Dan
 
-我想我对这一特别抽象（即数学抽象）的看法，以及一位代表性学者（实话说，我觉得 Dan 并没有确切地回答很多我觉得应该得到回答的疑问）的看法在这一个邮件的来回中已经充分表达。我想你大概已经看出来了，我并不擅长理解抽象——或许这就是我 “动机不纯” 的把柄，所以我要坦诚地承认这一点。我知道有太多太多的人远比我擅长理解抽象，并确实深刻地理解它们的意义和价值。或许他们会走向和 Alexander Stepanov 相反的道路，或许他们也会是 Dan 提到的 “will vehemently disagree” 的 “others”。
+我将对这些文字的解读留给读者。
+
+<article class="message">
+  <div class="message-header">
+    <p><i class="fas fa-info-circle"></i>&nbsp; <s>尤里卡！</s>&nbsp; 提示</p>
+  </div>
+  <div class="message-body">
+    <p><strong>EDIT 2024/4/7：如 Dan Grossman 教授所言，如今我进一步地认为讨论这个问题没有什么意义。</strong>如果我有机会删去这一节，我会这么做的（显然，我认为事到如今再更动标题比留下本节更愚蠢）。当然，我一如既往地反对在任何一般文档和讨论中故弄玄虚地强行引用 Monad、Monoid 等概念的行为，正如 Haskell 主要作者 SPJ 曾在一个著名演讲中说他们最大的错误（“Our biggest mistake”）就是起了 Monad 这个名字 <sup>[1]</sup>；我还需要指出，作为理论计算机科学的重要部分，编程语言理论（PLT）是一项艰深的<i>理论</i>学问，对各种编程语言、解析器和编译器的了解与该领域既无关系、亦无明显益处。</p>
+    <p>对作为编程语言理论的基础知识即代数和拓扑（更广泛地，<i>代数</i>和<i>几何</i>间相互冲突又密不可分的关联）感兴趣的读者，我<strong>并不</strong>推荐丘维声的《抽象代数讲义》，而是推荐 John Stillwell 教授的 <i>Mathematics and Its History (Third Edition)</i>，该书中译本《数学及其历史（第三版）》由高等教育出版社于2022年出版，不要被它的名字骗了，这不是一本数学史科普 :)&nbsp;&nbsp; 对具体的 PLT 理论感兴趣的读者，请参阅 <i>Practical Foundations for Programming Languages</i>（该书需要对逻辑和归纳法有一定的熟练度）。</p>
+    <br/>
+    <p>[1]：“So, workflow, I now think would be a much better name. A warm, fuzzy thing would have been good. Monad does sound rather scary, but it has the effect of filtering out people who want to learn Haskell, so that's good.（众人笑）” <a href="https://www.youtube.com/watch?v=re96UgMk6GQ" target="_blank">YouTube 源视频</a>；<a href="Simon_Peyton_Jones_Escape_from_the_ivory_tower_the_Haskell_journey.srt.txt?#:~:text=mistake" target="_blank">转译稿</a>（<i>由 <a href="https://github.com/Anthony-Hoo" target="_blank">Anthony Hoo</a> 提供，博主在此表示感谢</i>）</p>
+  </div>
+</article>
 
 ## 有关分层
 
@@ -139,10 +145,6 @@ categories: programming
 
 软件业的至理名言 “没有银弹” 相信每位读者都听过，而分层作为一种抽象机制同样如此：它承诺的*既能提高效率又能减轻负担*的 “银弹般” 的作用，是不成立的。抽象带来的效率提升，是以更大的学习负担（对实现细节的学习）为代价的：**随着我们创造越来越多、越来越高层的抽象，编程实现会变得更加简单，但成为专业程序员也越来越难。**
 
-看看如今的 Kubernetes 和云原生吧！到底需要强记多少有用没用的知识点、看多少篇晦涩难懂的论文、掌握从网络到操作系统从缓存架构到计组原理的多少方面，才能足以理解这么一个如此高层的抽象，如此庞杂的系统？
-
-我们已深陷于不断泄露的实现细节中。成为专业程序员需要了解的知识越来越多，成为有竞争力的专业程序员越来越难——会不会到某一天，泄露的实现细节的总和多到甚至超出了一个个体人类所能掌握的知识量？如何保持*层*的严密？如何使现代软件架构更易理解和掌握？
-
 ## 有关*高阶*
 
 相比上一节强调物理或逻辑上客观存在的 “界限”，本节主要强调一种心智活动。这样的心智活动具有一个明显的特征，那就是它具有一种 “递归” 的结构。我们首先从一个概念中抽象出它的形成过程，再将这样的思维过程应用于这个概念*自身*。如此，我们得到的新概念常常具有这样的结构： **`A` 的 `A`** 。
@@ -153,13 +155,13 @@ categories: programming
 
 比如，将类型的形成过程（类型描述一个语言中最小单位的类别）抽象出来，应用于类型*自身*，我们就得到了 *类型的类型*，即 *型别 kind* 。
 
-最后，作为压轴，讲一个咱昨晚在一篇屯了半年一年的文章中看到的一个概念。我想这个概念应该是超出大部分读者的经验的，而我觉得它还蛮有意思，所以放到最后来大概说说。我们需要从故事的最开始讲起——可能要过很久才能最终看到这个词。
+最后，作为压轴，讲一个我昨晚在一篇屯了半年一年的文章中看到的一个概念。我想这个概念应该是超出大部分读者的经验的，而我觉得它还蛮有意思，所以放到最后来大概说说。我们需要从故事的最开始讲起——可能要过很久才能最终看到这个词。
 
 ### “二村映射 Futamura projections”
 
 我们知道大体上编译技术可以分为两种，分别是 **编译器 compiler** 和 **解释器 interpreter**。编译器执行的是一个**两阶段**的过程：首先，自*源代码*编译出*目标程序 target program*，再向*目标程序*提供*输入*，然后得到程序的*输出*；解释器执行的则是一个**一阶段**的过程：解释器接收*源代码*和*输入*，并直接得到程序的*输出*。在本节中，我们主要关注*解释器*。
 
-绝大部分的编译原理教科书和课程都只涵盖这两者。然而，事实上还存在着**第三种**编译技术：某种程度上，它介于解释器和编译器之间，但它*既不是*解释器*又不是*编译器——咱在和同学试讲解这个概念的时候就忘了特别强调这一点。为了方便理解，我先岔开点讲。
+绝大部分的编译原理教科书和课程都只涵盖这两者。然而，事实上还存在着**第三种**编译技术：某种程度上，它介于解释器和编译器之间，但它*既不是*解释器*又不是*编译器——请特别注意这一点。为了方便理解，我先岔开点讲。
 
 稍有函数式经验的读者应该都听过 *柯里化 curried*。如果有一个接收 $n$ 个**输入**的函数，我们可以把它转化成一叠嵌套的*高阶函数*，这叠高阶函数中的第 $i$ 个接收原函数中的第 $i$ 个输入（仅一个），然后返回接收剩下 $ n - i $ 个输入的函数（故为 “高阶函数”）：比如，一个接收 3 个输入的函数（`(A, B, C) -> Output`）经柯里化后会成为一叠高阶函数，这个高阶函数中的第一个接收一个输入 `A`，然后返回一个接收输入 `B` 的高阶函数；再向其提供输入 `C`，才能得到最终结果，即柯里化后的结果是 `A -> (B -> (C -> Output))`。
 
