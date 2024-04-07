@@ -9,7 +9,7 @@
     "server": "hexo server"
   },
   "hexo": {
-    "version": "6.0.0"
+    "version": "6.3.0"
   },
   "dependencies": {
     "babel-plugin-inferno": "^6.1.1",
@@ -33,5 +33,6 @@
     "inferno": "^7.4.6",
     "inferno-create-element": "^7.4.6",
     "moment": "^2.29.1"
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
 }
