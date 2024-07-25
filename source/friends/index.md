@@ -21,7 +21,7 @@ donates:
             <a class="link-muted title is-3 not-article-part" target="_blank" href="https://dubuqian.cn/">湛兮酱</a>
           </div>
         </div>
-        <div class="content">艺术+文学+音乐大聚聚！<strong>捕捉！！</strong></div>
+        <div class="content">艺术+文学+音乐大聚聚</div>
       </div>
     </div>
     <div class="card">
@@ -36,7 +36,7 @@ donates:
             <a class="link-muted title is-3 not-article-part" target="_blank" href="https://ice1000.org/">千里冰封</a>
           </div>
         </div>
-        <div class="content"><s>头像和ID每日一换的</s><em>千里冰冰万里封封</em>（光速逃</div>
+        <div class="content"><s>头像和ID每日一换的</s><em>千里冰冰万里封封</em></div>
       </div>
     </div>
     <div class="card">
@@ -66,7 +66,7 @@ donates:
             <a class="link-muted title is-3 not-article-part" target="_blank" href="https://rikumi.dev/">Rikumi</a>
           </div>
         </div>
-        <div class="content">rkm 我的 rkm</div>
+        <div class="content">mmwdmm</div>
       </div>
     </div>
     <div class="card">
@@ -81,7 +81,7 @@ donates:
             <a class="link-muted title is-3 not-article-part" target="_blank" href="https://raptazure.github.io/">Raptazure</a>
           </div>
         </div>
-        <div class="content"><s>又是PLT聚聚</s>是染酱！好耶！🎉</div>
+        <div class="content"><s>又是PLT聚聚</s>染酱</div>
       </div>
     </div>
   </div>
@@ -96,10 +96,10 @@ donates:
       <div class="card-content">
         <div class="media">
           <div class="media-content">
-            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://edward40.com/">40</a>
+            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://edward40.com/">Edward Evans</a>
           </div>
         </div>
-        <div class="content"><strong>我要40哥！！！</strong>（破音</div>
+        <div class="content">40哥</div>
       </div>
     </div>
     <div class="card">
@@ -177,7 +177,7 @@ donates:
             <a class="link-muted title is-3 not-article-part" target="_blank" href="https://dark-flames.com/">df聚聚</a>
           </div>
         </div>
-        <div class="content">豆腐煲！我的豆腐煲！呜呜呜呜呜</div>
+        <div class="content">豆腐煲！</div>
       </div>
     </div>
     <div class="card">

@@ -5,7 +5,7 @@ toc: false
 cover: /img/ray-eldath.jpg
 thumbnail: /img/ray-eldath.jpg
 donates:
-categories: misc
+categories: notice
 ---
 
 一直打算自己写博客的一套前端和后端，前端本来已经写了挺多的了，现在看来是要搁置很长一段时间了… 感觉折腾这些毕竟没啥用，还是要花时间写文章才行。。

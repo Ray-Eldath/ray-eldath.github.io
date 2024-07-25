@@ -231,7 +231,7 @@ widgets:
                 url: 'https://twitter.com/nagisakaworu17'
             Email:
                 icon: fas fa-envelope-square
-                url: 'mailto://ray.eldath@outlook.com'
+                url: 'mailto:ray.eldath@outlook.com'
             RSS:
                 icon: fas fa-rss
                 url: atom.xml
