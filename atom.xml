@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ray Eldath&#39;s Blog</title>
+  <icon>https://ray-eldath.me/img/avatar.jpg</icon>
+  
+  <link href="https://ray-eldath.me/atom.xml" rel="self"/>
+  
+  <link href="https://ray-eldath.me/"/>
+  <updated>2022-11-09T18:40:27.000Z</updated>
+  <id>https://ray-eldath.me/</id>
+  
+  <author>
+    <name>Ray Eldath</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入 MIT 6.824：实现 LeaseRead 和全异步 shardkv</title>
+    <link href="https://ray-eldath.me/programming/deep-dive-in-6824/"/>
+    <id>https://ray-eldath.me/programming/deep-dive-in-6824/</id>
+    <published>2022-03-15T14:33:40.000Z</published>
+    <updated>2022-11-09T18:40:27.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;「生活，就是当你忙着做其它计划时，发生在你身上的事」：要问起开始学 MIT6.824 的缘由，这是一句恰如其分的描述。一个学期结束，原本的计划是深入研究一下编程语言和形式化验证，然后换到一个和操作系统关系更大的岗位；不知不觉却变成了写个数据库，在做操作系统相关的工作前先试试存储的方向——刚放假时我还对自己说，我是绝对不会喜欢上存储的。也许人们对自己还没下过苦功的事情，就是提不起劲的吧？&lt;/p&gt;
+&lt;p&gt;于是春节假期开始，明显一年比一年淡漠的气氛（今年甚至没看拜年祭）环绕，倒也是为思考提供了较好的场所：没有多少亲戚前来拜访，也就没有多少生硬蹩脚的玩笑和紧张尴尬的时刻需要消化。到现在，整一个月，算是把 MIT6.824 彻底完成了。&lt;/p&gt;
+&lt;p&gt;老实说，这并不如我想象中的难。在上手之前总觉得 824 的高不可攀，非顶尖学府的高手不可；但在自己&lt;em&gt;突然&lt;/em&gt;完成之后却发现虽然过程并不是「出乎意料地」顺利，但产出确实是出乎意料地好。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/Ray-Eldath/MIT6.824&quot;&gt;我已开源了&lt;/a&gt;这份实现。这一实现稳定通过了 Lab 1 到 Lab 4 的每一个测试点（至少 1000 次，通常 2000 次；其中 &lt;code&gt;Linearizability2B&lt;/code&gt; 通过了 10000 次——这么做是因为在&lt;a href=&quot;https://www.anishathalye.com/2017/06/04/testing-distributed-systems-for-linearizability/&quot;&gt;提出 porcupine 的文章&lt;/a&gt;中，作者说TA “没有找到&lt;em&gt;任何一个&lt;/em&gt;线性一致性测试不能发现的错误”），完成了 Lab 4 的两个 Challenges（即标题中的&lt;em&gt;全异步 shardkv&lt;/em&gt;），同时还&lt;em&gt;额外&lt;/em&gt;实现了 LeaseRead with noop 的优化，使得读请求无需经共识层——本文中提出的解决方案或许是对如何在 MIT 6.824 中实现这一优化的较好参考。另一方面，我谨慎地组织了代码结构，保证代码的粒度适宜——既不引入过多重复，又不引入过多函数（是不是想起了洗试管的原则？嘿嘿），每一次修改都执行了充分的回归测试，并且非常谨慎地操作 squash 和 cherry-pick，保证修改最少、最必要，且和我&lt;strong&gt;完成 Lab 的进度&lt;/strong&gt;严格对应：这意味着读者可以从代码的提交历史中明确看到&lt;em&gt;某个 Lab 和下一个 Lab&lt;/em&gt; 之间应要做哪些修改。&lt;/p&gt;
+&lt;article class=&quot;message is-info&quot;&gt;
+  &lt;div class=&quot;message-header&quot;&gt;
+    &lt;p&gt;&lt;i class=&quot;fas fa-image&quot;&gt;&lt;/i&gt; &amp;nbsp; 关于头图&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;message-body&quot;&gt;
+    头图来自 &lt;a href=&quot;https://twitter.com/werlosk&quot; target=&quot;_blank&quot;&gt;Twitter@Werlosk&lt;/a&gt;。
+  &lt;/div&gt;
+&lt;/article&gt;</summary>
+    
+    
+    
+    <category term="programming" scheme="https://ray-eldath.me/categories/programming/"/>
+    
+    
+    <category term="存储和分布式系统" scheme="https://ray-eldath.me/tags/%E5%AD%98%E5%82%A8%E5%92%8C%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本博客评论区现已支持邮件提醒</title>
+    <link href="https://ray-eldath.me/notice/now-support-email-notice/"/>
+    <id>https://ray-eldath.me/notice/now-support-email-notice/</id>
+    <published>2022-03-09T16:00:00.000Z</published>
+    <updated>2024-10-18T12:48:48.772Z</updated>
+    
+    
+    <summary type="html"> </summary>
+    
+    
+    
+    <category term="notice" scheme="https://ray-eldath.me/categories/notice/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>记忆、目光、另一种迷惘：the end of 2021</title>
+    <link href="https://ray-eldath.me/life/the-end-of-2021/"/>
+    <id>https://ray-eldath.me/life/the-end-of-2021/</id>
+    <published>2022-01-06T07:19:14.000Z</published>
+    <updated>2024-10-18T12:48:48.775Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;和这里的许多文章一样，本文的标题依然是仿照了某篇令我印象深刻的文章的标题。：-）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;最近考完试就在忙课设，这两天才终于有时间把这篇文章写完…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;「时间之矢向前飞逝 / 祂飞离时震颤的双翼总拍伤我的灵魂」，几个月前读到的这句诗如今无论是它的作者（是里尔克吗？）还是其全貌都已无从知晓，只觉得以这句想象力奇绝的诗句概括行将结束的整整一年，确实恰如其分。&lt;/p&gt;
+&lt;p&gt;写下上一篇年终总结（不知为何我很不喜欢「年终总结」这个词——如你所见，标题很努力地做到了不用这四个字）至今已有一年有余，而 2021 这一年，可以说是空前的烂漫和精彩。这一年，无数美好的事情，以我此前从来不敢想望的方式，完全不可预料地扑面而来（未来像盛夏的大雨，在我们还不及撑开伞时就扑面而来&lt;sup&gt;1&lt;/sup&gt;）：今年的许多许多段&lt;em&gt;回忆&lt;/em&gt;都是出奇的美好，它们是如此的弥足珍贵，冥冥之中我总觉得，即便是以一个人整整一生的时间尺度来衡量，这些回忆都将在时间的长河中熠熠生辉，就像华兹华斯笔下那些总能「让我们在困顿之时为之一振」的「卓越超群、瑰伟壮丽的若干时间点」&lt;sup&gt;&lt;em&gt;2&lt;/em&gt;&lt;/sup&gt;。&lt;/p&gt;
+&lt;p&gt;可是，正当世界向我们显露它那丰富多彩的&lt;a href=&quot;https://m.thepaper.cn/baijiahao_10470277&quot;&gt;衬里&lt;/a&gt;的同时，祂却又向我们徐徐展开了一副人们受苦受难图景的画卷。大三上已经结束，大家突然都紧张了起来，似乎才刚品尝到青春这甘醇甜美的琼浆，就要去体会人们这&lt;a href=&quot;https://www.zgnfys.com/m/a/nfwx-52600.shtml&quot;&gt;毫无意义地辛苦劳作、不得休息的无望图景&lt;/a&gt;。人们出于经济富足、出人头地等种种平凡低微的原因，在日常生活中从事各个琐碎、侮辱人才能又耗费人精神的工作，无论是不是心甘情愿，都要在就在这无尽的琐事中逐渐被「磨损」，逐渐只觉得，生活，永远在触不可及的地方，因为「此时此刻」永远是那么的无聊、那么的缺乏诗意、那么的死气沉沉——生活永远不在&lt;em&gt;这里&lt;/em&gt;，因为生活永远在&lt;a href=&quot;https://book.douban.com/subject/25900388/&quot;&gt;&lt;em&gt;别处&lt;/em&gt;&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;这是&lt;em&gt;另一种迷惘&lt;/em&gt;。人总要在不断的学习中成长，可是只有很少的人能够对一个领域怀有足够纯洁的热诚，从而主动地学习并自得其乐；任何成就的取得都需要决绝的努力，可是人们很难为一个虚无缥缈、触不可及的目标和「理想」长久地坚持，并摒弃种种安逸的生活方式。时日无多，回首你这过去的日子，几乎都在随性而为的自由和放纵中度过，你是否已经失去了（甚至是从未拥有过？）沉着刻苦的品格？考研还是工作？你能坚持下去吗？曾以为坦荡无比的生活最终坍缩（是的，在&lt;em&gt;目光&lt;/em&gt;的&lt;em&gt;观测&lt;/em&gt;下）成区区几个选择而已，怎样做你才不会后悔？在被抛入 “就像海洋的生活”（广东孩子请会意地笑笑）之前，你还要做些什么？你&lt;strong&gt;到底&lt;/strong&gt;想要怎样的生活，又&lt;strong&gt;到底&lt;/strong&gt;是否有相称的品格和&lt;strong&gt;毅力&lt;/strong&gt;来得到它？&lt;/p&gt;
+&lt;p&gt;我依然没有答案。或者确切的说，自从一个月前学期仿佛是毫无预兆地结束以来，我一直在&lt;strong&gt;逃避&lt;/strong&gt;这些问题，因为我实在是无从回答。我只希望当我完成本文，为这飞快过去的 2021 做完注时，我能有一丁点儿的头绪。&lt;/p&gt;
+&lt;article class=&quot;message is-info&quot;&gt;
+  &lt;div class=&quot;message-header&quot;&gt;
+    &lt;p&gt;&lt;i class=&quot;fas fa-camera&quot;&gt;&lt;/i&gt; &amp;nbsp; 关于头图&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;message-body&quot;&gt;
+    头图摄于 2020 年 12 月，是我们乐队在学校一年一度的音乐节演出前最后一次排练。那次排练效果很好，大家都非常高兴，那晚就是这美好、珍贵回忆中的一段。图中两人未出镜：我（因为这张照片是我拍的）和我们的贝斯手（我真的没有黑贝斯——至少当时没有！）。
+  &lt;/div&gt;
+&lt;/article&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="https://ray-eldath.me/categories/life/"/>
+    
+    
+    <category term="总结" scheme="https://ray-eldath.me/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>还有什么应该去写的事情？</title>
+    <link href="https://ray-eldath.me/life/what-left-behind/"/>
+    <id>https://ray-eldath.me/life/what-left-behind/</id>
+    <published>2021-06-22T08:56:22.000Z</published>
+    <updated>2024-10-18T12:48:48.777Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;大概两个星期以前，被朋友问到了一个问题。她问我：如果明天就是世界末日，你有没有什么想做的事？&lt;/p&gt;
+&lt;p&gt;她自己的回复是要&lt;strong&gt;立刻&lt;/strong&gt;到重庆（原话大意是 “不管发生什么我都要立刻飞过去”）去吃正宗的重庆火锅，因为在这边吃到的所有火锅都不怎么样。她说，这种回复其实表明她并不对自己当下的生活感到全然满意，因为明天就是世界的终结也会想去「最后疯狂一把」，而如果是真正满意自己的生活的话，回复应该是 “该怎么过就怎么过” 才是。&lt;/p&gt;
+&lt;p&gt;这几天我也一直在想这个问题。如果明天就是世界末日，我又会去做什么呢？&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="https://ray-eldath.me/categories/life/"/>
+    
+    
+    <category term="随笔" scheme="https://ray-eldath.me/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>一无所有</title>
+    <link href="https://ray-eldath.me/literature/poem-nothing-but-thee/"/>
+    <id>https://ray-eldath.me/literature/poem-nothing-but-thee/</id>
+    <published>2021-04-25T18:28:31.000Z</published>
+    <updated>2024-10-18T12:48:48.772Z</updated>
+    
+    
+    <summary type="html">第二首诗，献给一位朋友。</summary>
+    
+    
+    
+    <category term="literature" scheme="https://ray-eldath.me/categories/literature/"/>
+    
+    
+    <category term="文学" scheme="https://ray-eldath.me/tags/%E6%96%87%E5%AD%A6/"/>
+    
+    <category term="诗歌" scheme="https://ray-eldath.me/tags/%E8%AF%97%E6%AD%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如果事情起了变化…</title>
+    <link href="https://ray-eldath.me/literature/poem-if-things-changed/"/>
+    <id>https://ray-eldath.me/literature/poem-if-things-changed/</id>
+    <published>2021-04-11T11:54:28.000Z</published>
+    <updated>2024-10-18T12:48:48.772Z</updated>
+    
+    
+    <summary type="html">那会不会变回来呢...？</summary>
+    
+    
+    
+    <category term="literature" scheme="https://ray-eldath.me/categories/literature/"/>
+    
+    
+    <category term="文学" scheme="https://ray-eldath.me/tags/%E6%96%87%E5%AD%A6/"/>
+    
+    <category term="诗歌" scheme="https://ray-eldath.me/tags/%E8%AF%97%E6%AD%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Self：编程语言的变革仍未到来</title>
+    <link href="https://ray-eldath.me/programming/self-language/"/>
+    <id>https://ray-eldath.me/programming/self-language/</id>
+    <published>2021-03-15T07:09:20.000Z</published>
+    <updated>2024-10-18T12:48:48.772Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文是一篇&lt;em&gt;小作品&lt;/em&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文引用并翻译了在 HOPL III 上发表的论文 &lt;em&gt;Self&lt;/em&gt;（DOI: &lt;a href=&quot;https://doi.org/10.1145/1238844.1238853&quot;&gt;10.1145/1238844.1238853&lt;/a&gt;）中的倒数第二节。在 ACM Digital Library 收录的所有 &lt;a href=&quot;https://dl.acm.org/conference/hopl&quot;&gt;HOPL（&lt;em&gt;History of Programming Languages&lt;/em&gt;）&lt;/a&gt; 论文中，这篇论文的下载量排到了第八位。&lt;/p&gt;
+&lt;p&gt;我将要引用并翻译的段落出自论文的倒数第二节 &lt;em&gt;“8. Conclusion”（8. 结论）&lt;/em&gt; 。在读完全文后，我在我的私人群里如此表达我的感受：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="programming" scheme="https://ray-eldath.me/categories/programming/"/>
+    
+    
+    <category term="程序设计范式（paradigm）" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%EF%BC%88paradigm%EF%BC%89/"/>
+    
+    <category term="程序设计语言" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机领域的三个重要思想：抽象，分层和高阶</title>
+    <link href="https://ray-eldath.me/programming/three-important-ideas/"/>
+    <id>https://ray-eldath.me/programming/three-important-ideas/</id>
+    <published>2021-03-05T18:53:11.000Z</published>
+    <updated>2024-04-07T16:23:22.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;昨晚看了点比较有意思的东西，于是决定写一篇文章简单讲一下。&lt;/p&gt;
+&lt;p&gt;本文致力于概括我对计算机界三个重要思想的体会和认识。我希望做的并不是简单的百科全书式的列举（“&lt;code&gt;A&lt;/code&gt; 体现了抽象思想；&lt;code&gt;B&lt;/code&gt; 体现了分层思想…”），而是从这些思想中选取几个我个人&lt;strong&gt;较有体会&lt;/strong&gt;（或者是我单纯觉得&lt;strong&gt;十分有趣&lt;/strong&gt;）的侧面拿来细讲。这些侧面仅仅能覆盖这些思想应用范围中十分微小的一部分，它们&lt;strong&gt;并不是&lt;/strong&gt;最有代表性的、&lt;strong&gt;亦非&lt;/strong&gt;最为重要的——仅仅因为，我个人对这点侧面有些体会，或者我个人认为它比较有趣而已。&lt;/p&gt;
+&lt;p&gt;同样需要强调，和本博客大多数文章一样，本文&lt;strong&gt;个人意见色彩浓厚——本文并不客观，更绝不权威。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;为方便行文，文中提到的大量引述来源不会标号、也不会在文中注明。关于攥写时参考的资料，请参见文末 “参考文献”。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="programming" scheme="https://ray-eldath.me/categories/programming/"/>
+    
+    
+    <category term="程序设计范式（paradigm）" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%EF%BC%88paradigm%EF%BC%89/"/>
+    
+    <category term="随笔" scheme="https://ray-eldath.me/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从 SML 到 Scala：简单考察 typeclass 范式的演变和各种实现，以及🎉🎉🎉</title>
+    <link href="https://ray-eldath.me/programming/on-typeclass-paradigm/"/>
+    <id>https://ray-eldath.me/programming/on-typeclass-paradigm/</id>
+    <published>2021-02-13T09:35:11.000Z</published>
+    <updated>2024-10-18T12:48:48.772Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文是一篇「小作品」&lt;/p&gt;
+&lt;p&gt;&lt;del&gt;这次要是还写巨长我就吃了渚薰（（（（大雾）&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Typeclass 范式是对于 &lt;em&gt;表达式问题 Expression Problem&lt;/em&gt; 的一个重要的解。在我了解的编程语言范式中，个人认为，typeclass 范式是&lt;em&gt;较为优雅&lt;/em&gt;的一个。本文将简要考察这一范式本身，以及更加重要的：它在各种编程语言中到底如何落地。具体而言，本文将在各种落地语言中构造&lt;strong&gt;同一个&lt;/strong&gt;示例：一个类似 Ruby 中的 Comparable &lt;em&gt;mixin&lt;/em&gt;，或者 Java 中的 Comparable 接口，并且演示这些结构如何对既有的类型同样具备可扩展性。&lt;/p&gt;
+&lt;p&gt;阅读本文需要一定的代码基础，尤其是对 typeclass 范式的认识和相关的编码经验。本文并不会对文中的举例作详尽解释。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="programming" scheme="https://ray-eldath.me/categories/programming/"/>
+    
+    
+    <category term="程序设计范式（paradigm）" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%EF%BC%88paradigm%EF%BC%89/"/>
+    
+    <category term="程序设计语言" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Rust" scheme="https://ray-eldath.me/tags/Rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>简单聊聊编程语言的哲学，以及关于 Rust 的一些想法 (1)</title>
+    <link href="https://ray-eldath.me/programming/thoughts-on-rust-1/"/>
+    <id>https://ray-eldath.me/programming/thoughts-on-rust-1/</id>
+    <published>2021-02-12T14:29:31.000Z</published>
+    <updated>2022-11-16T17:54:46.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;del&gt;本文是一篇「小作品」。&lt;/del&gt;&lt;/p&gt;
+&lt;p&gt;草，写着写着发现越写越长，&lt;strong&gt;一点也不「小」嘛。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;或许我真的应该尝试一下「小」作品的体例才是。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;我的长期TODO列表里已经躺着五六篇以“博文”开头的条目——原本想着寒假一周一篇很快就能写完，然而到现在也没动笔。爆肝填坑了一个星期，今天实在有点累，不大想打开 RustLion，于是把这篇坑了很久的文章写一写。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在这几篇坑了这么久的文章中其实有一篇已经写了前半部分了，然而咕了太久后半部分要写什么都有点不大记得，于是只能前功尽弃…&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;本文的主要内容是从&lt;strong&gt;我个人的经验&lt;/strong&gt;出发，简单聊聊对于 Rust 的一些想法和体会。我会尽量避开诸如 “文档质量良好”、“很有特点” 这类宽泛的概括，而尽量将自己在使用 Rust 编程的过程中感受到的一些特别之处、尤其是和此前经历的不同之处拿来说说。我期望如此行文能使得本文对无论是 Rust 初学者、还是仍在观望的开发者甚至是 Rust 老手们都能带来一定启发。&lt;/p&gt;
+&lt;article class=&quot;message is-warning&quot;&gt;
+  &lt;div class=&quot;message-header&quot;&gt;
+    &lt;p&gt;&lt;i class=&quot;fas fa-exclamation-triangle&quot;&gt;&lt;/i&gt;&amp;nbsp; 可能过时&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;message-body&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;2022/11/17：&lt;/strong&gt;经过快两年的学习和工业实践，我对编程语言又有了新的认识。本文中对于 Ruby 的评论、尤其是对于 Ruby &lt;i&gt;优于&lt;/i&gt; Python 的评论，已不再是我当前的看法。不过，很大程度上我仍然保持着占本文主要篇幅的对 Rust 的各种见解，但由于在过去的一年间我的兴趣发生了重大转移（转向系统、尤其是数据系统的领域），我现在较少使用 Rust 语言（这恰恰是由于在本文中提出的一系列 Rust 语言设计不尽人意的原因），较少关注 Rust 语言社区，也更少广泛地思考编程语言本身，本文中的许多观点可能不再能反映编程语言发展的最新情况。&lt;/p&gt;
+    &lt;p&gt;如上文所述，占本文主要篇幅的观点并未明显改变，如果将来发生这种情况，我会修订或补正本文。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</summary>
+    
+    
+    
+    <category term="programming" scheme="https://ray-eldath.me/categories/programming/"/>
+    
+    
+    <category term="程序设计范式（paradigm）" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%EF%BC%88paradigm%EF%BC%89/"/>
+    
+    <category term="程序设计语言" scheme="https://ray-eldath.me/tags/%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/"/>
+    
+    <category term="Rust" scheme="https://ray-eldath.me/tags/Rust/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>有关媒体、社会学、阶级流动、人工智能、还原论、爱情、人类沙文主义和其它一些话题</title>
+    <link href="https://ray-eldath.me/life/me-and-the-world/"/>
+    <id>https://ray-eldath.me/life/me-and-the-world/</id>
+    <published>2021-01-28T20:19:22.000Z</published>
+    <updated>2024-10-18T12:48:48.765Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;我有一个非常、非常、非常不好的习惯，那就是喜欢沉浸在深刻、反复的自言自语中，不断地与现实中并不存在的、永远忍受永远包容的倾听者对话。显然这并不实际——并没有能一直忍受我烦人聒噪的慷慨之士。危险之处在于，我自己会经常陷于这样反复的自我对话当中，导致长久持续的失眠，以及更加危险的，一种单调思想的不断反复叠加最终造成极度不理智的言行。&lt;/p&gt;
+&lt;p&gt;所以昨晚就发生了这样的事情（事实上回家以来这经常发生，令我十分绝望——奇怪的是在学校并不会这样），辗转反侧、自我对话直到四点多彻底睡不着觉，于是起来将自己乱七八糟的思绪记录一二。&lt;/p&gt;
+&lt;p&gt;这就是这篇文章的由来——事实上我认为理想的形式应该是作为“访谈”，由一位永远忍受永远包容的倾听者记录并编辑，但显然本垃圾并没有这样的社会地位和条件= =。所以，本文是以一种“访谈”，或者说是“随笔”的形式组织并行文的，你应该已经从标题中看出了本文话题的跳跃性——正是如此。&lt;/p&gt;
+&lt;p&gt;创作本文的动机是作为一种&lt;em&gt;价值观输出&lt;/em&gt;。我可能会引用多个领域的各种文献（见文末）以期使读者对我的观念有更好的理解，但我并不了解这些领域中的&lt;strong&gt;任何一个&lt;/strong&gt;，正因如此，我的观点难免片面偏颇；考虑到本文是作为一篇&lt;strong&gt;自我&lt;em&gt;陈述&lt;/em&gt;&lt;/strong&gt;而非&lt;strong&gt;观点&lt;em&gt;论证&lt;/em&gt;&lt;/strong&gt;组织和行文，关于这一点，还请读者理解。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="https://ray-eldath.me/categories/life/"/>
+    
+    
+    <category term="随笔" scheme="https://ray-eldath.me/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我与科幻的故事，以及不情愿地2021</title>
+    <link href="https://ray-eldath.me/life/me-and-scifi-and-2021/"/>
+    <id>https://ray-eldath.me/life/me-and-scifi-and-2021/</id>
+    <published>2021-01-10T11:20:23.000Z</published>
+    <updated>2024-10-18T12:48:48.765Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update 2021.1.10：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;本文主要内容是一篇旧文，以及一些有关2021的文字。&lt;/p&gt;
+&lt;p&gt;最终还是打算把文章贴到博客上来（其实是一直忘了），做了一些修改，补了一些最近的&lt;em&gt;我与科幻的故事&lt;/em&gt;。&lt;br&gt;顺便这篇短文的一个选段居然还真在SFW2005的《回声》专栏上刊出来了…… 然而选的是现在看来比较尴尬的一个段落，感觉是真的羞耻（（（&lt;/p&gt;
+&lt;p&gt;以下内容（直至文末的分割线）作于2020年2月份，经少量修订。文末有关2021的内容作于今日。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="https://ray-eldath.me/categories/life/"/>
+    
+    
+    <category term="矫情" scheme="https://ray-eldath.me/tags/%E7%9F%AB%E6%83%85/"/>
+    
+    <category term="没什么用的回忆" scheme="https://ray-eldath.me/tags/%E6%B2%A1%E4%BB%80%E4%B9%88%E7%94%A8%E7%9A%84%E5%9B%9E%E5%BF%86/"/>
+    
+    <category term="科幻" scheme="https://ray-eldath.me/tags/%E7%A7%91%E5%B9%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[选译] Nature 论文：关于动物同性性行为演化的另一种假说</title>
+    <link href="https://ray-eldath.me/science/monk2019/"/>
+    <id>https://ray-eldath.me/science/monk2019/</id>
+    <published>2020-08-18T04:36:12.000Z</published>
+    <updated>2024-10-18T12:48:48.765Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;译者按：&lt;/strong&gt;这篇论文最早是微信公众号「Nature自然科研」在每周新闻中推送给我的，是刊发于2019年11月号《自然：生态学与演化》（Nature Ecology &amp;amp; Evolution）上的「观点（Perspective）」文章。我前天一个晚上看完了，看完总有种大脑升级的感觉，幼小的心灵受到了极大的震撼……. 花了三天，&lt;em&gt;选译&lt;/em&gt;了几个比较有意思、比较重要或者单纯比较&lt;strong&gt;令人震惊&lt;/strong&gt;的段落，放上来，各位当个“奇文共赏”就好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;论文原文：&lt;/strong&gt;Monk, J.D., Giglio, E., Kamath, A. &lt;em&gt;et al.&lt;/em&gt; An alternative hypothesis for the evolution of same-sex sexual behaviour in animals. &lt;em&gt;Nat Ecol Evol&lt;/em&gt; 3, 1622–1631 (2019). &lt;a href=&quot;https://doi.org/10.1038/s41559-019-1019-7&quot;&gt;https://doi.org/10.1038/s41559-019-1019-7&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;译者对原文内容、价值观不负责任，仅对&lt;em&gt;翻译本身&lt;/em&gt;负责。&lt;/p&gt;
+&lt;p&gt;以下是选译的段落。译文中&lt;strong&gt;省去了所有的引用注记&lt;/strong&gt;，并以 &lt;strong&gt;[粗体方括号]&lt;/strong&gt; 标明跳过不译的段落。译文中&lt;strong&gt;粗体&lt;/strong&gt;和&lt;em&gt;斜体&lt;/em&gt;均为译者所加。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="science" scheme="https://ray-eldath.me/categories/science/"/>
+    
+    
+    <category term="翻译" scheme="https://ray-eldath.me/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="演化生物学" scheme="https://ray-eldath.me/tags/%E6%BC%94%E5%8C%96%E7%94%9F%E7%89%A9%E5%AD%A6/"/>
+    
+    <category term="生物学" scheme="https://ray-eldath.me/tags/%E7%94%9F%E7%89%A9%E5%AD%A6/"/>
+    
+    <category term="不务正业" scheme="https://ray-eldath.me/tags/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[译] 病毒学家内森·拉尔夫：我无比期待“最后一场瘟疫”</title>
+    <link href="https://ray-eldath.me/science/nathan-wolfe/"/>
+    <id>https://ray-eldath.me/science/nathan-wolfe/</id>
+    <published>2020-08-17T04:03:26.000Z</published>
+    <updated>2024-10-18T12:48:48.770Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文是一篇旧文。最早是作为知乎的&lt;a href=&quot;https://zhuanlan.zhihu.com/p/113318789&quot;&gt;独立文章&lt;/a&gt;发出去的——果然没什么人感兴趣，这么久以来，现在咱也算是半退乎了。最近刚好又在&lt;em&gt;选译、纯手译&lt;/em&gt;一篇&lt;strong&gt;巨震惊&lt;/strong&gt;的文章（各位敬请期待），于是想着把以前这篇稍微改改放上来算了，估计反正也不会有人看的。&lt;/p&gt;
+&lt;p&gt;好吧，就这样。以下是旧文章内容。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;本篇文章是刊登在非盈利机构 &lt;a href=&quot;https://www.edge.org/&quot;&gt;edge.org&lt;/a&gt; 上的英文访谈辑要的翻译。原文地址：&lt;a href=&quot;https://www.edge.org/conversation/nathan_wolfe-waiting-for-the-final-plague&quot;&gt;WAITING FOR “THE FINAL PLAGUE” - edge.org&lt;/a&gt;。翻译经 Edge.org 编辑 Russell Weinberger 授权。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="science" scheme="https://ray-eldath.me/categories/science/"/>
+    
+    
+    <category term="翻译" scheme="https://ray-eldath.me/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+    <category term="生物学" scheme="https://ray-eldath.me/tags/%E7%94%9F%E7%89%A9%E5%AD%A6/"/>
+    
+    <category term="不务正业" scheme="https://ray-eldath.me/tags/%E4%B8%8D%E5%8A%A1%E6%AD%A3%E4%B8%9A/"/>
+    
+    <category term="病毒学" scheme="https://ray-eldath.me/tags/%E7%97%85%E6%AF%92%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>作为现代音乐支柱的爵士鼓（架子鼓）(1)：总论</title>
+    <link href="https://ray-eldath.me/music/drum-1/"/>
+    <id>https://ray-eldath.me/music/drum-1/</id>
+    <published>2020-08-16T01:00:31.000Z</published>
+    <updated>2024-10-18T12:48:48.694Z</updated>
+    
+    
+    <summary type="html">系列文章（咕咕咕咕咕）的第一篇。内容不少，文章较长，还请各位耐心读完；可能有各种事实性错误，也请各位在评论区指出，本垃圾会第一时间订正。相信无论是初学者还是已有一定经验的鼓手，都能从本文中学到一些东西——至少是笔者希望如此😜。</summary>
+    
+    
+    
+    <category term="music" scheme="https://ray-eldath.me/categories/music/"/>
+    
+    
+    <category term="爵士鼓" scheme="https://ray-eldath.me/tags/%E7%88%B5%E5%A3%AB%E9%BC%93/"/>
+    
+    <category term="架子鼓" scheme="https://ray-eldath.me/tags/%E6%9E%B6%E5%AD%90%E9%BC%93/"/>
+    
+    <category term="音乐" scheme="https://ray-eldath.me/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的大一啊，sigh</title>
+    <link href="https://ray-eldath.me/life/freshman/"/>
+    <id>https://ray-eldath.me/life/freshman/</id>
+    <published>2020-07-02T07:00:00.000Z</published>
+    <updated>2024-10-18T12:48:48.764Z</updated>
+    
+    
+    <summary type="html">😞😖😭</summary>
+    
+    
+    
+    <category term="life" scheme="https://ray-eldath.me/categories/life/"/>
+    
+    
+    <category term="总结" scheme="https://ray-eldath.me/tags/%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>First Step Towards FPGA (1): SystemVerilog Quick Take &amp; Pros and Cons</title>
+    <link href="https://ray-eldath.me/hardware/fpga-journey-1/"/>
+    <id>https://ray-eldath.me/hardware/fpga-journey-1/</id>
+    <published>2020-06-16T05:40:51.000Z</published>
+    <updated>2024-10-18T12:48:48.764Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Every time programmable hardware programming is mentioned, Verilog or SystemVerilog comes to our mind — such fact, IMHO, is ironically contrasts with another interesting, if not consensus, but at least first impression of those hardware newbies just like me, that the fundamental software and development toolkit in hardware programming field is far from diverse, mature and easy-to-use. Comparing to software engineering, there are not too much languages, tools or methodology to let you pick and choose, even among the limited available choices, most of them are either lack some important features, or just too expensive to investigate. Undoubtedly my first step towards FPGA, looking around and pick a combination of &lt;em&gt;language,  simulator and testing method&lt;/em&gt;, is a brief journey, but it also involved too many investigation as well as unexpected disappointment, which makes this journey more difficult, and more tiring. This article is intended to outline some of my conclusion, which is what I’m using now, and what I have used but quited.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="hardware" scheme="https://ray-eldath.me/categories/hardware/"/>
+    
+    
+    <category term="硬件编程" scheme="https://ray-eldath.me/tags/%E7%A1%AC%E4%BB%B6%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="SystemVerilog" scheme="https://ray-eldath.me/tags/SystemVerilog/"/>
+    
+    <category term="FPGA" scheme="https://ray-eldath.me/tags/FPGA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>阿尔贝·加缪其人</title>
+    <link href="https://ray-eldath.me/literature/albert-camus/"/>
+    <id>https://ray-eldath.me/literature/albert-camus/</id>
+    <published>2020-06-12T16:00:00.000Z</published>
+    <updated>2024-10-18T12:48:48.694Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;他在本世纪顶住了历史潮流，独自继承着源远流长的警世文学。他怀着顽强、严格、纯洁、肃穆、热情的人道主义，向当今时代的种种粗俗丑陋发起胜负未卜的宣战。但是反过来，他以自己始终如一的拒绝，在我们的时代，再次重申反对摒弃道德的马基雅维利主义，反对趋炎附势的现实主义，证实道德的存在。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="literature" scheme="https://ray-eldath.me/categories/literature/"/>
+    
+    
+    <category term="阿尔贝·加缪" scheme="https://ray-eldath.me/tags/%E9%98%BF%E5%B0%94%E8%B4%9D%C2%B7%E5%8A%A0%E7%BC%AA/"/>
+    
+    <category term="文学" scheme="https://ray-eldath.me/tags/%E6%96%87%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>咱的新博客</title>
+    <link href="https://ray-eldath.me/notice/hello-world/"/>
+    <id>https://ray-eldath.me/notice/hello-world/</id>
+    <published>2020-06-11T16:00:00.000Z</published>
+    <updated>2024-10-18T12:48:48.764Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;一直打算自己写博客的一套前端和后端，前端本来已经写了挺多的了，现在看来是要搁置很长一段时间了… 感觉折腾这些毕竟没啥用，还是要花时间写文章才行。。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="notice" scheme="https://ray-eldath.me/categories/notice/"/>
+    
+    
+  </entry>
+  
+</feed>
