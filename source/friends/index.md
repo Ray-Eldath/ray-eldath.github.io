@@ -42,6 +42,21 @@ donates:
     <div class="card">
       <div class="card-image">
         <figure class="image is-1by1" style="margin: 0">
+          <img src="/img/friends/powerfullz.jpg">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <a class="link-muted title is-3 not-article-part" target="_blank" href="https://blog.l3zc.com">powerfullz</a>
+          </div>
+        </div>
+        <div class="content">夢縈枯野上</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-1by1" style="margin: 0">
           <img src="/img/friends/bie.jpg">
         </figure>
       </div>
